@@ -3,3 +3,14 @@
 
 /robots.txt
   Content-Type: text/plain; charset=UTF-8
+
+/*.png
+  Content-Type: image/png
+  Access-Control-Allow-Origin: *
+
+/*.jpg
+  Content-Type: image/jpeg
+  Access-Control-Allow-Origin: *
+
+/*.ico
+  Content-Type: image/x-icon
