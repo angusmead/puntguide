@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{--background:hsl(205 60% 96%);--foreground:hsl(215 45% 16%);--primary:hsl(48 92% 64%);--primary-fg:hsl(215 45% 16%);--muted:hsl(205 40% 92%);--muted-fg:hsl(215 20% 42%);--accent:hsl(200 88% 58%);--hot:hsl(16 92% 60%);--border:hsl(205 40% 86%);--gradient-gold:linear-gradient(135deg,hsl(50 96% 72%) 0%,hsl(44 92% 60%) 100%);--gradient-card:linear-gradient(180deg,hsl(0 0% 100%) 0%,hsl(205 50% 97%) 100%);--shadow-gold:0 10px 40px -10px hsl(48 92% 54%/0.45);--shadow-card:0 4px 24px -8px hsl(215 50% 30%/0.12);--shadow-elegant:0 20px 60px -20px hsl(215 50% 30%/0.18);--compliance-h:36px;--nav-h:64px;}
+:root{--background:hsl(205 60% 96%);--foreground:hsl(215 45% 16%);--primary:hsl(48 92% 64%);--primary-fg:hsl(215 45% 16%);--muted:hsl(205 40% 92%);--muted-fg:hsl(215 20% 42%);--accent:hsl(200 88% 58%);--hot:hsl(16 92% 60%);--border:hsl(205 40% 86%);--gradient-gold:linear-gradient(135deg,hsl(50 96% 72%) 0%,hsl(44 92% 60%) 100%);--gradient-card:linear-gradient(180deg,hsl(0 0% 100%) 0%,hsl(205 50% 97%) 100%);--shadow-gold:0 10px 40px -10px hsl(48 92% 54%/0.45);--shadow-card:0 4px 24px -8px hsl(215 50% 30%/0.12);--shadow-elegant:0 20px 60px -20px hsl(215 50% 30%/0.18);--compliance-h:36px;--nav-h:80px;}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--background);color:var(--foreground);font-family:"Inter Tight",sans-serif;line-height:1.6;}
 h1,h2,h3,h4{font-family:"Geist",sans-serif;letter-spacing:-0.035em;font-weight:600;}
@@ -19,7 +19,7 @@ h1,h2,h3,h4{font-family:"Geist",sans-serif;letter-spacing:-0.035em;font-weight:6
 .cb-badges{display:flex;gap:6px;flex-shrink:0;}
 .cb-badge{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:2px 6px;font-size:10px;font-weight:700;letter-spacing:.05em;}
 .nav{position:fixed;top:var(--compliance-h);left:0;right:0;height:var(--nav-h);background:hsl(205 60% 96%/.88);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:100;}
-.nav-logo img{height:36px;width:auto;}
+.nav-logo img{height:72px;width:auto;}
 .nav-links{display:flex;gap:24px;list-style:none;}
 .nav-links a{font-size:13px;font-weight:500;color:hsl(215 45% 16%/.7);text-decoration:none;transition:color .2s;}
 .nav-links a:hover,.nav-links a.active{color:var(--primary);}
@@ -182,7 +182,7 @@ h1,h2,h3,h4{font-family:"Geist",sans-serif;letter-spacing:-0.035em;font-weight:6
       <div class="not-box"><div class="not-label">Not ideal for</div><div class="not-text">Punters who want the deepest racing markets &mdash; Dabble is sports-first</div></div>
     </div>
     <div class="row-actions">
-      <a href="#" onclick="trackClick('dabble','page_card','CPA');return false;" class="row-cta">View Platform &rarr;</a>
+      <a href="#" onclick="trackClick('dabble','page_card','CPA');return false;" class="row-cta">Bet Now →</a>
       <a href="/reviews/dabble.html" class="row-review">Full Review</a>
     </div>
     <p class="row-compliance">&ldquo;Set a deposit limit.&rdquo; &middot; 18+ &middot; T&amp;Cs apply</p>
@@ -206,7 +206,7 @@ h1,h2,h3,h4{font-family:"Geist",sans-serif;letter-spacing:-0.035em;font-weight:6
       <div class="not-box"><div class="not-label">Not ideal for</div><div class="not-text">Casual bettors looking for a simpler, stripped-back interface</div></div>
     </div>
     <div class="row-actions">
-      <a href="#" onclick="trackClick('betright','page_card','CPA');return false;" class="row-cta">View Platform &rarr;</a>
+      <a href="#" onclick="trackClick('betright','page_card','CPA');return false;" class="row-cta">Bet Now →</a>
       <a href="/reviews/betright.html" class="row-review">Full Review</a>
     </div>
     <p class="row-compliance">&ldquo;Chances are you&rsquo;re about to lose.&rdquo; &middot; 18+ &middot; T&amp;Cs apply</p>
@@ -230,7 +230,7 @@ h1,h2,h3,h4{font-family:"Geist",sans-serif;letter-spacing:-0.035em;font-weight:6
       <div class="not-box"><div class="not-label">Not ideal for</div><div class="not-text">Punters who need same-day clearance &mdash; Dabble and BetRight are faster</div></div>
     </div>
     <div class="row-actions">
-      <a href="#" onclick="trackClick('neds','page_card','CPA');return false;" class="row-cta">View Platform &rarr;</a>
+      <a href="#" onclick="trackClick('neds','page_card','CPA');return false;" class="row-cta">Bet Now →</a>
       <a href="/reviews/neds.html" class="row-review">Full Review</a>
     </div>
     <p class="row-compliance">&ldquo;Think. Is this a bet you really want to place?&rdquo; &middot; 18+ &middot; T&amp;Cs apply</p>
@@ -254,7 +254,7 @@ h1,h2,h3,h4{font-family:"Geist",sans-serif;letter-spacing:-0.035em;font-weight:6
       <div class="not-box"><div class="not-label">Not ideal for</div><div class="not-text">Punters whose #1 priority is same-day clearance</div></div>
     </div>
     <div class="row-actions">
-      <a href="#" onclick="trackClick('pointsbet','page_card','CPA');return false;" class="row-cta">View Platform &rarr;</a>
+      <a href="#" onclick="trackClick('pointsbet','page_card','CPA');return false;" class="row-cta">Bet Now →</a>
       <a href="/reviews/pointsbet.html" class="row-review">Full Review</a>
     </div>
     <p class="row-compliance">&ldquo;You win some. You lose more.&rdquo; &middot; 18+ &middot; T&amp;Cs apply</p>
@@ -278,7 +278,7 @@ h1,h2,h3,h4{font-family:"Geist",sans-serif;letter-spacing:-0.035em;font-weight:6
       <div class="not-box"><div class="not-label">Not ideal for</div><div class="not-text">Punters whose primary criterion is withdrawal speed &mdash; go with Dabble</div></div>
     </div>
     <div class="row-actions">
-      <a href="#" onclick="trackClick('sportsbet','page_card','CPA');return false;" class="row-cta">View Platform &rarr;</a>
+      <a href="#" onclick="trackClick('sportsbet','page_card','CPA');return false;" class="row-cta">Bet Now →</a>
       <a href="/reviews/sportsbet.html" class="row-review">Full Review</a>
     </div>
     <p class="row-compliance">&ldquo;What are you prepared to lose today?&rdquo; &middot; 18+ &middot; T&amp;Cs apply</p>
