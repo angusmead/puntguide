@@ -20,6 +20,7 @@
         { text: 'AFL Premiership Odds 2026',    href: '/afl-premiership-odds-2026.html' },
         { text: 'Brownlow Medal Odds 2026',     href: '/brownlow-medal-odds-2026.html' },
         { text: 'Coleman Medal Odds 2026',      href: '/afl-coleman-medal-odds-2026.html' },
+        { text: 'Rising Star Odds 2026',         href: '/afl-rising-star-odds-2026.html' },
         { text: 'Best Sites for AFL & NRL',     href: '/best-betting-sites-afl-nrl.html' },
         { text: 'Best Sites for AFL',           href: '/best-betting-sites-for-afl.html' },
       ]
