@@ -817,11 +817,63 @@ h1,h2,h3,h4 {
         <div class="nl-sub">Be first to know when a new Aussie betting site launches.</div>
       </div>
     </div>
-    <div class="nl-form">
-      <input type="email" class="nl-input" placeholder="you@example.com">
-      <button class="nl-btn" onclick="gtag('event','email_signup')">Subscribe</button>
+    <div class="nl-form" id="nl-form">
+      <input type="email" class="nl-input" id="nl-email" placeholder="you@example.com">
+      <button class="nl-btn" id="nl-btn" type="button">Subscribe</button>
     </div>
+    <div id="nl-msg" style="font-size:13px;margin-top:10px;display:none;"></div>
   </div>
+  <script>
+    document.getElementById('nl-btn').addEventListener('click', async function() {
+      const input = document.getElementById('nl-email');
+      const btn = document.getElementById('nl-btn');
+      const msg = document.getElementById('nl-msg');
+      const email = input.value.trim();
+
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        input.style.borderColor = '#e53e3e';
+        input.focus();
+        return;
+      }
+
+      input.style.borderColor = '';
+      btn.textContent = 'Subscribing…';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('https://mgwkydksfxxojndyaweg.supabase.co/functions/v1/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+          gtag('event', 'email_signup');
+          input.value = '';
+          btn.textContent = '✓ You\'re in!';
+          btn.style.background = 'hsl(140 50% 36%)';
+          msg.textContent = 'Check your inbox — a confirmation is on its way.';
+          msg.style.color = 'hsl(140 50% 32%)';
+          msg.style.display = 'block';
+        } else if (res.status === 409) {
+          btn.textContent = 'Subscribe';
+          btn.disabled = false;
+          msg.textContent = 'That email is already subscribed.';
+          msg.style.color = 'hsl(215 20% 42%)';
+          msg.style.display = 'block';
+        } else {
+          throw new Error();
+        }
+      } catch {
+        btn.textContent = 'Subscribe';
+        btn.disabled = false;
+        msg.textContent = 'Something went wrong — please try again.';
+        msg.style.color = '#e53e3e';
+        msg.style.display = 'block';
+      }
+    });
+  </script>
 </div>
 
 <!-- ═══════════════════ DIRECTORY ═══════════════════ -->
