@@ -40,6 +40,7 @@
     {
       label: '🏇 Racing',
       links: [
+        { text: 'Horse Racing Tips Today',      href: '/horse-racing-tips-today.html' },
         { text: 'Racing Weekend Tips',          href: '/racing-weekend-may2-2026.html' },
         { text: 'Racing Futures 2026',          href: '/racing-futures-2026.html' },
         { text: 'Best Sites for Racing',        href: '/best-betting-sites-for-racing.html' },
@@ -61,6 +62,7 @@
       links: [
         { text: 'NFL Tips 2026',              href: '/nfl-tips.html' },
         { text: 'NFL Super Bowl LXI Odds',    href: '/nfl-super-bowl-odds-2026.html' },
+        { text: 'MLB Tips 2026',              href: '/mlb-tips.html' },
         { text: 'MLB World Series Odds 2026', href: '/mlb-world-series-odds-2026.html' },
         { text: 'Bet365 Review (Best for MLB)', href: '/review-bet365.html' },
       ]
