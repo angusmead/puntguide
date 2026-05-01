@@ -50,7 +50,7 @@ Deno.serve(async (req) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'PuntGuide <info@betguide.com.au>',
+        from: 'PuntGuide <info@puntguide.com.au>',
         to: email,
         subject: "You're in — new Aussie bookmaker alerts are on",
         html: welcomeEmailHtml(email),
