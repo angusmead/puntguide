@@ -1,3 +1,7 @@
 User-agent: *
-Allow: /
+Disallow:
+
+User-agent: Google-Extended
+Disallow:
+
 Sitemap: https://puntguide.com.au/sitemap.xml
