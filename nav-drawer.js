@@ -16,6 +16,7 @@
     {
       label: '🏈 AFL',
       links: [
+        { text: 'AFL Tips 2026',               href: '/afl-tips.html' },
         { text: 'AFL Round 8 Tips 2026',        href: '/afl-round-8-tips-2026.html' },
         { text: 'AFL Premiership Odds 2026',    href: '/afl-premiership-odds-2026.html' },
         { text: 'Brownlow Medal Odds 2026',     href: '/brownlow-medal-odds-2026.html' },
@@ -28,6 +29,7 @@
     {
       label: '🏉 NRL',
       links: [
+        { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
         { text: 'NRL Round 9 Tips 2026',        href: '/nrl-round-10-tips-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
         { text: 'Best Sites for AFL & NRL',     href: '/best-betting-sites-afl-nrl.html' },
