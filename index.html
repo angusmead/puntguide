@@ -843,7 +843,7 @@ h1,h2,h3,h4 {
       try {
         const res = await fetch('https://mgwkydksfxxojndyaweg.supabase.co/functions/v1/subscribe', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1nd2t5ZGtzZnh4b2puZHlhd2VnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzc1NTA3MzIsImV4cCI6MjA5MzEyNjczMn0.J1ZeBT113M2DQAyOZv3tuZ83bBvY6-kuvLgF3TT_VN8' },
           body: JSON.stringify({ email }),
         });
         const data = await res.json();
