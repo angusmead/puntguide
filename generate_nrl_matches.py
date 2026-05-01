@@ -56,15 +56,15 @@ The Cowboys' form has been one of the competition's more impressive stories this
         status='upcoming', result=None,
         tip='Storm', tip_margin='7–14',
         summary="Melbourne Storm are firm favourites for this Friday night clash at Suncorp Stadium. The Storm's formidable forward pack and elite defensive structure — the best in the competition — make them difficult to beat anywhere.",
-        analysis="""Melbourne Storm have established themselves as the NRL's most consistent defensive unit through 2026 — conceding the fewest points per game of any side in the competition. Their forward pack, led by their dominant prop combination, provides the go-forward that allows their elite halves to control the game and exploit the edges. The Storm were noted in the Round 8 review as "clicking with Ryan Papenhuyzen at his best" — a frightening prospect for any opposition defence.
+        analysis="""Melbourne Storm have established themselves as the NRL's most consistent defensive unit through 2026 — conceding the fewest points per game of any side in the competition. Their forward pack, led by their dominant prop combination, provides the go-forward that allows their elite halves to control the game and exploit the edges. The Storm were noted in the Round 8 review as "clicking with Sua Fa'alogo finding his feet brilliantly in the fullback role" — a frightening prospect for any opposition defence.
 
 The Redcliffe Dolphins have been one of the competition's more frustrating clubs to assess in 2026. They showed enough in their ANZAC round match against the Roosters to suggest they have the talent to compete with top-eight sides, but they were ultimately "never in the game" according to match reviews. Their defence in particular has been inconsistent — conceding points in clusters after periods of controlled effort.
 
-Suncorp Stadium is Brisbane territory which should provide the Dolphins with some crowd advantage, but the Storm have won at every ground in the competition this year. Their combination of Papenhuyzen's brilliance at fullback, their structured right-edge attack and the dominance of their middle forwards makes them difficult to tip against regardless of venue. Storm by 7–14 in a controlled performance.""",
+Suncorp Stadium is Brisbane territory which should provide the Dolphins with some crowd advantage, but the Storm have won at every ground in the competition this year. Their combination of Fa'alogo's exciting form at fullback, their structured right-edge attack and the dominance of their middle forwards makes them difficult to tip against regardless of venue. Storm by 7–14 in a controlled performance.""",
         form1='L W L W L', form2='W W W L W',
         record1='4-5', record2='7-2',
         key_player1='Isaiya Katoa (Dolphins\' most creative player, needs to find his best to trouble the Storm)',
-        key_player2='Ryan Papenhuyzen (Melbourne\'s game-breaker at fullback, outstanding in 2026, averages 150+ metres per game)',
+        key_player2='Sua Fa\'alogo (Storm\'s exciting 22-year-old fullback taking over from the retired Papenhuyzen, already 6 tries in 2026)',
         key_matchup='Storm\'s middle forward dominance vs Dolphins\' ruck — if the Dolphins can compete at the base of the scrum, they stay in it',
         stats='Storm: 7W–2L, 2nd ladder · Dolphins: 4W–5L, 10th · Storm: fewest points conceded in comp 2026',
         markets='Head-to-head: DOL $3.50 / MEL $1.30 · Line: MEL –8.5 · Tip: Storm to win',
