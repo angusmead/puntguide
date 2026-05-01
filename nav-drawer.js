@@ -17,6 +17,7 @@
       label: '🏈 AFL',
       links: [
         { text: 'AFL Tips 2026',               href: '/afl-tips.html' },
+        { text: 'AFL Ladder 2026',             href: '/afl-ladder-2026.html' },
         { text: 'AFL Round 8 Tips 2026',        href: '/afl-round-8-tips-2026.html' },
         { text: 'AFL Premiership Odds 2026',    href: '/afl-premiership-odds-2026.html' },
         { text: 'Brownlow Medal Odds 2026',     href: '/brownlow-medal-odds-2026.html' },
@@ -30,6 +31,7 @@
       label: '🏉 NRL',
       links: [
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
+        { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
         { text: 'NRL Round 9 Tips 2026',        href: '/nrl-round-10-tips-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
         { text: 'Best Sites for AFL & NRL',     href: '/best-betting-sites-afl-nrl.html' },
@@ -57,6 +59,7 @@
     {
       label: '⚾ International Sports',
       links: [
+        { text: 'NFL Tips 2026',              href: '/nfl-tips.html' },
         { text: 'NFL Super Bowl LXI Odds',    href: '/nfl-super-bowl-odds-2026.html' },
         { text: 'MLB World Series Odds 2026', href: '/mlb-world-series-odds-2026.html' },
         { text: 'Bet365 Review (Best for MLB)', href: '/review-bet365.html' },
