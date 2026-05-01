@@ -282,4 +282,5 @@ localStorage.setItem("pgi",(i+1)%6);
 function tc(b,p,d){const k=new URLSearchParams(location.search).get("kw")||"direct";const s=b+"_"+p+"_"+d+"_"+k+"_"+Date.now();const l=JSON.parse(localStorage.getItem("pgc")||"[]");l.push({s,t:new Date().toISOString()});localStorage.setItem("pgc",JSON.stringify(l.slice(-200)));if(window.gtag)gtag("event","affiliate_click",{bookie:b});window.open("https://puntguide.com.au/out/"+b+"?subid="+s,"_blank");}
 function toggleFaq(btn){const a=btn.nextElementSibling;const o=a.classList.contains("open");document.querySelectorAll(".faq-a").forEach(x=>x.classList.remove("open"));document.querySelectorAll(".faq-q").forEach(x=>x.classList.remove("open"));if(!o){a.classList.add("open");btn.classList.add("open");}}
 </script>
+<script src="/nav-drawer.js"></script>
 </body></html>
