@@ -53,6 +53,13 @@
       ]
     },
     {
+      label: '⚾ International Sports',
+      links: [
+        { text: 'MLB World Series Odds 2026', href: '/mlb-world-series-odds-2026.html' },
+        { text: 'Bet365 Review (Best for MLB)', href: '/review-bet365.html' },
+      ]
+    },
+    {
       label: '🔍 Reviews & Comparisons',
       links: [
         { text: 'PointsBet Review',             href: '/review-pointsbet.html' },
