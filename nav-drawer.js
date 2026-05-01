@@ -55,6 +55,7 @@
     {
       label: '⚾ International Sports',
       links: [
+        { text: 'NFL Super Bowl LXI Odds',    href: '/nfl-super-bowl-odds-2026.html' },
         { text: 'MLB World Series Odds 2026', href: '/mlb-world-series-odds-2026.html' },
         { text: 'Bet365 Review (Best for MLB)', href: '/review-bet365.html' },
       ]
