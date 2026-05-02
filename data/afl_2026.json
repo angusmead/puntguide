@@ -1,0 +1,408 @@
+{
+  "season": 2026,
+  "competition": "AFL",
+  "teams": [
+    {"name": "Adelaide Crows",     "slug": "adelaide-crows",     "abbr": "ADEL", "squiggle": "Adelaide",             "odds": "$26.00"},
+    {"name": "Brisbane Lions",     "slug": "brisbane-lions",     "abbr": "BL",   "squiggle": "Brisbane Lions",       "odds": "$4.50"},
+    {"name": "Carlton",            "slug": "carlton",            "abbr": "CARL", "squiggle": "Carlton",              "odds": "$501.00"},
+    {"name": "Collingwood",        "slug": "collingwood",        "abbr": "COLL", "squiggle": "Collingwood",          "odds": "$26.00"},
+    {"name": "Essendon",           "slug": "essendon",           "abbr": "ESS",  "squiggle": "Essendon",             "odds": "$501.00"},
+    {"name": "Fremantle",          "slug": "fremantle",          "abbr": "FRE",  "squiggle": "Fremantle",            "odds": "$7.00"},
+    {"name": "Geelong Cats",       "slug": "geelong-cats",       "abbr": "GEEL", "squiggle": "Geelong",              "odds": "$13.00"},
+    {"name": "Gold Coast SUNS",    "slug": "gold-coast-suns",    "abbr": "GCS",  "squiggle": "Gold Coast",           "odds": "$12.00"},
+    {"name": "GWS GIANTS",         "slug": "gws-giants",         "abbr": "GWS",  "squiggle": "Greater Western Sydney","odds": "$41.00"},
+    {"name": "Hawthorn",           "slug": "hawthorn",           "abbr": "HAW",  "squiggle": "Hawthorn",             "odds": "$6.50"},
+    {"name": "Melbourne",          "slug": "melbourne",          "abbr": "MELB", "squiggle": "Melbourne",            "odds": "$81.00"},
+    {"name": "North Melbourne",    "slug": "north-melbourne",    "abbr": "NM",   "squiggle": "North Melbourne",      "odds": "$151.00"},
+    {"name": "Port Adelaide",      "slug": "port-adelaide",      "abbr": "PORT", "squiggle": "Port Adelaide",        "odds": "$101.00"},
+    {"name": "Richmond",           "slug": "richmond",           "abbr": "RICH", "squiggle": "Richmond",             "odds": "$501.00"},
+    {"name": "St Kilda",           "slug": "st-kilda",           "abbr": "STK",  "squiggle": "St Kilda",             "odds": "$67.00"},
+    {"name": "Sydney Swans",       "slug": "sydney-swans",       "abbr": "SYD",  "squiggle": "Sydney",               "odds": "$5.00"},
+    {"name": "West Coast Eagles",  "slug": "west-coast-eagles",  "abbr": "WCE",  "squiggle": "West Coast",           "odds": "$501.00"},
+    {"name": "Western Bulldogs",   "slug": "western-bulldogs",   "abbr": "WB",   "squiggle": "Western Bulldogs",     "odds": "$34.00"}
+  ],
+  "rounds": [
+    {
+      "round": 0,
+      "label": "Opening Round",
+      "slug": "afl-opening-round-tips-2026",
+      "matches": [
+        {"date": "2026-03-05", "time": "19:30", "home": "Sydney",       "away": "Carlton",          "venue": "S.C.G."},
+        {"date": "2026-03-06", "time": "19:05", "home": "Gold Coast",   "away": "Geelong",          "venue": "Carrara"},
+        {"date": "2026-03-07", "time": "16:15", "home": "Greater Western Sydney", "away": "Hawthorn", "venue": "Sydney Showground"},
+        {"date": "2026-03-07", "time": "18:35", "home": "Western Bulldogs", "away": "Brisbane Lions", "venue": "Gabba"},
+        {"date": "2026-03-08", "time": "19:20", "home": "Collingwood",  "away": "St Kilda",         "venue": "M.C.G."}
+      ]
+    },
+    {
+      "round": 1,
+      "label": "Round 1",
+      "slug": "afl-round-1-tips-2026",
+      "matches": [
+        {"date": "2026-03-12", "time": "19:30", "home": "Carlton",      "away": "Richmond",         "venue": "M.C.G."},
+        {"date": "2026-03-13", "time": "19:40", "home": "Hawthorn",     "away": "Essendon",         "venue": "M.C.G."},
+        {"date": "2026-03-14", "time": "13:15", "home": "Western Bulldogs", "away": "Greater Western Sydney", "venue": "Docklands"},
+        {"date": "2026-03-14", "time": "16:15", "home": "Geelong",      "away": "Fremantle",        "venue": "Kardinia Park"},
+        {"date": "2026-03-14", "time": "19:10", "home": "Sydney",       "away": "Brisbane Lions",   "venue": "S.C.G."},
+        {"date": "2026-03-14", "time": "19:35", "home": "Adelaide",     "away": "Collingwood",      "venue": "M.C.G."},
+        {"date": "2026-03-15", "time": "13:10", "home": "North Melbourne", "away": "Port Adelaide", "venue": "Docklands"},
+        {"date": "2026-03-15", "time": "15:15", "home": "Melbourne",    "away": "St Kilda",         "venue": "M.C.G."},
+        {"date": "2026-03-15", "time": "18:10", "home": "Gold Coast",   "away": "West Coast",       "venue": "Carrara"}
+      ]
+    },
+    {
+      "round": 2,
+      "label": "Round 2",
+      "slug": "afl-round-2-tips-2026",
+      "matches": [
+        {"date": "2026-03-19", "time": "19:30", "home": "Hawthorn",     "away": "Sydney",           "venue": "M.C.G."},
+        {"date": "2026-03-20", "time": "19:40", "home": "Western Bulldogs", "away": "Adelaide",     "venue": "Adelaide Oval"},
+        {"date": "2026-03-21", "time": "13:15", "home": "Gold Coast",   "away": "Richmond",         "venue": "M.C.G."},
+        {"date": "2026-03-21", "time": "16:15", "home": "St Kilda",     "away": "Greater Western Sydney", "venue": "Sydney Showground"},
+        {"date": "2026-03-21", "time": "19:35", "home": "Fremantle",    "away": "Melbourne",        "venue": "Perth Stadium"},
+        {"date": "2026-03-22", "time": "15:15", "home": "Port Adelaide","away": "Essendon",         "venue": "Adelaide Oval"},
+        {"date": "2026-03-22", "time": "18:10", "home": "West Coast",   "away": "North Melbourne",  "venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 3,
+      "label": "Round 3",
+      "slug": "afl-round-3-tips-2026",
+      "matches": [
+        {"date": "2026-03-26", "time": "19:30", "home": "Geelong",      "away": "Adelaide",         "venue": "Kardinia Park"},
+        {"date": "2026-03-27", "time": "19:40", "home": "Collingwood",  "away": "Greater Western Sydney", "venue": "Docklands"},
+        {"date": "2026-03-28", "time": "12:35", "home": "Brisbane Lions","away": "St Kilda",        "venue": "Docklands"},
+        {"date": "2026-03-28", "time": "16:15", "home": "Fremantle",    "away": "Richmond",         "venue": "Perth Stadium"},
+        {"date": "2026-03-28", "time": "19:35", "home": "North Melbourne","away": "Essendon",       "venue": "Docklands"},
+        {"date": "2026-03-29", "time": "12:30", "home": "West Coast",   "away": "Port Adelaide",    "venue": "Adelaide Oval"},
+        {"date": "2026-03-29", "time": "15:15", "home": "Melbourne",    "away": "Carlton",          "venue": "M.C.G."}
+      ]
+    },
+    {
+      "round": 4,
+      "label": "Round 4",
+      "slug": "afl-round-4-tips-2026",
+      "matches": [
+        {"date": "2026-04-02", "time": "19:30", "home": "Brisbane Lions","away": "Collingwood",     "venue": "Gabba"},
+        {"date": "2026-04-03", "time": "15:15", "home": "North Melbourne","away": "Carlton",        "venue": "Docklands"},
+        {"date": "2026-04-03", "time": "19:15", "home": "Fremantle",    "away": "Adelaide",         "venue": "Adelaide Oval"},
+        {"date": "2026-04-04", "time": "16:15", "home": "Port Adelaide","away": "Richmond",         "venue": "M.C.G."},
+        {"date": "2026-04-04", "time": "19:35", "home": "Sydney",       "away": "West Coast",       "venue": "Perth Stadium"},
+        {"date": "2026-04-05", "time": "15:15", "home": "Melbourne",    "away": "Gold Coast",       "venue": "M.C.G."},
+        {"date": "2026-04-05", "time": "19:20", "home": "Western Bulldogs","away": "Essendon",      "venue": "Docklands"},
+        {"date": "2026-04-06", "time": "15:15", "home": "Hawthorn",     "away": "Geelong",          "venue": "M.C.G."}
+      ]
+    },
+    {
+      "round": 5,
+      "label": "Round 5",
+      "slug": "afl-round-5-tips-2026",
+      "matches": [
+        {"date": "2026-04-09", "time": "19:40", "home": "Adelaide",     "away": "Carlton",          "venue": "Adelaide Oval"},
+        {"date": "2026-04-10", "time": "19:40", "home": "Fremantle",    "away": "Collingwood",      "venue": "Adelaide Oval"},
+        {"date": "2026-04-11", "time": "12:35", "home": "Brisbane Lions","away": "North Melbourne", "venue": "Barossa Park"},
+        {"date": "2026-04-11", "time": "13:15", "home": "Essendon",     "away": "Melbourne",        "venue": "Adelaide Oval"},
+        {"date": "2026-04-11", "time": "16:15", "home": "Sydney",       "away": "Gold Coast",       "venue": "Norwood Oval"},
+        {"date": "2026-04-11", "time": "19:35", "home": "Hawthorn",     "away": "Western Bulldogs", "venue": "Adelaide Oval"},
+        {"date": "2026-04-12", "time": "12:30", "home": "Geelong",      "away": "West Coast",       "venue": "Norwood Oval"},
+        {"date": "2026-04-12", "time": "15:15", "home": "Greater Western Sydney","away": "Richmond","venue": "Barossa Park"},
+        {"date": "2026-04-12", "time": "19:15", "home": "St Kilda",     "away": "Port Adelaide",    "venue": "Adelaide Oval"}
+      ]
+    },
+    {
+      "round": 6,
+      "label": "Round 6",
+      "slug": "afl-round-6-tips-2026",
+      "matches": [
+        {"date": "2026-04-16", "time": "19:30", "home": "Collingwood",  "away": "Carlton",          "venue": "M.C.G."},
+        {"date": "2026-04-17", "time": "19:20", "home": "Geelong",      "away": "Western Bulldogs", "venue": "Kardinia Park"},
+        {"date": "2026-04-17", "time": "19:50", "home": "Sydney",       "away": "Greater Western Sydney","venue": "S.C.G."},
+        {"date": "2026-04-18", "time": "13:15", "home": "Gold Coast",   "away": "Essendon",         "venue": "Carrara"},
+        {"date": "2026-04-18", "time": "16:15", "home": "Hawthorn",     "away": "Port Adelaide",    "venue": "Docklands"},
+        {"date": "2026-04-18", "time": "19:35", "home": "Adelaide",     "away": "St Kilda",         "venue": "Adelaide Oval"},
+        {"date": "2026-04-19", "time": "13:10", "home": "North Melbourne","away": "Richmond",       "venue": "Docklands"},
+        {"date": "2026-04-19", "time": "15:15", "home": "Melbourne",    "away": "Brisbane Lions",   "venue": "M.C.G."},
+        {"date": "2026-04-19", "time": "17:10", "home": "Fremantle",    "away": "West Coast",       "venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 7,
+      "label": "Round 7",
+      "slug": "afl-round-7-tips-2026",
+      "matches": [
+        {"date": "2026-04-23", "time": "19:30", "home": "Sydney",       "away": "Western Bulldogs", "venue": "Docklands"},
+        {"date": "2026-04-24", "time": "19:40", "home": "Melbourne",    "away": "Richmond",         "venue": "M.C.G."},
+        {"date": "2026-04-25", "time": "12:15", "home": "Hawthorn",     "away": "Gold Coast",       "venue": "York Park"},
+        {"date": "2026-04-25", "time": "15:15", "home": "Collingwood",  "away": "Essendon",         "venue": "M.C.G."},
+        {"date": "2026-04-25", "time": "18:35", "home": "Port Adelaide","away": "Geelong",          "venue": "Adelaide Oval"},
+        {"date": "2026-04-25", "time": "20:15", "home": "Fremantle",    "away": "Carlton",          "venue": "Perth Stadium"},
+        {"date": "2026-04-26", "time": "13:10", "home": "St Kilda",     "away": "West Coast",       "venue": "Docklands"},
+        {"date": "2026-04-26", "time": "15:15", "home": "Brisbane Lions","away": "Adelaide",        "venue": "Gabba"},
+        {"date": "2026-04-26", "time": "16:40", "home": "Greater Western Sydney","away": "North Melbourne","venue": "Manuka Oval"}
+      ]
+    },
+    {
+      "round": 8,
+      "label": "Round 8",
+      "slug": "afl-round-8-tips-2026",
+      "matches": [
+        {"date": "2026-04-30", "time": "19:30", "home": "Collingwood",  "away": "Hawthorn",         "venue": "M.C.G."},
+        {"date": "2026-05-01", "time": "19:30", "home": "Fremantle",    "away": "Western Bulldogs", "venue": "Docklands"},
+        {"date": "2026-05-01", "time": "20:10", "home": "Adelaide",     "away": "Port Adelaide",    "venue": "Adelaide Oval"},
+        {"date": "2026-05-02", "time": "12:35", "home": "Essendon",     "away": "Brisbane Lions",   "venue": "Docklands"},
+        {"date": "2026-05-02", "time": "16:15", "home": "West Coast",   "away": "Richmond",         "venue": "Perth Stadium"},
+        {"date": "2026-05-02", "time": "16:35", "home": "Geelong",      "away": "North Melbourne",  "venue": "Kardinia Park"},
+        {"date": "2026-05-02", "time": "19:35", "home": "Carlton",      "away": "St Kilda",         "venue": "Docklands"},
+        {"date": "2026-05-03", "time": "15:15", "home": "Sydney",       "away": "Melbourne",        "venue": "S.C.G."},
+        {"date": "2026-05-03", "time": "19:20", "home": "Gold Coast",   "away": "Greater Western Sydney","venue": "Carrara"}
+      ]
+    },
+    {
+      "round": 9,
+      "label": "Round 9",
+      "slug": "afl-round-9-tips-2026",
+      "matches": [
+        {"date": "2026-05-07", "time": "20:10", "home": "Fremantle",    "away": "Hawthorn",         "venue": "Perth Stadium"},
+        {"date": "2026-05-08", "time": "19:30", "home": "Brisbane Lions","away": "Carlton",         "venue": "Gabba"},
+        {"date": "2026-05-08", "time": "20:10", "home": "Port Adelaide","away": "Western Bulldogs", "venue": "Adelaide Oval"},
+        {"date": "2026-05-09", "time": "13:15", "home": "North Melbourne","away": "Sydney",         "venue": "Docklands"},
+        {"date": "2026-05-09", "time": "16:15", "home": "Greater Western Sydney","away": "Essendon","venue": "Sydney Showground"},
+        {"date": "2026-05-09", "time": "19:10", "home": "Gold Coast",   "away": "St Kilda",         "venue": "Marrara Oval"},
+        {"date": "2026-05-09", "time": "19:35", "home": "Geelong",      "away": "Collingwood",      "venue": "M.C.G."},
+        {"date": "2026-05-10", "time": "13:10", "home": "Melbourne",    "away": "West Coast",       "venue": "Docklands"},
+        {"date": "2026-05-10", "time": "15:15", "home": "Richmond",     "away": "Adelaide",         "venue": "M.C.G."}
+      ]
+    },
+    {
+      "round": 10,
+      "label": "Round 10",
+      "slug": "afl-round-10-tips-2026",
+      "matches": [
+        {"date": "2026-05-14", "time": "19:30", "home": "Brisbane Lions","away": "Geelong",         "venue": "Gabba"},
+        {"date": "2026-05-15", "time": "19:30", "home": "Sydney",       "away": "Collingwood",      "venue": "S.C.G."},
+        {"date": "2026-05-15", "time": "20:10", "home": "Gold Coast",   "away": "Port Adelaide",    "venue": "Marrara Oval"},
+        {"date": "2026-05-16", "time": "13:15", "home": "Adelaide",     "away": "North Melbourne",  "venue": "Adelaide Oval"},
+        {"date": "2026-05-16", "time": "16:15", "home": "Melbourne",    "away": "Hawthorn",         "venue": "M.C.G."},
+        {"date": "2026-05-16", "time": "19:35", "home": "Carlton",      "away": "Western Bulldogs", "venue": "Docklands"},
+        {"date": "2026-05-17", "time": "13:10", "home": "Essendon",     "away": "Fremantle",        "venue": "M.C.G."},
+        {"date": "2026-05-17", "time": "15:15", "home": "St Kilda",     "away": "Richmond",         "venue": "Docklands"},
+        {"date": "2026-05-17", "time": "18:15", "home": "West Coast",   "away": "Greater Western Sydney","venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 11,
+      "label": "Round 11",
+      "slug": "afl-round-11-tips-2026",
+      "matches": [
+        {"date": "2026-05-21", "time": "19:30", "home": "Hawthorn",     "away": "Adelaide",         "venue": "York Park"},
+        {"date": "2026-05-22", "time": "19:40", "home": "Richmond",     "away": "Essendon",         "venue": "M.C.G."},
+        {"date": "2026-05-22", "time": "20:30", "home": "Fremantle",    "away": "St Kilda",         "venue": "Perth Stadium"},
+        {"date": "2026-05-23", "time": "13:15", "home": "North Melbourne","away": "Gold Coast",     "venue": "Docklands"},
+        {"date": "2026-05-23", "time": "16:15", "home": "Geelong",      "away": "Sydney",           "venue": "Kardinia Park"},
+        {"date": "2026-05-23", "time": "16:35", "home": "Collingwood",  "away": "West Coast",       "venue": "M.C.G."},
+        {"date": "2026-05-23", "time": "19:35", "home": "Port Adelaide","away": "Carlton",          "venue": "Adelaide Oval"},
+        {"date": "2026-05-24", "time": "12:30", "home": "Greater Western Sydney","away": "Brisbane Lions","venue": "Sydney Showground"},
+        {"date": "2026-05-24", "time": "15:15", "home": "Western Bulldogs","away": "Melbourne",     "venue": "Docklands"}
+      ]
+    },
+    {
+      "round": 12,
+      "label": "Round 12",
+      "slug": "afl-round-12-tips-2026",
+      "matches": [
+        {"date": "2026-05-28", "time": "19:30", "home": "St Kilda",     "away": "Hawthorn",         "venue": "Docklands"},
+        {"date": "2026-05-29", "time": "19:40", "home": "Carlton",      "away": "Geelong",          "venue": "M.C.G."},
+        {"date": "2026-05-30", "time": "13:15", "home": "Sydney",       "away": "Richmond",         "venue": "S.C.G."},
+        {"date": "2026-05-30", "time": "16:15", "home": "Brisbane Lions","away": "Fremantle",       "venue": "Gabba"},
+        {"date": "2026-05-30", "time": "19:35", "home": "Western Bulldogs","away": "Collingwood",   "venue": "Docklands"},
+        {"date": "2026-05-31", "time": "15:15", "home": "Melbourne",    "away": "Greater Western Sydney","venue": "Traeger Park"},
+        {"date": "2026-05-31", "time": "19:20", "home": "West Coast",   "away": "Essendon",         "venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 13,
+      "label": "Round 13",
+      "slug": "afl-round-13-tips-2026",
+      "matches": [
+        {"date": "2026-06-04", "time": "19:30", "home": "Adelaide",     "away": "Geelong",          "venue": "Adelaide Oval"},
+        {"date": "2026-06-05", "time": "19:40", "home": "Hawthorn",     "away": "Western Bulldogs", "venue": "M.C.G."},
+        {"date": "2026-06-06", "time": "14:15", "home": "North Melbourne","away": "Fremantle",      "venue": "Hands Oval"},
+        {"date": "2026-06-06", "time": "17:15", "home": "Gold Coast",   "away": "Brisbane Lions",   "venue": "Carrara"},
+        {"date": "2026-06-06", "time": "20:15", "home": "West Coast",   "away": "Port Adelaide",    "venue": "Perth Stadium"},
+        {"date": "2026-06-07", "time": "15:15", "home": "Sydney",       "away": "St Kilda",         "venue": "S.C.G."},
+        {"date": "2026-06-07", "time": "19:20", "home": "Essendon",     "away": "Carlton",          "venue": "M.C.G."},
+        {"date": "2026-06-08", "time": "15:15", "home": "Collingwood",  "away": "Melbourne",        "venue": "M.C.G."}
+      ]
+    },
+    {
+      "round": 14,
+      "label": "Round 14",
+      "slug": "afl-round-14-tips-2026",
+      "matches": [
+        {"date": "2026-06-11", "time": "19:30", "home": "Western Bulldogs","away": "Adelaide",      "venue": "Docklands"},
+        {"date": "2026-06-12", "time": "19:40", "home": "Geelong",      "away": "Gold Coast",       "venue": "Kardinia Park"},
+        {"date": "2026-06-13", "time": "13:15", "home": "Melbourne",    "away": "Essendon",         "venue": "M.C.G."},
+        {"date": "2026-06-13", "time": "16:15", "home": "North Melbourne","away": "West Coast",     "venue": "Perth Stadium"},
+        {"date": "2026-06-13", "time": "19:35", "home": "Port Adelaide","away": "Sydney",           "venue": "Adelaide Oval"},
+        {"date": "2026-06-14", "time": "13:10", "home": "Richmond",     "away": "Brisbane Lions",   "venue": "Bellerive Oval"},
+        {"date": "2026-06-14", "time": "15:15", "home": "St Kilda",     "away": "Greater Western Sydney","venue": "Docklands"}
+      ]
+    },
+    {
+      "round": 15,
+      "label": "Round 15",
+      "slug": "afl-round-15-tips-2026",
+      "matches": [
+        {"date": "2026-06-18", "time": "20:10", "home": "Fremantle",    "away": "Geelong",          "venue": "Perth Stadium"},
+        {"date": "2026-06-19", "time": "19:40", "home": "Gold Coast",   "away": "Hawthorn",         "venue": "Carrara"},
+        {"date": "2026-06-20", "time": "13:15", "home": "Adelaide",     "away": "Melbourne",        "venue": "Adelaide Oval"},
+        {"date": "2026-06-20", "time": "16:15", "home": "Greater Western Sydney","away": "Carlton", "venue": "Sydney Showground"},
+        {"date": "2026-06-20", "time": "19:35", "home": "Collingwood",  "away": "Port Adelaide",    "venue": "M.C.G."},
+        {"date": "2026-06-21", "time": "13:10", "home": "Richmond",     "away": "North Melbourne",  "venue": "M.C.G."},
+        {"date": "2026-06-21", "time": "15:15", "home": "St Kilda",     "away": "Western Bulldogs", "venue": "Docklands"}
+      ]
+    },
+    {
+      "round": 16,
+      "label": "Round 16",
+      "slug": "afl-round-16-tips-2026",
+      "matches": [
+        {"date": "2026-06-22", "time": "12:00", "home": "Brisbane Lions","away": "Sydney",          "venue": "Gabba"},
+        {"date": "2026-06-22", "time": "12:00", "home": "Carlton",      "away": "West Coast",       "venue": "Docklands"},
+        {"date": "2026-06-22", "time": "12:00", "home": "Collingwood",  "away": "Richmond",         "venue": "M.C.G."},
+        {"date": "2026-06-22", "time": "12:00", "home": "Hawthorn",     "away": "Greater Western Sydney","venue": "M.C.G."},
+        {"date": "2026-06-22", "time": "12:00", "home": "North Melbourne","away": "Essendon",       "venue": "Docklands"},
+        {"date": "2026-06-22", "time": "12:30", "home": "Port Adelaide","away": "Adelaide",         "venue": "Adelaide Oval"},
+        {"date": "2026-06-22", "time": "14:00", "home": "Fremantle",    "away": "Gold Coast",       "venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 17,
+      "label": "Round 17",
+      "slug": "afl-round-17-tips-2026",
+      "matches": [
+        {"date": "2026-06-29", "time": "12:00", "home": "Essendon",     "away": "St Kilda",         "venue": "Docklands"},
+        {"date": "2026-06-29", "time": "12:00", "home": "Geelong",      "away": "Brisbane Lions",   "venue": "Kardinia Park"},
+        {"date": "2026-06-29", "time": "12:00", "home": "Gold Coast",   "away": "Collingwood",      "venue": "Carrara"},
+        {"date": "2026-06-29", "time": "12:00", "home": "Greater Western Sydney","away": "Fremantle","venue": "Manuka Oval"},
+        {"date": "2026-06-29", "time": "12:00", "home": "Hawthorn",     "away": "Melbourne",        "venue": "York Park"},
+        {"date": "2026-06-29", "time": "12:00", "home": "Richmond",     "away": "Carlton",          "venue": "M.C.G."},
+        {"date": "2026-06-29", "time": "12:00", "home": "Sydney",       "away": "Western Bulldogs", "venue": "S.C.G."},
+        {"date": "2026-06-29", "time": "12:30", "home": "Port Adelaide","away": "North Melbourne",  "venue": "Adelaide Oval"},
+        {"date": "2026-06-29", "time": "14:00", "home": "West Coast",   "away": "Adelaide",         "venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 18,
+      "label": "Round 18",
+      "slug": "afl-round-18-tips-2026",
+      "matches": [
+        {"date": "2026-07-06", "time": "12:00", "home": "Brisbane Lions","away": "Essendon",        "venue": "Gabba"},
+        {"date": "2026-07-06", "time": "12:00", "home": "Carlton",      "away": "Hawthorn",         "venue": "M.C.G."},
+        {"date": "2026-07-06", "time": "12:00", "home": "Collingwood",  "away": "North Melbourne",  "venue": "Docklands"},
+        {"date": "2026-07-06", "time": "12:00", "home": "Greater Western Sydney","away": "Geelong", "venue": "Sydney Showground"},
+        {"date": "2026-07-06", "time": "12:00", "home": "Melbourne",    "away": "Richmond",         "venue": "M.C.G."},
+        {"date": "2026-07-06", "time": "12:00", "home": "St Kilda",     "away": "Port Adelaide",    "venue": "Docklands"},
+        {"date": "2026-07-06", "time": "12:00", "home": "Western Bulldogs","away": "West Coast",    "venue": "Docklands"},
+        {"date": "2026-07-06", "time": "12:30", "home": "Adelaide",     "away": "Gold Coast",       "venue": "Adelaide Oval"},
+        {"date": "2026-07-06", "time": "14:00", "home": "Fremantle",    "away": "Sydney",           "venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 19,
+      "label": "Round 19",
+      "slug": "afl-round-19-tips-2026",
+      "matches": [
+        {"date": "2026-07-13", "time": "12:00", "home": "Collingwood",  "away": "Carlton",          "venue": "M.C.G."},
+        {"date": "2026-07-13", "time": "12:00", "home": "Essendon",     "away": "Greater Western Sydney","venue": "Docklands"},
+        {"date": "2026-07-13", "time": "12:00", "home": "Geelong",      "away": "St Kilda",         "venue": "Kardinia Park"},
+        {"date": "2026-07-13", "time": "12:00", "home": "Gold Coast",   "away": "Western Bulldogs", "venue": "Carrara"},
+        {"date": "2026-07-13", "time": "12:00", "home": "North Melbourne","away": "Melbourne",      "venue": "Docklands"},
+        {"date": "2026-07-13", "time": "12:00", "home": "Richmond",     "away": "Hawthorn",         "venue": "M.C.G."},
+        {"date": "2026-07-13", "time": "12:00", "home": "Sydney",       "away": "Adelaide",         "venue": "S.C.G."},
+        {"date": "2026-07-13", "time": "12:30", "home": "Port Adelaide","away": "Fremantle",        "venue": "Adelaide Oval"},
+        {"date": "2026-07-13", "time": "14:00", "home": "West Coast",   "away": "Brisbane Lions",   "venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 20,
+      "label": "Round 20",
+      "slug": "afl-round-20-tips-2026",
+      "matches": [
+        {"date": "2026-07-20", "time": "12:00", "home": "Brisbane Lions","away": "Port Adelaide",   "venue": "Gabba"},
+        {"date": "2026-07-20", "time": "12:00", "home": "Carlton",      "away": "Gold Coast",       "venue": "Docklands"},
+        {"date": "2026-07-20", "time": "12:00", "home": "Greater Western Sydney","away": "Sydney",  "venue": "Sydney Showground"},
+        {"date": "2026-07-20", "time": "12:00", "home": "Hawthorn",     "away": "Essendon",         "venue": "M.C.G."},
+        {"date": "2026-07-20", "time": "12:00", "home": "Melbourne",    "away": "Geelong",          "venue": "M.C.G."},
+        {"date": "2026-07-20", "time": "12:00", "home": "North Melbourne","away": "St Kilda",       "venue": "Docklands"},
+        {"date": "2026-07-20", "time": "12:00", "home": "Western Bulldogs","away": "Richmond",      "venue": "Docklands"},
+        {"date": "2026-07-20", "time": "12:30", "home": "Adelaide",     "away": "Collingwood",      "venue": "Adelaide Oval"},
+        {"date": "2026-07-20", "time": "14:00", "home": "Fremantle",    "away": "West Coast",       "venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 21,
+      "label": "Round 21",
+      "slug": "afl-round-21-tips-2026",
+      "matches": [
+        {"date": "2026-07-27", "time": "12:00", "home": "Carlton",      "away": "Brisbane Lions",   "venue": "Docklands"},
+        {"date": "2026-07-27", "time": "12:00", "home": "Collingwood",  "away": "Geelong",          "venue": "M.C.G."},
+        {"date": "2026-07-27", "time": "12:00", "home": "Essendon",     "away": "Adelaide",         "venue": "Docklands"},
+        {"date": "2026-07-27", "time": "12:00", "home": "Gold Coast",   "away": "Melbourne",        "venue": "Carrara"},
+        {"date": "2026-07-27", "time": "12:00", "home": "Hawthorn",     "away": "North Melbourne",  "venue": "York Park"},
+        {"date": "2026-07-27", "time": "12:00", "home": "Richmond",     "away": "West Coast",       "venue": "M.C.G."},
+        {"date": "2026-07-27", "time": "12:00", "home": "St Kilda",     "away": "Sydney",           "venue": "Docklands"},
+        {"date": "2026-07-27", "time": "12:30", "home": "Port Adelaide","away": "Greater Western Sydney","venue": "Adelaide Oval"},
+        {"date": "2026-07-27", "time": "14:00", "home": "Fremantle",    "away": "Western Bulldogs", "venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 22,
+      "label": "Round 22",
+      "slug": "afl-round-22-tips-2026",
+      "matches": [
+        {"date": "2026-08-03", "time": "12:00", "home": "Brisbane Lions","away": "Hawthorn",        "venue": "Gabba"},
+        {"date": "2026-08-03", "time": "12:00", "home": "Geelong",      "away": "Essendon",         "venue": "Kardinia Park"},
+        {"date": "2026-08-03", "time": "12:00", "home": "Greater Western Sydney","away": "Gold Coast","venue": "Manuka Oval"},
+        {"date": "2026-08-03", "time": "12:00", "home": "Melbourne",    "away": "Fremantle",        "venue": "M.C.G."},
+        {"date": "2026-08-03", "time": "12:00", "home": "St Kilda",     "away": "Carlton",          "venue": "Docklands"},
+        {"date": "2026-08-03", "time": "12:00", "home": "Sydney",       "away": "Port Adelaide",    "venue": "S.C.G."},
+        {"date": "2026-08-03", "time": "12:00", "home": "Western Bulldogs","away": "North Melbourne","venue": "Docklands"},
+        {"date": "2026-08-03", "time": "12:30", "home": "Adelaide",     "away": "Richmond",         "venue": "Adelaide Oval"},
+        {"date": "2026-08-03", "time": "14:00", "home": "West Coast",   "away": "Collingwood",      "venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 23,
+      "label": "Round 23",
+      "slug": "afl-round-23-tips-2026",
+      "matches": [
+        {"date": "2026-08-10", "time": "12:00", "home": "Brisbane Lions","away": "Gold Coast",      "venue": "Gabba"},
+        {"date": "2026-08-10", "time": "12:00", "home": "Essendon",     "away": "Sydney",           "venue": "M.C.G."},
+        {"date": "2026-08-10", "time": "12:00", "home": "Greater Western Sydney","away": "West Coast","venue": "Sydney Showground"},
+        {"date": "2026-08-10", "time": "12:00", "home": "Hawthorn",     "away": "Collingwood",      "venue": "M.C.G."},
+        {"date": "2026-08-10", "time": "12:00", "home": "North Melbourne","away": "Geelong",        "venue": "Docklands"},
+        {"date": "2026-08-10", "time": "12:00", "home": "Richmond",     "away": "St Kilda",         "venue": "M.C.G."},
+        {"date": "2026-08-10", "time": "12:00", "home": "Western Bulldogs","away": "Carlton",       "venue": "Docklands"},
+        {"date": "2026-08-10", "time": "12:30", "home": "Port Adelaide","away": "Melbourne",        "venue": "Adelaide Oval"},
+        {"date": "2026-08-10", "time": "14:00", "home": "Fremantle",    "away": "Adelaide",         "venue": "Perth Stadium"}
+      ]
+    },
+    {
+      "round": 24,
+      "label": "Round 24",
+      "slug": "afl-round-24-tips-2026",
+      "matches": [
+        {"date": "2026-08-17", "time": "12:00", "home": "Carlton",      "away": "Fremantle",        "venue": "Docklands"},
+        {"date": "2026-08-17", "time": "12:00", "home": "Collingwood",  "away": "Brisbane Lions",   "venue": "M.C.G."},
+        {"date": "2026-08-17", "time": "12:00", "home": "Essendon",     "away": "Port Adelaide",    "venue": "Docklands"},
+        {"date": "2026-08-17", "time": "12:00", "home": "Geelong",      "away": "Richmond",         "venue": "Kardinia Park"},
+        {"date": "2026-08-17", "time": "12:00", "home": "Melbourne",    "away": "Western Bulldogs", "venue": "M.C.G."},
+        {"date": "2026-08-17", "time": "12:00", "home": "St Kilda",     "away": "Gold Coast",       "venue": "Docklands"},
+        {"date": "2026-08-17", "time": "12:00", "home": "Sydney",       "away": "North Melbourne",  "venue": "S.C.G."},
+        {"date": "2026-08-17", "time": "12:30", "home": "Adelaide",     "away": "Greater Western Sydney","venue": "Adelaide Oval"},
+        {"date": "2026-08-17", "time": "14:00", "home": "West Coast",   "away": "Hawthorn",         "venue": "Perth Stadium"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,485 @@
+{
+  "season": 2026,
+  "competition": "NRL",
+  "_notes": "Round 9 fixtures confirmed from existing match pages. R1 Las Vegas games confirmed from image. Other rounds extracted from official NRL fixture card — verify venues and times before generating rich content for each round.",
+  "teams": [
+    {"name": "Brisbane Broncos",        "slug": "broncos",      "abbr": "BRI", "short": "Broncos",    "home_venue": "Suncorp Stadium"},
+    {"name": "Canberra Raiders",         "slug": "raiders",      "abbr": "CAN", "short": "Raiders",    "home_venue": "GIO Stadium"},
+    {"name": "Canterbury Bulldogs",      "slug": "bulldogs",     "abbr": "CBY", "short": "Bulldogs",   "home_venue": "Accor Stadium"},
+    {"name": "Cronulla Sharks",          "slug": "sharks",       "abbr": "CRO", "short": "Sharks",     "home_venue": "PointsBet Stadium"},
+    {"name": "Gold Coast Titans",        "slug": "titans",       "abbr": "GCT", "short": "Titans",     "home_venue": "Cbus Super Stadium"},
+    {"name": "Manly Sea Eagles",         "slug": "sea-eagles",   "abbr": "MAN", "short": "Sea Eagles", "home_venue": "4 Pines Park"},
+    {"name": "Melbourne Storm",          "slug": "storm",        "abbr": "MEL", "short": "Storm",      "home_venue": "AAMI Park"},
+    {"name": "Newcastle Knights",        "slug": "knights",      "abbr": "NEW", "short": "Knights",    "home_venue": "McDonald Jones Stadium"},
+    {"name": "North Queensland Cowboys", "slug": "cowboys",      "abbr": "NQC", "short": "Cowboys",    "home_venue": "Qld Country Bank Stadium"},
+    {"name": "Parramatta Eels",          "slug": "eels",         "abbr": "PAR", "short": "Eels",       "home_venue": "CommBank Stadium"},
+    {"name": "Penrith Panthers",         "slug": "panthers",     "abbr": "PEN", "short": "Panthers",   "home_venue": "BlueBet Stadium"},
+    {"name": "South Sydney Rabbitohs",   "slug": "rabbitohs",    "abbr": "SSY", "short": "Rabbitohs",  "home_venue": "Accor Stadium"},
+    {"name": "St George Illawarra Dragons","slug": "dragons",    "abbr": "SGI", "short": "Dragons",    "home_venue": "Netstrata Jubilee Stadium"},
+    {"name": "Sydney Roosters",          "slug": "roosters",     "abbr": "SYR", "short": "Roosters",   "home_venue": "Allianz Stadium"},
+    {"name": "New Zealand Warriors",     "slug": "warriors",     "abbr": "NZW", "short": "Warriors",   "home_venue": "Go Media Stadium"},
+    {"name": "Wests Tigers",             "slug": "wests-tigers", "abbr": "WST", "short": "Wests Tigers","home_venue": "CommBank Stadium"},
+    {"name": "Dolphins",                 "slug": "dolphins",     "abbr": "DOL", "short": "Dolphins",   "home_venue": "Kayo Stadium"}
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "label": "Round 1",
+      "slug": "nrl-round-1-tips-2026",
+      "_confirmed": "Las Vegas games confirmed from image. Regular games partially confirmed.",
+      "matches": [
+        {"date": "2026-03-01", "time": "13:15", "home": "Knights",    "away": "Cowboys",    "venue": "Allegiant Stadium, Las Vegas"},
+        {"date": "2026-03-01", "time": "15:30", "home": "Bulldogs",   "away": "Dragons",    "venue": "Allegiant Stadium, Las Vegas"},
+        {"date": "2026-03-05", "time": "20:00", "home": "Storm",      "away": "Eels",       "venue": "AAMI Park"},
+        {"date": "2026-03-06", "time": "18:00", "home": "Warriors",   "away": "Roosters",   "venue": "Go Media Stadium"},
+        {"date": "2026-03-06", "time": "20:00", "home": "Broncos",    "away": "Panthers",   "venue": "Suncorp Stadium"},
+        {"date": "2026-03-07", "time": "17:00", "home": "Sharks",     "away": "Titans",     "venue": "PointsBet Stadium"},
+        {"date": "2026-03-07", "time": "19:30", "home": "Sea Eagles", "away": "Raiders",    "venue": "4 Pines Park"},
+        {"date": "2026-03-08", "time": "16:05", "home": "Dolphins",   "away": "Rabbitohs",  "venue": "Kayo Stadium"}
+      ],
+      "bye": "Wests Tigers"
+    },
+    {
+      "round": 2,
+      "label": "Round 2",
+      "slug": "nrl-round-2-tips-2026",
+      "_confirmed": "Thu and Fri games confirmed from image. Sat-Sun estimated.",
+      "matches": [
+        {"date": "2026-03-12", "time": "20:00", "home": "Broncos",    "away": "Eels",       "venue": "Suncorp Stadium"},
+        {"date": "2026-03-13", "time": "18:00", "home": "Warriors",   "away": "Raiders",    "venue": "Go Media Stadium"},
+        {"date": "2026-03-13", "time": "19:30", "home": "Cowboys",    "away": "Storm",      "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-03-14", "time": "15:00", "home": "Panthers",   "away": "Sea Eagles", "venue": "BlueBet Stadium"},
+        {"date": "2026-03-14", "time": "17:30", "home": "Roosters",   "away": "Bulldogs",   "venue": "Allianz Stadium"},
+        {"date": "2026-03-14", "time": "19:30", "home": "Titans",     "away": "Knights",    "venue": "Cbus Super Stadium"},
+        {"date": "2026-03-15", "time": "14:00", "home": "Sharks",     "away": "Rabbitohs",  "venue": "PointsBet Stadium"},
+        {"date": "2026-03-15", "time": "16:05", "home": "Dragons",    "away": "Wests Tigers","venue": "Netstrata Jubilee Stadium"}
+      ],
+      "bye": "Dolphins"
+    },
+    {
+      "round": 3,
+      "label": "Round 3",
+      "slug": "nrl-round-3-tips-2026",
+      "_confirmed": "Raiders v Bulldogs (Thu) confirmed from image. Other games estimated.",
+      "matches": [
+        {"date": "2026-03-19", "time": "20:00", "home": "Raiders",    "away": "Bulldogs",   "venue": "GIO Stadium"},
+        {"date": "2026-03-20", "time": "18:00", "home": "Roosters",   "away": "Panthers",   "venue": "Allianz Stadium"},
+        {"date": "2026-03-20", "time": "20:00", "home": "Warriors",   "away": "Broncos",    "venue": "Go Media Stadium"},
+        {"date": "2026-03-21", "time": "15:00", "home": "Knights",    "away": "Cowboys",    "venue": "McDonald Jones Stadium"},
+        {"date": "2026-03-21", "time": "17:30", "home": "Sharks",     "away": "Dolphins",   "venue": "PointsBet Stadium"},
+        {"date": "2026-03-21", "time": "19:30", "home": "Storm",      "away": "Wests Tigers","venue": "AAMI Park"},
+        {"date": "2026-03-22", "time": "14:00", "home": "Eels",       "away": "Sea Eagles", "venue": "CommBank Stadium"},
+        {"date": "2026-03-22", "time": "16:05", "home": "Titans",     "away": "Rabbitohs",  "venue": "Cbus Super Stadium"}
+      ],
+      "bye": "Dragons"
+    },
+    {
+      "round": 4,
+      "label": "Round 4",
+      "slug": "nrl-round-4-tips-2026",
+      "_confirmed": "Panthers v Eels, Cowboys v Storm, Raiders v Sharks, Titans v Dragons confirmed from image. Bye: Rabbitohs confirmed.",
+      "matches": [
+        {"date": "2026-03-26", "time": "20:00", "home": "Broncos",    "away": "Warriors",   "venue": "Suncorp Stadium"},
+        {"date": "2026-03-27", "time": "18:00", "home": "Roosters",   "away": "Sea Eagles", "venue": "Allianz Stadium"},
+        {"date": "2026-03-27", "time": "20:00", "home": "Knights",    "away": "Bulldogs",   "venue": "McDonald Jones Stadium"},
+        {"date": "2026-03-28", "time": "17:00", "home": "Panthers",   "away": "Eels",       "venue": "CommBank Stadium"},
+        {"date": "2026-03-28", "time": "19:30", "home": "Cowboys",    "away": "Storm",      "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-03-28", "time": "19:30", "home": "Dolphins",   "away": "Wests Tigers","venue": "Kayo Stadium"},
+        {"date": "2026-03-29", "time": "16:05", "home": "Raiders",    "away": "Sharks",     "venue": "GIO Stadium"},
+        {"date": "2026-03-29", "time": "18:15", "home": "Titans",     "away": "Dragons",    "venue": "Cbus Super Stadium"}
+      ],
+      "bye": "Rabbitohs"
+    },
+    {
+      "round": 5,
+      "label": "Round 5",
+      "slug": "nrl-round-5-tips-2026",
+      "_confirmed": "Partially confirmed from image. Bye: Sharks confirmed.",
+      "matches": [
+        {"date": "2026-04-02", "time": "16:05", "home": "Rabbitohs",  "away": "Bulldogs",   "venue": "Accor Stadium"},
+        {"date": "2026-04-02", "time": "20:00", "home": "Cowboys",    "away": "Broncos",    "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-04-03", "time": "16:00", "home": "Roosters",   "away": "Panthers",   "venue": "Allianz Stadium"},
+        {"date": "2026-04-03", "time": "18:00", "home": "Sea Eagles", "away": "Eels",       "venue": "4 Pines Park"},
+        {"date": "2026-04-04", "time": "15:00", "home": "Storm",      "away": "Raiders",    "venue": "AAMI Park"},
+        {"date": "2026-04-04", "time": "17:30", "home": "Knights",    "away": "Warriors",   "venue": "McDonald Jones Stadium"},
+        {"date": "2026-04-05", "time": "14:00", "home": "Titans",     "away": "Wests Tigers","venue": "Cbus Super Stadium"},
+        {"date": "2026-04-05", "time": "16:05", "home": "Dolphins",   "away": "Dragons",    "venue": "Kayo Stadium"}
+      ],
+      "bye": "Sharks"
+    },
+    {
+      "round": 6,
+      "label": "Round 6",
+      "slug": "nrl-round-6-tips-2026",
+      "_confirmed": "Estimated from image — verify before generating rich content.",
+      "matches": [
+        {"date": "2026-04-09", "time": "20:00", "home": "Broncos",    "away": "Warriors",   "venue": "Suncorp Stadium"},
+        {"date": "2026-04-10", "time": "18:00", "home": "Roosters",   "away": "Cowboys",    "venue": "Allianz Stadium"},
+        {"date": "2026-04-10", "time": "20:00", "home": "Panthers",   "away": "Eels",       "venue": "BlueBet Stadium"},
+        {"date": "2026-04-11", "time": "15:00", "home": "Storm",      "away": "Sharks",     "venue": "AAMI Park"},
+        {"date": "2026-04-11", "time": "17:30", "home": "Sea Eagles", "away": "Bulldogs",   "venue": "4 Pines Park"},
+        {"date": "2026-04-11", "time": "19:30", "home": "Titans",     "away": "Rabbitohs",  "venue": "Cbus Super Stadium"},
+        {"date": "2026-04-12", "time": "14:00", "home": "Raiders",    "away": "Dragons",    "venue": "GIO Stadium"},
+        {"date": "2026-04-12", "time": "16:05", "home": "Knights",    "away": "Wests Tigers","venue": "McDonald Jones Stadium"}
+      ],
+      "bye": "Dolphins"
+    },
+    {
+      "round": 7,
+      "label": "Round 7",
+      "slug": "nrl-round-7-tips-2026",
+      "_confirmed": "Estimated from image — verify before generating rich content.",
+      "matches": [
+        {"date": "2026-04-16", "time": "19:50", "home": "Sea Eagles", "away": "Eels",       "venue": "4 Pines Park"},
+        {"date": "2026-04-17", "time": "18:00", "home": "Raiders",    "away": "Storm",      "venue": "GIO Stadium"},
+        {"date": "2026-04-17", "time": "20:00", "home": "Dolphins",   "away": "Panthers",   "venue": "Kayo Stadium"},
+        {"date": "2026-04-18", "time": "15:00", "home": "Rabbitohs",  "away": "Cowboys",    "venue": "Accor Stadium"},
+        {"date": "2026-04-18", "time": "17:30", "home": "Broncos",    "away": "Dragons",    "venue": "Suncorp Stadium"},
+        {"date": "2026-04-18", "time": "19:30", "home": "Roosters",   "away": "Wests Tigers","venue": "Allianz Stadium"},
+        {"date": "2026-04-19", "time": "14:00", "home": "Warriors",   "away": "Titans",     "venue": "Go Media Stadium"},
+        {"date": "2026-04-19", "time": "16:05", "home": "Bulldogs",   "away": "Knights",    "venue": "Accor Stadium"}
+      ],
+      "bye": "Sharks"
+    },
+    {
+      "round": 8,
+      "label": "Round 8",
+      "slug": "nrl-round-8-tips-2026",
+      "_confirmed": "Tigers v Raiders (Thu Apr 23) confirmed from image. Anzac Day games estimated.",
+      "matches": [
+        {"date": "2026-04-23", "time": "19:50", "home": "Wests Tigers","away": "Raiders",   "venue": "Leichhardt Oval"},
+        {"date": "2026-04-24", "time": "19:30", "home": "Cowboys",    "away": "Storm",      "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-04-25", "time": "16:00", "home": "Broncos",    "away": "Roosters",   "venue": "Suncorp Stadium"},
+        {"date": "2026-04-25", "time": "17:30", "home": "Bulldogs",   "away": "Warriors",   "venue": "Accor Stadium"},
+        {"date": "2026-04-25", "time": "19:35", "home": "Panthers",   "away": "Dragons",    "venue": "BlueBet Stadium"},
+        {"date": "2026-04-26", "time": "14:00", "home": "Sea Eagles", "away": "Eels",       "venue": "4 Pines Park"},
+        {"date": "2026-04-26", "time": "16:05", "home": "Titans",     "away": "Panthers",   "venue": "Cbus Super Stadium"},
+        {"date": "2026-04-26", "time": "18:15", "home": "Knights",    "away": "Sharks",     "venue": "McDonald Jones Stadium"}
+      ],
+      "bye": "Dolphins"
+    },
+    {
+      "round": 9,
+      "label": "Round 9",
+      "slug": "nrl-round-9-tips-2026",
+      "_confirmed": "ALL FIXTURES CONFIRMED from existing match pages.",
+      "matches": [
+        {"date": "2026-05-01", "time": "18:00", "home": "Bulldogs",   "away": "Cowboys",    "venue": "Accor Stadium"},
+        {"date": "2026-05-01", "time": "20:00", "home": "Dolphins",   "away": "Storm",      "venue": "Kayo Stadium"},
+        {"date": "2026-05-02", "time": "15:00", "home": "Titans",     "away": "Raiders",    "venue": "Cbus Super Stadium"},
+        {"date": "2026-05-02", "time": "17:30", "home": "Eels",       "away": "Warriors",   "venue": "CommBank Stadium"},
+        {"date": "2026-05-02", "time": "19:35", "home": "Roosters",   "away": "Broncos",    "venue": "Allianz Stadium"},
+        {"date": "2026-05-03", "time": "14:00", "home": "Knights",    "away": "Rabbitohs",  "venue": "McDonald Jones Stadium"},
+        {"date": "2026-05-03", "time": "16:05", "home": "Sharks",     "away": "Wests Tigers","venue": "PointsBet Stadium"},
+        {"date": "2026-05-03", "time": "18:15", "home": "Panthers",   "away": "Sea Eagles", "venue": "BlueBet Stadium"}
+      ],
+      "bye": "Dragons"
+    },
+    {
+      "round": 10,
+      "label": "Round 10",
+      "slug": "nrl-round-10-tips-2026",
+      "_confirmed": "Dolphins v Bulldogs (Thu May 7) identified from mislabeled match file. Other games estimated.",
+      "matches": [
+        {"date": "2026-05-07", "time": "19:50", "home": "Dolphins",   "away": "Bulldogs",   "venue": "Kayo Stadium"},
+        {"date": "2026-05-08", "time": "18:00", "home": "Cowboys",    "away": "Panthers",   "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-05-08", "time": "20:00", "home": "Roosters",   "away": "Sea Eagles", "venue": "Allianz Stadium"},
+        {"date": "2026-05-09", "time": "15:00", "home": "Storm",      "away": "Knights",    "venue": "AAMI Park"},
+        {"date": "2026-05-09", "time": "17:30", "home": "Dragons",    "away": "Warriors",   "venue": "Netstrata Jubilee Stadium"},
+        {"date": "2026-05-09", "time": "19:30", "home": "Broncos",    "away": "Rabbitohs",  "venue": "Suncorp Stadium"},
+        {"date": "2026-05-10", "time": "14:00", "home": "Raiders",    "away": "Titans",     "venue": "GIO Stadium"},
+        {"date": "2026-05-10", "time": "16:05", "home": "Eels",       "away": "Wests Tigers","venue": "CommBank Stadium"}
+      ],
+      "bye": "Sharks"
+    },
+    {
+      "round": 11,
+      "label": "Round 11",
+      "slug": "nrl-round-11-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-05-14", "time": "20:00", "home": "Panthers",   "away": "Broncos",    "venue": "BlueBet Stadium"},
+        {"date": "2026-05-15", "time": "18:00", "home": "Cowboys",    "away": "Raiders",    "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-05-15", "time": "20:00", "home": "Roosters",   "away": "Storm",      "venue": "Allianz Stadium"},
+        {"date": "2026-05-16", "time": "15:00", "home": "Sharks",     "away": "Bulldogs",   "venue": "PointsBet Stadium"},
+        {"date": "2026-05-16", "time": "17:30", "home": "Sea Eagles", "away": "Titans",     "venue": "4 Pines Park"},
+        {"date": "2026-05-16", "time": "19:30", "home": "Eels",       "away": "Dragons",    "venue": "CommBank Stadium"},
+        {"date": "2026-05-17", "time": "14:00", "home": "Warriors",   "away": "Knights",    "venue": "Go Media Stadium"},
+        {"date": "2026-05-17", "time": "16:05", "home": "Rabbitohs",  "away": "Wests Tigers","venue": "Accor Stadium"}
+      ],
+      "bye": "Dolphins"
+    },
+    {
+      "round": 12,
+      "label": "Round 12",
+      "slug": "nrl-round-12-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-05-21", "time": "19:50", "home": "Bulldogs",   "away": "Storm",      "venue": "Accor Stadium"},
+        {"date": "2026-05-22", "time": "18:00", "home": "Wests Tigers","away": "Cowboys",   "venue": "CommBank Stadium"},
+        {"date": "2026-05-22", "time": "20:00", "home": "Panthers",   "away": "Rabbitohs",  "venue": "BlueBet Stadium"},
+        {"date": "2026-05-23", "time": "15:00", "home": "Raiders",    "away": "Sea Eagles", "venue": "GIO Stadium"},
+        {"date": "2026-05-23", "time": "17:30", "home": "Dolphins",   "away": "Knights",    "venue": "Kayo Stadium"},
+        {"date": "2026-05-23", "time": "19:30", "home": "Titans",     "away": "Roosters",   "venue": "Cbus Super Stadium"},
+        {"date": "2026-05-24", "time": "14:00", "home": "Broncos",    "away": "Dragons",    "venue": "Suncorp Stadium"},
+        {"date": "2026-05-24", "time": "16:05", "home": "Eels",       "away": "Sharks",     "venue": "CommBank Stadium"}
+      ],
+      "bye": "Warriors"
+    },
+    {
+      "round": 13,
+      "label": "Round 13",
+      "slug": "nrl-round-13-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-05-28", "time": "20:00", "home": "Cowboys",    "away": "Bulldogs",   "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-05-29", "time": "18:00", "home": "Roosters",   "away": "Raiders",    "venue": "Allianz Stadium"},
+        {"date": "2026-05-29", "time": "20:00", "home": "Storm",      "away": "Panthers",   "venue": "AAMI Park"},
+        {"date": "2026-05-30", "time": "15:00", "home": "Sea Eagles", "away": "Broncos",    "venue": "4 Pines Park"},
+        {"date": "2026-05-30", "time": "17:30", "home": "Sharks",     "away": "Warriors",   "venue": "PointsBet Stadium"},
+        {"date": "2026-05-30", "time": "19:30", "home": "Knights",    "away": "Dragons",    "venue": "McDonald Jones Stadium"},
+        {"date": "2026-05-31", "time": "14:00", "home": "Titans",     "away": "Eels",       "venue": "Cbus Super Stadium"},
+        {"date": "2026-05-31", "time": "16:05", "home": "Rabbitohs",  "away": "Dolphins",   "venue": "Accor Stadium"}
+      ],
+      "bye": "Wests Tigers"
+    },
+    {
+      "round": 14,
+      "label": "Round 14",
+      "slug": "nrl-round-14-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-06-04", "time": "20:00", "home": "Broncos",    "away": "Cowboys",    "venue": "Suncorp Stadium"},
+        {"date": "2026-06-05", "time": "18:00", "home": "Warriors",   "away": "Panthers",   "venue": "Go Media Stadium"},
+        {"date": "2026-06-05", "time": "20:00", "home": "Roosters",   "away": "Bulldogs",   "venue": "Allianz Stadium"},
+        {"date": "2026-06-06", "time": "15:00", "home": "Storm",      "away": "Titans",     "venue": "AAMI Park"},
+        {"date": "2026-06-06", "time": "17:30", "home": "Sharks",     "away": "Sea Eagles", "venue": "PointsBet Stadium"},
+        {"date": "2026-06-06", "time": "19:30", "home": "Eels",       "away": "Raiders",    "venue": "CommBank Stadium"},
+        {"date": "2026-06-07", "time": "14:00", "home": "Knights",    "away": "Dolphins",   "venue": "McDonald Jones Stadium"},
+        {"date": "2026-06-07", "time": "16:05", "home": "Dragons",    "away": "Rabbitohs",  "venue": "Netstrata Jubilee Stadium"}
+      ],
+      "bye": "Wests Tigers"
+    },
+    {
+      "round": 15,
+      "label": "Round 15",
+      "slug": "nrl-round-15-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-06-11", "time": "20:00", "home": "Panthers",   "away": "Raiders",    "venue": "BlueBet Stadium"},
+        {"date": "2026-06-12", "time": "18:00", "home": "Cowboys",    "away": "Sea Eagles", "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-06-12", "time": "20:00", "home": "Bulldogs",   "away": "Storm",      "venue": "Accor Stadium"},
+        {"date": "2026-06-13", "time": "15:00", "home": "Broncos",    "away": "Sharks",     "venue": "Suncorp Stadium"},
+        {"date": "2026-06-13", "time": "17:30", "home": "Eels",       "away": "Roosters",   "venue": "CommBank Stadium"},
+        {"date": "2026-06-13", "time": "19:30", "home": "Wests Tigers","away": "Titans",    "venue": "CommBank Stadium"},
+        {"date": "2026-06-14", "time": "14:00", "home": "Warriors",   "away": "Dragons",    "venue": "Go Media Stadium"},
+        {"date": "2026-06-14", "time": "16:05", "home": "Rabbitohs",  "away": "Knights",    "venue": "Accor Stadium"}
+      ],
+      "bye": "Dolphins"
+    },
+    {
+      "round": 16,
+      "label": "Round 16",
+      "slug": "nrl-round-16-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-06-18", "time": "20:00", "home": "Roosters",   "away": "Cowboys",    "venue": "Allianz Stadium"},
+        {"date": "2026-06-19", "time": "18:00", "home": "Storm",      "away": "Broncos",    "venue": "AAMI Park"},
+        {"date": "2026-06-19", "time": "20:00", "home": "Panthers",   "away": "Bulldogs",   "venue": "BlueBet Stadium"},
+        {"date": "2026-06-20", "time": "15:00", "home": "Sea Eagles", "away": "Raiders",    "venue": "4 Pines Park"},
+        {"date": "2026-06-20", "time": "17:30", "home": "Sharks",     "away": "Dragons",    "venue": "PointsBet Stadium"},
+        {"date": "2026-06-20", "time": "19:30", "home": "Knights",    "away": "Titans",     "venue": "McDonald Jones Stadium"},
+        {"date": "2026-06-21", "time": "14:00", "home": "Dolphins",   "away": "Eels",       "venue": "Kayo Stadium"},
+        {"date": "2026-06-21", "time": "16:05", "home": "Wests Tigers","away": "Warriors",  "venue": "CommBank Stadium"}
+      ],
+      "bye": "Rabbitohs"
+    },
+    {
+      "round": 17,
+      "label": "Round 17",
+      "slug": "nrl-round-17-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-06-25", "time": "19:50", "home": "Eels",       "away": "Rabbitohs",  "venue": "CommBank Stadium"},
+        {"date": "2026-06-26", "time": "18:00", "home": "Cowboys",    "away": "Warriors",   "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-06-26", "time": "20:00", "home": "Titans",     "away": "Bulldogs",   "venue": "Cbus Super Stadium"},
+        {"date": "2026-06-27", "time": "15:00", "home": "Raiders",    "away": "Broncos",    "venue": "GIO Stadium"},
+        {"date": "2026-06-27", "time": "17:30", "home": "Storm",      "away": "Sea Eagles", "venue": "AAMI Park"},
+        {"date": "2026-06-27", "time": "19:30", "home": "Roosters",   "away": "Panthers",   "venue": "Allianz Stadium"},
+        {"date": "2026-06-28", "time": "14:00", "home": "Knights",    "away": "Wests Tigers","venue": "McDonald Jones Stadium"},
+        {"date": "2026-06-28", "time": "16:05", "home": "Sharks",     "away": "Dolphins",   "venue": "PointsBet Stadium"}
+      ],
+      "bye": "Dragons"
+    },
+    {
+      "round": 18,
+      "label": "Round 18",
+      "slug": "nrl-round-18-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-07-02", "time": "20:00", "home": "Panthers",   "away": "Storm",      "venue": "BlueBet Stadium"},
+        {"date": "2026-07-03", "time": "18:00", "home": "Broncos",    "away": "Bulldogs",   "venue": "Suncorp Stadium"},
+        {"date": "2026-07-03", "time": "20:00", "home": "Cowboys",    "away": "Sharks",     "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-07-04", "time": "15:00", "home": "Raiders",    "away": "Warriors",   "venue": "GIO Stadium"},
+        {"date": "2026-07-04", "time": "17:30", "home": "Sea Eagles", "away": "Roosters",   "venue": "4 Pines Park"},
+        {"date": "2026-07-04", "time": "19:30", "home": "Titans",     "away": "Knights",    "venue": "Cbus Super Stadium"},
+        {"date": "2026-07-05", "time": "14:00", "home": "Eels",       "away": "Dolphins",   "venue": "CommBank Stadium"},
+        {"date": "2026-07-05", "time": "16:05", "home": "Dragons",    "away": "Wests Tigers","venue": "Netstrata Jubilee Stadium"}
+      ],
+      "bye": "Rabbitohs"
+    },
+    {
+      "round": 19,
+      "label": "Round 19",
+      "slug": "nrl-round-19-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-07-09", "time": "19:50", "home": "Bulldogs",   "away": "Panthers",   "venue": "Accor Stadium"},
+        {"date": "2026-07-10", "time": "18:00", "home": "Warriors",   "away": "Storm",      "venue": "Go Media Stadium"},
+        {"date": "2026-07-10", "time": "20:00", "home": "Roosters",   "away": "Cowboys",    "venue": "Allianz Stadium"},
+        {"date": "2026-07-11", "time": "15:00", "home": "Sharks",     "away": "Raiders",    "venue": "PointsBet Stadium"},
+        {"date": "2026-07-11", "time": "17:30", "home": "Broncos",    "away": "Titans",     "venue": "Suncorp Stadium"},
+        {"date": "2026-07-11", "time": "19:30", "home": "Rabbitohs",  "away": "Sea Eagles", "venue": "Accor Stadium"},
+        {"date": "2026-07-12", "time": "14:00", "home": "Knights",    "away": "Eels",       "venue": "McDonald Jones Stadium"},
+        {"date": "2026-07-12", "time": "16:05", "home": "Dolphins",   "away": "Wests Tigers","venue": "Kayo Stadium"}
+      ],
+      "bye": "Dragons"
+    },
+    {
+      "round": 20,
+      "label": "Round 20",
+      "slug": "nrl-round-20-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-07-16", "time": "19:50", "home": "Panthers",   "away": "Cowboys",    "venue": "BlueBet Stadium"},
+        {"date": "2026-07-17", "time": "18:00", "home": "Storm",      "away": "Bulldogs",   "venue": "AAMI Park"},
+        {"date": "2026-07-17", "time": "20:00", "home": "Broncos",    "away": "Sea Eagles", "venue": "Suncorp Stadium"},
+        {"date": "2026-07-18", "time": "15:00", "home": "Titans",     "away": "Sharks",     "venue": "Cbus Super Stadium"},
+        {"date": "2026-07-18", "time": "17:30", "home": "Warriors",   "away": "Rabbitohs",  "venue": "Go Media Stadium"},
+        {"date": "2026-07-18", "time": "19:30", "home": "Roosters",   "away": "Knights",    "venue": "Allianz Stadium"},
+        {"date": "2026-07-19", "time": "14:00", "home": "Raiders",    "away": "Eels",       "venue": "GIO Stadium"},
+        {"date": "2026-07-19", "time": "16:05", "home": "Dragons",    "away": "Dolphins",   "venue": "Netstrata Jubilee Stadium"}
+      ],
+      "bye": "Wests Tigers"
+    },
+    {
+      "round": 21,
+      "label": "Round 21",
+      "slug": "nrl-round-21-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-07-23", "time": "19:50", "home": "Eels",       "away": "Panthers",   "venue": "CommBank Stadium"},
+        {"date": "2026-07-24", "time": "18:00", "home": "Cowboys",    "away": "Titans",     "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-07-24", "time": "20:00", "home": "Bulldogs",   "away": "Raiders",    "venue": "Accor Stadium"},
+        {"date": "2026-07-25", "time": "15:00", "home": "Storm",      "away": "Roosters",   "venue": "AAMI Park"},
+        {"date": "2026-07-25", "time": "17:30", "home": "Sea Eagles", "away": "Dragons",    "venue": "4 Pines Park"},
+        {"date": "2026-07-25", "time": "19:30", "home": "Broncos",    "away": "Rabbitohs",  "venue": "Suncorp Stadium"},
+        {"date": "2026-07-26", "time": "14:00", "home": "Warriors",   "away": "Dolphins",   "venue": "Go Media Stadium"},
+        {"date": "2026-07-26", "time": "16:05", "home": "Wests Tigers","away": "Knights",   "venue": "CommBank Stadium"}
+      ],
+      "bye": "Sharks"
+    },
+    {
+      "round": 22,
+      "label": "Round 22",
+      "slug": "nrl-round-22-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-07-30", "time": "19:50", "home": "Cowboys",    "away": "Roosters",   "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-07-31", "time": "18:00", "home": "Dolphins",   "away": "Raiders",    "venue": "Kayo Stadium"},
+        {"date": "2026-07-31", "time": "20:00", "home": "Storm",      "away": "Warriors",   "venue": "AAMI Park"},
+        {"date": "2026-08-01", "time": "15:00", "home": "Panthers",   "away": "Titans",     "venue": "BlueBet Stadium"},
+        {"date": "2026-08-01", "time": "17:30", "home": "Sharks",     "away": "Broncos",    "venue": "PointsBet Stadium"},
+        {"date": "2026-08-01", "time": "19:30", "home": "Sea Eagles", "away": "Rabbitohs",  "venue": "4 Pines Park"},
+        {"date": "2026-08-02", "time": "14:00", "home": "Eels",       "away": "Bulldogs",   "venue": "CommBank Stadium"},
+        {"date": "2026-08-02", "time": "16:05", "home": "Knights",    "away": "Dragons",    "venue": "McDonald Jones Stadium"}
+      ],
+      "bye": "Wests Tigers"
+    },
+    {
+      "round": 23,
+      "label": "Round 23",
+      "slug": "nrl-round-23-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-08-06", "time": "19:50", "home": "Titans",     "away": "Storm",      "venue": "Cbus Super Stadium"},
+        {"date": "2026-08-07", "time": "18:00", "home": "Roosters",   "away": "Broncos",    "venue": "Allianz Stadium"},
+        {"date": "2026-08-07", "time": "20:00", "home": "Raiders",    "away": "Panthers",   "venue": "GIO Stadium"},
+        {"date": "2026-08-08", "time": "15:00", "home": "Warriors",   "away": "Bulldogs",   "venue": "Go Media Stadium"},
+        {"date": "2026-08-08", "time": "17:30", "home": "Cowboys",    "away": "Sea Eagles", "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-08-08", "time": "19:30", "home": "Dolphins",   "away": "Sharks",     "venue": "Kayo Stadium"},
+        {"date": "2026-08-09", "time": "14:00", "home": "Rabbitohs",  "away": "Eels",       "venue": "Accor Stadium"},
+        {"date": "2026-08-09", "time": "16:05", "home": "Wests Tigers","away": "Dragons",   "venue": "CommBank Stadium"}
+      ],
+      "bye": "Knights"
+    },
+    {
+      "round": 24,
+      "label": "Round 24",
+      "slug": "nrl-round-24-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-08-13", "time": "19:50", "home": "Panthers",   "away": "Roosters",   "venue": "BlueBet Stadium"},
+        {"date": "2026-08-14", "time": "18:00", "home": "Storm",      "away": "Cowboys",    "venue": "AAMI Park"},
+        {"date": "2026-08-14", "time": "20:00", "home": "Broncos",    "away": "Titans",     "venue": "Suncorp Stadium"},
+        {"date": "2026-08-15", "time": "15:00", "home": "Bulldogs",   "away": "Sea Eagles", "venue": "Accor Stadium"},
+        {"date": "2026-08-15", "time": "17:30", "home": "Raiders",    "away": "Dolphins",   "venue": "GIO Stadium"},
+        {"date": "2026-08-15", "time": "19:30", "home": "Knights",    "away": "Warriors",   "venue": "McDonald Jones Stadium"},
+        {"date": "2026-08-16", "time": "14:00", "home": "Dragons",    "away": "Eels",       "venue": "Netstrata Jubilee Stadium"},
+        {"date": "2026-08-16", "time": "16:05", "home": "Sharks",     "away": "Rabbitohs",  "venue": "PointsBet Stadium"}
+      ],
+      "bye": "Wests Tigers"
+    },
+    {
+      "round": 25,
+      "label": "Round 25",
+      "slug": "nrl-round-25-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-08-20", "time": "19:50", "home": "Storm",      "away": "Panthers",   "venue": "AAMI Park"},
+        {"date": "2026-08-21", "time": "18:00", "home": "Raiders",    "away": "Cowboys",    "venue": "GIO Stadium"},
+        {"date": "2026-08-21", "time": "20:00", "home": "Roosters",   "away": "Titans",     "venue": "Allianz Stadium"},
+        {"date": "2026-08-22", "time": "15:00", "home": "Sea Eagles", "away": "Warriors",   "venue": "4 Pines Park"},
+        {"date": "2026-08-22", "time": "17:30", "home": "Broncos",    "away": "Knights",    "venue": "Suncorp Stadium"},
+        {"date": "2026-08-22", "time": "19:30", "home": "Eels",       "away": "Dolphins",   "venue": "CommBank Stadium"},
+        {"date": "2026-08-23", "time": "14:00", "home": "Rabbitohs",  "away": "Dragons",    "venue": "Accor Stadium"},
+        {"date": "2026-08-23", "time": "16:05", "home": "Wests Tigers","away": "Sharks",    "venue": "CommBank Stadium"}
+      ],
+      "bye": "Bulldogs"
+    },
+    {
+      "round": 26,
+      "label": "Round 26",
+      "slug": "nrl-round-26-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-08-27", "time": "19:50", "home": "Cowboys",    "away": "Eels",       "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-08-28", "time": "18:00", "home": "Broncos",    "away": "Storm",      "venue": "Suncorp Stadium"},
+        {"date": "2026-08-28", "time": "20:00", "home": "Panthers",   "away": "Sea Eagles", "venue": "BlueBet Stadium"},
+        {"date": "2026-08-29", "time": "15:00", "home": "Bulldogs",   "away": "Titans",     "venue": "Accor Stadium"},
+        {"date": "2026-08-29", "time": "17:30", "home": "Warriors",   "away": "Roosters",   "venue": "Go Media Stadium"},
+        {"date": "2026-08-29", "time": "19:30", "home": "Sharks",     "away": "Knights",    "venue": "PointsBet Stadium"},
+        {"date": "2026-08-30", "time": "14:00", "home": "Raiders",    "away": "Rabbitohs",  "venue": "GIO Stadium"},
+        {"date": "2026-08-30", "time": "16:05", "home": "Dragons",    "away": "Dolphins",   "venue": "Netstrata Jubilee Stadium"}
+      ],
+      "bye": "Wests Tigers"
+    },
+    {
+      "round": 27,
+      "label": "Round 27",
+      "slug": "nrl-round-27-tips-2026",
+      "_confirmed": "Estimated — verify from NRL.com before generating rich content.",
+      "matches": [
+        {"date": "2026-09-03", "time": "19:50", "home": "Bulldogs",   "away": "Broncos",    "venue": "Accor Stadium"},
+        {"date": "2026-09-04", "time": "18:00", "home": "Cowboys",    "away": "Dolphins",   "venue": "Qld Country Bank Stadium"},
+        {"date": "2026-09-04", "time": "20:00", "home": "Panthers",   "away": "Warriors",   "venue": "BlueBet Stadium"},
+        {"date": "2026-09-05", "time": "15:00", "home": "Storm",      "away": "Rabbitohs",  "venue": "AAMI Park"},
+        {"date": "2026-09-05", "time": "17:30", "home": "Roosters",   "away": "Raiders",    "venue": "Allianz Stadium"},
+        {"date": "2026-09-05", "time": "19:30", "home": "Sea Eagles", "away": "Sharks",     "venue": "4 Pines Park"},
+        {"date": "2026-09-06", "time": "14:00", "home": "Titans",     "away": "Knights",    "venue": "Cbus Super Stadium"},
+        {"date": "2026-09-06", "time": "16:05", "home": "Eels",       "away": "Dragons",    "venue": "CommBank Stadium"}
+      ],
+      "bye": "Wests Tigers"
+    }
+  ]
+}
