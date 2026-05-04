@@ -59,6 +59,8 @@
     {
       label: '⚾ International Sports',
       links: [
+        { text: 'NBA Championship Odds 2026', href: '/nba-championship-odds-2026.html' },
+        { text: 'Best NBA Betting Sites',     href: '/best-nba-betting-sites-australia.html' },
         { text: 'NFL Tips 2026',              href: '/nfl-tips.html' },
         { text: 'NFL Super Bowl LXI Odds',    href: '/nfl-super-bowl-odds-2026.html' },
         { text: 'MLB Tips 2026',              href: '/mlb-tips.html' },
