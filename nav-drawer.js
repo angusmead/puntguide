@@ -11,6 +11,7 @@
         { text: 'Fastest Payouts',              href: '/fastest-payout-betting-sites-australia.html' },
         { text: 'Fastest Withdrawals',          href: '/fastest-withdrawal-betting-sites-australia.html' },
         { text: 'New Betting Sites 2026',       href: '/new-betting-sites-australia.html' },
+        { text: 'All 130+ Bookmakers →',        href: '/all-betting-sites.html' },
       ]
     },
     {
