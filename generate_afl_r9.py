@@ -1,0 +1,472 @@
+#!/usr/bin/env python3
+"""Generate AFL Round 9 2026 match pages and editorial hub."""
+import json, os
+
+BASE = "https://puntguide.com.au"
+
+MATCHES = [
+    {
+        "slug": "afl-fremantle-vs-hawthorn-round-9-2026",
+        "home": "Fremantle", "home_full": "Fremantle",
+        "away": "Hawthorn", "away_full": "Hawthorn",
+        "date": "Thursday, 7 May 2026", "time": "8:10 PM", "venue": "Optus Stadium, Perth",
+        "h2h_home": "$1.80", "h2h_away": "$2.05",
+        "home_rec": "7-1 (2nd)", "away_rec": "6-1-1 (3rd)",
+        "tip": "Fremantle",
+        "analysis": "Fremantle have won seven consecutive games for the first time under Justin Longmuir and are humming — scoring triple figures in five of eight matches while holding the stingiest defence in the competition. Hawthorn drew with Collingwood but dominated general play and arrived here having won only once in their past eight meetings with the Dockers. Home advantage at Optus Stadium is significant.",
+        "key_news": [
+            "Freo: Hayden Young building form — 20 disposals and 2 goals vs Bulldogs",
+            "Hawks: Connor Macdonald career-high 28 disposals, 3 goals in the draw",
+            "Freo: Attack humming — five 100+ point hauls in 8 games",
+            "H2H: Hawthorn have won just 1 of last 8 meetings",
+        ],
+        "bets": [
+            {"desc": "Fremantle to win", "sub": "Home, in form, dominant H2H record"},
+            {"desc": "Fremantle by 1–39", "sub": "Hawks competitive but Freo too strong at home"},
+        ],
+    },
+    {
+        "slug": "afl-brisbane-lions-vs-carlton-round-9-2026",
+        "home": "Brisbane Lions", "home_full": "Brisbane Lions",
+        "away": "Carlton", "away_full": "Carlton",
+        "date": "Friday, 8 May 2026", "time": "7:30 PM", "venue": "Gabba, Brisbane",
+        "h2h_home": "$1.10", "h2h_away": "$7.50",
+        "home_rec": "5-3 (4th)", "away_rec": "1-7 (16th)",
+        "tip": "Brisbane Lions",
+        "analysis": "Two-time reigning premiers Brisbane flexed their muscles against Essendon and have moved into the top four for the first time this season. Carlton are stuck in a dire rut — seven straight defeats, repeatedly leading at half-time then fading in the second half. The Blues have conceded six or more straight goals on six occasions this season. Brisbane to win and boost their percentage.",
+        "key_news": [
+            "Lions: Hugh McCluggage returning to best — 25 disposals, 9 clearances vs Bombers",
+            "Blues: 1-7, have led at half-time in 6 of their 7 losses",
+            "Blues: Nic Newman one of the few Blues shining this season",
+            "Lions: Two-time reigning premiers pacing themselves but need wins",
+        ],
+        "bets": [
+            {"desc": "Brisbane Lions to win", "sub": "Lions $1.10 — no genuine upset scenario"},
+            {"desc": "Lions by 40+", "sub": "Carlton's second-half fade is a pattern"},
+        ],
+    },
+    {
+        "slug": "afl-port-adelaide-vs-western-bulldogs-round-9-2026",
+        "home": "Port Adelaide", "home_full": "Port Adelaide",
+        "away": "Western Bulldogs", "away_full": "Western Bulldogs",
+        "date": "Friday, 8 May 2026", "time": "8:10 PM", "venue": "Adelaide Oval",
+        "h2h_home": "$2.00", "h2h_away": "$1.85",
+        "home_rec": "3-5 (13th)", "away_rec": "4-4 (12th)",
+        "tip": "Western Bulldogs",
+        "analysis": "The Western Bulldogs are slight favourites at $1.85 and showed they can challenge top-six sides by pushing Fremantle to the wire last round. Port's improved form has come with better defensive structure under Josh Carr but they struggle to put teams away when they have the chance. The Bulldogs have beaten Port by 90 in their last meeting and will look to get back on track after four straight losses to top-six sides.",
+        "key_news": [
+            "Dogs: Matthew Kennedy career-highs 26.8 disposals and 7.4 clearances",
+            "Port: Zak Butters averaging career-high 30.6 disposals as stand-in skipper",
+            "H2H: Dogs beat Port by 90 points in R8 2025",
+            "Port: Better defensive steel under Carr but can't close games out",
+        ],
+        "bets": [
+            {"desc": "Western Bulldogs to win", "sub": "Slight favourites with better recent H2H"},
+            {"desc": "Port Adelaide to win", "sub": "If you think the home factor turns it"},
+        ],
+    },
+    {
+        "slug": "afl-north-melbourne-vs-sydney-swans-round-9-2026",
+        "home": "North Melbourne", "home_full": "North Melbourne",
+        "away": "Sydney Swans", "away_full": "Sydney Swans",
+        "date": "Saturday, 9 May 2026", "time": "1:15 PM", "venue": "Marvel Stadium, Melbourne",
+        "h2h_home": "$4.00", "h2h_away": "$1.25",
+        "home_rec": "4-4 (10th)", "away_rec": "7-1 (1st)",
+        "tip": "Sydney Swans",
+        "analysis": "Sydney are 7-1 and ladder leaders with few chinks in their armour — they held Melbourne at arm's length in a rollicking clash last round. Malcolm Rosas jnr kicked seven goals against the Demons and the Swans have had a stranglehold over North Melbourne since 2018. North showed growth pushing Geelong for a half before a final-term collapse but face a massive step-up here.",
+        "key_news": [
+            "Swans: Malcolm Rosas jnr 7 goals vs Melbourne — electric form",
+            "Swans: Sydney have dominated North since 2018",
+            "Roos: Luke Parker averaging 24.8 disposals in strong defensive half-back role",
+            "Swans: Few weaknesses — attack, defence, midfield all clicking",
+        ],
+        "bets": [
+            {"desc": "Sydney Swans to win", "sub": "Swans $1.25 — ladder leaders in full flight"},
+            {"desc": "Swans by 40+", "sub": "North's ceiling vs Sydney has a hard cap"},
+        ],
+    },
+    {
+        "slug": "afl-gws-giants-vs-essendon-round-9-2026",
+        "home": "GWS GIANTS", "home_full": "Greater Western Sydney GIANTS",
+        "away": "Essendon", "away_full": "Essendon",
+        "date": "Saturday, 9 May 2026", "time": "4:15 PM", "venue": "Engie Stadium, Sydney",
+        "h2h_home": "$1.10", "h2h_away": "$7.00",
+        "home_rec": "3-5 (14th)", "away_rec": "1-7 (17th)",
+        "tip": "GWS GIANTS",
+        "analysis": "Two sides in the bottom half needing a win. GWS paid for a slow start and wayward kicking in the wet against Gold Coast but had no such excuse and are massive $1.10 favourites at home. Essendon were outclassed by Brisbane and showed a concerning lack of defensive pressure — allowing 141 uncontested marks. A GWS win is expected though the margin could be tight if the Giants are slow to start again.",
+        "key_news": [
+            "GWS: Jayden Laverde quietly excellent after moving from Essendon",
+            "Bombers: Sam Durham reaches 100 games — 27 disposals vs Lions",
+            "Bombers: 1-7, conceded 141 to 70 uncontested marks vs Brisbane",
+            "GWS: Need consecutive wins after slow-start loss to Gold Coast",
+        ],
+        "bets": [
+            {"desc": "GWS GIANTS to win", "sub": "GWS $1.10 — H2H record dominant"},
+            {"desc": "GWS by 1–39", "sub": "Could be tight if Giants start slowly again"},
+        ],
+    },
+    {
+        "slug": "afl-gold-coast-suns-vs-st-kilda-round-9-2026",
+        "home": "Gold Coast SUNS", "home_full": "Gold Coast SUNS",
+        "away": "St Kilda", "away_full": "St Kilda",
+        "date": "Saturday, 9 May 2026", "time": "6:40 PM", "venue": "TIO Stadium, Darwin",
+        "h2h_home": "$1.45", "h2h_away": "$2.90",
+        "home_rec": "5-3 (5th)", "away_rec": "4-4 (9th)",
+        "tip": "Gold Coast SUNS",
+        "analysis": "Gold Coast's home away from home — they have won eight in a row at TIO Stadium by an average of 39 points. The Suns delivered their most convincing performance in months against GWS and have real momentum. St Kilda have shown they can beat the lesser lights but need to take a first scalp against a side currently above them. The venue and the Suns' form makes this hard to go against Gold Coast.",
+        "key_news": [
+            "Suns: 8 consecutive wins at TIO Stadium by average 39 points",
+            "Suns: John Noble 35 disposals, 8 rebounds — career-high 25.8 per game",
+            "Saints: Sam Flanders faces former club — a point to prove",
+            "Saints: Showed strong form beating West Coast and Carlton but this is a step up",
+        ],
+        "bets": [
+            {"desc": "Gold Coast SUNS to win", "sub": "TIO is a fortress — 8 straight wins there"},
+            {"desc": "Suns by 20+", "sub": "39-point average win at TIO supports big line"},
+        ],
+    },
+    {
+        "slug": "afl-geelong-cats-vs-collingwood-round-9-2026",
+        "home": "Geelong Cats", "home_full": "Geelong Cats",
+        "away": "Collingwood", "away_full": "Collingwood",
+        "date": "Saturday, 9 May 2026", "time": "7:35 PM", "venue": "MCG, Melbourne",
+        "h2h_home": "$1.50", "h2h_away": "$2.50",
+        "home_rec": "5-3 (6th)", "away_rec": "4-1-3 (8th)",
+        "tip": "Geelong Cats",
+        "analysis": "Match of the round. Geelong are $1.50 favourites at the MCG and have won five of their past seven clashes with the Magpies. The Cats blew away North Melbourne and are building form. Collingwood's gutsy draw against Hawthorn was arguably their best performance of the season but they are yet to beat a side sitting above them. Tom Stewart reaches 200 games, Lipinski reaches 150 — big milestone game for the Pies.",
+        "key_news": [
+            "Cats: Tom Stewart 200-game milestone — averaging 7.4 intercepts per game",
+            "Pies: Patrick Lipinski 150 games — led charge vs Hawks' midfield",
+            "Geelong: 5-3 in last 7 meetings with Collingwood by average 10 points — tight series",
+            "Pies: Yet to beat a top-8 side in 2026 despite impressive performances",
+        ],
+        "bets": [
+            {"desc": "Geelong Cats to win", "sub": "Home advantage and recent H2H edge"},
+            {"desc": "Collingwood to win", "sub": "The Pies at $2.50 is genuine value if they click"},
+        ],
+    },
+    {
+        "slug": "afl-melbourne-vs-west-coast-eagles-round-9-2026",
+        "home": "Melbourne", "home_full": "Melbourne",
+        "away": "West Coast Eagles", "away_full": "West Coast Eagles",
+        "date": "Sunday, 10 May 2026", "time": "1:10 PM", "venue": "Marvel Stadium, Melbourne",
+        "h2h_home": "$1.10", "h2h_away": "$7.00",
+        "home_rec": "5-3 (7th)", "away_rec": "2-6 (15th)",
+        "tip": "Melbourne",
+        "analysis": "Melbourne are in a surprise push for finals and cannot afford to slip up against the struggling Eagles. West Coast hit a new low last round — failing to outscore Richmond in either of the first two quarters before mounting a late challenge. Club-record 19 'losing' quarters in a row tells the story. Melbourne stayed with Sydney until deep in the final quarter last round and are in genuine form.",
+        "key_news": [
+            "Melbourne: Stayed with ladder-leaders Sydney deep into Q4 last week",
+            "Eagles: Club record 19 consecutive 'losing' quarters entering this game",
+            "Eagles: Liam Baker co-captain in his first year trying to lift a struggling side",
+            "Dees: Harry Sharp averaging 4.6 inside 50s — improving wing presence",
+        ],
+        "bets": [
+            {"desc": "Melbourne to win", "sub": "Demons $1.10 — Eagles in historic poor form"},
+            {"desc": "Melbourne by 40+", "sub": "Eagles' defensive quarters have been terrible"},
+        ],
+    },
+    {
+        "slug": "afl-richmond-vs-adelaide-crows-round-9-2026",
+        "home": "Richmond", "home_full": "Richmond",
+        "away": "Adelaide Crows", "away_full": "Adelaide Crows",
+        "date": "Sunday, 10 May 2026", "time": "3:15 PM", "venue": "MCG, Melbourne",
+        "h2h_home": "$5.80", "h2h_away": "$1.15",
+        "home_rec": "1-7 (18th)", "away_rec": "4-4 (11th)",
+        "tip": "Adelaide Crows",
+        "analysis": "Richmond snapped a 287-day and 12-match horror losing streak against West Coast last round — a genuine moment for their rebuild. But they face an Adelaide side that has won four of the past six meetings and is improving each week. The Crows snatched a memorable Showdown win over Port in a game decided by less than a goal. Sam Cumming is an exciting glimpse of Richmond's future but the Crows should have too much class.",
+        "key_news": [
+            "Tigers: Sam Cumming — 18-year-old starring in just his second game",
+            "Crows: Sam Berry leading the competition with 64 tackles in 8 games",
+            "Tigers: Snapped 12-match losing streak vs West Coast last week",
+            "Crows: Won 3 of last 4 at the MCG after snapping 10-match losing streak there",
+        ],
+        "bets": [
+            {"desc": "Adelaide Crows to win", "sub": "Crows $1.15 — superior class and form"},
+            {"desc": "Crows by 20+", "sub": "Richmond are rebuilding — Crows should dominate"},
+        ],
+    },
+]
+
+# ─── CSS (same as NRL R10 / AFL R8 design) ────────────────────────────────────
+CSS = """<style>
+:root{--bg:hsl(205 60% 96%);--fg:hsl(215 45% 16%);--primary:hsl(48 92% 64%);--primary-fg:hsl(215 45% 16%);--muted:hsl(205 40% 92%);--muted-fg:hsl(215 20% 42%);--border:hsl(205 40% 86%);--card:hsl(0 0% 100%);--grad-gold:linear-gradient(135deg,hsl(50 96% 72%) 0%,hsl(44 92% 60%) 100%);--shadow-card:0 4px 24px -8px hsl(215 50% 30% / 0.12);--shadow-gold:0 10px 40px -10px hsl(48 92% 54% / 0.45);--r:0.875rem;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:'Inter Tight',sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;font-size:15px}
+h1,h2,h3,h4{font-family:'Geist',sans-serif;letter-spacing:-0.035em;font-weight:600}a{color:var(--fg);text-decoration:none}
+.cbar{background:var(--fg);color:rgba(255,255,255,.75);padding:7px 24px;text-align:center;font-size:11.5px;position:fixed;top:0;left:0;right:0;z-index:200}
+.cbar a{color:hsl(200 88% 75%);text-decoration:underline}.cbar strong{color:rgba(255,255,255,.92)}
+.age-pill{display:inline-block;background:#c0392b;color:#fff;font-weight:700;font-size:10px;padding:1px 7px;border-radius:3px;margin-right:8px;vertical-align:middle}
+header{position:fixed;top:36px;left:0;right:0;z-index:100;background:hsl(205 60% 96% / 0.85);backdrop-filter:blur(20px);border-bottom:1px solid hsl(205 40% 86% / 0.40)}
+.nav-inner{max-width:80rem;margin:0 auto;padding:0 clamp(16px,2.5vw,40px);height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.nav-logo img{height:72px;width:auto}.nav-links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:500}
+.nav-links a{color:hsl(215 45% 16% / 0.70);transition:color .15s}.nav-links a:hover,.nav-links a.active{color:var(--primary)}
+.btn-nav{background:var(--grad-gold);color:var(--primary-fg);font-family:'Geist',sans-serif;font-weight:600;font-size:13px;padding:8px 18px;border-radius:8px;border:none;cursor:pointer;box-shadow:var(--shadow-gold);white-space:nowrap;text-decoration:none}
+.page-wrap{max-width:52rem;margin:0 auto;padding:calc(36px + 80px + clamp(32px,5vw,64px)) clamp(16px,3vw,32px) 60px}
+.breadcrumb{font-size:12px;color:var(--muted-fg);margin-bottom:24px;display:flex;align-items:center;gap:6px}.breadcrumb a{color:var(--primary)}
+.article-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
+.eyebrow-line{height:1px;width:40px;background:var(--primary)}
+.eyebrow-text{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--primary)}
+.article-title{font-family:'Geist',sans-serif;font-weight:700;font-size:clamp(28px,4vw,44px);letter-spacing:-0.035em;line-height:1.1;margin-bottom:16px}
+.article-title .serif-accent{font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--primary)}
+.article-meta{font-size:13px;color:var(--muted-fg);margin-bottom:32px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.match-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:24px;margin-bottom:20px;box-shadow:var(--shadow-card)}
+.match-card:hover{box-shadow:0 8px 32px -8px hsl(215 50% 30% / 0.16)}
+.match-card.featured{border-color:var(--primary);border-width:2px}
+.match-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:16px;flex-wrap:wrap}
+.match-teams{font-family:'Geist',sans-serif;font-weight:700;font-size:20px;letter-spacing:-0.02em;color:var(--fg)}
+.match-info{font-size:12px;color:var(--muted-fg);font-family:'JetBrains Mono',monospace}
+.tip-badge{display:inline-flex;align-items:center;gap:4px;background:var(--grad-gold);color:var(--primary-fg);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:4px 12px;border-radius:100px;box-shadow:var(--shadow-gold)}
+.match-body{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.match-section-title{font-family:'JetBrains Mono',monospace;font-size:9.5px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--primary);margin-bottom:6px}
+.match-text{font-size:13.5px;color:var(--muted-fg);line-height:1.6}
+.suggested-bets{grid-column:1/-1;background:hsl(205 55% 90% / 0.40);border:1px solid var(--border);border-radius:8px;padding:14px}
+.bet-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid hsl(205 40% 86% / 0.50);flex-wrap:wrap}
+.bet-row:last-child{border-bottom:none}.bet-left{display:flex;flex-direction:column;gap:2px}
+.bet-desc{font-size:13px;color:var(--fg);font-weight:500}.bet-sub{font-size:11px;color:var(--muted-fg)}
+.bet-cta{display:inline-flex;align-items:center;background:var(--grad-gold);color:var(--primary-fg);font-family:'Geist',sans-serif;font-weight:600;font-size:12px;padding:6px 14px;border-radius:6px;box-shadow:var(--shadow-gold);white-space:nowrap;transition:transform .15s;text-decoration:none}
+.bet-cta:hover{transform:scale(1.02)}
+.cgm-strip{font-size:10.5px;color:var(--muted-fg);font-style:italic;text-align:center;margin-top:10px}
+.cgm-strip a{color:var(--primary);text-decoration:underline}
+.section-hd{font-family:'Geist',sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.025em;margin:40px 0 16px;padding-bottom:12px;border-bottom:2px solid var(--fg)}
+.lead-text{font-size:16px;color:var(--muted-fg);line-height:1.75;margin-bottom:24px}
+.pick-box{background:var(--grad-gold);border-radius:var(--r);padding:20px 24px;margin:24px 0;box-shadow:var(--shadow-gold)}
+.pick-box-title{font-family:'Geist',sans-serif;font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--primary-fg);opacity:.75;margin-bottom:4px}
+.pick-box-pick{font-family:'Geist',sans-serif;font-weight:800;font-size:22px;letter-spacing:-0.02em;color:var(--primary-fg)}
+.pick-box-sub{font-size:13px;color:var(--primary-fg);opacity:.80;margin-top:4px}
+.resp-bar{background:hsl(205 55% 90% / 0.40);border-top:1px solid var(--border);padding:20px clamp(16px,3vw,40px);font-size:13px;color:var(--muted-fg);text-align:center;line-height:1.7;margin-top:60px}
+.resp-bar a{color:var(--primary);text-decoration:underline}.resp-bar strong{color:var(--fg)}
+footer.pg{background:var(--fg);padding:32px clamp(16px,3vw,40px);text-align:center}
+footer.pg a{color:var(--primary);font-size:13px;margin:0 12px}
+footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-height:1.7}
+@media(max-width:640px){.match-body{grid-template-columns:1fr}.nav-links{display:none}.match-header{flex-direction:column;align-items:flex-start}}
+</style>"""
+
+FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">'
+
+CB = '<div class="cbar"><span class="age-pill">18+</span> Gambling involves risk. <strong>For free and confidential support call <a href="tel:1800858858">1800 858 858</a> or visit <a href="https://www.gamblinghelponline.org.au" target="_blank" rel="noopener">gamblinghelponline.org.au</a></strong> &nbsp;·&nbsp; <a href="https://www.betstop.gov.au" target="_blank" rel="noopener">Self-exclude via BetStop</a></div>'
+
+NAV_HUB = '<header><div class="nav-inner"><a href="/index.html" class="nav-logo"><img src="/puntguide-logo.png" alt="PuntGuide"></a><nav class="nav-links"><a href="/index.html">Home</a><a href="/afl-round-9-tips-2026.html" class="active">🦘 AFL Round 9</a><a href="/nrl-round-10-tips-2026.html">🏉 NRL Tips</a><a href="/horse-racing-tips-today.html">🏇 Racing</a><a href="/afl-premiership-odds-2026.html">AFL Futures</a></nav><a href="/all-betting-sites.html" class="btn-nav">Bet Now →</a></div></header>'
+
+def nav_match(m):
+    return f'<header><div class="nav-inner"><a href="/index.html" class="nav-logo"><img src="/puntguide-logo.png" alt="PuntGuide"></a><nav class="nav-links"><a href="/index.html">Home</a><a href="/afl-round-9-tips-2026.html">🦘 AFL Round 9</a><a href="/afl-tips.html">AFL Tips</a><a href="/afl-ladder-2026.html">AFL Ladder</a><a href="/best-betting-sites-for-afl.html">Best for AFL</a></nav><a href="/best-betting-sites-australia.html" class="btn-nav">Bet Now →</a></div></header>'
+
+CGM = ["Think. Is this a bet you really want to place?", "Chances are you're about to lose."]
+
+def schema_event(m):
+    return json.dumps({
+        "@context": "https://schema.org", "@type": "SportsEvent",
+        "name": f"{m['home_full']} vs {m['away_full']}",
+        "startDate": f"2026-05-{m['date'].split()[1].zfill(2)}T{m['time'].replace(' PM','').replace(' AM','').strip()}:00+10:00",
+        "location": {"@type": "Place", "name": m['venue'], "address": {"@type": "PostalAddress", "addressCountry": "AU"}},
+        "sport": "Australian Rules Football",
+        "competitor": [{"@type": "SportsTeam", "name": m['home_full']}, {"@type": "SportsTeam", "name": m['away_full']}],
+        "organizer": {"@type": "Organization", "name": "AFL"},
+        "eventStatus": "https://schema.org/EventScheduled",
+        "image": f"{BASE}/puntguide-logo.png",
+        "performer": [{"@type": "SportsTeam", "name": m['home_full']}, {"@type": "SportsTeam", "name": m['away_full']}],
+    })
+
+def gen_match(m, idx):
+    slug = m['slug']
+    canonical = f"{BASE}/{slug}.html"
+    title = f"{m['home']} vs {m['away']} Tips — AFL Round 9 2026 | PuntGuide"
+    desc = f"Expert {m['home']} vs {m['away']} tip for AFL Round 9 2026. Prediction: {m['tip']} to win. Match preview, odds and best bet."
+
+    key_news_html = '<br>'.join(m.get('key_news', []))
+    bets_html = ''
+    for b in m['bets']:
+        bets_html += f'<div class="bet-row"><div class="bet-left"><span class="bet-desc">{b["desc"]}</span><span class="bet-sub">{b["sub"]}</span></div><a href="/best-betting-sites-australia.html" class="bet-cta">Bet Now →</a></div>\n'
+
+    odds_title = f'{m["home"]} {m["h2h_home"]} · {m["away"]} {m["h2h_away"]}'
+    cgm_msg = CGM[idx % 2]
+
+    return f"""<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content="{desc}">
+<link rel="canonical" href="{canonical}">
+<link rel="icon" type="image/png" href="/pg-icon.png">
+{FONTS}
+{CSS}
+<meta property="og:title" content="{title}"><meta property="og:description" content="{desc}">
+<meta property="og:url" content="{canonical}"><meta property="og:type" content="article">
+<meta property="og:image" content="{BASE}/puntguide-logo.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}"><meta name="twitter:image" content="{BASE}/puntguide-logo.png">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">{schema_event(m)}</script>
+<script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":f"Who will win {m['home']} vs {m['away']}?","acceptedAnswer":{"@type":"Answer","text":f"Our tip is {m['tip']} to win. {m['analysis'][:200]}"}},{"@type":"Question","name":f"When is {m['home']} vs {m['away']} AFL Round 9?","acceptedAnswer":{"@type":"Answer","text":f"{m['home']} vs {m['away']} is on {m['date']} at {m['time']} AEST at {m['venue']}."}}]})}</script>
+</head>
+<body>
+{CB}
+{nav_match(m)}
+<div class="page-wrap">
+  <div class="breadcrumb"><a href="/index.html">Home</a> › <a href="/afl-tips.html">AFL Tips 2026</a> › <a href="/afl-round-9-tips-2026.html">Round 9</a> › <span>{m['home']} vs {m['away']}</span></div>
+
+<div class="article-eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">AFL · Round 9 · {m['date']} · {m['time']} AEST</span></div>
+<h1 class="article-title">{m['home']} v {m['away']} <span class="serif-accent">Tips &amp; Prediction</span></h1>
+<div class="article-meta">By PuntGuide Editorial · Updated 5 May 2026 · {m['venue']} · All tips are independent</div>
+
+<div class="match-card featured">
+  <div class="match-header">
+    <div>
+      <div class="match-teams">{m['home']} v {m['away']}</div>
+      <div class="match-info">{m['date']} · {m['time']} · {m['venue']}</div>
+    </div>
+    <span class="tip-badge">⭐ Our Tip: {m['tip']}</span>
+  </div>
+  <div class="match-body">
+    <div>
+      <div class="match-section-title">Analysis</div>
+      <div class="match-text">{m['analysis']}</div>
+    </div>
+    <div>
+      <div class="match-section-title">Key News & Stats</div>
+      <div class="match-text">{key_news_html}<br><br>{m['home']}: {m['home_rec']}<br>{m['away']}: {m['away_rec']}</div>
+    </div>
+    <div class="suggested-bets">
+      <div class="match-section-title">Suggested Bets · {odds_title}</div>
+      {bets_html}
+      <div class="cgm-strip">{cgm_msg} · <a href="https://www.gamblinghelponline.org.au" target="_blank" rel="noopener">Free support: 1800 858 858</a></div>
+    </div>
+  </div>
+</div>
+
+<div style="margin:24px 0;padding:20px 24px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow-card);">
+  <div class="match-section-title" style="margin-bottom:10px;">Best Bookmakers for AFL Betting</div>
+  <div style="display:flex;flex-direction:column;gap:8px;">
+    <div style="display:flex;align-items:center;gap:12px;padding:10px;background:var(--muted);border-radius:8px;"><img src="/sportsbet.png" alt="Sportsbet" style="width:36px;height:36px;border-radius:8px;object-fit:contain;background:#fff;flex-shrink:0;"><div style="flex:1;font-size:13px;"><strong>Sportsbet</strong> — widest AFL market, same-game multis</div><a href="/review-sportsbet.html" class="bet-cta" style="font-size:11px;padding:5px 12px;">Review →</a></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:10px;background:var(--muted);border-radius:8px;"><img src="/pointsbet.png" alt="PointsBet" style="width:36px;height:36px;border-radius:8px;object-fit:contain;background:#fff;flex-shrink:0;"><div style="flex:1;font-size:13px;"><strong>PointsBet</strong> — sharp AFL odds, PointsBetting on player stats</div><a href="/review-pointsbet.html" class="bet-cta" style="font-size:11px;padding:5px 12px;">Review →</a></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;">
+    <a href="/best-betting-sites-australia.html" style="display:flex;align-items:center;justify-content:center;background:hsl(215 45% 16%);color:#fff;border-radius:8px;padding:11px;font-size:13px;font-weight:700;text-decoration:none;">🏆 Best Betting Sites →</a>
+    <a href="/all-betting-sites.html" style="display:flex;align-items:center;justify-content:center;background:var(--grad-gold);color:hsl(215 45% 16%);border-radius:8px;padding:11px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:var(--shadow-gold);">📋 All 130+ Bookmakers →</a>
+  </div>
+</div>
+
+<div style="margin-top:8px;font-size:13px;text-align:center;"><a href="/afl-round-9-tips-2026.html" style="color:var(--primary);font-weight:600;">← Back to all AFL Round 9 Tips</a></div>
+</div>
+
+<div class="resp-bar"><strong>Responsible Gambling:</strong> Set limits before you start. Free 24/7 support: <a href="tel:1800858858">1800 858 858</a> · <a href="https://www.gamblinghelponline.org.au" target="_blank" rel="noopener">gamblinghelponline.org.au</a> · <a href="https://www.betstop.gov.au" target="_blank" rel="noopener">BetStop.gov.au</a><br>Tips are editorial opinions only. PuntGuide earns commissions from affiliate links.</div>
+
+<footer class="pg">
+  <a href="/afl-tips.html">AFL Tips 2026</a><a href="/afl-round-9-tips-2026.html">AFL Round 9</a><a href="/afl-ladder-2026.html">AFL Ladder</a><a href="/best-betting-sites-for-afl.html">Best for AFL</a><a href="/best-betting-sites-australia.html">Best Betting Sites</a>
+  <p>© 2026 PuntGuide · Independent Australian betting guide · 18+ only · <a href="/editorial-policy.html">Editorial Policy</a></p>
+</footer>
+<script src="/nav-drawer.js"></script>
+</body></html>"""
+
+
+def gen_hub():
+    cards = ''
+    for i, m in enumerate(MATCHES):
+        key_html = '<br>'.join(m['key_news'])
+        bets_html = ''
+        for b in m['bets']:
+            bets_html += f'<div class="bet-row"><div class="bet-left"><span class="bet-desc">{b["desc"]}</span><span class="bet-sub">{b["sub"]}</span></div><a href="/best-betting-sites-australia.html" class="bet-cta">Bet Now →</a></div>\n'
+        is_featured = 'Geelong' in m['home'] or 'Collingwood' in m['away']
+        featured = ' featured' if is_featured else ''
+        odds_line = f'{m["home"]} {m["h2h_home"]} · {m["away"]} {m["h2h_away"]}'
+        cgm = CGM[i % 2]
+        cards += f'''<div class="match-card{featured}">
+  <div class="match-header">
+    <div>
+      <div class="match-teams">{m["home"]} v {m["away"]}</div>
+      <div class="match-info">{m["date"]} · {m["time"]} · {m["venue"]}</div>
+    </div>
+    <span class="tip-badge">⭐ Our Tip: {m["tip"]}</span>
+  </div>
+  <div class="match-body">
+    <div><div class="match-section-title">Analysis</div><div class="match-text">{m["analysis"]}</div></div>
+    <div><div class="match-section-title">Key News</div><div class="match-text">{key_html}</div></div>
+    <div class="suggested-bets">
+      <div class="match-section-title">Suggested Bets · {odds_line}</div>
+      {bets_html}
+      <div class="cgm-strip">{cgm} · <a href="https://www.gamblinghelponline.org.au" target="_blank" rel="noopener">Free support: 1800 858 858</a></div>
+      <a href="/{m["slug"]}.html" style="display:inline-block;margin-top:14px;font-size:13px;font-weight:600;color:var(--primary);border:1px solid var(--primary);border-radius:6px;padding:6px 14px;">Full Match Analysis →</a>
+    </div>
+  </div>
+</div>\n'''
+
+    return f"""<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFL Round 9 Tips 2026 — All 9 Games | PuntGuide</title>
+<meta name="description" content="AFL Round 9 tips and best bets for all 9 games. Fremantle v Hawthorn, Geelong v Collingwood, Sydney v North Melbourne and more. Confirmed analysis and predictions.">
+<link rel="canonical" href="{BASE}/afl-round-9-tips-2026.html">
+<link rel="icon" type="image/png" href="/pg-icon.png">
+{FONTS}
+{CSS}
+<meta property="og:title" content="AFL Round 9 Tips 2026 | PuntGuide">
+<meta property="og:description" content="AFL Round 9 tips and best bets for all 9 games. Fremantle v Hawthorn, Geelong v Collingwood at the MCG, Sydney v North Melbourne.">
+<meta property="og:url" content="{BASE}/afl-round-9-tips-2026.html"><meta property="og:type" content="article">
+<meta property="og:image" content="{BASE}/puntguide-logo.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="AFL Round 9 Tips 2026 | PuntGuide">
+<meta name="twitter:description" content="AFL Round 9 tips and best bets for all 9 games."><meta name="twitter:image" content="{BASE}/puntguide-logo.png">
+<meta name="robots" content="index, follow">
+<script type="application/ld+json">{json.dumps({"@context":"https://schema.org","@type":"Article","headline":"AFL Round 9 Tips 2026","description":"AFL Round 9 tips and best bets for all 9 games.","author":{"@type":"Organization","name":"PuntGuide"},"publisher":{"@type":"Organization","name":"PuntGuide","logo":{"@type":"ImageObject","url":f"{BASE}/puntguide-logo.png"}},"datePublished":"2026-05-05","dateModified":"2026-05-05","mainEntityOfPage":f"{BASE}/afl-round-9-tips-2026.html"})}</script>
+</head>
+<body>
+{CB}
+{NAV_HUB}
+<div class="page-wrap">
+  <div class="breadcrumb"><a href="/index.html">Home</a> › <a href="/afl-tips.html">AFL Tips 2026</a> › <span>AFL Round 9 Tips — All 9 Games</span></div>
+
+<div class="article-eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">AFL · Round 9 · 7–10 May 2026</span></div>
+<h1 class="article-title">AFL Round 9 Tips, Predictions <span class="serif-accent">&amp; Best Bets</span></h1>
+<div class="article-meta">By PuntGuide Editorial · Updated 5 May 2026 · All tips are independent</div>
+
+<p class="lead-text">Nine AFL games across four days — Thursday through Sunday — headlined by the Fremantle v Hawthorn top-of-the-table clash at Optus Stadium and Geelong v Collingwood in a classic MCG rivalry clash. Sydney look to extend their lead while Richmond host Adelaide fresh off snapping a 12-match losing streak.</p>
+
+<div class="pick-box">
+  <div class="pick-box-title">Match of the Round</div>
+  <div class="pick-box-pick">Geelong v Collingwood — MCG, Saturday 7:35pm</div>
+  <div class="pick-box-sub">Our tip: Geelong Cats · Tom Stewart's 200th game · Collingwood at $2.50 is value</div>
+</div>
+
+<h2 class="section-hd">All Round 9 Matches</h2>
+
+{cards}
+
+<div style="margin:40px 0 0;padding:24px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);box-shadow:var(--shadow-card);">
+  <div class="match-section-title" style="margin-bottom:12px;">Best Bookmakers for AFL Round 9</div>
+  <div style="display:flex;flex-direction:column;gap:8px;">
+    <div style="display:flex;align-items:center;gap:12px;padding:10px;background:var(--muted);border-radius:8px;"><img src="/sportsbet.png" alt="Sportsbet" style="width:36px;height:36px;border-radius:8px;object-fit:contain;background:#fff;flex-shrink:0;"><div style="flex:1;font-size:13px;"><strong>Sportsbet</strong> — widest AFL market, best same-game multis</div><a href="/review-sportsbet.html" class="bet-cta" style="font-size:11px;padding:5px 12px;">Review →</a></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:10px;background:var(--muted);border-radius:8px;"><img src="/pointsbet.png" alt="PointsBet" style="width:36px;height:36px;border-radius:8px;object-fit:contain;background:#fff;flex-shrink:0;"><div style="flex:1;font-size:13px;"><strong>PointsBet</strong> — sharp AFL odds, PointsBetting on player stats</div><a href="/review-pointsbet.html" class="bet-cta" style="font-size:11px;padding:5px 12px;">Review →</a></div>
+    <div style="display:flex;align-items:center;gap:12px;padding:10px;background:var(--muted);border-radius:8px;"><img src="/betr.png" alt="betr" style="width:36px;height:36px;border-radius:8px;object-fit:contain;background:#fff;flex-shrink:0;"><div style="flex:1;font-size:13px;"><strong>betr</strong> — best same-game multi builder for AFL in Australia</div><a href="/review-betr.html" class="bet-cta" style="font-size:11px;padding:5px 12px;">Review →</a></div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px;">
+    <a href="/best-betting-sites-australia.html" style="display:flex;align-items:center;justify-content:center;background:hsl(215 45% 16%);color:#fff;border-radius:8px;padding:12px;font-size:13px;font-weight:700;text-decoration:none;">🏆 Best Betting Sites →</a>
+    <a href="/all-betting-sites.html" style="display:flex;align-items:center;justify-content:center;background:var(--grad-gold);color:hsl(215 45% 16%);border-radius:8px;padding:12px;font-size:13px;font-weight:700;text-decoration:none;box-shadow:var(--shadow-gold);">📋 All 130+ Bookmakers →</a>
+  </div>
+</div>
+</div>
+
+<div class="resp-bar"><strong>Responsible Gambling:</strong> Set limits before you start. Free 24/7 support: <a href="tel:1800858858">1800 858 858</a> · <a href="https://www.gamblinghelponline.org.au" target="_blank" rel="noopener">gamblinghelponline.org.au</a> · <a href="https://www.betstop.gov.au" target="_blank" rel="noopener">BetStop.gov.au</a><br>Tips are editorial opinions only. PuntGuide earns commissions from affiliate links.</div>
+
+<footer class="pg">
+  <a href="/afl-tips.html">AFL Tips 2026</a><a href="/afl-ladder-2026.html">AFL Ladder</a><a href="/nrl-round-10-tips-2026.html">NRL Round 10</a><a href="/best-betting-sites-for-afl.html">Best for AFL</a><a href="/best-betting-sites-australia.html">Best Betting Sites</a>
+  <p>© 2026 PuntGuide · Independent Australian betting guide · 18+ only · <a href="/editorial-policy.html">Editorial Policy</a></p>
+</footer>
+<script src="/nav-drawer.js"></script>
+</body></html>"""
+
+
+if __name__ == "__main__":
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
+    # Write 9 match pages
+    for i, m in enumerate(MATCHES):
+        fn = f"{m['slug']}.html"
+        with open(fn, 'w', encoding='utf-8') as f:
+            f.write(gen_match(m, i))
+        print(f"  Written: {fn}")
+
+    # Write hub
+    with open('afl-round-9-tips-2026.html', 'w', encoding='utf-8') as f:
+        f.write(gen_hub())
+    print("  Written: afl-round-9-tips-2026.html")
+    print(f"\nDone — {len(MATCHES)} match pages + 1 hub")
