@@ -33,7 +33,7 @@
       links: [
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
         { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
-        { text: 'NRL Round 9 Tips 2026',        href: '/nrl-round-10-tips-2026.html' },
+        { text: 'NRL Round 10 Tips 2026',       href: '/nrl-round-10-tips-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
         { text: 'Best Sites for AFL & NRL',     href: '/best-betting-sites-afl-nrl.html' },
       ]
