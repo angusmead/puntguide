@@ -19,7 +19,7 @@
       links: [
         { text: 'AFL Tips 2026',               href: '/afl-tips.html' },
         { text: 'AFL Ladder 2026',             href: '/afl-ladder-2026.html' },
-        { text: 'AFL Round 8 Tips 2026',        href: '/afl-round-8-tips-2026.html' },
+        { text: 'AFL Round 9 Tips 2026',        href: '/afl-round-9-tips-2026.html' },
         { text: 'AFL Premiership Odds 2026',    href: '/afl-premiership-odds-2026.html' },
         { text: 'Brownlow Medal Odds 2026',     href: '/brownlow-medal-odds-2026.html' },
         { text: 'Coleman Medal Odds 2026',      href: '/afl-coleman-medal-odds-2026.html' },
