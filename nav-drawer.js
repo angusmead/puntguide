@@ -4,6 +4,7 @@
     {
       label: '🏆 Best Betting Sites',
       links: [
+        { text: 'All 130+ Bookmakers →',        href: '/all-betting-sites.html' },
         { text: 'Best Betting Sites Australia', href: '/best-betting-sites-australia.html' },
         { text: 'Top Betting Sites Australia',  href: '/top-betting-sites-australia.html' },
         { text: 'Compare Betting Sites',        href: '/compare-betting-sites.html' },
@@ -11,7 +12,6 @@
         { text: 'Fastest Payouts',              href: '/fastest-payout-betting-sites-australia.html' },
         { text: 'Fastest Withdrawals',          href: '/fastest-withdrawal-betting-sites-australia.html' },
         { text: 'New Betting Sites 2026',       href: '/new-betting-sites-australia.html' },
-        { text: 'All 130+ Bookmakers →',        href: '/all-betting-sites.html' },
       ]
     },
     {
