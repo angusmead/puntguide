@@ -71,6 +71,14 @@
       ]
     },
     {
+      label: 'ℹ️ About',
+      links: [
+        { text: 'About PuntGuide',     href: '/about.html' },
+        { text: 'Editorial Policy',    href: '/editorial-policy.html' },
+        { text: 'Contact Us',          href: '/contact.html' },
+      ]
+    },
+    {
       label: '📝 Blog',
       links: [
         { text: 'Fastest Withdrawal Betting Apps (Tested)', href: '/fastest-withdrawal-betting-apps-australia-tested.html' },
