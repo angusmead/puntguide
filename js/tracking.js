@@ -19,7 +19,7 @@
     'draftstars.com.au':      'Draftstars',
     'neds.com.au':            'Neds',
     'bet365.com.au':          'Bet365',
-    'picklebet.com.au':       'Picklebet',
+    'picklebet.com':       'Picklebet',
     'dabble.com.au':          'Dabble',
     'ladbrokes.com.au':       'Ladbrokes',
     'betright.com.au':        'BetRight',
