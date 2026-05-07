@@ -142,6 +142,7 @@
     'betbox.com.au':          'BetBox',
     'laserbet.com.au':        'LaserBet',
     'puntsport.com.au':       'PuntSport',
+    'legz.com.au':            'Legz',
   };
 
   function getDomain(url) {

@@ -71,6 +71,13 @@
       ]
     },
     {
+      label: '🎯 Tipping Services',
+      links: [
+        { text: 'All Tipping Services',  href: '/tipping-services.html' },
+        { text: 'Legz Review',           href: '/review-legz.html' },
+      ]
+    },
+    {
       label: 'ℹ️ About',
       links: [
         { text: 'About PuntGuide',     href: '/about.html' },
