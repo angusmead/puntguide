@@ -4,7 +4,8 @@
     {
       label: '🎯 Tools',
       links: [
-        { text: '🔍 Smart Bookie Matcher — Find your best bookie', href: '/bookie-matcher.html' },
+        { text: '🔍 Smart Bookie Matcher™ — Find your best bookie', href: '/bookie-matcher.html' },
+        { text: '💸 Cash Out Calculator™ — Is your cashout fair?',  href: '/cashout-calculator.html' },
       ]
     },
     {

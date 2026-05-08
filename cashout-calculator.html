@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X8HMP35PY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X8HMP35PY6');
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="32x32" href="/pg-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/pg-icon-192.png">
+<link rel="apple-touch-icon" sizes="192x192" href="/pg-icon-192.png">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Cash Out Calculator — Is Your Cashout Fair Value? | PuntGuide</title>
+<meta name="description" content="Find out if your bookie's cashout offer is fair value. Enter your bet details and cashout offer — our calculator shows the true fair value and how much the bookie is keeping.">
+<link rel="canonical" href="https://puntguide.com.au/cashout-calculator">
+<meta property="og:title" content="Cash Out Calculator — Is Your Cashout Fair? | PuntGuide">
+<meta property="og:description" content="See if your bookie's cashout offer is fair value. Free, instant, no signup required.">
+<meta property="og:url" content="https://puntguide.com.au/cashout-calculator">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://puntguide.com.au/puntguide-logo.png">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:hsl(205 60% 96%);--fg:hsl(215 45% 16%);--primary:hsl(48 92% 64%);--pfg:hsl(215 45% 16%);--muted:hsl(205 40% 92%);--muted-fg:hsl(215 20% 42%);--accent:hsl(200 88% 58%);--border:hsl(205 40% 86%);--gg:linear-gradient(135deg,hsl(50 96% 72%),hsl(44 92% 60%));--sg:0 10px 40px -10px hsl(48 92% 54%/.4);--sc:0 4px 24px -8px hsl(215 50% 30%/.1);--ch:36px;--nh:80px;--bad:hsl(0 72% 51%);--bad-bg:hsl(0 72% 97%);--bad-border:hsl(0 60% 85%);--fair:hsl(38 80% 45%);--fair-bg:hsl(44 80% 96%);--fair-border:hsl(44 60% 78%);--good:hsl(140 50% 38%);--good-bg:hsl(140 50% 96%);--good-border:hsl(140 45% 78%);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--fg);font-family:"Inter Tight",sans-serif;line-height:1.65;font-size:15px;}
+h1,h2,h3,h4{font-family:"Geist",sans-serif;letter-spacing:-0.03em;}
+a{color:inherit;text-decoration:none;}
+
+.cb{position:fixed;top:0;left:0;right:0;height:var(--ch);background:hsl(215 45% 16%);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:11px;z-index:200;gap:12px;}
+.cb-t{font-weight:700;color:var(--primary);}.cb-h{color:hsl(205 40% 70%);}.cb-h a{color:var(--accent);}
+.cb-b{display:flex;gap:6px;}.cb-b span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:2px 6px;font-size:10px;font-weight:700;}
+
+.nav{position:fixed;top:var(--ch);left:0;right:0;height:var(--nh);background:hsl(205 60% 96%/.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:100;}
+.nav-logo img{height:72px;width:auto;}
+.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:hsl(215 45% 16%/.7);transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.btn-g{display:inline-flex;align-items:center;background:var(--gg);color:var(--pfg);font-size:13px;font-weight:700;padding:9px 18px;border-radius:10px;border:none;cursor:pointer;text-decoration:none;box-shadow:var(--sg);white-space:nowrap;}
+.pb{padding-top:calc(var(--ch) + var(--nh));}
+
+.wrap{max-width:720px;margin:0 auto;padding:44px 20px 80px;}
+
+/* HERO */
+.hero{background:hsl(215 45% 16%);border-radius:20px;padding:40px 36px;color:#fff;margin-bottom:28px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:280px;height:280px;background:radial-gradient(circle,hsl(48 92% 64%/.12),transparent 70%);}
+.hero-eyebrow{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--primary);margin-bottom:12px;}
+.hero-title{font-size:clamp(24px,5vw,36px);font-weight:800;line-height:1.15;margin-bottom:10px;}
+.hero-sub{font-size:15px;color:rgba(255,255,255,.68);line-height:1.75;max-width:520px;}
+
+/* TABS */
+.tab-row{display:flex;gap:8px;margin-bottom:20px;}
+.tab{flex:1;padding:11px 0;border:2px solid var(--border);border-radius:10px;background:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:"Inter Tight",sans-serif;color:var(--muted-fg);transition:all .15s;text-align:center;}
+.tab.active{border-color:var(--fg);background:var(--fg);color:#fff;}
+
+/* CALC CARD */
+.calc-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;box-shadow:var(--sc);margin-bottom:20px;}
+.calc-card h2{font-size:17px;margin-bottom:20px;color:var(--fg);}
+
+/* FORM */
+.field-group{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+.field-group.full{grid-template-columns:1fr;}
+.field{display:flex;flex-direction:column;gap:5px;}
+.field label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted-fg);}
+.field-wrap{position:relative;}
+.field-pre{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-weight:700;color:var(--muted-fg);font-size:15px;pointer-events:none;}
+.field input,.field select{width:100%;padding:11px 12px;border:2px solid var(--border);border-radius:10px;font-size:16px;font-family:"Inter Tight",sans-serif;font-weight:600;color:var(--fg);background:var(--bg);outline:none;transition:border-color .15s;-webkit-appearance:none;}
+.field input.has-pre{padding-left:26px;}
+.field input:focus,.field select:focus{border-color:var(--accent);}
+.field input.error{border-color:var(--bad);}
+.field-hint{font-size:11px;color:var(--muted-fg);margin-top:2px;line-height:1.5;}
+.field-error{font-size:11px;color:var(--bad);margin-top:2px;font-weight:600;display:none;}
+.field input.error + .field-error,.field input.error ~ .field-error{display:block;}
+
+.divider{border:none;border-top:1px solid var(--border);margin:20px 0;}
+
+.btn-calc{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:15px;background:var(--gg);color:var(--pfg);font-family:"Geist",sans-serif;font-size:17px;font-weight:800;border:none;border-radius:12px;cursor:pointer;box-shadow:var(--sg);letter-spacing:-0.01em;transition:transform .15s,box-shadow .15s;margin-top:6px;}
+.btn-calc:hover{transform:translateY(-1px);box-shadow:0 14px 40px -8px hsl(48 92% 54%/.5);}
+
+/* RESULTS */
+.result-card{border-radius:16px;padding:24px;margin-bottom:20px;border:2px solid;animation:slideUp .3s ease;}
+.result-card.bad{background:var(--bad-bg);border-color:var(--bad-border);}
+.result-card.fair{background:var(--fair-bg);border-color:var(--fair-border);}
+.result-card.good{background:var(--good-bg);border-color:var(--good-border);}
+@keyframes slideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+.result-comparison{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;margin-bottom:20px;}
+.result-col{text-align:center;background:rgba(255,255,255,.7);border-radius:12px;padding:16px 12px;}
+.result-col.offer{border:2px solid rgba(0,0,0,.08);}
+.result-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-fg);margin-bottom:6px;font-family:"JetBrains Mono",monospace;}
+.result-amount{font-family:"Geist",sans-serif;font-size:clamp(22px,5vw,30px);font-weight:800;letter-spacing:-0.02em;}
+.result-amount.fair-val{color:hsl(215 45% 16%);}
+.result-vs{font-size:13px;font-weight:700;color:var(--muted-fg);text-align:center;}
+
+.gap-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:30px;font-family:"JetBrains Mono",monospace;font-size:15px;font-weight:700;margin-bottom:16px;}
+.gap-badge.bad{background:var(--bad);color:#fff;}
+.gap-badge.fair{background:var(--fair);color:#fff;}
+.gap-badge.good{background:var(--good);color:#fff;}
+
+.verdict-headline{font-family:"Geist",sans-serif;font-size:20px;font-weight:800;margin-bottom:8px;letter-spacing:-0.02em;}
+.verdict-headline.bad{color:var(--bad);}
+.verdict-headline.fair{color:var(--fair);}
+.verdict-headline.good{color:var(--good);}
+.verdict-text{font-size:15px;line-height:1.7;margin-bottom:8px;}
+.verdict-sub{font-size:13px;color:var(--muted-fg);line-height:1.7;margin-bottom:20px;}
+
+.result-actions{display:flex;gap:10px;flex-wrap:wrap;}
+.btn-share{background:#fff;border:2px solid var(--border);color:var(--fg);font-size:13px;font-weight:700;padding:10px 18px;border-radius:10px;cursor:pointer;font-family:"Inter Tight",sans-serif;transition:border-color .15s;}
+.btn-share:hover{border-color:var(--fg);}
+.btn-matcher{display:inline-flex;align-items:center;background:var(--gg);color:var(--pfg);font-size:13px;font-weight:700;padding:10px 18px;border-radius:10px;text-decoration:none;box-shadow:var(--sg);}
+
+/* DISCLAIMER */
+.disclaimer{background:hsl(205 40% 92%);border-radius:10px;padding:12px 16px;font-size:12px;color:var(--muted-fg);line-height:1.7;margin-bottom:20px;}
+.disclaimer a{color:var(--accent);}
+
+/* EDUCATIONAL EXPANDER */
+.explainer{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:20px;}
+.explainer-toggle{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:700;font-size:15px;width:100%;border:none;background:none;font-family:"Inter Tight",sans-serif;color:var(--fg);}
+.explainer-toggle:hover{background:var(--muted);}
+.explainer-body{display:none;padding:0 20px 20px;border-top:1px solid var(--border);}
+.explainer-body.open{display:block;}
+.explainer-body p{font-size:14px;line-height:1.75;color:var(--muted-fg);margin-top:16px;}
+.explainer-body strong{color:var(--fg);}
+.formula-box{background:var(--muted);border-radius:10px;padding:14px 18px;margin:14px 0;font-family:"JetBrains Mono",monospace;font-size:13px;line-height:1.8;}
+
+/* HISTORY */
+.history-section{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:20px;}
+.history-toggle{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;cursor:pointer;font-weight:700;font-size:15px;width:100%;border:none;background:none;font-family:"Inter Tight",sans-serif;color:var(--fg);}
+.history-toggle:hover{background:var(--muted);}
+.history-body{display:none;border-top:1px solid var(--border);}
+.history-body.open{display:block;}
+.history-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);}
+.history-stat{background:#fff;padding:16px;text-align:center;}
+.history-stat-num{font-family:"JetBrains Mono",monospace;font-size:22px;font-weight:700;color:var(--fg);}
+.history-stat-num.red{color:var(--bad);}
+.history-stat-label{font-size:11px;color:var(--muted-fg);margin-top:3px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;}
+.history-list{max-height:280px;overflow-y:auto;}
+.history-row{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid var(--border);font-size:13px;}
+.history-row:last-child{border-bottom:none;}
+.history-date{color:var(--muted-fg);min-width:72px;font-family:"JetBrains Mono",monospace;font-size:11px;}
+.history-bookie{min-width:80px;font-weight:600;text-transform:capitalize;}
+.history-amounts{flex:1;color:var(--muted-fg);}
+.history-gap{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:13px;}
+.history-gap.bad{color:var(--bad);}
+.history-gap.good{color:var(--good);}
+.history-clear{display:block;width:100%;padding:12px;border:none;background:none;border-top:1px solid var(--border);color:var(--muted-fg);font-size:13px;cursor:pointer;font-family:"Inter Tight",sans-serif;}
+.history-clear:hover{background:var(--muted);color:var(--bad);}
+.history-empty{padding:24px;text-align:center;color:var(--muted-fg);font-size:14px;}
+
+/* BOOKIE CTA SECTION */
+.bookie-cta-card{background:hsl(215 45% 16%);border-radius:14px;padding:24px;color:#fff;margin-bottom:20px;}
+.bookie-cta-card h3{font-size:17px;font-weight:700;margin-bottom:6px;}
+.bookie-cta-card p{font-size:13px;color:rgba(255,255,255,.65);margin-bottom:16px;line-height:1.7;}
+.bookie-row{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.06);border-radius:10px;padding:12px 14px;margin-bottom:8px;}
+.bookie-row:last-of-type{margin-bottom:16px;}
+.bookie-row img{width:36px;height:36px;border-radius:8px;object-fit:contain;background:rgba(255,255,255,.1);padding:2px;}
+.bookie-row-name{flex:1;font-weight:700;font-size:14px;}
+.bookie-row-score{font-family:"JetBrains Mono",monospace;font-size:12px;color:var(--primary);}
+.btn-matcher-dark{display:inline-flex;align-items:center;background:var(--gg);color:var(--pfg);font-size:13px;font-weight:700;padding:10px 18px;border-radius:10px;text-decoration:none;box-shadow:var(--sg);}
+
+/* FOOTER */
+.site-footer{background:hsl(215 45% 16%);color:rgba(255,255,255,.7);padding:44px 32px 28px;margin-top:72px;}
+.footer-in{max-width:1100px;margin:0 auto;}
+.footer-logo{height:44px;width:auto;margin-bottom:14px;filter:brightness(0) invert(1);opacity:.75;}
+.footer-links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.55);}
+.footer-rg{font-size:11px;color:rgba(255,255,255,.4);border-top:1px solid rgba(255,255,255,.1);padding-top:20px;line-height:1.8;}
+.footer-rg a{color:rgba(255,255,255,.4);}
+
+/* COPY TOAST */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--fg);color:#fff;padding:10px 20px;border-radius:30px;font-size:13px;font-weight:600;opacity:0;transition:all .3s;pointer-events:none;z-index:999;}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+@media(max-width:640px){
+  .nav-links{display:none;}
+  .nav{padding:0 16px;}
+  .wrap{padding:24px 12px 60px;}
+  .hero{padding:24px 18px;}
+  .field-group{grid-template-columns:1fr;}
+  .result-comparison{gap:5px;}
+  .result-amount{font-size:22px;}
+  .history-stats{grid-template-columns:1fr 1fr;}
+  .result-actions{flex-direction:column;}
+  .btn-share,.btn-matcher{justify-content:center;}
+  .calc-card{padding:20px 16px;}
+}
+</style>
+</head>
+<body>
+
+<div class="cb">
+  <span class="cb-t">Bet Responsibly</span>
+  <span class="cb-h">Gambling Help: <a href="tel:1800858858">1800 858 858</a> · <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a></span>
+  <div class="cb-b"><span>18+</span><span>AUS ONLY</span></div>
+</div>
+
+<nav class="nav">
+  <a href="/index.html" class="nav-logo"><img src="/puntguide-logo.png" alt="PuntGuide"></a>
+  <ul class="nav-links">
+    <li><a href="/best-betting-sites-australia.html">Best Sites</a></li>
+    <li><a href="/bookie-matcher.html">Bookie Matcher</a></li>
+    <li><a href="/nrl-tips.html">NRL Tips</a></li>
+    <li><a href="/afl-tips.html">AFL Tips</a></li>
+    <li><a href="/cashout-calculator.html" class="active">Cashout Calc</a></li>
+  </ul>
+  <a href="/bookie-matcher.html" class="btn-g">Find My Bookie →</a>
+</nav>
+
+<div class="pb">
+<div class="wrap">
+
+  <div style="background:hsl(215 45% 16%);border-radius:10px;padding:16px 20px;margin-bottom:20px;">
+    <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(48 92% 64%);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">Short Answer</div>
+    <p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.9);margin:0;">Bookmakers almost always offer cashout values below true mathematical fair value -- that's how they profit from the feature. This calculator shows you the fair value based on current market odds and how much your bookie is keeping. Enter your original bet, the current odds and your bookie's offer to see the gap instantly.</p>
+  </div>
+  <div style="background:hsl(200 80% 97%);border:1px solid hsl(200 70% 85%);border-radius:10px;padding:16px 20px;margin-bottom:24px;">
+    <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(200 60% 40%);margin-bottom:10px;font-family:'JetBrains Mono',monospace;">Key Findings</div>
+    <ul style="list-style:none;margin:0;padding:0;">
+      <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>Fair cashout = (original stake x original odds) / current odds -- the mathematically correct value if the market is fair.</li>
+      <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>Most bookie cashout offers are <strong>10-25% below fair value</strong> -- the gap is rarely visible to punters without a calculator.</li>
+      <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>A negative gap means the bookie is keeping part of your bet's true worth. A positive gap (rare) means the offer is above fair value.</li>
+      <li style="display:flex;gap:10px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>Your calculation history is saved locally -- see the total amount bookies have kept across all your cashout checks.</li>
+    </ul>
+  </div>
+
+  <div class="hero">
+    <div class="hero-eyebrow">Cash Out Calculator</div>
+    <h1 class="hero-title">Is your cashout offer fair value?</h1>
+    <p class="hero-sub">Enter your original bet and your bookie's cashout offer. We'll show you the true fair value and how much the bookie is keeping — instantly, no signup required.</p>
+  </div>
+
+  <!-- BET TYPE TABS -->
+  <div class="tab-row">
+    <button class="tab active" onclick="setType('single', this)">Single Bet</button>
+    <button class="tab" onclick="setType('eachway', this)">Each-Way</button>
+    <button class="tab" onclick="setType('multi', this)" style="opacity:.55;cursor:not-allowed;" title="Coming soon" disabled>Multi (soon)</button>
+  </div>
+
+  <!-- CALCULATOR FORM -->
+  <div class="calc-card">
+    <h2 id="form-title">Single Bet Calculator</h2>
+    <div id="form-body"></div>
+  </div>
+
+  <!-- RESULT (injected here) -->
+  <div id="result-area"></div>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer">
+    <strong>Important:</strong> This calculator estimates fair value based on current market odds. It is not financial advice and does not guarantee any outcome. "Current odds" should be the best available market price for your selection right now -- check your bookie or a comparison site. Gamble responsibly -- <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a> · <a href="https://www.betstop.gov.au" target="_blank">BetStop self-exclusion</a>. 18+ only.
+  </div>
+
+  <!-- EDUCATIONAL EXPANDER -->
+  <div class="explainer">
+    <button class="explainer-toggle" onclick="toggleExplainer(this)">
+      <span>📚 How does cashout work — and why is it rarely fair value?</span>
+      <span id="explainer-arrow">↓</span>
+    </button>
+    <div class="explainer-body" id="explainer-body">
+      <p>When you cash out a bet, your bookie is effectively buying back your position. Like any business transaction, they need to make a margin on that trade.</p>
+      <p>The <strong>mathematically fair cashout</strong> is calculated as:</p>
+      <div class="formula-box">
+        Fair cashout = (Original Stake × Original Odds) ÷ Current Odds<br><br>
+        Example: $50 @ 4.00, current odds 2.50<br>
+        Fair cashout = ($50 × 4.00) ÷ 2.50 = <strong>$80.00</strong>
+      </div>
+      <p>Your bookie calculates their cashout offer using their <strong>internal odds</strong> — which include their margin (overround). This is typically 5-15% worse than the best available market price. The result is a cashout offer that is systematically below fair value.</p>
+      <p>This isn't illegal or even unusual — it's how bookmakers profit from the cashout feature. But most punters have no way to check the gap. That's what this calculator is for.</p>
+      <p>For each-way bets, the same logic applies to both the win and place portions separately. The place portion uses place odds derived from the win odds and the place fraction (e.g., 1/4 of win odds minus 1).</p>
+      <p>If you want to trade out a bet at true fair value, <strong>Betfair Exchange</strong> is the closest alternative — you lay your selection at the current exchange price, locking in profit or limiting loss without the bookie margin built in.</p>
+    </div>
+  </div>
+
+  <!-- HISTORY -->
+  <div class="history-section" id="history-section">
+    <button class="history-toggle" onclick="toggleHistory(this)">
+      <span id="history-label">📊 Your Cashout History</span>
+      <span id="history-arrow">↓</span>
+    </button>
+    <div class="history-body" id="history-body"></div>
+  </div>
+
+  <!-- BOOKIE CTA -->
+  <div class="bookie-cta-card">
+    <h3>Which bookies offer fairer cashouts?</h3>
+    <p>Based on our scoring data, these bookmakers consistently offer the tightest cashout margins and most flexible cash-out conditions.</p>
+    <div class="bookie-row">
+      <img src="/betright.png" alt="BetRight" onerror="this.style.display='none'">
+      <div class="bookie-row-name">BetRight</div>
+      <div class="bookie-row-score">Cash-out 4/5</div>
+      <a href="/go/?to=betright&src=cashout_calc" target="_blank" rel="noopener sponsored" class="btn-g" style="font-size:12px;padding:7px 14px;" onclick="track('affiliate_click',{bookmaker:'BetRight',source:'cashout_cta'})">Visit →</a>
+    </div>
+    <div class="bookie-row">
+      <img src="/bet365.png" alt="Bet365" onerror="this.style.display='none'">
+      <div class="bookie-row-name">Bet365</div>
+      <div class="bookie-row-score">Cash-out 5/5</div>
+      <a href="/go/?to=bet365&src=cashout_calc" target="_blank" rel="noopener sponsored" class="btn-g" style="font-size:12px;padding:7px 14px;" onclick="track('affiliate_click',{bookmaker:'Bet365',source:'cashout_cta'})">Visit →</a>
+    </div>
+    <div class="bookie-row">
+      <img src="/sportsbet.png" alt="Sportsbet" onerror="this.style.display='none'">
+      <div class="bookie-row-name">Sportsbet</div>
+      <div class="bookie-row-score">Cash-out 4/5</div>
+      <a href="/go/?to=sportsbet&src=cashout_calc" target="_blank" rel="noopener sponsored" class="btn-g" style="font-size:12px;padding:7px 14px;" onclick="track('affiliate_click',{bookmaker:'Sportsbet',source:'cashout_cta'})">Visit →</a>
+    </div>
+    <a href="/bookie-matcher.html" class="btn-matcher-dark" onclick="track('cashout_to_matcher_clicked',{source:'cashout_calc'})">🔍 Find your best bookie overall →</a>
+  </div>
+
+</div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-in">
+    <img src="/puntguide-logo.png" alt="PuntGuide" class="footer-logo">
+    <div class="footer-links">
+      <a href="/best-betting-sites-australia.html">Best Betting Sites</a>
+      <a href="/bookie-matcher.html">Bookie Matcher</a>
+      <a href="/cashout-calculator.html">Cashout Calculator</a>
+      <a href="/nrl-tips.html">NRL Tips</a>
+      <a href="/afl-tips.html">AFL Tips</a>
+      <a href="/about.html">About</a>
+    </div>
+    <div class="footer-rg">
+      Gamble responsibly. Set a budget. For help call <a href="tel:1800858858">Gambling Help 1800 858 858</a> or visit <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a>. Self-exclude at <a href="https://www.betstop.gov.au" target="_blank">BetStop.gov.au</a>. 18+ only. PuntGuide may earn a commission when you sign up via our links. This does not influence editorial content or calculator results.
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="/nav-drawer.js"></script>
+<script src="/js/tracking.js"></script>
+
+<script>
+// ============================================================
+// CONSTANTS & STATE
+// ============================================================
+const HISTORY_KEY = 'pg_cashout_history';
+const BOOKIES_LIST = [
+  { slug: 'bet365',    name: 'Bet365' },
+  { slug: 'sportsbet', name: 'Sportsbet' },
+  { slug: 'ladbrokes', name: 'Ladbrokes' },
+  { slug: 'neds',      name: 'Neds' },
+  { slug: 'betr',      name: 'Betr' },
+  { slug: 'dabble',    name: 'Dabble' },
+  { slug: 'unibet',    name: 'Unibet' },
+  { slug: 'pointsbet', name: 'PointsBet' },
+  { slug: 'betright',  name: 'BetRight' },
+  { slug: 'betfair',   name: 'Betfair' },
+  { slug: 'tab',       name: 'TAB' },
+  { slug: 'palmerbet', name: 'Palmerbet' },
+  { slug: 'picklebet', name: 'Picklebet' },
+  { slug: 'nextbet',   name: 'Nextbet' },
+  { slug: 'tradiebet', name: 'TradieBet' },
+];
+const FRACTIONS = [
+  { value: '0.25', label: '1/4 (standard)' },
+  { value: '0.2',  label: '1/5' },
+  { value: '0.1667', label: '1/6' },
+  { value: '0.333',  label: '1/3' },
+];
+
+let calcType = 'single';
+
+// ============================================================
+// ANALYTICS
+// ============================================================
+function track(event, params) {
+  if (typeof gtag === 'function') gtag('event', event, params || {});
+}
+
+// ============================================================
+// MATH
+// ============================================================
+function calcSingle(stake, origOdds, currOdds, bookieOffer) {
+  const fair = (stake * origOdds) / currOdds;
+  const gap = bookieOffer - fair;
+  const gapPct = (gap / fair) * 100;
+  return { fair, gap, gapPct, type: 'single' };
+}
+
+function calcEachway(stake, origOdds, currOdds, fraction, bookieOffer) {
+  const origPlaceOdds = (origOdds - 1) * fraction + 1;
+  const currPlaceOdds = (currOdds - 1) * fraction + 1;
+  const fairWin   = (stake * origOdds) / currOdds;
+  const fairPlace = (stake * origPlaceOdds) / currPlaceOdds;
+  const fair = fairWin + fairPlace;
+  const gap = bookieOffer - fair;
+  const gapPct = (gap / fair) * 100;
+  return { fair, gap, gapPct, fairWin, fairPlace, origPlaceOdds, currPlaceOdds, type: 'eachway' };
+}
+
+function verdict(gapPct) {
+  if (gapPct < -5)  return 'bad';
+  if (gapPct > 2)   return 'good';
+  return 'fair';
+}
+
+// ============================================================
+// FORM RENDERING
+// ============================================================
+const bookieOptions = `<option value="">Select bookie (optional)</option>` +
+  BOOKIES_LIST.map(b => `<option value="${b.slug}">${b.name}</option>`).join('');
+
+const fractionOptions = FRACTIONS.map(f => `<option value="${f.value}">${f.label}</option>`).join('');
+
+function renderForm() {
+  const title = calcType === 'single' ? 'Single Bet Calculator' : 'Each-Way Calculator';
+  document.getElementById('form-title').textContent = title;
+
+  let html = '';
+
+  if (calcType === 'single') {
+    html = `
+      <div class="field-group">
+        <div class="field">
+          <label>Original Stake</label>
+          <div class="field-wrap"><span class="field-pre">$</span>
+          <input type="number" id="f-stake" class="has-pre" inputmode="decimal" placeholder="50.00" min="0.01" step="0.01"></div>
+          <span class="field-hint">How much you put on the bet</span>
+        </div>
+        <div class="field">
+          <label>Bookie's Cashout Offer</label>
+          <div class="field-wrap"><span class="field-pre">$</span>
+          <input type="number" id="f-offer" class="has-pre" inputmode="decimal" placeholder="42.00" min="0" step="0.01"></div>
+          <span class="field-hint">The dollar amount offered right now</span>
+        </div>
+      </div>
+      <div class="field-group">
+        <div class="field">
+          <label>Original Odds</label>
+          <input type="number" id="f-orig" inputmode="decimal" placeholder="3.50" min="1.01" step="0.01">
+          <span class="field-hint">The odds when you placed the bet (decimal)</span>
+        </div>
+        <div class="field">
+          <label>Current Odds</label>
+          <input type="number" id="f-curr" inputmode="decimal" placeholder="2.20" min="1.01" step="0.01">
+          <span class="field-hint">Best available price for your selection now</span>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="field-group full">
+        <div class="field">
+          <label>Bookmaker (optional — for history)</label>
+          <select id="f-bookie">${bookieOptions}</select>
+        </div>
+      </div>
+    `;
+  } else {
+    html = `
+      <div class="field-group">
+        <div class="field">
+          <label>Stake (each way)</label>
+          <div class="field-wrap"><span class="field-pre">$</span>
+          <input type="number" id="f-stake" class="has-pre" inputmode="decimal" placeholder="25.00" min="0.01" step="0.01"></div>
+          <span class="field-hint">Amount per component (total bet = 2×)</span>
+        </div>
+        <div class="field">
+          <label>Bookie's Cashout Offer</label>
+          <div class="field-wrap"><span class="field-pre">$</span>
+          <input type="number" id="f-offer" class="has-pre" inputmode="decimal" placeholder="38.00" min="0" step="0.01"></div>
+          <span class="field-hint">The total cashout amount offered</span>
+        </div>
+      </div>
+      <div class="field-group">
+        <div class="field">
+          <label>Original Win Odds</label>
+          <input type="number" id="f-orig" inputmode="decimal" placeholder="5.00" min="1.01" step="0.01">
+          <span class="field-hint">Win odds when you placed the bet</span>
+        </div>
+        <div class="field">
+          <label>Current Win Odds</label>
+          <input type="number" id="f-curr" inputmode="decimal" placeholder="3.20" min="1.01" step="0.01">
+          <span class="field-hint">Best available win price right now</span>
+        </div>
+      </div>
+      <div class="field-group full">
+        <div class="field">
+          <label>Place Fraction</label>
+          <select id="f-fraction">${fractionOptions}</select>
+          <span class="field-hint">Check race conditions — usually 1/4 for metro races</span>
+        </div>
+      </div>
+      <hr class="divider">
+      <div class="field-group full">
+        <div class="field">
+          <label>Bookmaker (optional — for history)</label>
+          <select id="f-bookie">${bookieOptions}</select>
+        </div>
+      </div>
+    `;
+  }
+
+  html += `<button class="btn-calc" onclick="calculate()">Calculate Fair Value →</button>`;
+  document.getElementById('form-body').innerHTML = html;
+
+  // Pre-fill from URL params
+  prefillFromURL();
+}
+
+function setType(type, btn) {
+  if (btn.disabled) return;
+  calcType = type;
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('result-area').innerHTML = '';
+  renderForm();
+}
+
+// ============================================================
+// VALIDATION
+// ============================================================
+function getVal(id) {
+  const el = document.getElementById(id);
+  if (!el) return null;
+  const v = parseFloat(el.value);
+  return isNaN(v) ? null : v;
+}
+
+function validate() {
+  const stake  = getVal('f-stake');
+  const orig   = getVal('f-orig');
+  const curr   = getVal('f-curr');
+  const offer  = getVal('f-offer');
+
+  const errors = [];
+  if (!stake || stake <= 0)   errors.push('Enter a valid stake (greater than $0)');
+  if (!orig  || orig < 1.01)  errors.push('Original odds must be 1.01 or higher (decimal)');
+  if (!curr  || curr < 1.01)  errors.push('Current odds must be 1.01 or higher (decimal)');
+  if (offer === null || offer < 0) errors.push('Enter the bookie\'s cashout offer ($0 or more)');
+
+  if (calcType === 'eachway') {
+    const frac = parseFloat(document.getElementById('f-fraction').value);
+    if (!frac || frac <= 0) errors.push('Select a place fraction');
+  }
+
+  return errors;
+}
+
+// ============================================================
+// CALCULATE
+// ============================================================
+function calculate() {
+  track('cashout_calc_started', { type: calcType });
+
+  const errors = validate();
+  if (errors.length) {
+    showToast(errors[0]);
+    return;
+  }
+
+  const stake  = getVal('f-stake');
+  const orig   = getVal('f-orig');
+  const curr   = getVal('f-curr');
+  const offer  = getVal('f-offer');
+  const bookie = document.getElementById('f-bookie')?.value || '';
+
+  let result;
+  if (calcType === 'single') {
+    result = calcSingle(stake, orig, curr, offer);
+  } else {
+    const fraction = parseFloat(document.getElementById('f-fraction').value);
+    result = calcEachway(stake, orig, curr, fraction, offer);
+  }
+
+  result.stake  = stake;
+  result.orig   = orig;
+  result.curr   = curr;
+  result.offer  = offer;
+  result.bookie = bookie;
+  result.date   = new Date().toLocaleDateString('en-AU');
+
+  const v = verdict(result.gapPct);
+  track('cashout_calc_completed', {
+    type: calcType,
+    gap_bucket: v,
+    gap_pct: Math.round(result.gapPct * 10) / 10,
+    bookie: bookie || 'unknown',
+  });
+
+  saveHistory(result);
+  renderResult(result, v);
+  updateHistoryLabel();
+  encodeURL(result);
+
+  document.getElementById('result-area').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+// ============================================================
+// RESULT RENDERING
+// ============================================================
+function fmt(n) { return '$' + Math.abs(n).toFixed(2); }
+function fmtSigned(n) { return (n >= 0 ? '+$' : '-$') + Math.abs(n).toFixed(2); }
+function fmtPct(n) { return (n >= 0 ? '+' : '') + n.toFixed(1) + '%'; }
+
+function renderResult(r, v) {
+  const verdictCopy = {
+    bad: {
+      headline: 'Below fair value',
+      text: `The bookie is offering ${fmt(r.offer)} — fair value is ${fmt(r.fair)}. They are keeping ${fmt(Math.abs(r.gap))} (${Math.abs(r.gapPct).toFixed(1)}%) of your bet's true worth.`,
+      sub: 'On pure math, you are better off letting the bet run. If you want to lock in profit at fair value, consider laying the selection on Betfair Exchange instead.',
+    },
+    fair: {
+      headline: 'Roughly fair value',
+      text: `The offer is within 5% of fair value — within the normal bookmaker margin on cashouts.`,
+      sub: 'Cashing out is a personal call. If locking in the money helps you, this offer is reasonable.',
+    },
+    good: {
+      headline: 'Above fair value',
+      text: `The math suggests this offer is worth more than current market pricing implies — a gap of ${fmtPct(r.gapPct)}.`,
+      sub: 'This sometimes happens during promotions or when a bookie is slow to update their cashout prices. Consider the offer carefully.',
+    },
+  };
+
+  const copy = verdictCopy[v];
+
+  let extraHtml = '';
+  if (r.type === 'eachway' && r.fairWin !== undefined) {
+    extraHtml = `
+      <div style="background:rgba(255,255,255,.6);border-radius:10px;padding:12px 14px;margin:14px 0;font-size:13px;line-height:1.8;">
+        <strong>Each-way breakdown:</strong><br>
+        Win: orig ${r.orig} → curr ${r.curr} · fair win value = ${fmt(r.fairWin)}<br>
+        Place: orig ${r.origPlaceOdds.toFixed(2)} → curr ${r.currPlaceOdds.toFixed(2)} · fair place value = ${fmt(r.fairPlace)}<br>
+        Total stake committed: ${fmt(r.stake * 2)}
+      </div>
+    `;
+  }
+
+  const matcherUrl = v === 'bad'
+    ? '/bookie-matcher.html'
+    : '/bookie-matcher.html';
+
+  document.getElementById('result-area').innerHTML = `
+    <div class="result-card ${v}">
+      <div class="result-comparison">
+        <div class="result-col offer">
+          <div class="result-label">Bookie's Offer</div>
+          <div class="result-amount">${fmt(r.offer)}</div>
+        </div>
+        <div class="result-vs">vs</div>
+        <div class="result-col">
+          <div class="result-label">Fair Value</div>
+          <div class="result-amount fair-val">${fmt(r.fair)}</div>
+        </div>
+      </div>
+      <div><span class="gap-badge ${v}">${fmtSigned(r.gap)} (${fmtPct(r.gapPct)})</span></div>
+      <div class="verdict-headline ${v}" style="margin-top:14px;">${copy.headline}</div>
+      <div class="verdict-text">${copy.text}</div>
+      ${extraHtml}
+      <div class="verdict-sub">${copy.sub}</div>
+      <div class="result-actions">
+        <button class="btn-share" onclick="copyShareLink()">📋 Copy share link</button>
+        ${v === 'bad' ? `<a href="${matcherUrl}" class="btn-matcher" onclick="track('cashout_to_matcher_clicked',{source:'result_cta',verdict:'bad'})">Find bookies with fairer cashouts →</a>` : ''}
+      </div>
+    </div>
+  `;
+}
+
+// ============================================================
+// HISTORY
+// ============================================================
+function loadHistory() {
+  try { return JSON.parse(localStorage.getItem(HISTORY_KEY)) || []; }
+  catch { return []; }
+}
+
+function saveHistory(result) {
+  const h = loadHistory();
+  h.unshift({
+    id: Date.now(),
+    date: result.date,
+    type: result.type,
+    stake: result.stake,
+    orig: result.orig,
+    curr: result.curr,
+    offer: result.offer,
+    fair: result.fair,
+    gap: result.gap,
+    gapPct: result.gapPct,
+    bookie: result.bookie,
+  });
+  if (h.length > 50) h.pop();
+  try { localStorage.setItem(HISTORY_KEY, JSON.stringify(h)); } catch {}
+}
+
+function clearHistory() {
+  if (!confirm('Clear all saved cashout history?')) return;
+  try { localStorage.removeItem(HISTORY_KEY); } catch {}
+  renderHistoryBody();
+  updateHistoryLabel();
+}
+
+function updateHistoryLabel() {
+  const h = loadHistory();
+  const label = h.length ? `📊 Your Cashout History (${h.length} calc${h.length !== 1 ? 's' : ''})` : '📊 Your Cashout History';
+  document.getElementById('history-label').textContent = label;
+}
+
+function renderHistoryBody() {
+  const h = loadHistory();
+  const el = document.getElementById('history-body');
+
+  if (!h.length) {
+    el.innerHTML = `<div class="history-empty">No calculations saved yet. Run your first calculation above.</div>`;
+    return;
+  }
+
+  const totalGap = h.reduce((s, e) => s + e.gap, 0);
+  const avgPct   = h.reduce((s, e) => s + e.gapPct, 0) / h.length;
+
+  const rows = h.map(e => `
+    <div class="history-row">
+      <span class="history-date">${e.date}</span>
+      <span class="history-bookie">${e.bookie ? e.bookie : 'Unknown'}</span>
+      <span class="history-amounts">${fmt(e.offer)} offered / ${fmt(e.fair)} fair</span>
+      <span class="history-gap ${e.gap < 0 ? 'bad' : 'good'}">${fmtPct(e.gapPct)}</span>
+    </div>
+  `).join('');
+
+  el.innerHTML = `
+    <div class="history-stats">
+      <div class="history-stat">
+        <div class="history-stat-num">${h.length}</div>
+        <div class="history-stat-label">Calculations</div>
+      </div>
+      <div class="history-stat">
+        <div class="history-stat-num red">${fmtSigned(totalGap)}</div>
+        <div class="history-stat-label">Left on table</div>
+      </div>
+      <div class="history-stat">
+        <div class="history-stat-num red">${avgPct.toFixed(1)}%</div>
+        <div class="history-stat-label">Avg gap</div>
+      </div>
+    </div>
+    <div class="history-list">${rows}</div>
+    <button class="history-clear" onclick="clearHistory()">Clear history</button>
+  `;
+}
+
+function toggleHistory(btn) {
+  const body = document.getElementById('history-body');
+  const arrow = document.getElementById('history-arrow');
+  const isOpen = body.classList.toggle('open');
+  arrow.textContent = isOpen ? '↑' : '↓';
+  if (isOpen) {
+    renderHistoryBody();
+    track('cashout_history_viewed', {});
+  }
+}
+
+// ============================================================
+// EXPANDER
+// ============================================================
+function toggleExplainer(btn) {
+  const body = document.getElementById('explainer-body');
+  const arrow = document.getElementById('explainer-arrow');
+  body.classList.toggle('open');
+  arrow.textContent = body.classList.contains('open') ? '↑' : '↓';
+}
+
+// ============================================================
+// URL STATE
+// ============================================================
+function encodeURL(r) {
+  const p = new URLSearchParams({
+    type: r.type,
+    s: r.stake,
+    oo: r.orig,
+    co: r.curr,
+    bo: r.offer,
+    ...(r.bookie ? { bk: r.bookie } : {}),
+    ...(r.type === 'eachway' && r.origPlaceOdds ? { pf: document.getElementById('f-fraction')?.value || '0.25' } : {}),
+  });
+  window.history.pushState({}, '', '?' + p.toString());
+}
+
+function prefillFromURL() {
+  const p = new URLSearchParams(window.location.search);
+  if (!p.get('s')) return;
+
+  const fields = { 's': 'f-stake', 'oo': 'f-orig', 'co': 'f-curr', 'bo': 'f-offer', 'bk': 'f-bookie', 'pf': 'f-fraction' };
+  Object.entries(fields).forEach(([param, id]) => {
+    const val = p.get(param);
+    const el  = document.getElementById(id);
+    if (val && el) el.value = val;
+  });
+
+  // Auto-calculate after short delay
+  setTimeout(calculate, 100);
+}
+
+function copyShareLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    showToast('Link copied — share your result!');
+  });
+}
+
+// ============================================================
+// TOAST
+// ============================================================
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+// ============================================================
+// INIT
+// ============================================================
+function init() {
+  renderForm();
+  updateHistoryLabel();
+
+  const p = new URLSearchParams(window.location.search);
+  if (p.get('type') && p.get('type') !== 'single') {
+    const tabBtn = document.querySelectorAll('.tab')[p.get('type') === 'eachway' ? 1 : 0];
+    if (tabBtn) setType(p.get('type'), tabBtn);
+  }
+}
+
+init();
+</script>
+</body>
+</html>
