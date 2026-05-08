@@ -2,6 +2,12 @@
   // ─── NAV DATA ─────────────────────────────────────────────────────────────
   const NAV = [
     {
+      label: '🎯 Tools',
+      links: [
+        { text: '🔍 Smart Bookie Matcher — Find your best bookie', href: '/bookie-matcher.html' },
+      ]
+    },
+    {
       label: '🏆 Best Betting Sites',
       links: [
         { text: 'All 130+ Bookmakers →',        href: '/all-betting-sites.html' },
