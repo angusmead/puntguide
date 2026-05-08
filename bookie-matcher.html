@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X8HMP35PY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X8HMP35PY6');
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" sizes="32x32" href="/pg-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/pg-icon-192.png">
+<link rel="apple-touch-icon" sizes="192x192" href="/pg-icon-192.png">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Smart Bookie Matcher — Find Your Best Australian Bookmaker | PuntGuide</title>
+<meta name="description" content="Answer 8 quick questions and get matched to the Australian bookmakers that best suit how you bet. Independent, data-driven, takes under 2 minutes.">
+<link rel="canonical" href="https://puntguide.com.au/bookie-matcher">
+<meta property="og:title" content="Smart Bookie Matcher | PuntGuide">
+<meta property="og:description" content="8 questions. Personalised bookmaker recommendations from 15 Australian bookies.">
+<meta property="og:url" content="https://puntguide.com.au/bookie-matcher">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://puntguide.com.au/puntguide-logo.png">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:hsl(205 60% 96%);--fg:hsl(215 45% 16%);--primary:hsl(48 92% 64%);--pfg:hsl(215 45% 16%);--muted:hsl(205 40% 92%);--muted-fg:hsl(215 20% 42%);--accent:hsl(200 88% 58%);--border:hsl(205 40% 86%);--gg:linear-gradient(135deg,hsl(50 96% 72%),hsl(44 92% 60%));--sg:0 10px 40px -10px hsl(48 92% 54%/.4);--sc:0 4px 24px -8px hsl(215 50% 30%/.1);--ch:36px;--nh:80px;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--fg);font-family:"Inter Tight",sans-serif;line-height:1.65;font-size:15px;}
+h1,h2,h3,h4{font-family:"Geist",sans-serif;letter-spacing:-0.03em;}
+a{color:inherit;text-decoration:none;}
+
+/* COMPLIANCE BAR */
+.cb{position:fixed;top:0;left:0;right:0;height:var(--ch);background:hsl(215 45% 16%);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 24px;font-size:11px;z-index:200;gap:12px;}
+.cb-t{font-weight:700;color:var(--primary);}.cb-h{color:hsl(205 40% 70%);}.cb-h a{color:var(--accent);}
+.cb-b{display:flex;gap:6px;}.cb-b span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:2px 6px;font-size:10px;font-weight:700;}
+
+/* NAV */
+.nav{position:fixed;top:var(--ch);left:0;right:0;height:var(--nh);background:hsl(205 60% 96%/.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 40px;z-index:100;}
+.nav-logo img{height:72px;width:auto;}
+.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:500;color:hsl(215 45% 16%/.7);transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--primary);}
+.btn-g{display:inline-flex;align-items:center;background:var(--gg);color:var(--pfg);font-size:13px;font-weight:700;padding:9px 18px;border-radius:10px;border:none;cursor:pointer;text-decoration:none;box-shadow:var(--sg);white-space:nowrap;}
+.pb{padding-top:calc(var(--ch) + var(--nh));}
+
+/* QUIZ WRAPPER */
+.matcher-wrap{max-width:680px;margin:0 auto;padding:44px 20px 80px;}
+
+/* INTRO SCREEN */
+.intro-hero{background:hsl(215 45% 16%);border-radius:20px;padding:44px 36px;color:#fff;margin-bottom:24px;position:relative;overflow:hidden;}
+.intro-hero::before{content:'';position:absolute;top:-60px;right:-60px;width:240px;height:240px;background:radial-gradient(circle,hsl(48 92% 64%/.15),transparent 70%);}
+.intro-eyebrow{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--primary);margin-bottom:14px;}
+.intro-title{font-size:clamp(26px,5vw,38px);font-weight:800;line-height:1.15;margin-bottom:14px;color:#fff;}
+.intro-sub{font-size:15px;color:rgba(255,255,255,.72);line-height:1.75;margin-bottom:28px;max-width:480px;}
+.intro-features{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px;}
+.intro-feat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:8px;padding:7px 14px;font-size:13px;color:rgba(255,255,255,.85);font-weight:500;}
+.btn-start{display:inline-flex;align-items:center;gap:8px;background:var(--gg);color:var(--pfg);font-family:"Geist",sans-serif;font-size:16px;font-weight:800;padding:14px 28px;border-radius:12px;border:none;cursor:pointer;box-shadow:var(--sg);letter-spacing:-0.01em;transition:transform .15s,box-shadow .15s;}
+.btn-start:hover{transform:translateY(-1px);box-shadow:0 14px 40px -8px hsl(48 92% 54%/.5);}
+
+/* QUIZ SCREEN */
+.quiz-card{background:#fff;border:1px solid var(--border);border-radius:20px;box-shadow:var(--sc);overflow:hidden;}
+
+/* PROGRESS */
+.progress-wrap{padding:20px 24px 0;}
+.progress-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.progress-label{font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;color:var(--muted-fg);text-transform:uppercase;letter-spacing:.1em;}
+.progress-bar{display:flex;gap:4px;}
+.progress-seg{flex:1;height:4px;border-radius:2px;background:var(--muted);transition:background .3s;}
+.progress-seg.done{background:var(--primary);}
+.progress-seg.active{background:var(--accent);}
+
+/* QUESTION */
+.question-body{padding:28px 24px 20px;}
+.q-number{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.15em;color:var(--accent);margin-bottom:10px;}
+.q-text{font-family:"Geist",sans-serif;font-size:clamp(18px,4vw,22px);font-weight:700;line-height:1.3;margin-bottom:6px;letter-spacing:-0.02em;}
+.q-hint{font-size:13px;color:var(--muted-fg);margin-bottom:22px;}
+
+/* OPTIONS */
+.options-grid{display:flex;flex-direction:column;gap:8px;}
+.option-card{display:flex;align-items:center;gap:14px;padding:14px 16px;border:2px solid var(--border);border-radius:12px;cursor:pointer;transition:border-color .15s,background .15s;user-select:none;-webkit-tap-highlight-color:transparent;}
+.option-card:hover{border-color:var(--accent);background:hsl(200 80% 97%);}
+.option-card.selected{border-color:var(--fg);background:var(--fg);color:#fff;}
+.option-card.selected .opt-indicator{background:var(--primary);border-color:var(--primary);}
+.option-card.selected .opt-indicator::after{opacity:1;}
+.opt-indicator{width:20px;height:20px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;position:relative;transition:all .15s;}
+.opt-indicator::after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--fg);opacity:0;transition:opacity .15s;}
+.multi .opt-indicator{border-radius:5px;}
+.multi .opt-indicator::after{border-radius:2px;}
+.opt-label{font-size:15px;font-weight:600;line-height:1.3;}
+.opt-emoji{font-size:20px;flex-shrink:0;width:28px;text-align:center;}
+
+/* NAV BUTTONS */
+.quiz-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px 24px;border-top:1px solid var(--border);margin-top:4px;}
+.btn-back{background:none;border:2px solid var(--border);color:var(--muted-fg);font-size:14px;font-weight:600;padding:10px 20px;border-radius:10px;cursor:pointer;font-family:"Inter Tight",sans-serif;transition:border-color .15s,color .15s;}
+.btn-back:hover{border-color:var(--fg);color:var(--fg);}
+.btn-back:disabled{opacity:.35;cursor:not-allowed;}
+.btn-next{background:var(--gg);color:var(--pfg);font-size:15px;font-weight:800;padding:12px 28px;border-radius:10px;border:none;cursor:pointer;font-family:"Geist",sans-serif;box-shadow:var(--sg);transition:opacity .15s,transform .15s;letter-spacing:-0.01em;}
+.btn-next:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;}
+.btn-next:not(:disabled):hover{transform:translateY(-1px);}
+
+/* RESULTS */
+.results-header{background:hsl(215 45% 16%);border-radius:20px;padding:32px 28px;color:#fff;margin-bottom:24px;}
+.results-eyebrow{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.2em;color:var(--primary);margin-bottom:10px;}
+.results-title{font-size:clamp(22px,4vw,30px);font-weight:800;margin-bottom:8px;}
+.results-sub{font-size:14px;color:rgba(255,255,255,.65);line-height:1.7;}
+.disclaimer{background:hsl(205 40% 92%);border-radius:10px;padding:12px 16px;font-size:12px;color:var(--muted-fg);line-height:1.7;margin-bottom:24px;}
+.disclaimer a{color:var(--accent);}
+
+/* RESULT CARDS */
+.result-card{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:16px;box-shadow:var(--sc);}
+.result-card.top{border-color:hsl(48 60% 75%);box-shadow:var(--sg);}
+.rank-banner{display:flex;align-items:center;gap:10px;padding:10px 20px;font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;}
+.rank-banner.r1{background:var(--gg);color:var(--pfg);}
+.rank-banner.r2{background:hsl(215 20% 88%);color:var(--muted-fg);}
+.rank-banner.r3{background:hsl(22 50% 88%);color:hsl(22 40% 35%);}
+.result-body{padding:20px;}
+.result-top{display:flex;align-items:center;gap:16px;margin-bottom:16px;}
+.bookie-logo{width:56px;height:56px;border-radius:12px;object-fit:contain;background:var(--muted);padding:4px;border:1px solid var(--border);}
+.bookie-logo-fallback{width:56px;height:56px;border-radius:12px;background:var(--fg);color:var(--primary);display:flex;align-items:center;justify-content:center;font-family:"Geist",sans-serif;font-size:20px;font-weight:800;flex-shrink:0;}
+.result-name{font-family:"Geist",sans-serif;font-size:20px;font-weight:800;letter-spacing:-0.02em;}
+.result-tagline{font-size:13px;color:var(--muted-fg);margin-top:2px;}
+
+/* MATCH BAR */
+.match-pct-row{display:flex;align-items:center;gap:12px;margin-bottom:16px;}
+.match-pct-num{font-family:"JetBrains Mono",monospace;font-size:22px;font-weight:700;color:var(--fg);min-width:52px;}
+.match-bar-track{flex:1;height:8px;background:var(--muted);border-radius:4px;overflow:hidden;}
+.match-bar-fill{height:100%;border-radius:4px;background:var(--gg);width:0%;transition:width 0.8s cubic-bezier(.16,1,.3,1);}
+
+/* REASONS */
+.reasons{margin-bottom:16px;}
+.reason{display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.55;}
+.reason-tick{color:var(--accent);font-weight:700;flex-shrink:0;margin-top:1px;}
+
+/* STAT PILLS */
+.stat-pills{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px;}
+.stat-pill{background:var(--muted);border-radius:6px;padding:4px 10px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:5px;}
+.stat-pill .stat-score{font-family:"JetBrains Mono",monospace;color:var(--accent);font-weight:700;}
+
+/* CTAs */
+.result-ctas{display:flex;gap:10px;flex-wrap:wrap;}
+.cta-visit{display:inline-flex;align-items:center;background:var(--gg);color:var(--pfg);font-size:14px;font-weight:700;padding:11px 22px;border-radius:10px;text-decoration:none;box-shadow:var(--sg);white-space:nowrap;transition:transform .15s;}
+.cta-visit:hover{transform:translateY(-1px);}
+.cta-review{display:inline-flex;align-items:center;background:var(--muted);color:var(--fg);font-size:13px;font-weight:600;padding:11px 18px;border-radius:10px;text-decoration:none;}
+
+/* FULL RANKING */
+.full-rank-wrap{margin-top:8px;}
+.full-rank-toggle{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px;background:#fff;border:2px solid var(--border);border-radius:12px;cursor:pointer;font-size:14px;font-weight:600;color:var(--muted-fg);transition:border-color .15s,color .15s;font-family:"Inter Tight",sans-serif;}
+.full-rank-toggle:hover{border-color:var(--fg);color:var(--fg);}
+.full-rank-list{display:none;background:#fff;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-top:10px;}
+.full-rank-list.open{display:block;}
+.rank-row{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);}
+.rank-row:last-child{border-bottom:none;}
+.rank-num{font-family:"JetBrains Mono",monospace;font-size:13px;font-weight:700;color:var(--muted-fg);min-width:24px;text-align:center;}
+.rank-row-logo{width:32px;height:32px;border-radius:8px;object-fit:contain;background:var(--muted);padding:2px;}
+.rank-row-logo-fb{width:32px;height:32px;border-radius:8px;background:var(--fg);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;font-family:"Geist",sans-serif;}
+.rank-row-name{flex:1;font-weight:600;font-size:14px;}
+.rank-row-pct{font-family:"JetBrains Mono",monospace;font-size:13px;font-weight:700;color:var(--accent);}
+.rank-row-cta{font-size:12px;font-weight:700;color:var(--pfg);background:var(--gg);padding:5px 12px;border-radius:6px;white-space:nowrap;}
+
+/* RESTART */
+.restart-row{text-align:center;margin-top:24px;}
+.restart-row button{background:none;border:none;color:var(--muted-fg);font-size:14px;cursor:pointer;text-decoration:underline;font-family:"Inter Tight",sans-serif;}
+
+/* SCREEN TRANSITIONS */
+.screen{display:none;animation:fadeIn .25s ease;}
+.screen.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* FOOTER */
+.site-footer{background:hsl(215 45% 16%);color:rgba(255,255,255,.7);padding:44px 32px 28px;margin-top:72px;}
+.footer-in{max-width:1100px;margin:0 auto;}
+.footer-logo{height:44px;width:auto;margin-bottom:14px;filter:brightness(0) invert(1);opacity:.75;}
+.footer-links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px;}
+.footer-links a{font-size:13px;color:rgba(255,255,255,.55);}
+.footer-rg{font-size:11px;color:rgba(255,255,255,.4);border-top:1px solid rgba(255,255,255,.1);padding-top:20px;line-height:1.8;}
+.footer-rg a{color:rgba(255,255,255,.4);}
+
+@media(max-width:640px){
+  .nav-links{display:none;}
+  .nav{padding:0 16px;}
+  .matcher-wrap{padding:28px 12px 60px;}
+  .intro-hero{padding:28px 20px;}
+  .question-body{padding:20px 16px 14px;}
+  .quiz-nav{padding:14px 16px 20px;}
+  .result-body{padding:16px;}
+  .result-ctas{flex-direction:column;}
+  .cta-visit,.cta-review{justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<div class="cb">
+  <span class="cb-t">Bet Responsibly</span>
+  <span class="cb-h">Gambling Help: <a href="tel:1800858858">1800 858 858</a> · <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a></span>
+  <div class="cb-b"><span>18+</span><span>AUS ONLY</span></div>
+</div>
+
+<nav class="nav">
+  <a href="/index.html" class="nav-logo"><img src="/puntguide-logo.png" alt="PuntGuide"></a>
+  <ul class="nav-links">
+    <li><a href="/best-betting-sites-australia.html">Best Sites</a></li>
+    <li><a href="/afl-tips.html">AFL Tips</a></li>
+    <li><a href="/nrl-tips.html">NRL Tips</a></li>
+    <li><a href="/bookie-matcher.html" class="active">Bookie Matcher</a></li>
+    <li><a href="/all-betting-sites.html">All Sites</a></li>
+  </ul>
+  <a href="/bookie-matcher.html" class="btn-g">Find My Bookie →</a>
+</nav>
+
+<div class="pb">
+<div class="matcher-wrap">
+  <div id="app"></div>
+</div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-in">
+    <img src="/puntguide-logo.png" alt="PuntGuide" class="footer-logo">
+    <div class="footer-links">
+      <a href="/best-betting-sites-australia.html">Best Betting Sites</a>
+      <a href="/bookie-matcher.html">Bookie Matcher</a>
+      <a href="/nrl-tips.html">NRL Tips</a>
+      <a href="/afl-tips.html">AFL Tips</a>
+      <a href="/horse-racing-tips-today.html">Racing Tips</a>
+      <a href="/about.html">About</a>
+    </div>
+    <div class="footer-rg">
+      Gamble responsibly. Set a budget and stick to it. For help call <a href="tel:1800858858">Gambling Help 1800 858 858</a> or visit <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a>. Self-exclude nationally at <a href="https://www.betstop.gov.au" target="_blank">BetStop.gov.au</a>. 18+ only. PuntGuide may earn a commission when you sign up via our links. This does not influence our rankings or recommendations.
+    </div>
+  </div>
+</footer>
+
+<script src="/nav-drawer.js"></script>
+<script src="/js/tracking.js"></script>
+
+<script>
+// ============================================================
+// QUIZ DATA
+// ============================================================
+
+const QUESTIONS = [
+  {
+    id: 'q0',
+    text: 'What do you bet on most?',
+    hint: 'Select all that apply',
+    type: 'multi',
+    options: [
+      { value: 'racing',       emoji: '🏇', label: 'Horse Racing',       weights: { racing: 3 } },
+      { value: 'afl_nrl',      emoji: '🏉', label: 'AFL & NRL',           weights: { sports: 3 } },
+      { value: 'other_sports', emoji: '⚽', label: 'Other Sports',        weights: { sports: 2, niche: 1 } },
+      { value: 'esports',      emoji: '🎮', label: 'Esports',             weights: { niche: 3, sports: 1 } },
+      { value: 'everything',   emoji: '🎯', label: 'Mix of everything',   weights: { racing: 1, sports: 1, niche: 1 } },
+    ]
+  },
+  {
+    id: 'q1',
+    text: 'How often do you bet?',
+    type: 'single',
+    options: [
+      { value: 'daily',       emoji: '📅', label: 'Daily',                          weights: { promos: 1, app: 2 } },
+      { value: 'few_weekly',  emoji: '📆', label: 'A few times a week',             weights: { promos: 1, app: 1 } },
+      { value: 'weekly_big',  emoji: '🏆', label: 'Weekly — mostly big events',     weights: { sports: 1, promos: 1 } },
+      { value: 'occasional',  emoji: '🌙', label: 'Occasionally / casual',          weights: { lowstake: 2 } },
+    ]
+  },
+  {
+    id: 'q2',
+    text: 'What\'s your typical bet size?',
+    type: 'single',
+    options: [
+      { value: 'micro',     emoji: '🪙', label: 'Under $20',      weights: { lowstake: 3 } },
+      { value: 'small',     emoji: '💵', label: '$20 – $100',     weights: { lowstake: 1, promos: 1 } },
+      { value: 'medium',    emoji: '💰', label: '$100 – $500',    weights: { cashout: 1, promos: 1 } },
+      { value: 'large',     emoji: '💎', label: '$500+',          weights: { cashout: 2 } },
+    ]
+  },
+  {
+    id: 'q3',
+    text: 'Pick your top priorities',
+    hint: 'Choose up to 3 — what matters most to you in a bookmaker?',
+    type: 'multi',
+    maxSelect: 3,
+    options: [
+      { value: 'odds',      emoji: '💰', label: 'Best odds',            weights: { racing: 1, sports: 1 } },
+      { value: 'promos',    emoji: '🎁', label: 'Promos & bonuses',     weights: { promos: 3 } },
+      { value: 'app',       emoji: '📱', label: 'App experience',       weights: { app: 3 } },
+      { value: 'markets',   emoji: '📊', label: 'Range of markets',     weights: { sports: 2, niche: 1 } },
+      { value: 'cashout',   emoji: '💸', label: 'Cash-out flexibility', weights: { cashout: 3 } },
+      { value: 'lowstake',  emoji: '🪙', label: 'Low minimum stakes',   weights: { lowstake: 2 } },
+    ]
+  },
+  {
+    id: 'q4',
+    text: 'Do you bet live / in-play?',
+    type: 'single',
+    options: [
+      { value: 'often',     emoji: '⚡', label: 'Yes — often',        weights: { live: 3 } },
+      { value: 'sometimes', emoji: '🔄', label: 'Sometimes',          weights: { live: 1 } },
+      { value: 'rarely',    emoji: '❌', label: 'Rarely or never',    weights: {} },
+    ]
+  },
+  {
+    id: 'q5',
+    text: 'Do you build multis or same-game multis?',
+    type: 'single',
+    options: [
+      { value: 'always',    emoji: '🔗', label: 'All the time — love a multi',   weights: { multis: 3 } },
+      { value: 'sometimes', emoji: '↕️', label: 'Sometimes',                      weights: { multis: 1 } },
+      { value: 'never',     emoji: '➖', label: 'Almost never',                   weights: {} },
+    ]
+  },
+  {
+    id: 'q6',
+    text: 'Interested in exchange betting?',
+    hint: 'Lay bets, trading, no account restrictions for winning punters',
+    type: 'single',
+    options: [
+      { value: 'yes',   emoji: '🔄', label: 'Yes — that\'s what I\'m after',    weights: { exchange: 5 } },
+      { value: 'maybe', emoji: '🤔', label: 'Maybe — tell me more',             weights: { exchange: 2 } },
+      { value: 'no',    emoji: '❌', label: 'No — fixed odds only',             weights: {} },
+    ]
+  },
+  {
+    id: 'q7',
+    text: 'What\'s your situation?',
+    type: 'single',
+    options: [
+      { value: 'first',     emoji: '🆕', label: 'Looking for my first bookmaker',       weights: { promos: 2, app: 1, lowstake: 1 } },
+      { value: 'adding',    emoji: '➕', label: 'Adding a second or third account',     weights: { niche: 1, sports: 1 } },
+      { value: 'switching', emoji: '🔀', label: 'Want to switch from my current bookie', weights: { promos: 1, app: 1 } },
+    ]
+  },
+];
+
+// ============================================================
+// BOOKIE PROFILES
+// commission_tier is stored for internal reporting only.
+// It is NOT used in any scoring calculation.
+// ============================================================
+const BOOKIES = {
+  bet365: {
+    name: 'Bet365', slug: 'bet365',
+    tagline: "World's largest bookmaker — unmatched market depth and live streaming",
+    logo: '/bet365.png', reviewUrl: '/review-bet365.html',
+    commission_tier: 'medium',
+    scores: { racing:4, sports:5, live:5, multis:4, app:5, cashout:5, promos:3, lowstake:3, exchange:1, niche:4 },
+  },
+  sportsbet: {
+    name: 'Sportsbet', slug: 'sportsbet',
+    tagline: "Australia's favourite — biggest promos and best same-game multi builder",
+    logo: '/sportsbet.png', reviewUrl: '/review-sportsbet.html',
+    commission_tier: 'high',
+    scores: { racing:4, sports:5, live:3, multis:5, app:5, cashout:4, promos:5, lowstake:4, exchange:1, niche:3 },
+  },
+  ladbrokes: {
+    name: 'Ladbrokes', slug: 'ladbrokes',
+    tagline: "Strong racing markets and Best Tote with regular sports promotions",
+    logo: '/ladbrokes.png', reviewUrl: '/review-ladbrokes.html',
+    commission_tier: 'high',
+    scores: { racing:5, sports:4, live:3, multis:4, app:4, cashout:4, promos:4, lowstake:4, exchange:1, niche:2 },
+  },
+  neds: {
+    name: 'Neds', slug: 'neds',
+    tagline: "Clean app, competitive NRL and AFL lines, solid racing coverage",
+    logo: '/neds.png', reviewUrl: '/review-neds.html',
+    commission_tier: 'high',
+    scores: { racing:4, sports:4, live:3, multis:4, app:4, cashout:3, promos:4, lowstake:4, exchange:1, niche:2 },
+  },
+  betr: {
+    name: 'Betr', slug: 'betr',
+    tagline: "Modern app, micro-betting and no-frills punting for any stake size",
+    logo: '/betr.png', reviewUrl: '/review-betr.html',
+    commission_tier: 'medium',
+    scores: { racing:3, sports:4, live:3, multis:4, app:5, cashout:3, promos:4, lowstake:5, exchange:1, niche:2 },
+  },
+  dabble: {
+    name: 'Dabble', slug: 'dabble',
+    tagline: "Social betting app with near-instant NPP withdrawals and a clean UI",
+    logo: '/dabble.png', reviewUrl: '/review-dabble.html',
+    commission_tier: 'medium',
+    scores: { racing:4, sports:3, live:2, multis:3, app:5, cashout:3, promos:3, lowstake:5, exchange:1, niche:2 },
+  },
+  unibet: {
+    name: 'Unibet', slug: 'unibet',
+    tagline: "European-backed operator with strong live markets and competitive promos",
+    logo: '/unibet.png', reviewUrl: '/review-unibet.html',
+    commission_tier: 'medium',
+    scores: { racing:3, sports:4, live:4, multis:4, app:4, cashout:4, promos:4, lowstake:4, exchange:1, niche:3 },
+  },
+  pointsbet: {
+    name: 'PointsBet', slug: 'pointsbet',
+    tagline: "PointsBetting product plus best-in-class SGMs and promos",
+    logo: '/pointsbet.png', reviewUrl: '/review-pointsbet.html',
+    commission_tier: 'medium',
+    scores: { racing:3, sports:5, live:3, multis:5, app:4, cashout:4, promos:5, lowstake:3, exchange:1, niche:3 },
+  },
+  picklebet: {
+    name: 'Picklebet', slug: 'picklebet',
+    tagline: "Australia's #1 esports bookmaker — CS2, LoL, Dota 2, Valorant and more",
+    logo: '/picklebet.png', reviewUrl: '/review-picklebet.html',
+    commission_tier: 'low',
+    scores: { racing:2, sports:3, live:2, multis:3, app:4, cashout:2, promos:3, lowstake:4, exchange:1, niche:5 },
+  },
+  palmerbet: {
+    name: 'Palmerbet', slug: 'palmerbet',
+    tagline: "Racing specialist with the deepest metro markets and Best Tote guarantee",
+    logo: '/palmerbet.png', reviewUrl: '/review-palmerbet.html',
+    commission_tier: 'low',
+    scores: { racing:5, sports:3, live:2, multis:3, app:3, cashout:2, promos:3, lowstake:4, exchange:1, niche:2 },
+  },
+  betright: {
+    name: 'BetRight', slug: 'betright',
+    tagline: "Near-instant withdrawals, Best Tote and one of the best SGM builders",
+    logo: '/betright.png', reviewUrl: '/review-betright.html',
+    commission_tier: 'medium',
+    scores: { racing:5, sports:4, live:3, multis:5, app:4, cashout:4, promos:4, lowstake:4, exchange:1, niche:2 },
+  },
+  betfair: {
+    name: 'Betfair', slug: 'betfair',
+    tagline: "Australia's only betting exchange — lay bets, trade and never get restricted",
+    logo: '/betfair.png', reviewUrl: '/review-betfair.html',
+    commission_tier: 'low',
+    scores: { racing:4, sports:4, live:5, multis:1, app:4, cashout:5, promos:2, lowstake:3, exchange:5, niche:3 },
+  },
+  betfocus: {
+    name: 'BetFocus', slug: 'betfocus',
+    tagline: "Smaller independent operator — good for low stakes and casual punting",
+    logo: '/betfocus.png', reviewUrl: '/review-betfocus.html',
+    commission_tier: 'none',
+    scores: { racing:3, sports:3, live:2, multis:3, app:3, cashout:2, promos:3, lowstake:4, exchange:1, niche:2 },
+  },
+  nextbet: {
+    name: 'Nextbet', slug: 'nextbet',
+    tagline: "Emerging Australian bookmaker with racing focus and competitive fixed odds",
+    logo: '/nextbet.png', reviewUrl: '/review-nextbet.html',
+    commission_tier: 'none',
+    scores: { racing:4, sports:3, live:2, multis:3, app:3, cashout:2, promos:3, lowstake:3, exchange:1, niche:2 },
+  },
+  tradiebet: {
+    name: 'TradieBet', slug: 'tradiebet',
+    tagline: "No-fuss Aussie bookie — great for small stakes and rapid 4x daily withdrawals",
+    logo: '/tradiebet.png', reviewUrl: '/review-tradiebet.html',
+    commission_tier: 'none',
+    scores: { racing:4, sports:3, live:2, multis:3, app:3, cashout:3, promos:3, lowstake:5, exchange:1, niche:2 },
+  },
+};
+
+const ATTR_LABELS = {
+  racing:'Racing', sports:'Sports', live:'Live betting', multis:'Multis',
+  app:'App', cashout:'Cash-out', promos:'Promos', lowstake:'Low stakes',
+  exchange:'Exchange', niche:'Niche/Esports',
+};
+
+const REASON_TEMPLATES = {
+  racing:   () => 'Deep racing coverage with Best Tote guaranteed on metropolitan meetings',
+  sports:   () => 'Strong AFL, NRL and international sports markets with competitive pricing',
+  live:     () => 'Great for live betting — real-time markets and cash-out available',
+  multis:   () => 'One of the best multi and same-game multi builders in Australia',
+  app:      () => 'Highly rated mobile app — fast, clean and built for punting on the go',
+  cashout:  () => 'Flexible cash-out across most markets with real-time pricing',
+  promos:   () => 'Regular promotions, money-back specials and weekly bonus offers',
+  lowstake: () => 'No minimum bet pressure — works for any stake size from $1 up',
+  exchange: () => 'Genuine exchange betting — lay bets, trade positions, no account bans for winning',
+  niche:    () => 'Widest niche and esports coverage in Australia — CS2, LoL, Dota 2 and more',
+};
+
+// ============================================================
+// STATE
+// ============================================================
+let currentQ = 0;
+let answers = {}; // { 0: ['racing','afl_nrl'], 1: 'daily', ... }
+
+// ============================================================
+// SCORING (commission_tier deliberately excluded)
+// ============================================================
+function computeWeights() {
+  const w = {};
+  QUESTIONS.forEach((q, qi) => {
+    const ans = answers[qi];
+    if (!ans) return;
+    const selected = Array.isArray(ans) ? ans : [ans];
+    selected.forEach(val => {
+      const opt = q.options.find(o => o.value === val);
+      if (!opt || !opt.weights) return;
+      Object.entries(opt.weights).forEach(([attr, weight]) => {
+        w[attr] = (w[attr] || 0) + weight;
+      });
+    });
+  });
+  return w;
+}
+
+function scoreBookies(weights) {
+  if (!Object.keys(weights).length) {
+    // Default equal weights if no meaningful answers
+    const eq = {};
+    Object.keys(BOOKIES).forEach(s => { eq[s] = 50; });
+    return eq;
+  }
+  const raw = {};
+  Object.entries(BOOKIES).forEach(([slug, b]) => {
+    let s = 0;
+    Object.entries(weights).forEach(([attr, w]) => {
+      s += w * (b.scores[attr] || 0);
+    });
+    raw[slug] = s;
+  });
+  const max = Math.max(...Object.values(raw), 1);
+  const norm = {};
+  Object.entries(raw).forEach(([s, v]) => {
+    // Scale to 45-98 range (honest -- nobody is a perfect match)
+    norm[s] = Math.round(45 + (v / max) * 53);
+  });
+  return norm;
+}
+
+function getRanked(scores) {
+  return Object.entries(scores).sort((a, b) => b[1] - a[1]).map(([s, pct]) => ({ slug: s, pct }));
+}
+
+function getMatchReasons(slug, weights) {
+  const b = BOOKIES[slug];
+  const contribs = Object.entries(weights)
+    .map(([attr, w]) => ({ attr, contrib: w * (b.scores[attr] || 0), score: b.scores[attr] || 0 }))
+    .filter(c => c.contrib > 0 && c.score >= 3)
+    .sort((a, b) => b.contrib - a.contrib);
+  return contribs.slice(0, 3).map(c => REASON_TEMPLATES[c.attr]());
+}
+
+function getTopStats(slug, weights) {
+  const b = BOOKIES[slug];
+  const attrs = Object.entries(weights)
+    .filter(([attr, w]) => w > 0)
+    .map(([attr, w]) => ({ attr, score: b.scores[attr] || 0 }))
+    .sort((a, b2) => b2.score - a.score)
+    .slice(0, 4);
+  if (!attrs.length) {
+    return [{ attr: 'app', score: b.scores.app }, { attr: 'racing', score: b.scores.racing }];
+  }
+  return attrs;
+}
+
+// ============================================================
+// URL STATE
+// ============================================================
+function encodeState() {
+  const parts = QUESTIONS.map((_, i) => {
+    const a = answers[i];
+    if (!a) return '';
+    return Array.isArray(a) ? a.join(',') : a;
+  });
+  return parts.join('|');
+}
+
+function decodeState(str) {
+  if (!str) return false;
+  const parts = str.split('|');
+  if (parts.length !== QUESTIONS.length) return false;
+  parts.forEach((p, i) => {
+    if (!p) return;
+    const q = QUESTIONS[i];
+    if (q.type === 'multi') {
+      answers[i] = p.split(',').filter(Boolean);
+    } else {
+      answers[i] = p;
+    }
+  });
+  return true;
+}
+
+// ============================================================
+// ANALYTICS
+// ============================================================
+function track(event, params) {
+  if (typeof gtag === 'function') gtag('event', event, params || {});
+}
+
+// ============================================================
+// RENDER HELPERS
+// ============================================================
+function logoImg(slug, size, fallbackClass) {
+  const b = BOOKIES[slug];
+  const cls = fallbackClass || 'bookie-logo-fallback';
+  const szStyle = size ? `style="width:${size}px;height:${size}px;"` : '';
+  return `<img src="${b.logo}" alt="${b.name}" class="${size === 32 ? 'rank-row-logo' : 'bookie-logo'}" ${szStyle} onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">` +
+         `<div class="${size === 32 ? 'rank-row-logo-fb' : cls}" style="display:none;">${b.name[0]}</div>`;
+}
+
+function matchBar(pct, delay) {
+  const id = 'bar_' + Math.random().toString(36).slice(2);
+  setTimeout(() => {
+    const el = document.getElementById(id);
+    if (el) el.style.width = pct + '%';
+  }, delay || 100);
+  return `<div class="match-bar-fill" id="${id}"></div>`;
+}
+
+// ============================================================
+// SCREENS
+// ============================================================
+function showScreen(name) {
+  document.getElementById('app').innerHTML = '';
+  document.getElementById('app').className = 'screen active';
+  if (name === 'intro') renderIntro();
+  else if (name === 'quiz') renderQuiz();
+  else if (name === 'results') renderResults();
+}
+
+function renderIntro() {
+  document.getElementById('app').innerHTML = `
+    <div style="background:hsl(215 45% 16%);border-radius:10px;padding:16px 20px;margin:0 0 20px;">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(48 92% 64%);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">Short Answer</div>
+      <p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.9);margin:0;">Answer 8 quick questions about how you bet and get matched to the 2-3 Australian bookmakers that genuinely suit your profile. 15 bookmakers scored across 10 attributes. Independent -- your results are never influenced by who pays us the most commission.</p>
+    </div>
+    <div style="background:hsl(200 80% 97%);border:1px solid hsl(200 70% 85%);border-radius:10px;padding:16px 20px;margin:0 0 24px;">
+      <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(200 60% 40%);margin-bottom:10px;font-family:'JetBrains Mono',monospace;">Key Findings</div>
+      <ul style="list-style:none;margin:0;padding:0;">
+        <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>15 Australian bookmakers scored across 10 criteria: racing, sports, live betting, multis, app, cash-out, promos, low stakes, exchange and niche markets.</li>
+        <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span><strong>Commission never influences results</strong> -- the highest-scoring bookmaker for your profile wins, regardless of what they pay us.</li>
+        <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>Takes under 2 minutes. All 15 bookmakers remain visible in the full ranking after your top 3 results.</li>
+        <li style="display:flex;gap:10px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>Results explain <em>why</em> each bookmaker matched -- driven by your specific answers, not generic recommendations.</li>
+      </ul>
+    </div>
+    <div class="intro-hero">
+      <div class="intro-eyebrow">Smart Bookie Matcher</div>
+      <h1 class="intro-title">Find your perfect Australian bookmaker</h1>
+      <p class="intro-sub">8 questions. Personalised recommendations from 15 bookmakers. Scored across racing, sports, live betting, multis, app quality and more.</p>
+      <div class="intro-features">
+        <span class="intro-feat">✓ Takes under 2 minutes</span>
+        <span class="intro-feat">✓ 15 bookmakers compared</span>
+        <span class="intro-feat">✓ 100% independent</span>
+        <span class="intro-feat">✓ 18+ | Gamble responsibly</span>
+      </div>
+      <button class="btn-start" onclick="startQuiz()">Start the Quiz →</button>
+    </div>
+  `;
+}
+
+function startQuiz() {
+  answers = {};
+  currentQ = 0;
+  track('quiz_started', { tool: 'bookie_matcher' });
+  showScreen('quiz');
+}
+
+function renderQuiz() {
+  const q = QUESTIONS[currentQ];
+  const isMulti = q.type === 'multi';
+  const selected = answers[currentQ] || (isMulti ? [] : null);
+
+  const segs = QUESTIONS.map((_, i) => {
+    const cls = i < currentQ ? 'done' : i === currentQ ? 'active' : '';
+    return `<div class="progress-seg ${cls}"></div>`;
+  }).join('');
+
+  const opts = q.options.map(opt => {
+    const isSelected = isMulti ? selected.includes(opt.value) : selected === opt.value;
+    return `
+      <div class="option-card ${isMulti ? 'multi' : ''} ${isSelected ? 'selected' : ''}"
+           onclick="selectOption(${currentQ}, '${opt.value}', ${isMulti}, ${q.maxSelect || 99})" role="button" tabindex="0">
+        <div class="opt-indicator"></div>
+        <span class="opt-emoji">${opt.emoji}</span>
+        <span class="opt-label">${opt.label}</span>
+      </div>
+    `;
+  }).join('');
+
+  const hasAnswer = isMulti ? selected.length > 0 : !!selected;
+  const isLast = currentQ === QUESTIONS.length - 1;
+
+  document.getElementById('app').innerHTML = `
+    <div class="quiz-card">
+      <div class="progress-wrap">
+        <div class="progress-meta">
+          <span class="progress-label">Question ${currentQ + 1} of ${QUESTIONS.length}</span>
+          <span class="progress-label">${Math.round(((currentQ) / QUESTIONS.length) * 100)}% done</span>
+        </div>
+        <div class="progress-bar">${segs}</div>
+      </div>
+      <div class="question-body">
+        <div class="q-number">Question ${currentQ + 1}</div>
+        <div class="q-text">${q.text}</div>
+        ${q.hint ? `<div class="q-hint">${q.hint}</div>` : '<div style="margin-bottom:16px;"></div>'}
+        <div class="options-grid">${opts}</div>
+      </div>
+      <div class="quiz-nav">
+        <button class="btn-back" onclick="goBack()" ${currentQ === 0 ? 'disabled' : ''}>← Back</button>
+        <button class="btn-next" id="btn-next" onclick="goNext()" ${!hasAnswer ? 'disabled' : ''}>
+          ${isLast ? 'See My Results →' : 'Next →'}
+        </button>
+      </div>
+    </div>
+  `;
+}
+
+function selectOption(qi, value, isMulti, maxSelect) {
+  if (isMulti) {
+    let sel = answers[qi] ? [...answers[qi]] : [];
+    if (sel.includes(value)) {
+      sel = sel.filter(v => v !== value);
+    } else {
+      if (sel.length >= maxSelect) sel.shift();
+      sel.push(value);
+    }
+    answers[qi] = sel;
+  } else {
+    answers[qi] = value;
+  }
+  renderQuiz();
+}
+
+function goBack() {
+  if (currentQ > 0) {
+    currentQ--;
+    showScreen('quiz');
+  }
+}
+
+function goNext() {
+  const q = QUESTIONS[currentQ];
+  const ans = answers[currentQ];
+  const hasAnswer = q.type === 'multi' ? (ans && ans.length > 0) : !!ans;
+  if (!hasAnswer) return;
+
+  track('question_answered', { question: currentQ + 1, answer: JSON.stringify(ans) });
+
+  if (currentQ < QUESTIONS.length - 1) {
+    currentQ++;
+    showScreen('quiz');
+  } else {
+    finishQuiz();
+  }
+}
+
+function finishQuiz() {
+  track('quiz_completed', { tool: 'bookie_matcher' });
+  // Encode into URL without triggering navigation
+  const encoded = encodeState();
+  const url = new URL(window.location.href);
+  url.searchParams.set('r', encoded);
+  window.history.pushState({}, '', url);
+  showScreen('results');
+}
+
+function renderResults() {
+  const weights = computeWeights();
+  const scores = scoreBookies(weights);
+  const ranked = getRanked(scores);
+  const top3 = ranked.slice(0, 3);
+
+  const rankBanners = ['🥇 Best Match', '🥈 Second Pick', '🥉 Third Pick'];
+  const rankClasses = ['r1', 'r2', 'r3'];
+
+  const topCards = top3.map((r, i) => {
+    const b = BOOKIES[r.slug];
+    const reasons = getMatchReasons(r.slug, weights);
+    const stats = getTopStats(r.slug, weights);
+    const reasonHtml = reasons.length
+      ? reasons.map(txt => `<div class="reason"><span class="reason-tick">✓</span><span>${txt}</span></div>`).join('')
+      : `<div class="reason"><span class="reason-tick">✓</span><span>Solid all-round option for Australian punters</span></div>`;
+    const statsHtml = stats.map(s =>
+      `<div class="stat-pill">${ATTR_LABELS[s.attr]} <span class="stat-score">${s.score}/5</span></div>`
+    ).join('');
+
+    return `
+      <div class="result-card ${i === 0 ? 'top' : ''}">
+        <div class="rank-banner ${rankClasses[i]}">${rankBanners[i]}</div>
+        <div class="result-body">
+          <div class="result-top">
+            ${logoImg(r.slug)}
+            <div>
+              <div class="result-name">${b.name}</div>
+              <div class="result-tagline">${b.tagline}</div>
+            </div>
+          </div>
+          <div class="match-pct-row">
+            <div class="match-pct-num">${r.pct}%</div>
+            <div class="match-bar-track">${matchBar(r.pct, 200 + i * 150)}</div>
+            <div style="font-size:12px;color:var(--muted-fg);white-space:nowrap;">match</div>
+          </div>
+          <div class="reasons">${reasonHtml}</div>
+          <div class="stat-pills">${statsHtml}</div>
+          <div class="result-ctas">
+            <a href="/go/?to=${r.slug}&src=matcher" target="_blank" rel="noopener sponsored" class="cta-visit"
+               onclick="track('affiliate_click',{bookmaker:'${b.name}',source:'bookie_matcher',rank:${i+1}})">
+              Visit ${b.name} →
+            </a>
+            <a href="${b.reviewUrl}" class="cta-review">Read full review</a>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Full ranking list
+  const fullRankHtml = ranked.map((r, i) => {
+    const b = BOOKIES[r.slug];
+    return `
+      <div class="rank-row">
+        <div class="rank-num">${i + 1}</div>
+        ${logoImg(r.slug, 32)}
+        <div class="rank-row-name">${b.name}</div>
+        <div class="rank-row-pct">${r.pct}%</div>
+        <a href="/go/?to=${r.slug}&src=matcher_list" target="_blank" rel="noopener sponsored" class="rank-row-cta"
+           onclick="track('affiliate_click',{bookmaker:'${b.name}',source:'bookie_matcher_list',rank:${i+1}})">
+          Visit →
+        </a>
+      </div>
+    `;
+  }).join('');
+
+  document.getElementById('app').innerHTML = `
+    <div class="results-header">
+      <div class="results-eyebrow">Your Results</div>
+      <div class="results-title">Your top bookmaker picks</div>
+      <div class="results-sub">Matched across 10 criteria from 15 Australian bookmakers. Recommendations are driven by your answers only — not by commission rates.</div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Editorial independence:</strong> PuntGuide may earn a commission if you sign up via our links. This does not influence which bookmakers appear in your results or in what order. The highest-scoring bookmaker for your profile always wins. · All bookmakers are licensed in Australia. Gamble responsibly — <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a> · <a href="https://www.betstop.gov.au" target="_blank">BetStop self-exclusion</a>. 18+ only.
+    </div>
+
+    ${topCards}
+
+    <div class="full-rank-wrap">
+      <button class="full-rank-toggle" onclick="toggleFullRank(this)">
+        <span>See all 15 bookmakers ranked for you</span>
+        <span id="rank-arrow">↓</span>
+      </button>
+      <div class="full-rank-list" id="full-rank-list">
+        ${fullRankHtml}
+      </div>
+    </div>
+
+    <div class="restart-row">
+      <button onclick="restartQuiz()">← Start over with different answers</button>
+    </div>
+  `;
+}
+
+function toggleFullRank(btn) {
+  const list = document.getElementById('full-rank-list');
+  const arrow = document.getElementById('rank-arrow');
+  list.classList.toggle('open');
+  arrow.textContent = list.classList.contains('open') ? '↑' : '↓';
+}
+
+function restartQuiz() {
+  answers = {};
+  currentQ = 0;
+  const url = new URL(window.location.href);
+  url.searchParams.delete('r');
+  window.history.pushState({}, '', url);
+  showScreen('intro');
+}
+
+// ============================================================
+// INIT
+// ============================================================
+function init() {
+  const params = new URLSearchParams(window.location.search);
+  const encoded = params.get('r');
+  if (encoded && decodeState(encoded)) {
+    showScreen('results');
+  } else {
+    showScreen('intro');
+  }
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-X8HMP35PY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-X8HMP35PY6');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Redirecting... | PuntGuide</title>
+<style>
+body{font-family:sans-serif;background:hsl(215 45% 16%);color:#fff;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0;text-align:center;}
+.box{padding:40px 24px;}
+.logo{font-size:24px;font-weight:800;margin-bottom:16px;color:hsl(48 92% 64%);}
+p{color:rgba(255,255,255,.7);margin-bottom:8px;font-size:15px;}
+a{color:hsl(200 88% 58%);}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="logo">PuntGuide</div>
+  <p id="msg">Redirecting...</p>
+  <p style="font-size:12px;opacity:.5;margin-top:16px;">If you are not redirected, <a id="fallback" href="/best-betting-sites-australia.html">click here</a>.</p>
+</div>
+<script>
+const DESTINATIONS = {
+  'bet365':    'https://www.bet365.com.au',
+  'sportsbet': 'https://www.sportsbet.com.au',
+  'ladbrokes': 'https://www.ladbrokes.com.au',
+  'neds':      'https://www.neds.com.au',
+  'betr':      'https://www.betr.com.au',
+  'dabble':    'https://www.dabble.com.au',
+  'unibet':    'https://www.unibet.com.au',
+  'pointsbet': 'https://www.pointsbet.com.au',
+  'picklebet': 'https://www.picklebet.com',
+  'palmerbet': 'https://www.palmerbet.com',
+  'betright':  'https://www.betright.com.au',
+  'betfair':   'https://www.betfair.com.au',
+  'betfocus':  'https://www.betfocus.com.au',
+  'nextbet':   'https://www.nextbet.com.au',
+  'tradiebet': 'https://www.tradie.bet',
+  'tab':       'https://www.tab.com.au',
+  'legz':      'https://legz.com.au/?via=angus',
+};
+
+const NAMES = {
+  'bet365':'Bet365','sportsbet':'Sportsbet','ladbrokes':'Ladbrokes','neds':'Neds',
+  'betr':'Betr','dabble':'Dabble','unibet':'Unibet','pointsbet':'PointsBet',
+  'picklebet':'Picklebet','palmerbet':'Palmerbet','betright':'BetRight',
+  'betfair':'Betfair','betfocus':'BetFocus','nextbet':'Nextbet','tradiebet':'TradieBet',
+  'tab':'TAB','legz':'Legz',
+};
+
+const params = new URLSearchParams(window.location.search);
+const to = params.get('to');
+const source = params.get('src') || 'direct';
+const url = to && DESTINATIONS[to];
+
+if (url) {
+  const name = NAMES[to] || to;
+  document.getElementById('msg').textContent = 'Taking you to ' + name + '...';
+  document.getElementById('fallback').href = url;
+  document.getElementById('fallback').textContent = 'visit ' + name;
+
+  gtag('event', 'affiliate_click', {
+    bookmaker: name,
+    source_page: source,
+    destination: url,
+  });
+
+  setTimeout(() => { window.location.href = url; }, 300);
+} else {
+  document.getElementById('msg').textContent = 'Link not found.';
+}
+</script>
+</body>
+</html>
