@@ -50,7 +50,7 @@
     "cf_advertiser_id": "",
     "status": "applied",
     "priority": 1,
-    "notes": "Direct program — bet365.com/partners"
+    "notes": "Direct program \u2014 bet365.com/partners"
   },
   "tab": {
     "name": "TAB",
@@ -1371,5 +1371,15 @@
     "status": "coming_soon",
     "priority": 5,
     "notes": "Coming soon"
+  },
+  "onlybets": {
+    "name": "OnlyBets",
+    "homepage": "https://www.onlybets.com.au",
+    "affiliate_url": "",
+    "network": "Direct",
+    "cf_advertiser_id": "",
+    "status": "applied",
+    "priority": 3,
+    "notes": "New launch May 2026. Generation Web platform (same as PuntNow/PuntZone)."
   }
 }
