@@ -99,6 +99,7 @@
         { text: '📋 All Articles →',                         href: '/blog.html' },
         { text: 'Stop Guessing: Find the Right Betting App', href: '/stop-guessing-find-right-betting-app.html' },
         { text: 'Should You Cash Out Your Bet?',             href: '/should-you-cash-out-your-bet.html' },
+        { text: 'Best Cash Out Betting Sites 2026',          href: '/best-cashout-betting-sites-australia.html' },
         { text: 'Fastest Withdrawal Betting Apps (Tested)',  href: '/fastest-withdrawal-betting-apps-australia-tested.html' },
         { text: 'We Tested Every Major Betting App',         href: '/we-tested-every-major-australian-betting-app.html' },
         { text: 'Bookmakers That Limit Winning Punters',     href: '/australian-bookmakers-that-limit-winning-punters.html' },
