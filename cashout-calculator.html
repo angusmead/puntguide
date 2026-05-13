@@ -189,6 +189,24 @@ a{color:inherit;text-decoration:none;}
   .btn-share,.btn-matcher{justify-content:center;}
   .calc-card{padding:20px 16px;}
 }
+
+/* LEG CARDS */
+.leg-card{border:2px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px;transition:border-color .2s;}
+.leg-card.leg-pending{border-color:var(--border);background:#fff;}
+.leg-card.leg-won{border-color:hsl(140 50% 70%);background:hsl(140 50% 97%);}
+.leg-header{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap;}
+.leg-num{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;color:var(--muted-fg);background:var(--muted);padding:3px 9px;border-radius:5px;white-space:nowrap;}
+.leg-status{display:flex;gap:6px;flex:1;}
+.leg-btn{border:2px solid var(--border);background:#fff;color:var(--muted-fg);font-size:12px;font-weight:600;padding:5px 12px;border-radius:8px;cursor:pointer;font-family:'Inter Tight',sans-serif;transition:all .15s;}
+.leg-btn.active{border-color:var(--fg);background:var(--fg);color:#fff;}
+.leg-btn.active.won{border-color:hsl(140 50% 38%);background:hsl(140 50% 38%);}
+.leg-remove{background:none;border:none;color:var(--muted-fg);font-size:20px;cursor:pointer;padding:0 4px;line-height:1;font-weight:300;}
+.leg-remove:hover{color:hsl(0 70% 50%);}
+.leg-fields{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.btn-add-leg{width:100%;padding:10px;border:2px dashed var(--border);border-radius:10px;background:none;color:var(--muted-fg);font-size:14px;font-weight:600;cursor:pointer;font-family:'Inter Tight',sans-serif;margin-bottom:16px;transition:border-color .15s,color .15s;}
+.btn-add-leg:hover{border-color:var(--accent);color:var(--accent);}
+.multi-summary{background:var(--muted);border-radius:10px;padding:12px 14px;margin:14px 0;font-size:13px;line-height:1.8;}
+@media(max-width:640px){.leg-fields{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -238,7 +256,7 @@ a{color:inherit;text-decoration:none;}
   <div class="tab-row">
     <button class="tab active" onclick="setType('single', this)">Single Bet</button>
     <button class="tab" onclick="setType('eachway', this)">Each-Way</button>
-    <button class="tab" onclick="setType('multi', this)" style="opacity:.55;cursor:not-allowed;" title="Coming soon" disabled>Multi (soon)</button>
+    <button class="tab" onclick="setType('multi', this)">Multi</button>
   </div>
 
   <!-- CALCULATOR FORM -->
@@ -394,6 +412,131 @@ function calcEachway(stake, origOdds, currOdds, fraction, bookieOffer) {
   return { fair, gap, gapPct, fairWin, fairPlace, origPlaceOdds, currPlaceOdds, type: 'eachway' };
 }
 
+// ============================================================
+// MULTI STATE + MATH
+// ============================================================
+let multiLegs = [];
+
+function initMultiLegs() {
+  multiLegs = [
+    { status: 'pending', origOdds: null, currOdds: null },
+    { status: 'pending', origOdds: null, currOdds: null },
+  ];
+}
+
+function addLeg() {
+  if (multiLegs.length >= 8) { showToast('Maximum 8 legs'); return; }
+  syncMultiLegValues();
+  multiLegs.push({ status: 'pending', origOdds: null, currOdds: null });
+  renderMultiLegs();
+  if (multiLegs.length >= 8) document.getElementById('btn-add-leg').style.display = 'none';
+}
+
+function removeLeg(i) {
+  if (multiLegs.length <= 2) { showToast('Minimum 2 legs'); return; }
+  syncMultiLegValues();
+  multiLegs.splice(i, 1);
+  renderMultiLegs();
+  document.getElementById('btn-add-leg').style.display = '';
+}
+
+function toggleLegStatus(i, status) {
+  syncMultiLegValues();
+  multiLegs[i].status = status;
+  renderMultiLegs();
+}
+
+function syncMultiLegValues() {
+  multiLegs.forEach((leg, i) => {
+    const origEl = document.getElementById('leg' + i + '-orig');
+    const currEl = document.getElementById('leg' + i + '-curr');
+    if (origEl) { const v = parseFloat(origEl.value); if (!isNaN(v)) leg.origOdds = v; }
+    if (currEl) { const v = parseFloat(currEl.value); if (!isNaN(v)) leg.currOdds = v; }
+  });
+}
+
+function renderMultiLegs() {
+  const container = document.getElementById('multi-legs');
+  if (!container) return;
+  container.innerHTML = multiLegs.map((leg, i) => {
+    const isWon = leg.status === 'won';
+    return '<div class="leg-card ' + (isWon ? 'leg-won' : 'leg-pending') + '" id="leg-card-' + i + '">'
+      + '<div class="leg-header">'
+      + '<span class="leg-num">Leg ' + (i + 1) + '</span>'
+      + '<div class="leg-status">'
+      + '<button class="leg-btn ' + (!isWon ? 'active' : '') + '" onclick="toggleLegStatus(' + i + ',\'pending\')">⏳ Pending</button>'
+      + '<button class="leg-btn ' + (isWon ? 'active won' : '') + '" onclick="toggleLegStatus(' + i + ',\'won\')">✅ Won</button>'
+      + '</div>'
+      + (multiLegs.length > 2 ? '<button class="leg-remove" onclick="removeLeg(' + i + ')" title="Remove leg">&times;</button>' : '')
+      + '</div>'
+      + '<div class="leg-fields">'
+      + '<div class="field"><label>Original Odds</label>'
+      + '<input type="number" id="leg' + i + '-orig" inputmode="decimal" placeholder="2.50" min="1.01" step="0.01"' + (leg.origOdds ? ' value="' + leg.origOdds + '"' : '') + '>'
+      + '<span class="field-hint">Odds when you placed the bet</span></div>'
+      + (!isWon
+        ? '<div class="field"><label>Current Odds</label>'
+          + '<input type="number" id="leg' + i + '-curr" inputmode="decimal" placeholder="1.80" min="1.01" step="0.01"' + (leg.currOdds ? ' value="' + leg.currOdds + '"' : '') + '>'
+          + '<span class="field-hint">Best available price now</span></div>'
+        : '<div></div>')
+      + '</div></div>';
+  }).join('');
+}
+
+function calcMulti(stake, legs, bookieOffer) {
+  const origCombined = legs.reduce(function(acc, l) { return acc * l.origOdds; }, 1);
+  const pendingLegs = legs.filter(function(l) { return l.status === 'pending'; });
+  const pendingCurrent = pendingLegs.length > 0
+    ? pendingLegs.reduce(function(acc, l) { return acc * l.currOdds; }, 1) : 1;
+  const fair = pendingLegs.length === 0
+    ? stake * origCombined
+    : (stake * origCombined) / pendingCurrent;
+  const gap = bookieOffer - fair;
+  const gapPct = (gap / fair) * 100;
+  return { fair, gap, gapPct, type: 'multi', origCombined, pendingCurrent,
+    pendingCount: pendingLegs.length, wonCount: legs.filter(function(l){return l.status==='won';}).length, legs };
+}
+
+function renderMultiForm() {
+  document.getElementById('form-title').textContent = 'Multi Bet Calculator';
+  if (!multiLegs.length) initMultiLegs();
+  document.getElementById('form-body').innerHTML =
+    '<p style="font-size:13px;color:var(--muted-fg);margin-bottom:14px;line-height:1.65;">'
+    + 'Add each leg of your multi. Mark legs that have already won as <strong>Won</strong>. '
+    + 'For pending legs, enter the best available current odds.</p>'
+    + '<div id="multi-legs"></div>'
+    + '<button class="btn-add-leg" id="btn-add-leg" onclick="addLeg()">+ Add another leg</button>'
+    + '<hr class="divider">'
+    + '<div class="field-group"><div class="field"><label>Original Stake</label>'
+    + '<div class="field-wrap"><span class="field-pre">$</span>'
+    + '<input type="number" id="f-stake" class="has-pre" inputmode="decimal" placeholder="50.00" min="0.01" step="0.01"></div>'
+    + '<span class="field-hint">Your total multi stake</span></div>'
+    + '<div class="field"><label>Bookie's Cashout Offer</label>'
+    + '<div class="field-wrap"><span class="field-pre">$</span>'
+    + '<input type="number" id="f-offer" class="has-pre" inputmode="decimal" placeholder="85.00" min="0" step="0.01"></div>'
+    + '</div></div>'
+    + '<div class="field-group full"><div class="field"><label>Bookmaker (optional)</label>'
+    + '<select id="f-bookie">' + bookieOptions + '</select></div></div>'
+    + '<button class="btn-calc" onclick="calculate()">Calculate Fair Value →</button>';
+  renderMultiLegs();
+}
+
+function validateMulti() {
+  syncMultiLegValues();
+  const errors = [];
+  const stake = getVal('f-stake');
+  const offer = getVal('f-offer');
+  if (!stake || stake <= 0) errors.push('Enter a valid stake');
+  if (offer === null || offer < 0) errors.push("Enter the bookie's cashout offer");
+  const pending = multiLegs.filter(function(l){return l.status==='pending';});
+  if (pending.length === 0) errors.push('At least one leg must still be pending for a cashout');
+  multiLegs.forEach(function(leg, i) {
+    if (!leg.origOdds || leg.origOdds < 1.01) errors.push('Leg ' + (i+1) + ': enter valid original odds (1.01 or higher)');
+    if (leg.status === 'pending' && (!leg.currOdds || leg.currOdds < 1.01))
+      errors.push('Leg ' + (i+1) + ': enter current best available odds');
+  });
+  return errors;
+}
+
 function verdict(gapPct) {
   if (gapPct < -5)  return 'bad';
   if (gapPct > 2)   return 'good';
@@ -508,7 +651,7 @@ function setType(type, btn) {
   document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
   btn.classList.add('active');
   document.getElementById('result-area').innerHTML = '';
-  renderForm();
+  if (type === 'multi') { renderMultiForm(); } else { renderForm(); }
 }
 
 // ============================================================
@@ -554,25 +697,28 @@ function calculate() {
   }
 
   const stake  = getVal('f-stake');
-  const orig   = getVal('f-orig');
-  const curr   = getVal('f-curr');
   const offer  = getVal('f-offer');
   const bookie = document.getElementById('f-bookie')?.value || '';
 
   let result;
-  if (calcType === 'single') {
-    result = calcSingle(stake, orig, curr, offer);
+  if (calcType === 'multi') {
+    syncMultiLegValues();
+    result = calcMulti(stake, multiLegs, offer);
+    result.stake = stake; result.offer = offer; result.bookie = bookie;
+    result.date = new Date().toLocaleDateString('en-AU');
   } else {
-    const fraction = parseFloat(document.getElementById('f-fraction').value);
-    result = calcEachway(stake, orig, curr, fraction, offer);
+    const orig   = getVal('f-orig');
+    const curr   = getVal('f-curr');
+    if (calcType === 'single') {
+      result = calcSingle(stake, orig, curr, offer);
+    } else {
+      const fraction = parseFloat(document.getElementById('f-fraction').value);
+      result = calcEachway(stake, orig, curr, fraction, offer);
+    }
+    result.stake = stake; result.orig = orig; result.curr = curr;
+    result.offer = offer; result.bookie = bookie;
+    result.date = new Date().toLocaleDateString('en-AU');
   }
-
-  result.stake  = stake;
-  result.orig   = orig;
-  result.curr   = curr;
-  result.offer  = offer;
-  result.bookie = bookie;
-  result.date   = new Date().toLocaleDateString('en-AU');
 
   const v = verdict(result.gapPct);
   track('cashout_calc_completed', {
@@ -628,6 +774,20 @@ function renderResult(r, v) {
         Total stake committed: ${fmt(r.stake * 2)}
       </div>
     `;
+  }
+  if (r.type === 'multi') {
+    const wonList = r.legs.map(function(l,i){
+      return '<span style="display:inline-block;margin-right:6px;padding:2px 8px;border-radius:5px;font-size:12px;background:' +
+        (l.status==='won' ? 'hsl(140 50% 90%);color:hsl(140 50% 28%)' : 'var(--muted);color:var(--muted-fg)') +
+        '">Leg '+(i+1)+' '+(l.status==='won'?'✅':'⏳')+' '+l.origOdds+'</span>';
+    }).join('');
+    extraHtml = '<div class="multi-summary">'
+      + '<strong>Multi breakdown:</strong><br>'
+      + wonList + '<br>'
+      + 'Combined original odds: <strong>' + r.origCombined.toFixed(2) + '</strong> &nbsp;·&nbsp; '
+      + 'Pending odds remaining: <strong>' + r.pendingCurrent.toFixed(2) + '</strong><br>'
+      + 'Original potential return: <strong>' + fmt(r.stake * r.origCombined) + '</strong>'
+      + '</div>';
   }
 
   const matcherUrl = v === 'bad'
