@@ -49,7 +49,7 @@
     {
       label: '🏇 Racing',
       links: [
-        { text: 'Horse Racing Tips',             href: '/horse-racing-tips-today.html' },
+        { text: 'Horse Racing Tips Today',        href: '/horse-racing-tips-today.html' },
         { text: 'Racing Futures 2026',          href: '/racing-futures-2026.html' },
         { text: 'Best Sites for Racing',        href: '/best-betting-sites-for-racing.html' },
       ]
@@ -73,9 +73,10 @@
         { text: 'Best NBA Betting Sites',     href: '/best-nba-betting-sites-australia.html' },
         { text: 'NFL Tips 2026',              href: '/nfl-tips.html' },
         { text: 'NFL Super Bowl LXI Odds',    href: '/nfl-super-bowl-odds-2026.html' },
+        { text: 'MLB Tips Today',             href: '/mlb-tips-today.html' },
         { text: 'MLB Tips 2026',              href: '/mlb-tips.html' },
         { text: 'MLB World Series Odds 2026', href: '/mlb-world-series-odds-2026.html' },
-        { text: 'Bet365 Review (Best for MLB)', href: '/review-bet365.html' },
+        { text: 'Best Bookmakers for MLB',    href: '/best-bookmakers-for-mlb.html' },
       ]
     },
     {
