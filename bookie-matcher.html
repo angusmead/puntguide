@@ -279,13 +279,12 @@ const QUESTIONS = [
   },
   {
     id: 'q2',
-    text: 'What\'s your typical bet size?',
+    text: 'Do you like to have the option of cashing out live bets?',
     type: 'single',
     options: [
-      { value: 'micro',     emoji: '🪙', label: 'Under $20',      weights: { lowstake: 3 } },
-      { value: 'small',     emoji: '💵', label: '$20 – $100',     weights: { lowstake: 1, promos: 1 } },
-      { value: 'medium',    emoji: '💰', label: '$100 – $500',    weights: { cashout: 1, promos: 1 } },
-      { value: 'large',     emoji: '💎', label: '$500+',          weights: { cashout: 2 } },
+      { value: 'always',    emoji: '💸', label: 'Yes — I cash out regularly',         weights: { cashout: 3 } },
+      { value: 'sometimes', emoji: '🤔', label: 'Sometimes, if the option is there',  weights: { cashout: 1 } },
+      { value: 'never',     emoji: '🔒', label: 'No — I prefer to let bets run',      weights: {} },
     ]
   },
   {
