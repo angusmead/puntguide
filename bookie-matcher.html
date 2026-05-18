@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/pg-icon-192.png">
 <link rel="apple-touch-icon" sizes="192x192" href="/pg-icon-192.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Smart Bookie Matcher — Find Your Best Australian Bookmaker | PuntGuide</title>
+<title>Smart Bookie Matcher — Find the Right Australian Bookmaker for You | PuntGuide</title>
 <meta name="description" content="Answer 8 quick questions and get matched to the Australian bookmakers that best suit how you bet. Independent, data-driven, takes under 2 minutes.">
 <link rel="canonical" href="https://puntguide.com.au/bookie-matcher">
 <meta property="og:title" content="Smart Bookie Matcher | PuntGuide">
@@ -163,6 +163,16 @@ a{color:inherit;text-decoration:none;}
 /* RESTART */
 .restart-row{text-align:center;margin-top:24px;}
 .restart-row button{background:none;border:none;color:var(--muted-fg);font-size:14px;cursor:pointer;text-decoration:underline;font-family:"Inter Tight",sans-serif;}
+
+/* AGE GATE */
+.age-gate-overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:500;display:flex;align-items:center;justify-content:center;padding:20px;}
+.age-gate-modal{background:#fff;border-radius:20px;padding:36px 32px;max-width:400px;width:100%;text-align:center;box-shadow:0 24px 60px -12px rgba(0,0,0,.4);}
+.age-gate-title{font-family:"Geist",sans-serif;font-size:24px;font-weight:800;margin-bottom:10px;letter-spacing:-0.02em;}
+.age-gate-sub{font-size:14px;color:var(--muted-fg);line-height:1.6;margin-bottom:24px;}
+.age-gate-btns{display:flex;gap:10px;}
+.age-gate-yes{flex:1;background:var(--gg);color:var(--pfg);font-size:15px;font-weight:800;padding:13px;border-radius:10px;border:none;cursor:pointer;font-family:"Geist",sans-serif;box-shadow:var(--sg);}
+.age-gate-no{flex:1;background:var(--muted);color:var(--muted-fg);font-size:15px;font-weight:700;padding:13px;border-radius:10px;border:none;cursor:pointer;font-family:"Inter Tight",sans-serif;}
+.age-gate-rg{font-size:11px;color:var(--muted-fg);margin-top:16px;line-height:1.6;}
 
 /* SCREEN TRANSITIONS */
 .screen{display:none;animation:fadeIn .25s ease;}
@@ -627,7 +637,7 @@ function renderIntro() {
     </div>
     <div class="intro-hero">
       <div class="intro-eyebrow">Smart Bookie Matcher</div>
-      <h1 class="intro-title">Find your perfect Australian bookmaker</h1>
+      <h1 class="intro-title">Find the right Australian bookmaker for you</h1>
       <p class="intro-sub">8 questions. Personalised recommendations from 15 bookmakers. Scored across racing, sports, live betting, multis, app quality and more.</p>
       <div class="intro-features">
         <span class="intro-feat">✓ Takes under 2 minutes</span>
@@ -636,15 +646,50 @@ function renderIntro() {
         <span class="intro-feat">✓ 18+ | Gamble responsibly</span>
       </div>
       <button class="btn-start" onclick="startQuiz()">Start the Quiz →</button>
+      <p style="font-size:11px;color:rgba(255,255,255,.4);margin-top:14px;line-height:1.6;">18+ only · Australian residents only · This tool does not store your answers or personal data · Results are calculated entirely in your browser</p>
+    </div>
+    <div style="background:#fff;border:1px solid var(--border);border-radius:14px;padding:18px 22px;margin-top:16px;">
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--muted-fg);font-family:'JetBrains Mono',monospace;margin-bottom:10px;">How this works</div>
+      <p style="font-size:13px;color:var(--muted-fg);line-height:1.7;margin-bottom:8px;">The 15 bookmakers are selected from Australian-licensed operators reviewed independently by PuntGuide. Each is scored 1–5 across 10 attributes: racing, AFL/NRL, other sports, live betting, multis, app quality, cash-out, promotions, low-stakes and exchange markets.</p>
+      <p style="font-size:13px;color:var(--muted-fg);line-height:1.7;margin-bottom:8px;">Your 8 answers generate a weighting profile. The bookmaker whose attribute scores best match your weighting ranks first. Commission never enters the calculation — this is verified by the fact that commission tiers are stored in a separate field that is explicitly excluded from scoring.</p>
+      <p style="font-size:13px;color:var(--muted-fg);line-height:1.7;">No answers, emails or personal data are captured or stored. Everything runs in your browser. <strong style="color:var(--fg);">Bookmaker scoring last updated: May 2026.</strong></p>
     </div>
   `;
 }
 
 function startQuiz() {
+  // Show age verification gate before starting
+  const overlay = document.createElement('div');
+  overlay.className = 'age-gate-overlay';
+  overlay.id = 'age-gate';
+  overlay.innerHTML = `
+    <div class="age-gate-modal">
+      <div class="age-gate-title">Are you 18 or older?</div>
+      <div class="age-gate-sub">This tool recommends Australian licensed bookmakers. You must be 18 or over to use gambling services in Australia.</div>
+      <div class="age-gate-btns">
+        <button class="age-gate-yes" onclick="confirmAge()">Yes, I'm 18+</button>
+        <button class="age-gate-no" onclick="denyAge()">No</button>
+      </div>
+      <div class="age-gate-rg">Need help? <a href="https://www.gamblinghelponline.org.au" target="_blank" style="color:var(--accent);">gamblinghelponline.org.au</a> · 1800 858 858</div>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+}
+
+function confirmAge() {
+  const gate = document.getElementById('age-gate');
+  if (gate) gate.remove();
   answers = {};
   currentQ = 0;
   track('quiz_started', { tool: 'bookie_matcher' });
   showScreen('quiz');
+}
+
+function denyAge() {
+  const gate = document.getElementById('age-gate');
+  if (gate) {
+    gate.innerHTML = `<div class="age-gate-modal"><div class="age-gate-title">You must be 18+</div><div class="age-gate-sub">Gambling services in Australia are only available to adults aged 18 and over.<br><br>If you or someone you know needs support, call <strong>1800 858 858</strong> or visit <a href="https://www.gamblinghelponline.org.au" target="_blank" style="color:var(--accent);">gamblinghelponline.org.au</a>.</div></div>`;
+  }
 }
 
 function renderQuiz() {
@@ -821,7 +866,10 @@ function renderResults() {
     </div>
 
     <div class="disclaimer">
-      <strong>Editorial independence:</strong> PuntGuide may earn a commission if you sign up via our links. This does not influence which bookmakers appear in your results or in what order. The highest-scoring bookmaker for your profile always wins. · All bookmakers are licensed in Australia. Gamble responsibly — <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a> · <a href="https://www.betstop.gov.au" target="_blank">BetStop self-exclusion</a>. 18+ only.
+      <strong>Editorial independence:</strong> These recommendations are based on your stated preferences and PuntGuide's independent editorial assessment. They are not financial advice. PuntGuide may earn a commission if you sign up via our links — this does not affect which bookmakers appear in your results or in what order. The highest-scoring bookmaker for your profile always wins, regardless of commission. All recommended bookmakers hold a current Australian state or territory licence. No personal data or quiz answers were captured or stored — results are calculated entirely in your browser. Bookmaker scoring last updated May 2026. Gamble responsibly — <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a> · 1800 858 858. 18+ only · Australian residents only.
+    </div>
+    <div style="background:hsl(140 50% 96%);border:1px solid hsl(140 40% 80%);border-radius:10px;padding:14px 18px;margin-bottom:20px;font-size:13px;line-height:1.7;color:hsl(140 40% 25%);">
+      <strong>Before you sign up:</strong> Set a deposit limit at every bookmaker you join — every Australian-licensed operator is required to offer them. Already concerned about your gambling? <a href="https://www.betstop.gov.au" target="_blank" style="color:hsl(140 50% 30%);font-weight:600;">Self-exclude for free at BetStop.gov.au</a> before continuing.
     </div>
 
     ${topCards}
