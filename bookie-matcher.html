@@ -17,7 +17,7 @@
 <meta name="description" content="Answer 8 quick questions and get matched to the Australian bookmakers that best suit how you bet. Independent, data-driven, takes under 2 minutes.">
 <link rel="canonical" href="https://puntguide.com.au/bookie-matcher">
 <meta property="og:title" content="Smart Bookie Matcher | PuntGuide">
-<meta property="og:description" content="8 questions. Personalised bookmaker recommendations from 15 Australian bookies.">
+<meta property="og:description" content="8 questions. See which Australian bookmakers match your betting preferences. Results are based on your answers, not personal recommendations.">
 <meta property="og:url" content="https://puntguide.com.au/bookie-matcher">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://puntguide.com.au/puntguide-logo.png">
@@ -239,7 +239,7 @@ a{color:inherit;text-decoration:none;}
       <a href="/about.html">About</a>
     </div>
     <div class="footer-rg">
-      Gamble responsibly. Set a budget and stick to it. For help call <a href="tel:1800858858">Gambling Help 1800 858 858</a> or visit <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a>. Self-exclude nationally at <a href="https://www.betstop.gov.au" target="_blank">BetStop.gov.au</a>. 18+ only. PuntGuide may earn a commission when you sign up via our links. This does not influence our rankings or recommendations.
+      Gamble responsibly. Set a budget and stick to it. For help call <a href="tel:1800858858">Gambling Help 1800 858 858</a> or visit <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a>. Self-exclude nationally at <a href="https://www.betstop.gov.au" target="_blank">BetStop.gov.au</a>. 18+ only. PuntGuide may earn a commission when you sign up via our links. This does not influence our rankings or match scores.
     </div>
   </div>
 </footer>
@@ -632,13 +632,13 @@ function renderIntro() {
         <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>15 Australian bookmakers scored across 10 criteria: racing, sports, live betting, multis, app, cash-out, promos, low stakes, exchange and niche markets.</li>
         <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span><strong>Commission never influences results</strong> -- the highest-scoring bookmaker for your profile wins, regardless of what they pay us.</li>
         <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>Takes under 2 minutes. All 15 bookmakers remain visible in the full ranking after your top 3 results.</li>
-        <li style="display:flex;gap:10px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>Results explain <em>why</em> each bookmaker matched -- driven by your specific answers, not generic recommendations.</li>
+        <li style="display:flex;gap:10px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>Results show <em>why</em> each bookmaker matched your stated preferences — automated match scores, not personal recommendations.</li>
       </ul>
     </div>
     <div class="intro-hero">
       <div class="intro-eyebrow">Smart Bookie Matcher</div>
       <h1 class="intro-title">Find the right Australian bookmaker for you</h1>
-      <p class="intro-sub">8 questions. Personalised recommendations from 15 bookmakers. Scored across racing, sports, live betting, multis, app quality and more.</p>
+      <p class="intro-sub">8 questions. See which bookmakers match your preferences across racing, sports, live betting, multis, app quality and more. Match scores only — not personal recommendations.</p>
       <div class="intro-features">
         <span class="intro-feat">✓ Takes under 2 minutes</span>
         <span class="intro-feat">✓ 15 bookmakers compared</span>
@@ -665,7 +665,7 @@ function startQuiz() {
   overlay.innerHTML = `
     <div class="age-gate-modal">
       <div class="age-gate-title">Are you 18 or older?</div>
-      <div class="age-gate-sub">This tool recommends Australian licensed bookmakers. You must be 18 or over to use gambling services in Australia.</div>
+      <div class="age-gate-sub">This tool shows bookmaker match results based on your stated preferences. You must be 18 or over to use gambling services in Australia.</div>
       <div class="age-gate-btns">
         <button class="age-gate-yes" onclick="confirmAge()">Yes, I'm 18+</button>
         <button class="age-gate-no" onclick="denyAge()">No</button>
@@ -797,7 +797,7 @@ function renderResults() {
   const ranked = getRanked(scores);
   const top3 = ranked.slice(0, 3);
 
-  const rankBanners = ['🥇 Best Match', '🥈 Second Pick', '🥉 Third Pick'];
+  const rankBanners = ['🥇 Highest Preference Match', '🥈 2nd Preference Match', '🥉 3rd Preference Match'];
   const rankClasses = ['r1', 'r2', 'r3'];
 
   const topCards = top3.map((r, i) => {
@@ -861,12 +861,12 @@ function renderResults() {
   document.getElementById('app').innerHTML = `
     <div class="results-header">
       <div class="results-eyebrow">Your Results</div>
-      <div class="results-title">Your top bookmaker picks</div>
-      <div class="results-sub">Matched across 10 criteria from 15 Australian bookmakers. Recommendations are driven by your answers only — not by commission rates.</div>
+      <div class="results-title">Your preference match results</div>
+      <div class="results-sub">Match scores calculated across 10 criteria from 15 Australian bookmakers. Scores are driven by your stated preferences only — not by commission rates. These are not personal recommendations.</div>
     </div>
 
     <div class="disclaimer">
-      <strong>Editorial independence:</strong> These recommendations are based on your stated preferences and PuntGuide's independent editorial assessment. They are not financial advice. PuntGuide may earn a commission if you sign up via our links — this does not affect which bookmakers appear in your results or in what order. The highest-scoring bookmaker for your profile always wins, regardless of commission. All recommended bookmakers hold a current Australian state or territory licence. No personal data or quiz answers were captured or stored — results are calculated entirely in your browser. Bookmaker scoring last updated May 2026. Gamble responsibly — <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a> · 1800 858 858. 18+ only · Australian residents only.
+      <strong>Editorial independence:</strong> These match results are based solely on your stated preferences and PuntGuide's independent editorial scoring of each bookmaker. They are automated match scores, not personal recommendations, and do not constitute financial or gambling advice. PuntGuide may earn a commission if you sign up via our links — this does not affect which bookmakers appear in your results or in what order. The highest-scoring bookmaker for your profile always wins, regardless of commission. All listed bookmakers hold a current Australian state or territory licence. No personal data or quiz answers were captured or stored — results are calculated entirely in your browser. Bookmaker scoring last updated May 2026. Gamble responsibly — <a href="https://www.gamblinghelponline.org.au" target="_blank">gamblinghelponline.org.au</a> · 1800 858 858. 18+ only · Australian residents only.
     </div>
     <div style="background:hsl(140 50% 96%);border:1px solid hsl(140 40% 80%);border-radius:10px;padding:14px 18px;margin-bottom:20px;font-size:13px;line-height:1.7;color:hsl(140 40% 25%);">
       <strong>Before you sign up:</strong> Set a deposit limit at every bookmaker you join — every Australian-licensed operator is required to offer them. Already concerned about your gambling? <a href="https://www.betstop.gov.au" target="_blank" style="color:hsl(140 50% 30%);font-weight:600;">Self-exclude for free at BetStop.gov.au</a> before continuing.
