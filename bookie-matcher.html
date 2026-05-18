@@ -14,10 +14,10 @@
 <link rel="apple-touch-icon" sizes="192x192" href="/pg-icon-192.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Smart Bookie Matcher — Find the Right Australian Bookmaker for You | PuntGuide</title>
-<meta name="description" content="Answer 8 quick questions and get matched to the Australian bookmakers that best suit how you bet. Independent, data-driven, takes under 2 minutes.">
+<meta name="description" content="Answer 9 quick questions and get matched to the Australian bookmakers that best suit how you bet. Independent, data-driven, takes under 2 minutes.">
 <link rel="canonical" href="https://puntguide.com.au/bookie-matcher">
 <meta property="og:title" content="Smart Bookie Matcher | PuntGuide">
-<meta property="og:description" content="8 questions. See which Australian bookmakers match your betting preferences. Results are based on your answers, not personal recommendations.">
+<meta property="og:description" content="9 questions. See which Australian bookmakers match your betting preferences. Results are based on your answers, not personal recommendations.">
 <meta property="og:url" content="https://puntguide.com.au/bookie-matcher">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://puntguide.com.au/puntguide-logo.png">
@@ -343,6 +343,17 @@ const QUESTIONS = [
       { value: 'switching', emoji: '🔀', label: 'Want to switch from my current bookie', weights: { promos: 1, app: 1 } },
     ]
   },
+  {
+    id: 'q8',
+    text: 'Are quick withdrawals a priority for you?',
+    hint: 'How fast you get your winnings back to your bank',
+    type: 'single',
+    options: [
+      { value: 'yes',       emoji: '⚡', label: 'Yes — fast payouts matter a lot to me',    weights: { withdrawals: 3 } },
+      { value: 'somewhat',  emoji: '🕐', label: 'Somewhat — within a day or two is fine',  weights: { withdrawals: 1 } },
+      { value: 'no',        emoji: '💤', label: 'Not a priority for me',                    weights: {} },
+    ]
+  },
 ];
 
 // ============================================================
@@ -356,112 +367,112 @@ const BOOKIES = {
     tagline: "World's largest bookmaker — unmatched live market depth and international coverage",
     logo: '/bet365.png', reviewUrl: '/review-bet365.html',
     commission_tier: 'medium',
-    scores: { racing:3, sports:5, live:5, multis:3, app:5, cashout:4, promos:2, lowstake:3, exchange:1, niche:4 },
+    scores: { racing:3, sports:5, live:5, multis:3, app:5, cashout:4, promos:2, lowstake:3, exchange:1, niche:4, withdrawals:2 },
   },
   sportsbet: {
     name: 'Sportsbet', slug: 'sportsbet',
     tagline: "Australia's favourite — biggest promos and best same-game multi builder",
     logo: '/sportsbet.png', reviewUrl: '/review-sportsbet.html',
     commission_tier: 'high',
-    scores: { racing:4, sports:5, live:2, multis:5, app:5, cashout:4, promos:5, lowstake:4, exchange:1, niche:3 },
+    scores: { racing:4, sports:5, live:2, multis:5, app:5, cashout:4, promos:5, lowstake:4, exchange:1, niche:3, withdrawals:3 },
   },
   ladbrokes: {
     name: 'Ladbrokes', slug: 'ladbrokes',
     tagline: "Strong racing markets and Best Tote with solid sports coverage",
     logo: '/ladbrokes.png', reviewUrl: '/review-ladbrokes.html',
     commission_tier: 'high',
-    scores: { racing:5, sports:4, live:3, multis:4, app:4, cashout:4, promos:3, lowstake:3, exchange:1, niche:2 },
+    scores: { racing:5, sports:4, live:3, multis:4, app:4, cashout:4, promos:3, lowstake:3, exchange:1, niche:2, withdrawals:3 },
   },
   neds: {
     name: 'Neds', slug: 'neds',
     tagline: "Clean app, competitive NRL and AFL lines, solid racing coverage",
     logo: '/neds.png', reviewUrl: '/review-neds.html',
     commission_tier: 'high',
-    scores: { racing:4, sports:4, live:3, multis:4, app:4, cashout:3, promos:3, lowstake:4, exchange:1, niche:2 },
+    scores: { racing:4, sports:4, live:3, multis:4, app:4, cashout:3, promos:3, lowstake:4, exchange:1, niche:2, withdrawals:3 },
   },
   betr: {
     name: 'Betr', slug: 'betr',
     tagline: "Best SGM builder in Australia — modern app built for sports punters",
     logo: '/betr.png', reviewUrl: '/review-betr.html',
     commission_tier: 'medium',
-    scores: { racing:3, sports:4, live:3, multis:5, app:5, cashout:3, promos:4, lowstake:5, exchange:1, niche:2 },
+    scores: { racing:3, sports:4, live:3, multis:5, app:5, cashout:3, promos:4, lowstake:5, exchange:1, niche:2, withdrawals:4 },
   },
   dabble: {
     name: 'Dabble', slug: 'dabble',
     tagline: "Social betting app with near-instant NPP withdrawals and a clean UI",
     logo: '/dabble.png', reviewUrl: '/review-dabble.html',
     commission_tier: 'medium',
-    scores: { racing:3, sports:3, live:2, multis:3, app:5, cashout:3, promos:2, lowstake:5, exchange:1, niche:2 },
+    scores: { racing:3, sports:3, live:2, multis:3, app:5, cashout:3, promos:2, lowstake:5, exchange:1, niche:2, withdrawals:5 },
   },
   unibet: {
     name: 'Unibet', slug: 'unibet',
     tagline: "European-backed operator with strong live markets and competitive odds",
     logo: '/unibet.png', reviewUrl: '/review-unibet.html',
     commission_tier: 'medium',
-    scores: { racing:3, sports:4, live:4, multis:4, app:4, cashout:4, promos:3, lowstake:4, exchange:1, niche:3 },
+    scores: { racing:3, sports:4, live:4, multis:4, app:4, cashout:4, promos:3, lowstake:4, exchange:1, niche:3, withdrawals:3 },
   },
   pointsbet: {
     name: 'PointsBet', slug: 'pointsbet',
     tagline: "PointsBetting product plus strong SGMs — unique in the Australian market",
     logo: '/pointsbet.png', reviewUrl: '/review-pointsbet.html',
     commission_tier: 'medium',
-    scores: { racing:3, sports:5, live:3, multis:5, app:4, cashout:3, promos:4, lowstake:2, exchange:1, niche:3 },
+    scores: { racing:3, sports:5, live:3, multis:5, app:4, cashout:3, promos:4, lowstake:2, exchange:1, niche:3, withdrawals:3 },
   },
   picklebet: {
     name: 'Picklebet', slug: 'picklebet',
     tagline: "Australia's #1 esports bookmaker — CS2, LoL, Dota 2, Valorant and more",
     logo: '/picklebet.png', reviewUrl: '/review-picklebet.html',
     commission_tier: 'low',
-    scores: { racing:2, sports:3, live:2, multis:3, app:4, cashout:2, promos:3, lowstake:4, exchange:1, niche:5 },
+    scores: { racing:2, sports:3, live:2, multis:3, app:4, cashout:2, promos:3, lowstake:4, exchange:1, niche:5, withdrawals:3 },
   },
   palmerbet: {
     name: 'Palmerbet', slug: 'palmerbet',
     tagline: "Racing specialist with the deepest metro markets and Best Tote guarantee",
     logo: '/palmerbet.png', reviewUrl: '/review-palmerbet.html',
     commission_tier: 'low',
-    scores: { racing:5, sports:3, live:2, multis:3, app:3, cashout:3, promos:3, lowstake:4, exchange:1, niche:2 },
+    scores: { racing:5, sports:3, live:2, multis:3, app:3, cashout:3, promos:3, lowstake:4, exchange:1, niche:2, withdrawals:4 },
   },
   betright: {
     name: 'BetRight', slug: 'betright',
     tagline: "Best cash-out product in Australia — instant withdrawals, Best Tote and great SGMs",
     logo: '/betright.png', reviewUrl: '/review-betright.html',
     commission_tier: 'medium',
-    scores: { racing:5, sports:4, live:3, multis:5, app:4, cashout:5, promos:3, lowstake:4, exchange:1, niche:2 },
+    scores: { racing:5, sports:4, live:3, multis:5, app:4, cashout:5, promos:3, lowstake:4, exchange:1, niche:2, withdrawals:5 },
   },
   betfair: {
     name: 'Betfair', slug: 'betfair',
     tagline: "Australia's only betting exchange — lay bets, trade and never get restricted",
     logo: '/betfair.png', reviewUrl: '/review-betfair.html',
     commission_tier: 'low',
-    scores: { racing:4, sports:4, live:5, multis:1, app:4, cashout:5, promos:2, lowstake:3, exchange:5, niche:3 },
+    scores: { racing:4, sports:4, live:5, multis:1, app:4, cashout:5, promos:2, lowstake:3, exchange:5, niche:3, withdrawals:4 },
   },
   betfocus: {
     name: 'BetFocus', slug: 'betfocus',
     tagline: "Smaller independent operator — good for low stakes and casual punting",
     logo: '/betfocus.png', reviewUrl: '/review-betfocus.html',
     commission_tier: 'none',
-    scores: { racing:3, sports:3, live:2, multis:3, app:3, cashout:2, promos:3, lowstake:4, exchange:1, niche:2 },
+    scores: { racing:3, sports:3, live:2, multis:3, app:3, cashout:2, promos:3, lowstake:4, exchange:1, niche:2, withdrawals:2 },
   },
   nextbet: {
     name: 'Nextbet', slug: 'nextbet',
     tagline: "Emerging Australian bookmaker with racing focus and competitive fixed odds",
     logo: '/nextbet.png', reviewUrl: '/review-nextbet.html',
     commission_tier: 'none',
-    scores: { racing:4, sports:3, live:2, multis:3, app:3, cashout:2, promos:3, lowstake:3, exchange:1, niche:2 },
+    scores: { racing:4, sports:3, live:2, multis:3, app:3, cashout:2, promos:3, lowstake:3, exchange:1, niche:2, withdrawals:3 },
   },
   tradiebet: {
     name: 'TradieBet', slug: 'tradiebet',
     tagline: "No-fuss Aussie bookie — great for small stakes and rapid 4x daily withdrawals",
     logo: '/tradiebet.png', reviewUrl: '/review-tradiebet.html',
     commission_tier: 'none',
-    scores: { racing:4, sports:3, live:2, multis:3, app:3, cashout:3, promos:2, lowstake:5, exchange:1, niche:2 },
+    scores: { racing:4, sports:3, live:2, multis:3, app:3, cashout:3, promos:2, lowstake:5, exchange:1, niche:2, withdrawals:5 },
   },
 };
 
 const ATTR_LABELS = {
   racing:'Racing', sports:'Sports', live:'Live betting', multis:'Multis',
   app:'App', cashout:'Cash-out', promos:'Promos', lowstake:'Low stakes',
-  exchange:'Exchange', niche:'Niche/Esports',
+  exchange:'Exchange', niche:'Niche/Esports', withdrawals:'Fast Withdrawals',
 };
 
 const REASON_TEMPLATES = {
@@ -475,6 +486,7 @@ const REASON_TEMPLATES = {
   lowstake: () => 'No minimum bet pressure — works for any stake size from $1 up',
   exchange: () => 'Genuine exchange betting — lay bets, trade positions, no account bans for winning',
   niche:    () => 'Widest niche and esports coverage in Australia — CS2, LoL, Dota 2 and more',
+  withdrawals: () => 'Fast withdrawal processing — get winnings back to your bank quickly',
 };
 
 // ============================================================
@@ -623,12 +635,12 @@ function renderIntro() {
   document.getElementById('app').innerHTML = `
     <div style="background:hsl(215 45% 16%);border-radius:10px;padding:16px 20px;margin:0 0 20px;">
       <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(48 92% 64%);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">Short Answer</div>
-      <p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.9);margin:0;">Answer 8 quick questions about how you bet and get matched to the 2-3 Australian bookmakers that genuinely suit your profile. 15 bookmakers scored across 10 attributes. Independent -- your results are never influenced by who pays us the most commission.</p>
+      <p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.9);margin:0;">Answer 9 quick questions about how you bet and get matched to the 2-3 Australian bookmakers that genuinely suit your profile. 15 bookmakers scored across 11 attributes. Independent -- your results are never influenced by who pays us the most commission.</p>
     </div>
     <div style="background:hsl(200 80% 97%);border:1px solid hsl(200 70% 85%);border-radius:10px;padding:16px 20px;margin:0 0 24px;">
       <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(200 60% 40%);margin-bottom:10px;font-family:'JetBrains Mono',monospace;">Key Findings</div>
       <ul style="list-style:none;margin:0;padding:0;">
-        <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>15 Australian bookmakers scored across 10 criteria: racing, sports, live betting, multis, app, cash-out, promos, low stakes, exchange and niche markets.</li>
+        <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>15 Australian bookmakers scored across 11 criteria: racing, sports, live betting, multis, app, cash-out, promos, low stakes, exchange and niche markets.</li>
         <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span><strong>Commission never influences results</strong> -- the highest-scoring bookmaker for your profile wins, regardless of what they pay us.</li>
         <li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>Takes under 2 minutes. All 15 bookmakers remain visible in the full ranking after your top 3 results.</li>
         <li style="display:flex;gap:10px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">→</span>Results show <em>why</em> each bookmaker matched your stated preferences — automated match scores, not personal recommendations.</li>
@@ -637,7 +649,7 @@ function renderIntro() {
     <div class="intro-hero">
       <div class="intro-eyebrow">Smart Bookie Matcher</div>
       <h1 class="intro-title">Find the right Australian bookmaker for you</h1>
-      <p class="intro-sub">8 questions. See which bookmakers match your preferences across racing, sports, live betting, multis, app quality and more. Match scores only — not personal recommendations.</p>
+      <p class="intro-sub">9 questions. See which bookmakers match your preferences across racing, sports, live betting, multis, app quality and more. Match scores only — not personal recommendations.</p>
       <div class="intro-features">
         <span class="intro-feat">✓ Takes under 2 minutes</span>
         <span class="intro-feat">✓ 15 bookmakers compared</span>
@@ -861,7 +873,7 @@ function renderResults() {
     <div class="results-header">
       <div class="results-eyebrow">Your Results</div>
       <div class="results-title">Your preference match results</div>
-      <div class="results-sub">Match scores calculated across 10 criteria from 15 Australian bookmakers. Scores are driven by your stated preferences only — not by commission rates. These are not personal recommendations.</div>
+      <div class="results-sub">Match scores calculated across 11 criteria from 15 Australian bookmakers. Scores are driven by your stated preferences only — not by commission rates. These are not personal recommendations.</div>
     </div>
 
     <div class="disclaimer">
