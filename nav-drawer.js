@@ -40,6 +40,7 @@
       label: '🏉 NRL',
       links: [
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
+        { text: '⚡ State of Origin 2026 — Game 1 Preview', href: '/nrl-state-of-origin-2026-game-1.html' },
         { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
         { text: 'NRL Round 11 Tips 2026 — Magic Round', href: '/nrl-round-11-tips-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
