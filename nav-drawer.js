@@ -27,7 +27,7 @@
       links: [
         { text: 'AFL Tips 2026',               href: '/afl-tips.html' },
         { text: 'AFL Ladder 2026',             href: '/afl-ladder-2026.html' },
-        { text: 'AFL Round 10 Tips 2026',       href: '/afl-round-10-tips-2026.html' },
+        { text: 'AFL Round 11 Tips 2026',       href: '/afl-round-11-tips-2026.html' },
         { text: 'AFL Premiership Odds 2026',    href: '/afl-premiership-odds-2026.html' },
         { text: 'Brownlow Medal Odds 2026',     href: '/brownlow-medal-odds-2026.html' },
         { text: 'Coleman Medal Odds 2026',      href: '/afl-coleman-medal-odds-2026.html' },
@@ -42,7 +42,7 @@
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
         { text: '⚡ State of Origin 2026 — Game 1 Preview', href: '/nrl-state-of-origin-2026-game-1.html' },
         { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
-        { text: 'NRL Round 11 Tips 2026 — Magic Round', href: '/nrl-round-11-tips-2026.html' },
+        { text: 'NRL Round 12 Tips 2026', href: '/nrl-round-12-tips-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
         { text: 'Best Sites for AFL & NRL',     href: '/best-betting-sites-afl-nrl.html' },
       ]
