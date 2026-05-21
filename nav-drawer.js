@@ -78,6 +78,7 @@
         { text: 'NFL Tips 2026',              href: '/nfl-tips.html' },
         { text: 'NFL Super Bowl LXI Odds',    href: '/nfl-super-bowl-odds-2026.html' },
         { text: 'MLB Tips Today',             href: '/mlb-tips-today.html' },
+        { text: 'MLB Tips Record 2026',       href: '/mlb-tips-record-2026.html' },
         { text: 'MLB Tips 2026',              href: '/mlb-tips.html' },
         { text: 'MLB World Series Odds 2026', href: '/mlb-world-series-odds-2026.html' },
         { text: 'Best Bookmakers for MLB',    href: '/best-bookmakers-for-mlb.html' },
