@@ -13,10 +13,10 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/pg-icon-192.png">
 <link rel="apple-touch-icon" sizes="192x192" href="/pg-icon-192.png">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Cash Out Calculator — Is Your Cashout Fair Value? | PuntGuide</title>
-<meta name="description" content="Find out if your bookie's cashout offer is fair value. Enter your bet details and cashout offer — our calculator shows the true fair value and how much the bookie is keeping.">
+<title>Cash Out Calculator  -  Is Your Cashout Fair Value? | PuntGuide</title>
+<meta name="description" content="Find out if your bookie's cashout offer is fair value. Enter your bet details and cashout offer  -  our calculator shows the true fair value and how much the bookie is keeping.">
 <link rel="canonical" href="https://puntguide.com.au/cashout-calculator">
-<meta property="og:title" content="Cash Out Calculator — Is Your Cashout Fair? | PuntGuide">
+<meta property="og:title" content="Cash Out Calculator  -  Is Your Cashout Fair? | PuntGuide">
 <meta property="og:description" content="See if your bookie's cashout offer is fair value. Free, instant, no signup required.">
 <meta property="og:url" content="https://puntguide.com.au/cashout-calculator">
 <meta property="og:type" content="website">
@@ -249,7 +249,7 @@ a{color:inherit;text-decoration:none;}
   <div class="hero">
     <div class="hero-eyebrow">Cash Out Calculator</div>
     <h1 class="hero-title">Is your cashout offer fair value?</h1>
-    <p class="hero-sub">Enter your original bet and your bookie's cashout offer. We'll show you the true fair value and how much the bookie is keeping — instantly, no signup required.</p>
+    <p class="hero-sub">Enter your original bet and your bookie's cashout offer. We'll show you the true fair value and how much the bookie is keeping  -  instantly, no signup required.</p>
   </div>
 
   <!-- BET TYPE TABS -->
@@ -276,7 +276,7 @@ a{color:inherit;text-decoration:none;}
   <!-- EDUCATIONAL EXPANDER -->
   <div class="explainer">
     <button class="explainer-toggle" onclick="toggleExplainer(this)">
-      <span>📚 How does cashout work — and why is it rarely fair value?</span>
+      <span>📚 How does cashout work  -  and why is it rarely fair value?</span>
       <span id="explainer-arrow">↓</span>
     </button>
     <div class="explainer-body" id="explainer-body">
@@ -287,10 +287,10 @@ a{color:inherit;text-decoration:none;}
         Example: $50 @ 4.00, current odds 2.50<br>
         Fair cashout = ($50 × 4.00) ÷ 2.50 = <strong>$80.00</strong>
       </div>
-      <p>Your bookie calculates their cashout offer using their <strong>internal odds</strong> — which include their margin (overround). This is typically 5-15% worse than the best available market price. The result is a cashout offer that is systematically below fair value.</p>
-      <p>This isn't illegal or even unusual — it's how bookmakers profit from the cashout feature. But most punters have no way to check the gap. That's what this calculator is for.</p>
+      <p>Your bookie calculates their cashout offer using their <strong>internal odds</strong>  -  which include their margin (overround). This is typically 5-15% worse than the best available market price. The result is a cashout offer that is systematically below fair value.</p>
+      <p>This isn't illegal or even unusual  -  it's how bookmakers profit from the cashout feature. But most punters have no way to check the gap. That's what this calculator is for.</p>
       <p>For each-way bets, the same logic applies to both the win and place portions separately. The place portion uses place odds derived from the win odds and the place fraction (e.g., 1/4 of win odds minus 1).</p>
-      <p>If you want to trade out a bet at true fair value, <strong>Betfair Exchange</strong> is the closest alternative — you lay your selection at the current exchange price, locking in profit or limiting loss without the bookie margin built in.</p>
+      <p>If you want to trade out a bet at true fair value, <strong>Betfair Exchange</strong> is the closest alternative  -  you lay your selection at the current exchange price, locking in profit or limiting loss without the bookie margin built in.</p>
     </div>
   </div>
 
@@ -582,13 +582,13 @@ function renderForm() {
         <div class="field">
           <label>Current Odds</label>
           <input type="number" id="f-curr" inputmode="decimal" placeholder="2.20" min="1.01" step="0.01">
-          <span class="field-hint">⚠️ Use the <strong>best available market price</strong> — not your bookie's displayed price (which includes their margin). Check Betfair Exchange or an odds comparison site for the true current price.</span>
+          <span class="field-hint">⚠️ Use the <strong>best available market price</strong>  -  not your bookie's displayed price (which includes their margin). Check Betfair Exchange or an odds comparison site for the true current price.</span>
         </div>
       </div>
       <hr class="divider">
       <div class="field-group full">
         <div class="field">
-          <label>Bookmaker (optional — for history)</label>
+          <label>Bookmaker (optional  -  for history)</label>
           <select id="f-bookie">${bookieOptions}</select>
         </div>
       </div>
@@ -625,13 +625,13 @@ function renderForm() {
         <div class="field">
           <label>Place Fraction</label>
           <select id="f-fraction">${fractionOptions}</select>
-          <span class="field-hint">Check race conditions — usually 1/4 for metro races</span>
+          <span class="field-hint">Check race conditions  -  usually 1/4 for metro races</span>
         </div>
       </div>
       <hr class="divider">
       <div class="field-group full">
         <div class="field">
-          <label>Bookmaker (optional — for history)</label>
+          <label>Bookmaker (optional  -  for history)</label>
           <select id="f-bookie">${bookieOptions}</select>
         </div>
       </div>
@@ -747,17 +747,17 @@ function renderResult(r, v) {
   const verdictCopy = {
     bad: {
       headline: 'Below fair value',
-      text: `The bookie is offering ${fmt(r.offer)} — fair value is ${fmt(r.fair)}. They are keeping ${fmt(Math.abs(r.gap))} (${Math.abs(r.gapPct).toFixed(1)}%) of your bet's true worth.`,
+      text: `The bookie is offering ${fmt(r.offer)}  -  fair value is ${fmt(r.fair)}. They are keeping ${fmt(Math.abs(r.gap))} (${Math.abs(r.gapPct).toFixed(1)}%) of your bet's true worth.`,
       sub: 'On pure math, you are better off letting the bet run. If you want to lock in profit at fair value, consider laying the selection on Betfair Exchange instead.',
     },
     fair: {
       headline: 'Roughly fair value',
-      text: `The offer is within 5% of fair value — within the normal bookmaker margin on cashouts.`,
+      text: `The offer is within 5% of fair value  -  within the normal bookmaker margin on cashouts.`,
       sub: 'Cashing out is a personal call. If locking in the money helps you, this offer is reasonable.',
     },
     good: {
       headline: 'Above fair value',
-      text: `The math suggests this offer is worth more than current market pricing implies — a gap of ${fmtPct(r.gapPct)}.`,
+      text: `The math suggests this offer is worth more than current market pricing implies  -  a gap of ${fmtPct(r.gapPct)}.`,
       sub: 'This sometimes happens during promotions or when a bookie is slow to update their cashout prices. Consider the offer carefully.',
     },
   };
@@ -955,7 +955,7 @@ function prefillFromURL() {
 
 function copyShareLink() {
   navigator.clipboard.writeText(window.location.href).then(() => {
-    showToast('Link copied — share your result!');
+    showToast('Link copied  -  share your result!');
   });
 }
 
