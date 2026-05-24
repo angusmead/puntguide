@@ -72,9 +72,7 @@
       links: [
         { text: '⚽ World Cup 2026 Odds',     href: '/world-cup-2026-odds.html' },
         { text: 'NBA Tips Today',             href: '/nba-tips-today.html' },
-        { text: '&#127936; Spurs vs Thunder WCF Game 2', href: '/nba/2026/may-20/spurs-vs-thunder-game-2.html' },
-        { text: '&#127936; Cavaliers vs Knicks ECF Game 2', href: '/nba/2026/may-22/cavaliers-vs-knicks-ecf-game-2.html' },
-        { text: '&#127936; Cavaliers vs Knicks ECF Game 1', href: '/nba/2026/may-19/cavaliers-vs-knicks-ecf-game-1.html' },
+        { text: '&#127936; Thunder vs Spurs WCF Game 4 — Today', href: '/nba-tips-today.html' },
         { text: 'NBA Championship Odds 2026', href: '/nba-championship-odds-2026.html' },
         { text: 'Best NBA Betting Sites',     href: '/best-nba-betting-sites-australia.html' },
         { text: 'NFL Tips 2026',              href: '/nfl-tips.html' },
