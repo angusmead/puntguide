@@ -27,7 +27,7 @@
       links: [
         { text: 'AFL Tips 2026',               href: '/afl-tips.html' },
         { text: 'AFL Ladder 2026',             href: '/afl-ladder-2026.html' },
-        { text: 'AFL Round 11 Tips 2026',       href: '/afl-round-11-tips-2026.html' },
+        { text: 'AFL Round 12 Tips 2026',       href: '/afl-round-12-tips-2026.html' },
         { text: 'AFL Premiership Odds 2026',    href: '/afl-premiership-odds-2026.html' },
         { text: 'Brownlow Medal Odds 2026',     href: '/brownlow-medal-odds-2026.html' },
         { text: 'Coleman Medal Odds 2026',      href: '/afl-coleman-medal-odds-2026.html' },
@@ -40,9 +40,9 @@
       label: '🏉 NRL',
       links: [
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
-        { text: '⚡ State of Origin 2026 — Game 1 Preview', href: '/nrl-state-of-origin-2026-game-1.html' },
+        { text: '⚡ State of Origin 2026 — Game 1 (Tomorrow)', href: '/nrl-state-of-origin-2026-game-1.html' },
+        { text: '🏉 NRL Round 13 Tips 2026 — This Weekend', href: '/nrl-round-13-tips-2026.html' },
         { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
-        { text: 'NRL Round 12 Tips 2026', href: '/nrl-round-12-tips-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
         { text: 'Best Sites for AFL & NRL',     href: '/best-betting-sites-afl-nrl.html' },
       ]
@@ -50,8 +50,7 @@
     {
       label: '🏇 Racing',
       links: [
-        { text: 'Sunday Racing Tips 24 May',       href: '/horse-racing-tips-sunday-24-may-2026.html' },
-        { text: 'Horse Racing Tips Today',        href: '/horse-racing-tips-today.html' },
+        { text: '🏇 Horse Racing Tips Today',     href: '/horse-racing-tips-today.html' },
         { text: 'Racing Futures 2026',          href: '/racing-futures-2026.html' },
         { text: 'Best Sites for Racing',        href: '/best-betting-sites-for-racing.html' },
       ]
@@ -71,13 +70,13 @@
       label: '⚾ International Sports',
       links: [
         { text: '⚽ World Cup 2026 Odds',     href: '/world-cup-2026-odds.html' },
-        { text: 'NBA Tips Today',             href: '/nba-tips-today.html' },
-        { text: '&#127936; Knicks vs Cavaliers ECF Game 4 — Tomorrow', href: '/nba/2026/may-26/knicks-vs-cavaliers-ecf-game-4.html' },
+        { text: '🏀 NBA Tips Today',          href: '/nba-tips-today.html' },
+        { text: '&#127936; Spurs vs Thunder WCF Game 5 — Tomorrow', href: '/nba/2026/may-27/spurs-vs-thunder-wcf-game-5.html' },
         { text: 'NBA Championship Odds 2026', href: '/nba-championship-odds-2026.html' },
         { text: 'Best NBA Betting Sites',     href: '/best-nba-betting-sites-australia.html' },
         { text: 'NFL Tips 2026',              href: '/nfl-tips.html' },
         { text: 'NFL Super Bowl LXI Odds',    href: '/nfl-super-bowl-odds-2026.html' },
-        { text: 'MLB Tips Today',             href: '/mlb-tips-today.html' },
+        { text: '⚾ MLB Tips Today (Wed Card)', href: '/mlb-tips-today.html' },
         { text: 'MLB Tips Record 2026',       href: '/mlb-tips-record-2026.html' },
         { text: 'MLB Tips 2026',              href: '/mlb-tips.html' },
         { text: 'MLB World Series Odds 2026', href: '/mlb-world-series-odds-2026.html' },
