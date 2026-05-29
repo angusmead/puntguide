@@ -2,6 +2,16 @@
   // ─── NAV DATA ─────────────────────────────────────────────────────────────
   const NAV = [
     {
+      label: '🔥 Today\'s Tips',
+      links: [
+        { text: '🏇 Racing Tips Today — Sat 30 May',  href: '/horse-racing-tips-today.html' },
+        { text: '🏉 NRL Round 13 Tips — This Weekend', href: '/nrl-round-13-tips-2026.html' },
+        { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
+        { text: '🏈 AFL Round 12 Tips',                href: '/afl-round-12-tips-2026.html' },
+        { text: '⚾ MLB Tips Today',                   href: '/mlb-tips-today.html' },
+      ]
+    },
+    {
       label: '🎯 Tools',
       links: [
         { text: '🔍 Smart Bookie Matcher™ — Find your best bookie', href: '/bookie-matcher.html' },
