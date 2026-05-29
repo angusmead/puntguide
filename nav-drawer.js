@@ -4,7 +4,7 @@
     {
       label: '🔥 Today\'s Tips',
       links: [
-        { text: '🏇 Racing Tips Today',  href: '/horse-racing-tips-today.html' },
+        { text: '🏇 Racing Tips — Saturday 30 May',  href: '/horse-racing-tips-saturday-30-may-2026.html' },
         { text: '🏉 NRL Round 13 Tips — This Weekend', href: '/nrl-round-13-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
         { text: '🏈 AFL Round 12 Tips',                href: '/afl-round-12-tips-2026.html' },
@@ -60,7 +60,7 @@
     {
       label: '🏇 Racing',
       links: [
-        { text: '🏇 Racing Tips Today', href: '/horse-racing-tips-today.html' },
+        { text: '🏇 Racing Tips — Saturday 30 May', href: '/horse-racing-tips-saturday-30-may-2026.html' },
         { text: 'Racing Futures 2026',          href: '/racing-futures-2026.html' },
         { text: 'Best Sites for Racing',        href: '/best-betting-sites-for-racing.html' },
       ]
