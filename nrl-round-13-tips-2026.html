@@ -35,7 +35,22 @@ header{position:fixed;top:36px;left:0;right:0;z-index:100;background:hsl(205 60%
 .nav-links a{color:hsl(215 45% 16%/.70);transition:color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--primary)}
 .btn-nav{background:var(--grad-gold);color:var(--primary-fg);font-family:'Geist',sans-serif;font-weight:600;font-size:13px;padding:8px 18px;border-radius:8px;border:none;cursor:pointer;box-shadow:var(--shadow-gold);white-space:nowrap;text-decoration:none}
-.page-wrap{max-width:52rem;margin:0 auto;padding:calc(36px + 80px + clamp(32px,5vw,64px)) clamp(16px,3vw,32px) 60px}
+.page-wrap{max-width:90rem;margin:0 auto;display:grid;grid-template-columns:160px minmax(0,1fr) 290px;gap:0 24px;align-items:start;padding:calc(36px + 80px + clamp(32px,5vw,64px)) clamp(16px,3vw,32px) 60px}
+.layout-main{max-width:52rem;width:100%}
+.betr-col{position:sticky;top:calc(36px + 80px + 24px);display:flex;flex-direction:column;align-items:center;gap:8px;overflow:hidden;flex-shrink:0}
+.banner-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-fg);font-family:'JetBrains Mono',monospace;text-align:center}
+.bookie-sidebar{position:sticky;top:calc(36px + 80px + 24px)}
+.sidebar-hd{font-family:'Geist',sans-serif;font-weight:700;font-size:17px;letter-spacing:-0.025em;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--fg)}
+.bookie-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px;display:flex;align-items:center;gap:10px;box-shadow:var(--shadow-card);transition:box-shadow .15s}
+.bookie-card:hover{box-shadow:0 8px 32px -8px hsl(215 50% 30%/.16)}
+.bookie-logo-box{width:56px;height:56px;border-radius:8px;flex-shrink:0;object-fit:contain;background:#fff;border:1px solid var(--border);padding:4px}
+.bookie-body{flex:1;min-width:0}
+.bookie-title{font-family:'Geist',sans-serif;font-weight:700;font-size:13px;letter-spacing:-0.01em;line-height:1.3;margin-bottom:2px}
+.bookie-desc{font-size:11px;color:var(--muted-fg);line-height:1.35}
+.bookie-claim-btn{display:inline-flex;align-items:center;justify-content:center;background:hsl(168 55% 38%);color:#fff;font-family:'Geist',sans-serif;font-weight:700;font-size:12px;padding:8px 14px;border-radius:100px;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .15s}
+.bookie-claim-btn:hover{background:hsl(168 55% 32%)}
+.sidebar-legal{font-size:10px;color:var(--muted-fg);text-align:center;margin-top:12px;line-height:1.55}
+.sidebar-legal a{color:var(--primary);text-decoration:underline}
 .breadcrumb{font-size:12px;color:var(--muted-fg);margin-bottom:24px;display:flex;align-items:center;gap:6px}
 .breadcrumb a{color:var(--primary)}
 .article-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
@@ -84,6 +99,8 @@ header{position:fixed;top:36px;left:0;right:0;z-index:100;background:hsl(205 60%
 footer.pg{background:var(--fg);padding:32px clamp(16px,3vw,40px);text-align:center}
 footer.pg a{color:var(--primary);font-size:13px;margin:0 12px}
 footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-height:1.7}
+@media(max-width:1100px){.page-wrap{grid-template-columns:minmax(0,1fr) 290px}.betr-col{display:none}}
+@media(max-width:960px){.page-wrap{grid-template-columns:1fr}.bookie-sidebar{position:static}}
 @media(max-width:640px){.match-body{grid-template-columns:1fr}.nav-links{display:none}.match-header{flex-direction:column;align-items:flex-start}.cta-strip{grid-template-columns:1fr}}
 </style>
 </head>
@@ -105,6 +122,13 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
 </header>
 <script src="/nav-drawer.js"></script>
 <div class="page-wrap">
+
+<div class="betr-col">
+  <div class="banner-label">Advertisement</div>
+  <script type="text/javascript" src="https://js.betraffiliates.com.au/javascript.php?prefix=zJS8NRxe1pCYNevImT-MDGNd7ZgqdRLk&amp;media=14&amp;campaign=1"></script>
+</div>
+
+<div class="layout-main">
   <div class="breadcrumb"><a href="/nrl-tips.html">NRL Tips 2026</a><span>&rsaquo;</span><span>Round 13</span></div>
   <div class="article-eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">NRL Tips &middot; Round 13 &middot; 29&ndash;31 May 2026</span></div>
   <h1 class="article-title">NRL Round 13 Tips, Predictions &amp; Best Bets</h1>
@@ -330,7 +354,69 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
     <a href="/nrl-state-of-origin-2026-game-2.html" style="display:inline-flex;align-items:center;background:var(--grad-gold);color:hsl(215 45% 16%);font-size:13px;font-weight:700;padding:8px 16px;border-radius:8px;text-decoration:none;">Game 2 Preview &rarr;</a>
   </div>
 
-</div>
+</div><!-- /layout-main -->
+
+<aside class="bookie-sidebar">
+  <div class="sidebar-hd">Best Bookmakers</div>
+
+  <div class="bookie-card">
+    <img src="/betr.png" alt="Betr" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Best for NRL</div>
+      <div class="bookie-desc">NRL specials, multis &amp; try scorer props</div>
+    </div>
+    <a href="/go/?to=betr-nrl" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <img src="/sportsbet.png" alt="Sportsbet" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Deepest NRL Markets</div>
+      <div class="bookie-desc">Try scorers, margins &amp; SGM</div>
+    </div>
+    <a href="/go/?to=sportsbet" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <img src="/bet365.png" alt="bet365" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Best Live Betting</div>
+      <div class="bookie-desc">In-play NRL &mdash; cash out live</div>
+    </div>
+    <a href="/go/?to=bet365" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <img src="/ladbrokes.png" alt="Ladbrokes" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Australia&rsquo;s #1 Bookie</div>
+      <div class="bookie-desc">Huge NRL market range</div>
+    </div>
+    <a href="/go/?to=ladbrokes" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <img src="/unibet.png" alt="Unibet" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Daily Odds Boosts</div>
+      <div class="bookie-desc">Log in for NRL boosts &amp; specials</div>
+    </div>
+    <a href="/go/?to=unibet" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <img src="/tab.png" alt="TAB" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Fixed Odds NRL</div>
+      <div class="bookie-desc">TAB fixed odds &amp; PocketBet app</div>
+    </div>
+    <a href="/go/?to=tab" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <p class="sidebar-legal">18+ only. Gamble responsibly. <a href="/all-betting-sites.html">Compare all 130+ bookmakers &rarr;</a></p>
+</aside>
+
+</div><!-- /page-wrap -->
 <div class="resp-bar"><strong>Gamble responsibly.</strong> Tips are editorial opinions only. Always confirm odds before placing. <a href="tel:1800858858">1800 858 858</a> &middot; <a href="https://www.gamblinghelponline.org.au" target="_blank" rel="noopener">gamblinghelponline.org.au</a>. 18+ only.</div>
 <footer class="pg">
   <a href="/nrl-tips.html">NRL Tips</a><a href="/nrl-round-12-tips-2026.html">Round 12 Tips</a><a href="/nrl-ladder-2026.html">NRL Ladder</a><a href="/nrl-premiership-odds-2026.html">NRL Futures</a><a href="/nrl-state-of-origin-2026-game-2.html">State of Origin</a><a href="/all-betting-sites.html">All Bookmakers</a>
