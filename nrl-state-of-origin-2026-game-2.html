@@ -91,6 +91,25 @@ a{color:inherit;}img{max-width:100%;}
 .footer-rg{font-size:11px;color:rgba(255,255,255,.4);border-top:1px solid rgba(255,255,255,.1);padding-top:20px;line-height:1.8;}
 .footer-rg a{color:rgba(255,255,255,.4);}
 @media(max-width:768px){.nav-links{display:none;}.wrap,.hero{padding-left:16px;padding-right:16px;}.nav{padding:0 20px;}.teams-grid{grid-template-columns:1fr;}.try-grid{grid-template-columns:1fr;}}
+/* 3-col layout */
+.pg-outer{display:grid;grid-template-columns:160px minmax(0,1fr) 290px;max-width:calc(900px + 500px);margin:0 auto;gap:0 24px;align-items:start;}
+.pg-outer .wrap{max-width:none;margin:0;}
+.betr-col{position:sticky;top:calc(36px + 80px + 24px);padding-top:clamp(28px,4vw,52px);display:flex;flex-direction:column;align-items:center;gap:8px;width:160px;overflow:hidden;flex-shrink:0;}
+.banner-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-fg);font-family:'JetBrains Mono',monospace;text-align:center;}
+.bookie-sidebar{position:sticky;top:calc(36px + 80px + 24px);padding-top:clamp(28px,4vw,52px);}
+.sidebar-hd{font-family:'Geist',sans-serif;font-weight:700;font-size:17px;letter-spacing:-0.025em;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--fg);}
+.bookie-card{background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px;display:flex;align-items:center;gap:10px;box-shadow:var(--sc);transition:box-shadow .15s;}
+.bookie-card:hover{box-shadow:0 8px 32px -8px hsl(215 50% 30%/.16);}
+.bookie-logo-box{width:56px;height:56px;border-radius:8px;flex-shrink:0;object-fit:contain;background:#fff;border:1px solid var(--border);padding:4px;}
+.bookie-body{flex:1;min-width:0;}
+.bookie-title{font-family:'Geist',sans-serif;font-weight:700;font-size:13px;letter-spacing:-0.01em;line-height:1.3;margin-bottom:2px;}
+.bookie-desc{font-size:11px;color:var(--muted-fg);line-height:1.35;}
+.bookie-claim-btn{display:inline-flex;align-items:center;justify-content:center;background:hsl(168 55% 38%);color:#fff;font-family:'Geist',sans-serif;font-weight:700;font-size:12px;padding:8px 14px;border-radius:100px;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .15s;}
+.bookie-claim-btn:hover{background:hsl(168 55% 32%);}
+.sidebar-legal{font-size:10px;color:var(--muted-fg);text-align:center;margin-top:12px;line-height:1.55;}
+.sidebar-legal a{color:var(--accent);text-decoration:underline;}
+@media(max-width:1100px){.pg-outer{grid-template-columns:minmax(0,1fr) 290px;}.betr-col{display:none;}}
+@media(max-width:960px){.pg-outer{grid-template-columns:1fr;}.bookie-sidebar{position:static;}}
 </style>
 </head>
 <body>
@@ -125,6 +144,13 @@ a{color:inherit;}img{max-width:100%;}
     <p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.9);margin:0;">NSW lead the series 1&ndash;0 after Tedesco&rsquo;s dramatic match-winning try in Game 1. Kalyn Ponga was sent off for a shoulder to the head of Tolu Koula &mdash; his availability for Game 2 is the biggest question in rugby league. Mitchell Moses returns at five-eighth. NSW are favourites even at Suncorp: <strong style="color:var(--primary);">NSW $1.78 H2H (Sportsbet) &middot; QLD $2.08.</strong> Our tip: <strong style="color:var(--primary);">NSW to win</strong> &middot; Margin: <strong style="color:var(--primary);">NSW 1&ndash;12 at $3.00</strong> (Betr). Try scorer tips to be confirmed closer to kick-off.</p>
   </div>
 </div></div>
+
+<div class="pg-outer">
+
+<div class="betr-col">
+  <div class="banner-label">Advertisement</div>
+  <script type="text/javascript" src="https://js.betraffiliates.com.au/javascript.php?prefix=zJS8NRxe1pCYNevImT-MDGNd7ZgqdRLk&amp;media=14&amp;campaign=1"></script>
+</div>
 
 <div class="wrap">
 
@@ -383,8 +409,70 @@ a{color:inherit;}img{max-width:100%;}
 
   <p style="font-size:11px;color:var(--muted-fg);text-align:center;margin-top:8px;">Tips are editorial opinions only. Always confirm odds before placing. Gamble responsibly. 18+ only.</p>
 
-</div>
-</div>
+</div><!-- /wrap -->
+
+<aside class="bookie-sidebar">
+  <div class="sidebar-hd">Best Bookmakers</div>
+
+  <div class="bookie-card">
+    <img src="/betr.png" alt="Betr" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Best for Origin</div>
+      <div class="bookie-desc">NSW 1&ndash;12 margin at $3.00. NRL specials &amp; props</div>
+    </div>
+    <a href="/go/?to=betr-nrl" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <img src="/sportsbet.png" alt="Sportsbet" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Deepest Origin Markets</div>
+      <div class="bookie-desc">Try scorers, margins, first try &amp; player specials</div>
+    </div>
+    <a href="/go/?to=sportsbet" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <img src="/bet365.png" alt="bet365" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Best Live Betting</div>
+      <div class="bookie-desc">In-play Origin &mdash; cash out live</div>
+    </div>
+    <a href="/go/?to=bet365" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <img src="/ladbrokes.png" alt="Ladbrokes" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Australia&rsquo;s #1 Bookie</div>
+      <div class="bookie-desc">Huge NRL &amp; Origin market range</div>
+    </div>
+    <a href="/go/?to=ladbrokes" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <img src="/unibet.png" alt="Unibet" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Daily Odds Boosts</div>
+      <div class="bookie-desc">Log in for NRL boosts &amp; specials</div>
+    </div>
+    <a href="/go/?to=unibet" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <img src="/tab.png" alt="TAB" class="bookie-logo-box">
+    <div class="bookie-body">
+      <div class="bookie-title">Fixed Odds NRL</div>
+      <div class="bookie-desc">TAB fixed odds &amp; PocketBet app</div>
+    </div>
+    <a href="/go/?to=tab" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <p class="sidebar-legal">18+ only. Gamble responsibly. <a href="/all-betting-sites.html">Compare all 130+ bookmakers &rarr;</a></p>
+</aside>
+
+</div><!-- /pg-outer -->
+</div><!-- /pb -->
 
 <footer class="site-footer">
   <div class="footer-in">
