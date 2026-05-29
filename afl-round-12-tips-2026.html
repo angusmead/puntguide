@@ -35,7 +35,20 @@ header{position:fixed;top:36px;left:0;right:0;z-index:100;background:hsl(205 60%
 .nav-links a{color:hsl(215 45% 16%/.70);transition:color .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--primary)}
 .btn-nav{background:var(--grad-gold);color:var(--primary-fg);font-family:'Geist',sans-serif;font-weight:600;font-size:13px;padding:8px 18px;border-radius:8px;border:none;cursor:pointer;box-shadow:var(--shadow-gold);white-space:nowrap;text-decoration:none}
-.page-wrap{max-width:52rem;margin:0 auto;padding:calc(36px + 80px + clamp(32px,5vw,64px)) clamp(16px,3vw,32px) 60px}
+.page-wrap{max-width:90rem;margin:0 auto;padding:calc(36px + 80px + clamp(32px,5vw,64px)) clamp(16px,3vw,40px) 60px;display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:44px;align-items:start}
+.layout-main{max-width:52rem;width:100%}
+.bookie-sidebar{position:sticky;top:calc(36px + 80px + 16px)}
+.sidebar-hd{font-family:'Geist',sans-serif;font-weight:700;font-size:17px;letter-spacing:-0.025em;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--fg)}
+.bookie-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;margin-bottom:10px;display:flex;align-items:center;gap:10px;box-shadow:0 2px 8px -4px hsl(215 50% 30%/.08);transition:box-shadow .15s}
+.bookie-card:hover{box-shadow:var(--shadow-card)}
+.bookie-logo-box{width:50px;height:50px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:'Geist',sans-serif;font-weight:900;font-size:10px;color:#fff;text-align:center;line-height:1.2;padding:4px}
+.bookie-body{flex:1;min-width:0}
+.bookie-title{font-family:'Geist',sans-serif;font-weight:700;font-size:13px;letter-spacing:-0.01em;line-height:1.3;margin-bottom:2px}
+.bookie-desc{font-size:11px;color:var(--muted-fg);line-height:1.35}
+.bookie-claim-btn{display:inline-flex;align-items:center;justify-content:center;background:hsl(168 55% 38%);color:#fff;font-family:'Geist',sans-serif;font-weight:700;font-size:12px;padding:8px 14px;border-radius:100px;text-decoration:none;white-space:nowrap;flex-shrink:0;transition:background .15s}
+.bookie-claim-btn:hover{background:hsl(168 55% 32%)}
+.sidebar-legal{font-size:10px;color:var(--muted-fg);text-align:center;margin-top:12px;line-height:1.55}
+.sidebar-legal a{color:var(--primary);text-decoration:underline}
 .breadcrumb{font-size:12px;color:var(--muted-fg);margin-bottom:24px;display:flex;align-items:center;gap:6px}
 .breadcrumb a{color:var(--primary)}
 .article-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:20px}
@@ -72,6 +85,7 @@ header{position:fixed;top:36px;left:0;right:0;z-index:100;background:hsl(205 60%
 footer.pg{background:var(--fg);padding:32px clamp(16px,3vw,40px);text-align:center}
 footer.pg a{color:var(--primary);font-size:13px;margin:0 12px}
 footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-height:1.7}
+@media(max-width:960px){.page-wrap{grid-template-columns:1fr}.bookie-sidebar{position:static}}
 @media(max-width:640px){.match-body{grid-template-columns:1fr}.nav-links{display:none}.match-header{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
@@ -91,16 +105,16 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
   </div>
 </header>
 <script src="/nav-drawer.js"></script>
-<div class="page-wrap">
+<div class="page-wrap"><div class="layout-main">
   <div class="breadcrumb"><a href="/afl-tips.html">AFL Tips 2026</a><span>&rsaquo;</span><span>Round 12 &mdash; Bye Round 1</span></div>
   <div class="article-eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">AFL Tips &middot; Round 12 &middot; Bye Round 1</span></div>
   <h1 class="article-title">AFL Round 12 Tips, Predictions &amp; Best Bets</h1>
 
-<div style="background:hsl(215 45% 16%);border-radius:10px;padding:16px 20px;margin:20px 0;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(48 92% 64%);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">Short Answer</div><p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.9);margin:0;">Seven games across the first bye round. The injury news dominates &mdash; Collingwood lose Elliott (ACL, season over), Moore (hamstring) and Hayes (shoulder), while Essendon are catastrophically short-handed without McGrath, Durham, May, Guelfi and Caldwell. Value plays: <strong style="color:#fff;">St Kilda +18.5</strong> against a Hawks side projected to win by 13, <strong style="color:#fff;">Carlton +24.5</strong> with Carroll's ACL tightening the Cats&rsquo; margin, <strong style="color:#fff;">Brisbane &minus;5.5</strong> at the Gabba with key returns, and <strong style="color:#fff;">West Coast &minus;7.5</strong> against a five-man-down Essendon.</p></div>
+<div style="background:hsl(215 45% 16%);border-radius:10px;padding:16px 20px;margin:20px 0;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(48 92% 64%);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">Short Answer</div><p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.9);margin:0;">Seven games across the first bye round. The injury news dominates &mdash; Collingwood lose Elliott (ACL, season over), Moore (hamstring) and Hayes (shoulder), while Essendon are catastrophically short-handed without McGrath, Redman, Durham, Guelfi and Caldwell (Archer May cleared to play). Sydney also hit with four confirmed changes &mdash; Mills and Papley both out with calf injuries, Rosas ankle, Grundy managed &mdash; with debutant Harry Kyle set to be unveiled. Value plays: <strong style="color:#fff;">St Kilda +18.5</strong> against a Hawks side projected to win by 13, <strong style="color:#fff;">Carlton +24.5</strong> with Carroll's ACL tightening the Cats&rsquo; margin, <strong style="color:#fff;">Brisbane &minus;5.5</strong> at the Gabba with Berry and Answerth back (Zorko out six weeks with quad), and <strong style="color:#fff;">West Coast &minus;7.5</strong> against a five-man-down Essendon.</p></div>
 
-<div style="background:hsl(0 80% 97%);border:2px solid hsl(0 60% 75%);border-radius:10px;padding:14px 18px;margin:16px 0;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(0 60% 38%);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">&#9888; Late Mail &mdash; Confirmed Teams 28 May 2026</div><ul style="list-style:none;margin:0;padding:0;"><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(0 50% 22%);"><span style="font-weight:700;flex-shrink:0;">&#128680;</span><strong>Jamie Elliott OUT (ACL, season over)</strong> &mdash; Collingwood&rsquo;s leading forward is gone for 2026 after going down in the win over West Coast. Massive blow to Pies&rsquo; forward line.</li><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(0 50% 22%);"><span style="font-weight:700;flex-shrink:0;">&#128680;</span><strong>Darcy Moore OUT (hamstring) + Will Hayes OUT (shoulder)</strong> &mdash; Collingwood lose three senior players in one game. Membrey, Buller, Harrison, Parker come in.</li><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(0 50% 22%);"><span style="font-weight:700;flex-shrink:0;">&#128680;</span><strong>Andrew McGrath OUT (broken jaw)</strong> &mdash; Essendon&rsquo;s best player and captain unavailable for the trip to Optus Stadium. Durham, May, Guelfi and Caldwell also out &mdash; five players in total.</li><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(0 50% 22%);"><span style="font-weight:700;flex-shrink:0;">&#128680;</span><strong>Matt Carroll OUT (ACL, season over)</strong> &mdash; Carlton lose a key midfielder ahead of the Geelong clash. Patrick Cripps carries a heavier load.</li><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(215 40% 22%);"><span style="font-weight:700;flex-shrink:0;">&rarr;</span><strong>Jack Gunston + Will Day return for Hawthorn</strong> &mdash; Both confirmed in the team for tonight vs St Kilda. Gunston plays HF, Day in followers. Hawks forward depth significantly boosted.</li><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(215 40% 22%);"><span style="font-weight:700;flex-shrink:0;">&rarr;</span><strong>Jarrod Berry + Noah Answerth available for Brisbane</strong> &mdash; Both return for the Lions after two straight losses. Zorko also back. Three key names back for the Gabba clash vs Fremantle.</li><li style="display:flex;gap:10px;font-size:13px;line-height:1.6;color:hsl(215 40% 22%);"><span style="font-weight:700;flex-shrink:0;">&rarr;</span><strong>Jake Lever OUT (concussion) for Melbourne</strong> &mdash; Key defender misses the Alice Springs trip vs GWS. Tom McDonald expected to fill the role after 29 disposals and 10 marks in the VFL.</li></ul></div>
+<div style="background:hsl(0 80% 97%);border:2px solid hsl(0 60% 75%);border-radius:10px;padding:14px 18px;margin:16px 0;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(0 60% 38%);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">&#9888; Late Mail &mdash; Confirmed Teams 28 May 2026</div><ul style="list-style:none;margin:0;padding:0;"><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(0 50% 22%);"><span style="font-weight:700;flex-shrink:0;">&#128680;</span><strong>Jamie Elliott OUT (ACL, season over)</strong> &mdash; Collingwood&rsquo;s leading forward is gone for 2026 after going down in the win over West Coast. Massive blow to Pies&rsquo; forward line.</li><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(0 50% 22%);"><span style="font-weight:700;flex-shrink:0;">&#128680;</span><strong>Darcy Moore OUT (hamstring) + Will Hayes OUT (shoulder)</strong> &mdash; Collingwood lose three senior players in one game. Anderson certain in; Harvey Harrison back for his first AFL game since 2024 after ACL recovery; Membrey or Buller also in.</li><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(0 50% 22%);"><span style="font-weight:700;flex-shrink:0;">&#128680;</span><strong>Andrew McGrath OUT (broken jaw)</strong> &mdash; Essendon&rsquo;s best player and captain unavailable for the trip to Optus Stadium. Redman, Durham, Guelfi and Caldwell also confirmed out &mdash; five total. Archer May cleared to play after rib scare. Tsatas, Cox, El-Hawli in for Round 12.</li><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(0 50% 22%);"><span style="font-weight:700;flex-shrink:0;">&#128680;</span><strong>Matt Carroll OUT (ACL, season over)</strong> &mdash; Carlton lose a key midfielder ahead of the Geelong clash. Patrick Cripps carries a heavier load.</li><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(215 40% 22%);"><span style="font-weight:700;flex-shrink:0;">&rarr;</span><strong>Jack Gunston + Will Day return for Hawthorn</strong> &mdash; Both confirmed in the team for tonight vs St Kilda. Gunston plays HF, Day in followers. Hawks forward depth significantly boosted.</li><li style="display:flex;gap:10px;margin-bottom:7px;font-size:13px;line-height:1.6;color:hsl(215 40% 22%);"><span style="font-weight:700;flex-shrink:0;">&rarr;</span><strong>Jarrod Berry + Noah Answerth available for Brisbane</strong> &mdash; Both return for the Lions. However, Dayne Zorko (quad) is OUT for up to six weeks &mdash; fresh scans revealed &ldquo;more damage&rdquo;. Cody Curtin (4 goals in VFL) also pushing for inclusion.</li><li style="display:flex;gap:10px;font-size:13px;line-height:1.6;color:hsl(215 40% 22%);"><span style="font-weight:700;flex-shrink:0;">&rarr;</span><strong>Sydney lose four: Mills (calf), Papley (calf, 6 weeks), Rosas (ankle), Grundy (managed)</strong> &mdash; Harry Kyle set to debut at the SCG. Heeney confirmed captain and key scoring threat. Cunningham, Ladhams, McLean all in.</li><li style="display:flex;gap:10px;font-size:13px;line-height:1.6;color:hsl(215 40% 22%);"><span style="font-weight:700;flex-shrink:0;">&rarr;</span><strong>Jake Lever OUT (concussion) + Steven May OUT for Melbourne</strong> &mdash; Two key defenders missing for the Alice Springs trip. McDonald, Mihocek, Latrelle Pickett, Henderson and Moniz-Wakefield all in contention.</li></ul></div>
 
-<div style="background:hsl(200 80% 97%);border:1px solid hsl(200 70% 85%);border-radius:10px;padding:16px 20px;margin:16px 0;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(200 60% 40%);margin-bottom:10px;font-family:'JetBrains Mono',monospace;">Key Findings</div><ul style="list-style:none;margin:0;padding:0;"><li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">&rarr;</span>Hawthorn -18.5 vs St Kilda &mdash; Hawks confirmed $1.37, Gunston + Day back. Projected margin sits around 13. <strong>Saints +18.5 is the value</strong> even in a losing cause.</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">&rarr;</span>Geelong -24.5 vs Carlton &mdash; Carroll ACL devastating loss but consensus margin has Cats winning by ~21. <strong>Carlton +24.5 holds value</strong> despite Geelong coming off their best win of 2026.</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">&rarr;</span>Collingwood lose three including <strong>Jamie Elliott ACL</strong> &mdash; Bulldogs -6.5 looks soft with Pies&rsquo; forward line stripped. English possibly returning for Dogs adds further confidence.</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">&rarr;</span>Essendon lose <strong>five players including McGrath (broken jaw)</strong> &mdash; Plus Brad Scott sacked mid-week. Dean Solomon takes the reins. West Coast -7.5 is the safest line on the card.</li></ul></div>
+<div style="background:hsl(200 80% 97%);border:1px solid hsl(200 70% 85%);border-radius:10px;padding:16px 20px;margin:16px 0;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(200 60% 40%);margin-bottom:10px;font-family:'JetBrains Mono',monospace;">Key Findings</div><ul style="list-style:none;margin:0;padding:0;"><li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">&rarr;</span>Hawthorn -18.5 vs St Kilda &mdash; Hawks confirmed $1.37, Gunston + Day back. Projected margin sits around 13. <strong>Saints +18.5 is the value</strong> even in a losing cause.</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">&rarr;</span>Geelong -24.5 vs Carlton &mdash; Carroll ACL devastating loss but consensus margin has Cats winning by ~21. <strong>Carlton +24.5 holds value</strong> despite Geelong coming off their best win of 2026.</li><li style="display:flex;gap:10px;margin-bottom:8px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">&rarr;</span>Collingwood lose three including <strong>Jamie Elliott ACL</strong> &mdash; Bulldogs -6.5 looks soft with Pies&rsquo; forward line stripped. English confirmed returning from concussion protocols for Dogs adds significant ruck depth.</li><li style="display:flex;gap:10px;font-size:14px;line-height:1.6;"><span style="color:hsl(200 88% 58%);font-weight:700;flex-shrink:0;">&rarr;</span>Essendon lose <strong>five players including McGrath (broken jaw)</strong> &mdash; Plus Brad Scott sacked mid-week. Dean Solomon takes the reins. West Coast -7.5 is the safest line on the card.</li></ul></div>
 
   <div class="article-meta">Jake Morrison &mdash; AFL Tipster, PuntGuide &middot; Round 12 &middot; Bye Round 1 &middot; Thu 28 &ndash; Sun 31 May 2026 &middot; Odds: BetRight</div>
 
@@ -112,7 +126,7 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
   <div class="pick-box">
     <div class="pick-box-title">Match of the Round</div>
     <div class="pick-box-pick">Brisbane Lions v Fremantle &mdash; The Gabba, Saturday 4:15pm</div>
-    <div class="pick-box-sub">Our tip: Brisbane &minus;5.5 $1.95 &middot; Reigning premiers bounce back with Berry, Zorko &amp; Answerth back &mdash; Fremantle have lost four straight at the Gabba by 35 avg</div>
+    <div class="pick-box-sub">Our tip: Brisbane &minus;5.5 $1.95 &middot; Berry &amp; Answerth back at the Gabba &mdash; Zorko out 6 weeks (quad) but Fremantle have lost four straight here by 35 avg</div>
   </div>
 
   <div style="display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 18px;margin:0 0 16px;box-shadow:0 4px 24px -8px hsl(215 50% 30%/.1);">
@@ -178,7 +192,7 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
     </div>
     <div>
       <div class="match-section-title">Key News</div>
-      <div class="match-text"><strong>&#128680; Carlton: Carroll OUT (ACL, season over).</strong> Cripps carries extra load. Josh Fraser still in caretaker role.<br><strong>Geelong:</strong> Bruhn returns after managed rest. Bowes and Worpel strong VFL options. Cats line strengthened.</div>
+      <div class="match-text"><strong>&#128680; Carlton: Carroll OUT (ACL, season over).</strong> Cripps carries extra load. Weitering (calf) tests fitness &mdash; could return. Acres in the mix; Saad available. Josh Fraser in caretaker role.<br><strong>Geelong:</strong> Bruhn returns after managed rest. Bowes and Worpel strong VFL options with 39 disposals each last week. Cats line strengthened.</div>
     </div>
     <div class="suggested-bets">
       <div class="match-section-title">Suggested Bets &middot; Cats $1.28 &middot; Blues $3.70 &middot; Line: Cats &minus;24.5</div>
@@ -197,16 +211,16 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
   <div class="match-body">
     <div>
       <div class="match-section-title">Analysis</div>
-      <div class="match-text">No betting value at $1.01 for Sydney, but this is a near-certainty for tipping purposes. Richmond carry 19 injuries and are missing Lynch and Faull. Swans lose Papley and Rosas (both possibly out), but they&rsquo;re still the vastly superior side. The angle is the <strong>Swans Total Points Over 119.5</strong> &mdash; they will score heavily.</div>
+      <div class="match-text">No betting value at $1.01 for Sydney, but this is a near-certainty for tipping purposes. Richmond carry 19 injuries and are missing Lynch (fractured larynx) and Faull (concussion). Swans lose Papley (calf, 6 weeks), Rosas (ankle), Mills (calf) and Grundy (managed) &mdash; four confirmed out &mdash; but debutant Harry Kyle arrives and Heeney steps up as captain. Still the vastly superior side. The angle is the <strong>Isaac Heeney 2+ Goals</strong> &mdash; Richmond backline decimated, open forward line all afternoon.</div>
     </div>
     <div>
       <div class="match-section-title">Key News</div>
-      <div class="match-text"><strong>Sydney:</strong> Papley (calf) and Rosas (ankle) both failed to finish last week &mdash; assessments ongoing. Still a full-strength powerhouse side.<br><strong>Richmond:</strong> Lynch OUT (larynx injury), Faull OUT (concussion). 19 players unavailable. Historical lows.</div>
+      <div class="match-text"><strong>&#128680; Sydney (4 confirmed out):</strong> Mills (calf), Papley (calf &mdash; 6 weeks), Rosas (ankle), Grundy (managed). Harry Kyle debuts (pick 14, converted from rugby union). Cunningham, Ladhams, McLean all in. Heeney confirmed captain.<br><strong>Richmond:</strong> Lynch OUT (fractured larynx), Faull OUT (concussion). Banks, Prestia available. 19+ unavailable overall.</div>
     </div>
     <div class="suggested-bets">
       <div class="match-section-title">Suggested Bets &middot; Swans $1.01 &middot; Tigers $17.00 &middot; Line: Swans &minus;60.5</div>
-      <div class="bet-row"><div class="bet-left"><span class="bet-desc">Sydney Total Points Over 119.5 $1.88</span><span class="bet-sub">Swans score freely vs 19-player-short Richmond &middot; Projected 54-point win &middot; Sportsbet</span></div><a href="/go/?to=betr-afl" class="bet-cta">Bet Now &rarr;</a></div>
-      <div class="bet-row"><div class="bet-left"><span class="bet-desc">Isaac Heeney 2+ Goals $1.73</span><span class="bet-sub">Averaging 1.95 goals/game in 2026 &middot; Richmond missing 19 players &middot; Open forward line all day</span></div><a href="/go/?to=betr-afl" class="bet-cta">Bet Now &rarr;</a></div>
+      <div class="bet-row"><div class="bet-left"><span class="bet-desc">Sydney H2H $1.01 (tipping only)</span><span class="bet-sub">Certainty for tipping &middot; No wagering value at $1.01 &middot; Sportsbet</span></div><a href="/go/?to=betr-afl" class="bet-cta">Bet Now &rarr;</a></div>
+      <div class="bet-row"><div class="bet-left"><span class="bet-desc">Isaac Heeney 2+ Goals $1.73</span><span class="bet-sub">Captain for Round 12 &middot; 1.95 goals/game in 2026 &middot; Richmond decimated &middot; Open forward line all afternoon</span></div><a href="/go/?to=betr-afl" class="bet-cta">Bet Now &rarr;</a></div>
     </div>
   </div>
 </div>
@@ -227,15 +241,15 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
   <div class="match-body">
     <div>
       <div class="match-section-title">Analysis</div>
-      <div class="match-text">The marquee game of the round &mdash; reigning premiers vs ladder leaders. Brisbane have lost two straight in ugly fashion, but get Berry, Zorko and Answerth back at the Gabba. Fremantle have won 10 straight but have lost four consecutive at this venue by an average of 35.3 points. Lions to bounce back and cover the modest -5.5 spread.</div>
+      <div class="match-text">The marquee game of the round &mdash; reigning premiers vs ladder leaders. Brisbane have lost two straight in ugly fashion, and now receive a massive blow: Zorko (quad) is OUT for up to six weeks after fresh scans. Berry and Answerth return, Curtin pushes for selection. Fremantle have won 10 straight but have lost four consecutive at this venue by an average of 35.3 points. Without Zorko the case is tighter, but the Gabba record is damning for the Dockers.</div>
     </div>
     <div>
       <div class="match-section-title">Key News</div>
-      <div class="match-text"><strong>Lions (key returns):</strong> Jarrod Berry, Dayne Zorko, Noah Answerth all available. Cody Curtin pushed for selection with 4 goals in VFL. Two weeks of hurt to work off.<br><strong>Fremantle:</strong> 10-game win streak. Pearce and Hayden Young could return. But the Gabba record is damning.</div>
+      <div class="match-text"><strong>&#128680; Lions:</strong> Zorko (quad) OUT up to six weeks &mdash; &ldquo;more damage&rdquo; in fresh scans. Berry &amp; Answerth confirmed back; Curtin (4 goals VFL) also in mix. McLachlan likely out.<br><strong>Fremantle:</strong> 10-game win streak; Pearce (knee) returns, McDonald makes way. Young (concussion) and Serong (calf) still out.</div>
     </div>
     <div class="suggested-bets">
       <div class="match-section-title">Suggested Bets &middot; Lions $1.75 &middot; Dockers $2.08 &middot; Line: Lions &minus;5.5</div>
-      <div class="bet-row"><div class="bet-left"><span class="bet-desc">Brisbane &minus;5.5 $1.95</span><span class="bet-sub">Berry + Zorko + Answerth return &middot; Fremantle 0-4 at the Gabba &middot; BetRight</span></div><a href="/go/?to=betr-afl" class="bet-cta">Bet Now &rarr;</a></div>
+      <div class="bet-row"><div class="bet-left"><span class="bet-desc">Brisbane &minus;5.5 $1.95</span><span class="bet-sub">Berry &amp; Answerth back &middot; Zorko out 6wks but Gabba record is damning for Freo &middot; BetRight</span></div><a href="/go/?to=betr-afl" class="bet-cta">Bet Now &rarr;</a></div>
       <div class="bet-row"><div class="bet-left"><span class="bet-desc">Logan Morris 3+ goals $2.65</span><span class="bet-sub">Brisbane Key Forward &middot; 94 career goals in 52 games &middot; 1.8 per game avg &middot; Sportsbet</span></div><a href="/go/?to=betr-afl" class="bet-cta">Props &rarr;</a></div>
     </div>
   </div>
@@ -250,11 +264,11 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
   <div class="match-body">
     <div>
       <div class="match-section-title">Analysis</div>
-      <div class="match-text">Collingwood&rsquo;s horror week continues. Elliott (ACL, season done), Moore (hamstring) and Hayes (shoulder) all out from the #SP433 win over West Coast. Four players in &mdash; Membrey, Buller, Harrison, Parker &mdash; all less experienced options. Bulldogs won by 3 over Melbourne last week and may have English returning from concussion. Depleted Pies can&rsquo;t cover -6.5 against a fresh Bulldogs outfit.</div>
+      <div class="match-text">Collingwood&rsquo;s horror week continues. Elliott (ACL, season done), Moore (hamstring) and Hayes (shoulder) all out from the #SP433 win over West Coast. Four players in &mdash; Membrey, Buller, Harrison, Parker &mdash; all less experienced options. Bulldogs won by 3 over Melbourne last week and now confirmed get English back from concussion protocols &mdash; he shifts Lobb back to defence. Depleted Pies can&rsquo;t cover -6.5 against a boosted Bulldogs outfit.</div>
     </div>
     <div>
       <div class="match-section-title">Key News</div>
-      <div class="match-text"><strong>&#128680; Collingwood (3 out):</strong> Elliott ACL (season over), Moore (hamstring), Hayes (shoulder). Membrey, Buller, Harrison, Parker in. Forward line depth devastated.<br><strong>Bulldogs:</strong> Cleary OUT (concussion). Tim English potentially returning from concussion protocols. Weightman getting closer.</div>
+      <div class="match-text"><strong>&#128680; Collingwood (3 out):</strong> Elliott ACL (season over), Moore (hamstring), Hayes (shoulder). Anderson confirmed in; Harvey Harrison (first AFL game since 2024 ACL); Membrey or Buller also in. Forward line depth gutted.<br><strong>Bulldogs:</strong> Cleary OUT (concussion). Tim English confirmed returning &mdash; clears protocols, plays Round 12. Lobb shifts to defence. Weightman one more week away.</div>
     </div>
     <div class="suggested-bets">
       <div class="match-section-title">Suggested Bets &middot; Dogs $1.60 &middot; Pies $2.35 &middot; Line: Dogs &minus;6.5</div>
@@ -273,11 +287,11 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
   <div class="match-body">
     <div>
       <div class="match-section-title">Analysis</div>
-      <div class="match-text">Melbourne have lost seven straight at interstate venues &mdash; a staggering run that can&rsquo;t be ignored for a Traeger Park trip. Lever is out (concussion). GWS just dismantled Brisbane with 14 goals in one quarter and Stringer, Greene and Daniels all firing. Giants are hitting form at the right time. The $2.15 on GWS is genuinely tempting, but the +4.5 spread is the play to manage the risk.</div>
+      <div class="match-text">Melbourne have lost seven straight at interstate venues &mdash; a staggering run that can&rsquo;t be ignored for a Traeger Park trip. Now they lose both Lever (concussion) and Steven May, meaning two key defenders down for the Alice Springs trip. GWS just dismantled Brisbane with 14 goals in one quarter and Stringer, Greene and Daniels all firing. Giants are hitting form at the right time. The $2.15 on GWS is genuinely tempting, but the +4.5 spread is the play to manage the risk.</div>
     </div>
     <div>
       <div class="match-section-title">Key News</div>
-      <div class="match-text"><strong>&#128680; Melbourne:</strong> Jake Lever OUT (concussion). Tom McDonald likely in (29 dis, 10 marks in VFL). Mihocek edging closer but interstate form remains deeply concerning.<br><strong>GWS:</strong> Buckley (hamstring) and Whitfield (hamstring) both under injury clouds. Greene and Stringer in form after Brisbane blitz.</div>
+      <div class="match-text"><strong>&#128680; Melbourne (2 defenders out):</strong> Lever (concussion) and Steven May both OUT. McDonald, Mihocek, Latrelle Pickett, Henderson and Moniz-Wakefield all confirmed in. Interstate form catastrophic &mdash; 7 straight losses away from home.<br><strong>&#128680; GWS:</strong> Buckley (hamstring) ruled out before Q1 of R11, gone for R12. Whitfield (hamstring awareness) monitored. Greene and Stringer in red-hot form after Brisbane blitz.</div>
     </div>
     <div class="suggested-bets">
       <div class="match-section-title">Suggested Bets &middot; Dees $1.70 &middot; Giants $2.15 &middot; Line: Dees &minus;4.5</div>
@@ -296,11 +310,11 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
   <div class="match-body">
     <div>
       <div class="match-section-title">Analysis</div>
-      <div class="match-text">The most compelling line tip of the round. Essendon have lost five players &mdash; including captain McGrath to a broken jaw &mdash; and their head coach Brad Scott has been sacked mid-week. Dean Solomon takes the reins in his first game. West Coast were competitive in a 10-point loss to Collingwood and Optus Stadium is a genuine fortress. Eagles to cover easily.</div>
+      <div class="match-text">The most compelling line tip of the round. Essendon have lost five players &mdash; McGrath (broken jaw), Redman, Durham, Guelfi, Caldwell &mdash; and their head coach Brad Scott has been sacked mid-week. Archer May is cleared to play despite initial rib scare. Dean Solomon takes the reins in his first game. West Coast were competitive in a 10-point loss to Collingwood and Optus Stadium is a genuine fortress. Eagles to cover easily.</div>
     </div>
     <div>
       <div class="match-section-title">Key News</div>
-      <div class="match-text"><strong>&#128680; Essendon (5 out):</strong> McGrath (broken jaw), Durham (concussion), May (ribs), Guelfi (hamstring), Caldwell (ankle). Brad Scott sacked. Dean Solomon coach. Cox could return via VFL.<br><strong>West Coast:</strong> Strong home record at Optus. Starcevich possible inclusion after managed VFL minutes. Eagles buoyed by competitive Collingwood effort.</div>
+      <div class="match-text"><strong>&#128680; Essendon (5 out):</strong> McGrath (broken jaw &mdash; out until mid-season bye), Redman (inj), Durham (concussion), Guelfi (hamstring &mdash; mid-season bye), Caldwell (ankle). Archer May cleared to play. Brad Scott sacked; Dean Solomon coach. Tsatas, Cox, El-Hawli in.<br><strong>West Coast:</strong> Strong home record at Optus. Duff-Tytler and Gross could come in. Starcevich returned from calf and available for selection. Eagles buoyed by competitive Collingwood effort.</div>
     </div>
     <div class="suggested-bets">
       <div class="match-section-title">Suggested Bets &middot; Eagles $1.57 &middot; Bombers $2.40 &middot; Line: Eagles &minus;7.5</div>
@@ -310,7 +324,69 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
   </div>
 </div>
 
-</div>
+</div><!-- /layout-main -->
+
+<aside class="bookie-sidebar">
+  <div class="sidebar-hd">Best Bookmakers</div>
+
+  <div class="bookie-card">
+    <div class="bookie-logo-box" style="background:hsl(262 75% 40%)">Betr</div>
+    <div class="bookie-body">
+      <div class="bookie-title">AFL Multis &amp; SGMs</div>
+      <div class="bookie-desc">Australia&rsquo;s newest bookie &mdash; great multi promos &amp; boosts</div>
+    </div>
+    <a href="/go/?to=betr-afl" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <div class="bookie-logo-box" style="background:hsl(25 95% 50%)">Sbet</div>
+    <div class="bookie-body">
+      <div class="bookie-title">Deepest AFL Markets</div>
+      <div class="bookie-desc">Goal scorers, disposals, player props &amp; SGM builder</div>
+    </div>
+    <a href="/go/?to=sportsbet" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <div class="bookie-logo-box" style="background:hsl(142 65% 32%)">365</div>
+    <div class="bookie-body">
+      <div class="bookie-title">Best Live Betting</div>
+      <div class="bookie-desc">In-play AFL &amp; racing &mdash; cash out &amp; edit bets live</div>
+    </div>
+    <a href="/go/?to=bet365" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <div class="bookie-logo-box" style="background:hsl(0 68% 42%)">Ldbrk</div>
+    <div class="bookie-body">
+      <div class="bookie-title">Australia&rsquo;s #1 Bookie</div>
+      <div class="bookie-desc">Huge range of AFL &amp; racing markets &amp; odds boosts</div>
+    </div>
+    <a href="/go/?to=ladbrokes" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <div class="bookie-logo-box" style="background:hsl(210 78% 35%)">Unbt</div>
+    <div class="bookie-body">
+      <div class="bookie-title">Daily Racing Rewards</div>
+      <div class="bookie-desc">Log in for daily odds boosts &amp; AFL multi specials</div>
+    </div>
+    <a href="/go/?to=unibet" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <div class="bookie-card">
+    <div class="bookie-logo-box" style="background:hsl(215 38% 18%)">TAB</div>
+    <div class="bookie-body">
+      <div class="bookie-title">Tote &amp; Fixed AFL</div>
+      <div class="bookie-desc">Best tote odds, racing rebates &amp; PocketBet app</div>
+    </div>
+    <a href="/go/?to=tab" class="bookie-claim-btn">Claim</a>
+  </div>
+
+  <p class="sidebar-legal">18+ only. Gamble responsibly. <a href="/all-betting-sites.html">Compare all 130+ bookmakers &rarr;</a></p>
+</aside>
+
+</div><!-- /page-wrap -->
 <div class="resp-bar"><strong>Gamble responsibly.</strong> Tips are editorial opinions only. Always confirm odds before placing. <a href="tel:1800858858">1800 858 858</a> &middot; <a href="https://www.gamblinghelponline.org.au" target="_blank" rel="noopener">gamblinghelponline.org.au</a>. 18+ only.</div>
 <footer class="pg">
   <a href="/afl-tips.html">AFL Tips</a><a href="/afl-round-11-tips-2026.html">Round 11 Tips</a><a href="/afl-round-13-tips-2026.html">Round 13 Tips</a><a href="/afl-ladder-2026.html">AFL Ladder</a><a href="/afl-premiership-odds-2026.html">AFL Futures</a><a href="/best-betting-sites-for-afl.html">Best for AFL</a><a href="/all-betting-sites.html">All Bookmakers</a>
