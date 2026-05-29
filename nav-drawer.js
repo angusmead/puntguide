@@ -4,7 +4,7 @@
     {
       label: '🔥 Today\'s Tips',
       links: [
-        { text: '🏇 Racing Tips Today — Sat 30 May',  href: '/horse-racing-tips-today.html' },
+        { text: '🏇 Racing Tips Today',  href: '/horse-racing-tips-today.html' },
         { text: '🏉 NRL Round 13 Tips — This Weekend', href: '/nrl-round-13-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
         { text: '🏈 AFL Round 12 Tips',                href: '/afl-round-12-tips-2026.html' },
@@ -60,7 +60,7 @@
     {
       label: '🏇 Racing',
       links: [
-        { text: '🏇 Racing Tips Today — Sat 30 May', href: '/horse-racing-tips-today.html' },
+        { text: '🏇 Racing Tips Today', href: '/horse-racing-tips-today.html' },
         { text: 'Racing Futures 2026',          href: '/racing-futures-2026.html' },
         { text: 'Best Sites for Racing',        href: '/best-betting-sites-for-racing.html' },
       ]
@@ -395,10 +395,12 @@
     });
   });
 
-  // Auto-open the section containing the current page
+  // Auto-open Today's Tips section by default, plus the section containing the current page
+  document.getElementById('pg-links-0')?.classList.add('open');
+  drawer.querySelector('[data-idx="0"]')?.classList.add('open');
   const current = window.location.pathname.split('/').pop() || 'index.html';
   NAV.forEach((cat, i) => {
-    if (cat.links.some(l => l.href.includes(current))) {
+    if (i !== 0 && cat.links.some(l => l.href.includes(current))) {
       document.getElementById(`pg-links-${i}`)?.classList.add('open');
       drawer.querySelector(`[data-idx="${i}"]`)?.classList.add('open');
     }
