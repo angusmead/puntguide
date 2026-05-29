@@ -50,7 +50,7 @@
     {
       label: '🏇 Racing',
       links: [
-        { text: '🏇 Horse Racing Tips Today',     href: '/horse-racing-tips-today.html' },
+        { text: '🏇 Racing Tips - Saturday',       href: '/horse-racing-tips-today.html' },
         { text: 'Racing Futures 2026',          href: '/racing-futures-2026.html' },
         { text: 'Best Sites for Racing',        href: '/best-betting-sites-for-racing.html' },
       ]
