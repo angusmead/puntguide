@@ -40,7 +40,7 @@
       label: '🏉 NRL',
       links: [
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
-        { text: '⚡ State of Origin 2026 — Game 1', href: '/nrl-state-of-origin-2026-game-1.html' },
+        { text: '⚡ State of Origin Game 2 Preview', href: '/nrl-state-of-origin-2026-game-2.html' },
         { text: '🏉 NRL Round 13 Tips 2026 — This Weekend', href: '/nrl-round-13-tips-2026.html' },
         { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
@@ -70,12 +70,12 @@
       label: '⚾ International Sports',
       links: [
         { text: '⚽ World Cup 2026 Odds',     href: '/world-cup-2026-odds.html' },
-        { text: '&#127936; Spurs vs Thunder WCF Game 5 — Tomorrow', href: '/nba/2026/may-27/spurs-vs-thunder-wcf-game-5.html' },
+        { text: '🏀 NBA OKC vs Spurs - Game 6 PREVIEW', href: '/nba-game-6-spurs-vs-thunder-wc-finals-2026.html' },
         { text: 'NBA Championship Odds 2026', href: '/nba-championship-odds-2026.html' },
         { text: 'Best NBA Betting Sites',     href: '/best-nba-betting-sites-australia.html' },
         { text: 'NFL Tips 2026',              href: '/nfl-tips.html' },
         { text: 'NFL Super Bowl LXI Odds',    href: '/nfl-super-bowl-odds-2026.html' },
-        { text: '⚾ MLB Tips Today (Wed Card)', href: '/mlb-tips-today.html' },
+        { text: '⚾ MLB TIPS TODAY', href: '/mlb-tips-today.html' },
         { text: 'MLB Tips Record 2026',       href: '/mlb-tips-record-2026.html' },
         { text: 'MLB Tips 2026',              href: '/mlb-tips.html' },
         { text: 'MLB World Series Odds 2026', href: '/mlb-world-series-odds-2026.html' },
