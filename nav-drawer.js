@@ -8,6 +8,7 @@
         { text: '🏉 NRL Round 13 Tips — This Weekend', href: '/nrl-round-13-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
         { text: '🏈 AFL Round 12 Tips',                href: '/afl-round-12-tips-2026.html' },
+        { text: '🏀 NBA Game 7: OKC vs Spurs — Tonight', href: '/nba-game-7-thunder-vs-spurs-wcf-2026.html' },
         { text: '⚾ MLB Tips Today',                   href: '/mlb-tips-today.html' },
       ]
     },
@@ -80,7 +81,7 @@
       label: '⚾ International Sports',
       links: [
         { text: '⚽ World Cup 2026 Odds',     href: '/world-cup-2026-odds.html' },
-        { text: '🏀 NBA OKC vs Spurs - Game 6 PREVIEW', href: '/nba-game-6-spurs-vs-thunder-wc-finals-2026.html' },
+        { text: '🏀 NBA Game 7: OKC vs Spurs — WCF', href: '/nba-game-7-thunder-vs-spurs-wcf-2026.html' },
         { text: 'NBA Championship Odds 2026', href: '/nba-championship-odds-2026.html' },
         { text: 'Best NBA Betting Sites',     href: '/best-nba-betting-sites-australia.html' },
         { text: 'NFL Tips 2026',              href: '/nfl-tips.html' },
