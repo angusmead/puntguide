@@ -82,6 +82,8 @@
       label: '⚾ International Sports',
       links: [
         { text: '⚽ World Cup 2026 Odds',     href: '/world-cup-2026-odds.html' },
+        { text: '🏉 Rugby World Cup 2027 Odds', href: '/rugby-world-cup-2027-odds.html' },
+        { text: '🏉 Who Will Win RWC 2027?',   href: '/who-will-win-rugby-world-cup-2027.html' },
         { text: '🏀 NBA Game 7: OKC vs Spurs — WCF', href: '/nba-game-7-thunder-vs-spurs-wcf-2026.html' },
         { text: 'NBA Championship Odds 2026', href: '/nba-championship-odds-2026.html' },
         { text: 'Best NBA Betting Sites',     href: '/best-nba-betting-sites-australia.html' },
