@@ -7,7 +7,7 @@
         { text: '🏇 Racing Tips — Saturday 30 May',  href: '/horse-racing-tips-saturday-30-may-2026.html' },
         { text: '🏉 NRL Round 13 Tips — This Weekend', href: '/nrl-round-13-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
-        { text: '🏈 AFL Round 12 Tips',                href: '/afl-round-12-tips-2026.html' },
+        { text: '🦘 AFL Round 12 Tips',                href: '/afl-round-12-tips-2026.html' },
         { text: '🏀 NBA Game 7: OKC vs Spurs — Tonight', href: '/nba-game-7-thunder-vs-spurs-wcf-2026.html' },
         { text: '⚾ MLB Tips Today',                   href: '/mlb-tips-today.html' },
       ]
@@ -34,7 +34,7 @@
       ]
     },
     {
-      label: '🏈 AFL',
+      label: '🦘 AFL',
       links: [
         { text: 'AFL Tips 2026',               href: '/afl-tips.html' },
         { text: 'AFL Ladder 2026',             href: '/afl-ladder-2026.html' },
