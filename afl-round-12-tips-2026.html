@@ -21,8 +21,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"AFL Round 12 Tips 2026 &mdash; Bye Round 1","author":{"@type":"Person","name":"Jake Morrison"},"publisher":{"@type":"Organization","name":"PuntGuide","logo":{"@type":"ImageObject","url":"https://puntguide.com.au/puntguide-logo.png"}},"datePublished":"2026-05-28","dateModified":"2026-05-28","mainEntityOfPage":"https://puntguide.com.au/afl-round-12-tips-2026.html"}</script>
 <style>
 :root{--bg:hsl(205 60% 96%);--fg:hsl(215 45% 16%);--primary:hsl(48 92% 64%);--primary-fg:hsl(215 45% 16%);--muted:hsl(205 40% 92%);--muted-fg:hsl(215 20% 42%);--border:hsl(205 40% 86%);--card:hsl(0 0% 100%);--grad-gold:linear-gradient(135deg,hsl(50 96% 72%) 0%,hsl(44 92% 60%) 100%);--shadow-card:0 4px 24px -8px hsl(215 50% 30%/.12);--shadow-gold:0 10px 40px -10px hsl(48 92% 54%/.45);--r:0.875rem}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{font-family:'Inter Tight',sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;font-size:15px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'Inter Tight',sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;font-size:15px;overflow-x:hidden}
 h1,h2,h3,h4{font-family:'Geist',sans-serif;letter-spacing:-0.035em;font-weight:600}
 a{color:var(--fg);text-decoration:none}
 .cbar{background:var(--fg);color:rgba(255,255,255,.75);padding:7px 24px;text-align:center;font-size:11.5px;position:fixed;top:0;left:0;right:0;z-index:200}
@@ -86,7 +86,8 @@ footer.pg{background:var(--fg);padding:32px clamp(16px,3vw,40px);text-align:cent
 footer.pg a{color:var(--primary);font-size:13px;margin:0 12px}
 footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-height:1.7}
 @media(max-width:960px){.page-wrap{grid-template-columns:1fr}.bookie-sidebar{position:static}}
-@media(max-width:640px){.match-body{grid-template-columns:1fr}.nav-links{display:none}.match-header{flex-direction:column;align-items:flex-start}}
+@media(max-width:768px){.inline-ad{display:none}}
+@media(max-width:640px){.match-body{grid-template-columns:1fr}.nav-links{display:none}.match-header{flex-direction:column;align-items:flex-start}.bookie-sidebar{width:100%;max-width:100%}}
 </style>
 </head>
 <body>
@@ -147,9 +148,9 @@ footer.pg p{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:12px;line-hei
   </div>
 
   <!-- Betr AFL Banner -->
-  <div style="text-align:center;margin:0 0 28px;">
+  <div class="inline-ad" style="text-align:center;margin:0 0 28px;">
     <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-fg);margin-bottom:6px;font-family:'JetBrains Mono',monospace;">Advertisement</div>
-    <div style="overflow:hidden;max-width:728px;margin:0 auto;">
+    <div style="overflow:hidden;max-width:min(728px,100%);margin:0 auto;">
       <script type="text/javascript" src="https://js.betraffiliates.com.au/javascript.php?prefix=zJS8NRxe1pAWqcfzuvZcQGNd7ZgqdRLk&amp;media=4&amp;campaign=1"></script>
     </div>
   </div>
