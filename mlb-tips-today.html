@@ -68,8 +68,8 @@ a{color:inherit;}img{max-width:100%;}
 .betr-vert-label{font-family:"JetBrains Mono",monospace;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted-fg);margin-bottom:10px;}
 .bookie-grid-6{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;}
 .bookie-grid-6 .bookie-tile{background:#fff;border:1px solid var(--border);padding:12px 14px;}
-.bookie-split-title{font-size:18px;font-weight:700;margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border);}
-.bookie-split-right{background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px 22px;box-shadow:var(--sc);}
+.bookie-split-title{font-size:20px;font-weight:800;font-family:"Geist",sans-serif;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid hsl(215 45% 16%);}
+.bookie-split-right{padding:4px 0;}
 .results-note{background:hsl(140 35% 96%);border:1px solid hsl(140 30% 80%);border-radius:10px;padding:14px 18px;margin:24px 0 12px;text-align:center;font-size:14px;font-weight:600;color:hsl(140 50% 22%);}
 .results-note strong{color:hsl(140 60% 28%);}
 @media(max-width:768px){.bookie-split{grid-template-columns:1fr;}}
@@ -85,6 +85,26 @@ a{color:inherit;}img{max-width:100%;}
 .footer-rg{font-size:11px;color:rgba(255,255,255,.4);border-top:1px solid rgba(255,255,255,.1);padding-top:20px;line-height:1.8;}
 .footer-rg a{color:rgba(255,255,255,.4);}
 @media(max-width:768px){.nav-links{display:none;}.wrap,.hero{padding-left:16px;padding-right:16px;}.nav{padding:0 20px;}}
+.wrap-rails{max-width:1380px;margin:0 auto;display:grid;grid-template-columns:240px minmax(0,860px) 240px;gap:28px;padding:0 16px;align-items:start;}
+.wrap-rails .wrap{padding:44px 0 80px;max-width:none;margin:0;}
+.rail{position:sticky;top:128px;padding-top:44px;}
+.rail-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px 14px;box-shadow:var(--sc);}
+.rail-card-title{font-size:13px;font-weight:800;font-family:"Geist",sans-serif;margin-bottom:12px;padding-bottom:10px;border-bottom:2px solid hsl(215 45% 16%);}
+.rail-bookies .bm-row{padding:9px 10px;gap:9px;margin-bottom:7px;flex-wrap:wrap;box-shadow:none;}
+.rail-bookies .bm-row:last-child{margin-bottom:0;}
+.rail-bookies .bm-logo{width:34px;height:34px;padding:4px;}
+.rail-bookies .bm-info{flex:1;min-width:0;}
+.rail-bookies .bm-title{font-size:12px;line-height:1.2;}
+.rail-bookies .bm-desc{display:none;}
+.rail-bookies .btn-claim{padding:7px 12px;font-size:11px;width:100%;text-align:center;justify-content:center;margin-top:4px;flex-basis:100%;border-radius:8px;box-shadow:none;}
+.bm-row{display:flex;align-items:center;gap:14px;padding:14px 16px;background:#fff;border:1px solid var(--border);border-radius:12px;margin-bottom:10px;box-shadow:0 1px 3px hsl(215 50% 30% / .06);}
+.bm-logo{width:54px;height:54px;border-radius:10px;object-fit:contain;background:#fff;border:1px solid var(--border);padding:6px;flex-shrink:0;}
+.bm-info{flex:1;min-width:0;}
+.bm-title{font-size:15px;font-weight:800;font-family:"Geist",sans-serif;margin-bottom:3px;color:var(--fg);line-height:1.25;}
+.bm-desc{font-size:13px;color:var(--muted-fg);line-height:1.45;}
+.btn-claim{display:inline-flex;align-items:center;justify-content:center;background:hsl(150 42% 38%);color:#fff;font-weight:700;font-size:14px;padding:11px 24px;border-radius:999px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 12px -4px hsl(150 50% 30% / .35);font-family:"Geist",sans-serif;}
+.btn-claim:hover{background:hsl(150 42% 32%);}
+@media(max-width:1200px){.wrap-rails{display:block;padding:0;}.wrap-rails .wrap{max-width:860px;padding:44px 32px 80px;margin:0 auto;}.rail{display:none;}}
 </style>
 </head>
 <body>
@@ -118,6 +138,14 @@ a{color:inherit;}img{max-width:100%;}
   </div>
   <p style="font-size:12px;color:var(--muted-fg);font-family:'JetBrains Mono',monospace;margin-top:8px;">Published 2 June 2026 for Tuesday 2 June card &middot; Odds from Sportsbet &middot; 18+</p>
 </div></div>
+
+<div class="wrap-rails">
+<aside class="rail rail-left">
+  <div class="betr-vert-wrap">
+    <div class="betr-vert-label">Advertisement</div>
+    <script type="text/javascript" src="https://js.betraffiliates.com.au/javascript.php?prefix=zJS8NRxe1pAWqcfzuvZcQGNd7ZgqdRLk&amp;media=7&amp;campaign=1"></script>
+  </div>
+</aside>
 
 <div class="wrap">
 
@@ -266,40 +294,56 @@ a{color:inherit;}img{max-width:100%;}
       <script type="text/javascript" src="https://js.betraffiliates.com.au/javascript.php?prefix=zJS8NRxe1pAWqcfzuvZcQGNd7ZgqdRLk&amp;media=7&amp;campaign=1"></script>
     </div>
     <div class="bookie-split-right">
-      <h2 class="bookie-split-title">Top 6 Bookmakers for MLB</h2>
-      <div class="bookie-grid-6">
-        <div class="bookie-tile">
-          <div class="bookie-tile-name">Betr</div>
-          <div class="bookie-tile-reason">Best MLB pricing, deep exotics &amp; SGMs.</div>
-          <div class="bookie-tile-ctas"><a href="/go/?to=betr" class="btn-gold" style="font-size:11px;padding:6px 10px;">Bet Now &rarr;</a><a href="/review-betr.html" class="btn-sm" style="font-size:11px;padding:6px 10px;">Review</a></div>
+      <h2 class="bookie-split-title">Best Bookmakers</h2>
+      <div class="bm-row">
+        <img src="/betr.png" alt="Betr" class="bm-logo">
+        <div class="bm-info">
+          <div class="bm-title">Best MLB Pricing</div>
+          <div class="bm-desc">Sharp lines on the road dogs, same-game multis on every game</div>
         </div>
-        <div class="bookie-tile">
-          <div class="bookie-tile-name">Bet365</div>
-          <div class="bookie-tile-reason">Deepest market depth, best for in-play.</div>
-          <div class="bookie-tile-ctas"><a href="/go/?to=bet365" class="btn-gold" style="font-size:11px;padding:6px 10px;">Bet Now &rarr;</a><a href="/review-bet365.html" class="btn-sm" style="font-size:11px;padding:6px 10px;">Review</a></div>
-        </div>
-        <div class="bookie-tile">
-          <div class="bookie-tile-name">Sportsbet</div>
-          <div class="bookie-tile-reason">Strong multis builder &amp; live coverage.</div>
-          <div class="bookie-tile-ctas"><a href="/go/?to=sportsbet" class="btn-gold" style="font-size:11px;padding:6px 10px;">Bet Now &rarr;</a><a href="/review-sportsbet.html" class="btn-sm" style="font-size:11px;padding:6px 10px;">Review</a></div>
-        </div>
-        <div class="bookie-tile">
-          <div class="bookie-tile-name">Palmerbet</div>
-          <div class="bookie-tile-reason">Sharp lines, strong totals markets.</div>
-          <div class="bookie-tile-ctas"><a href="/go/?to=palmerbet" class="btn-gold" style="font-size:11px;padding:6px 10px;">Bet Now &rarr;</a><a href="/review-palmerbet.html" class="btn-sm" style="font-size:11px;padding:6px 10px;">Review</a></div>
-        </div>
-        <div class="bookie-tile">
-          <div class="bookie-tile-name">Picklebet</div>
-          <div class="bookie-tile-reason">Good run line &amp; first-innings options.</div>
-          <div class="bookie-tile-ctas"><a href="/go/?to=picklebet" class="btn-gold" style="font-size:11px;padding:6px 10px;">Bet Now &rarr;</a><a href="/review-picklebet.html" class="btn-sm" style="font-size:11px;padding:6px 10px;">Review</a></div>
-        </div>
-        <div class="bookie-tile">
-          <div class="bookie-tile-name">Betright</div>
-          <div class="bookie-tile-reason">Best of the boutiques for MLB futures.</div>
-          <div class="bookie-tile-ctas"><a href="/go/?to=betright" class="btn-gold" style="font-size:11px;padding:6px 10px;">Bet Now &rarr;</a><a href="/review-betright.html" class="btn-sm" style="font-size:11px;padding:6px 10px;">Review</a></div>
-        </div>
+        <a href="/go/?to=betr" class="btn-claim" target="_blank" rel="noopener">Claim</a>
       </div>
-      <p style="font-size:11px;color:var(--muted-fg);margin-top:14px;">See our <a href="/all-betting-sites.html" style="color:var(--accent);font-weight:600;">full guide to all 130+ betting sites in Australia &rarr;</a></p>
+      <div class="bm-row">
+        <img src="/bet365.png" alt="Bet365" class="bm-logo">
+        <div class="bm-info">
+          <div class="bm-title">Deepest MLB Markets</div>
+          <div class="bm-desc">In-play, run lines, alt totals &amp; live cash out across the slate</div>
+        </div>
+        <a href="/go/?to=bet365" class="btn-claim" target="_blank" rel="noopener">Claim</a>
+      </div>
+      <div class="bm-row">
+        <img src="/sportsbet.png" alt="Sportsbet" class="bm-logo">
+        <div class="bm-info">
+          <div class="bm-title">Widest MLB Multis</div>
+          <div class="bm-desc">Build a 5-leg multi from today&rsquo;s slate in one tap</div>
+        </div>
+        <a href="/go/?to=sportsbet" class="btn-claim" target="_blank" rel="noopener">Claim</a>
+      </div>
+      <div class="bm-row">
+        <img src="/palmerbet.png" alt="Palmerbet" class="bm-logo">
+        <div class="bm-info">
+          <div class="bm-title">Sharp MLB Totals</div>
+          <div class="bm-desc">Strong over/under markets and head-to-head pricing</div>
+        </div>
+        <a href="/go/?to=palmerbet" class="btn-claim" target="_blank" rel="noopener">Claim</a>
+      </div>
+      <div class="bm-row">
+        <img src="/picklebet.png" alt="Picklebet" class="bm-logo">
+        <div class="bm-info">
+          <div class="bm-title">Run Line Specialist</div>
+          <div class="bm-desc">Best alt run-line and first-innings options on the card</div>
+        </div>
+        <a href="/go/?to=picklebet" class="btn-claim" target="_blank" rel="noopener">Claim</a>
+      </div>
+      <div class="bm-row">
+        <img src="/betright.png" alt="Betright" class="bm-logo">
+        <div class="bm-info">
+          <div class="bm-title">MLB Futures King</div>
+          <div class="bm-desc">Longer World Series and division winner prices</div>
+        </div>
+        <a href="/go/?to=betright" class="btn-claim" target="_blank" rel="noopener">Claim</a>
+      </div>
+      <p style="font-size:12px;color:var(--muted-fg);text-align:center;margin-top:14px;">18+ only. Gamble responsibly. <a href="/all-betting-sites.html" style="color:var(--accent);font-weight:600;">Compare all 130+ bookmakers &rarr;</a></p>
     </div>
   </div>
 
@@ -318,6 +362,46 @@ a{color:inherit;}img{max-width:100%;}
   </div>
 
   <p style="font-size:11px;color:var(--muted-fg);text-align:center;margin-top:8px;">Tips are editorial opinions only. Odds from Sportsbet  -  always confirm current prices before placing. 18+ only. Gamble responsibly.</p>
+
+</div>
+
+<aside class="rail rail-right">
+  <div class="rail-card">
+    <div class="rail-card-title">Best Bookmakers</div>
+    <div class="rail-bookies">
+      <div class="bm-row">
+        <img src="/betr.png" alt="Betr" class="bm-logo">
+        <div class="bm-info"><div class="bm-title">Best MLB Pricing</div></div>
+        <a href="/go/?to=betr" class="btn-claim" target="_blank" rel="noopener">Claim</a>
+      </div>
+      <div class="bm-row">
+        <img src="/bet365.png" alt="Bet365" class="bm-logo">
+        <div class="bm-info"><div class="bm-title">Deepest MLB Markets</div></div>
+        <a href="/go/?to=bet365" class="btn-claim" target="_blank" rel="noopener">Claim</a>
+      </div>
+      <div class="bm-row">
+        <img src="/sportsbet.png" alt="Sportsbet" class="bm-logo">
+        <div class="bm-info"><div class="bm-title">Widest MLB Multis</div></div>
+        <a href="/go/?to=sportsbet" class="btn-claim" target="_blank" rel="noopener">Claim</a>
+      </div>
+      <div class="bm-row">
+        <img src="/palmerbet.png" alt="Palmerbet" class="bm-logo">
+        <div class="bm-info"><div class="bm-title">Sharp MLB Totals</div></div>
+        <a href="/go/?to=palmerbet" class="btn-claim" target="_blank" rel="noopener">Claim</a>
+      </div>
+      <div class="bm-row">
+        <img src="/picklebet.png" alt="Picklebet" class="bm-logo">
+        <div class="bm-info"><div class="bm-title">Run Line Specialist</div></div>
+        <a href="/go/?to=picklebet" class="btn-claim" target="_blank" rel="noopener">Claim</a>
+      </div>
+      <div class="bm-row">
+        <img src="/betright.png" alt="Betright" class="bm-logo">
+        <div class="bm-info"><div class="bm-title">MLB Futures King</div></div>
+        <a href="/go/?to=betright" class="btn-claim" target="_blank" rel="noopener">Claim</a>
+      </div>
+    </div>
+  </div>
+</aside>
 
 </div>
 </div>
