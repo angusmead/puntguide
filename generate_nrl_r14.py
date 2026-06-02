@@ -473,7 +473,7 @@ def analysis_section(m, p):
   <div class="tip-pick-block">
     <div class="tip-pick-label">&#11088; PuntGuide Best Bet  -  {p['tip_type']}</div>
     <div class="tip-pick-content">{p['tip_label']} (${p['tip_odds']})</div>
-    <div class="tip-pick-sub">First Tryscorer: <strong>{p['tryscorer']}</strong></div>
+    <div class="tip-pick-sub">Anytime Tryscorer: <strong>{p['tryscorer']}</strong></div>
     <div class="tip-pick-ctas">
       <a href="/go/?to=betr" target="_blank" rel="noopener" class="tip-pick-cta">Bet at Betr &rarr;</a>
       <a href="/all-betting-sites.html" class="tip-pick-cta-outline">Compare 130+ Bookmakers</a>
@@ -513,13 +513,13 @@ def build_match_page(m):
 
     faqs = [
         (f"Who will win {m['home_nick']} vs {m['away_nick']}?",
-         f"PuntGuide's Best Bet for {m['home_full']} vs {m['away_full']} is {p['tip_label']} at ${p['tip_odds']}, with {p['tryscorer']} as the first tryscorer pick. Full analysis above."),
+         f"PuntGuide's Best Bet for {m['home_full']} vs {m['away_full']} is {p['tip_label']} at ${p['tip_odds']}, with {p['tryscorer']} as the anytime tryscorer pick. Full analysis above."),
         (f"When and where is {m['home_nick']} vs {m['away_nick']} Round 14 2026?",
          f"{m['home_full']} vs {m['away_full']} kicks off at {m['time_str']} AEST on {m['date_str']} at {m['venue']}."),
         ("Where can I bet on this match?",
          f"PuntGuide recommends Betr for {m['home_full']} vs {m['away_full']} &mdash; sharpest line markets and the deepest tryscorer book. Sportsbet, PointsBet, Ladbrokes, Neds and Picklebet are also live. See the full comparison of 130+ Australian bookmakers."),
         ("What is the recommended pick?",
-         f"PuntGuide's Round 14 Best Bet for this match is {p['tip_label']} at ${p['tip_odds']}, paired with {p['tryscorer']} to score the first try. Always shop the market for best price before placing &mdash; 18+ only."),
+         f"PuntGuide's Round 14 Best Bet for this match is {p['tip_label']} at ${p['tip_odds']}, paired with {p['tryscorer']} to score a try at anytime. Always shop the market for best price before placing &mdash; 18+ only."),
     ]
     faq_schema_obj = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
     faq_items = ''.join(f'<div class="faq-item"><button class="faq-q">{q} <span class="fi">+</span></button><div class="faq-a">{a}</div></div>' for q, a in faqs)
@@ -558,7 +558,7 @@ def build_match_page(m):
   <h1>{m['home_full']} vs {m['away_full']} Tips</h1>
   <div style="background:hsl(215 45% 16%);border-radius:10px;padding:16px 20px;margin:20px 0;">
     <div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(48 92% 64%);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">Short Answer</div>
-    <p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.9);margin:0;">PuntGuide&rsquo;s Best Bet: <strong style="color:#fff;">{p['tip_label']} (${p['tip_odds']})</strong>. First Tryscorer: <strong style="color:#fff;">{p['tryscorer']}</strong>. {m['home_full']} host {m['away_full']} at {m['venue']} on {m['date_str']} &mdash; full analysis, team lists and odds comparison below.</p>
+    <p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.9);margin:0;">PuntGuide&rsquo;s Best Bet: <strong style="color:#fff;">{p['tip_label']} (${p['tip_odds']})</strong>. Anytime Tryscorer: <strong style="color:#fff;">{p['tryscorer']}</strong>. {m['home_full']} host {m['away_full']} at {m['venue']} on {m['date_str']} &mdash; full analysis, team lists and odds comparison below.</p>
   </div>
   <p style="font-size:16px;color:hsl(215 45% 16%/.65);max-width:700px;line-height:1.8;margin-top:10px">NRL Round 14 2026  -  {m['home_full']} host {m['away_full']} at {m['venue']}. PuntGuide Best Bet, tryscorer pick, full match analysis and Sportsbet odds comparison.</p>
   <p class="upd">{m['time_str']} &middot; {m['date_str']} &middot; {m['venue']}</p>
@@ -652,7 +652,7 @@ def build_hub():
   <div class="mc-odds">H2H: {m['home_nick']} ${m['h2h_home']} &middot; {m['away_nick']} ${m['h2h_away']}</div>
   <div class="mc-tip">
     <span class="mc-tip-line"><span class="mc-tip-star">&#11088;</span> Best Bet: {p['tip_label']} (${p['tip_odds']})</span>
-    <span class="mc-tip-line">First Tryscorer: {p['tryscorer']}</span>
+    <span class="mc-tip-line">Anytime Tryscorer: {p['tryscorer']}</span>
   </div>
   <a href="/{slug}" class="mc-badge">Full Analysis &rarr;</a>
 </div>''')
@@ -662,7 +662,7 @@ def build_hub():
         ("What NRL matches are in Round 14 2026?",
          f"NRL Round 14 2026 features 8 matches played from Thursday 4 June to Monday 8 June. The bye team is the {BYE_TEAM}. Full fixture, tips and odds above."),
         ("What are the PuntGuide Round 14 tips?",
-         "PuntGuide publishes a Best Bet (winner or handicap) and a first tryscorer pick for every Round 14 match. All picks are listed on the match cards above and full analysis is available on each match page."),
+         "PuntGuide publishes a Best Bet (winner or handicap) and an anytime tryscorer pick for every Round 14 match. All picks are listed on the match cards above and full analysis is available on each match page."),
         ("Where can I bet on NRL Round 14 2026?",
          "Betr is PuntGuide's editorial pick for NRL betting in 2026 &mdash; sharpest line markets and deepest tryscorer book. Sportsbet, PointsBet, Ladbrokes, Neds and Picklebet are also strong. Compare all 130+ Australian bookmakers before placing."),
     ]
@@ -703,7 +703,7 @@ def build_hub():
   <div class="bc"><a href="/index.html">Home</a> &rsaquo; <a href="/nrl-tips.html">NRL 2026</a> &rsaquo; Round 14 Tips</div>
   <div class="eye"><span class="eye-l"></span><span class="eye-t">NRL 2026 &middot; Round 14</span></div>
   <h1>NRL Round 14 Tips 2026</h1>
-  <div style="background:hsl(215 45% 16%);border-radius:10px;padding:16px 20px;margin:20px 0;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(48 92% 64%);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">Short Answer</div><p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.9);margin:0;">PuntGuide picks a Best Bet (winner or handicap) and first tryscorer for every Round 14 match. Eight games across Thursday 4 June to Monday 8 June. Bye: {BYE_TEAM}. Sportsbet odds and team lists confirmed Tuesday 2 June.</p></div>
+  <div style="background:hsl(215 45% 16%);border-radius:10px;padding:16px 20px;margin:20px 0;"><div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:hsl(48 92% 64%);margin-bottom:8px;font-family:'JetBrains Mono',monospace;">Short Answer</div><p style="font-size:15px;line-height:1.75;color:rgba(255,255,255,.9);margin:0;">PuntGuide picks a Best Bet (winner or handicap) and anytime tryscorer for every Round 14 match. Eight games across Thursday 4 June to Monday 8 June. Bye: {BYE_TEAM}. Sportsbet odds and team lists confirmed Tuesday 2 June.</p></div>
   <p style="font-size:16px;color:hsl(215 45% 16%/.65);max-width:700px;line-height:1.8;margin-top:10px">PuntGuide NRL Round 14 2026 tips. Best Bet + tryscorer pick for every match, with Sportsbet odds, team lists and full per-match analysis  -  4 Jun to 8 Jun.</p>
   <p class="upd">8 matches &middot; 4 Jun&ndash;8 Jun &middot; Bye: {BYE_TEAM}</p>
 </div></div>
@@ -715,7 +715,7 @@ def build_hub():
 
   <div class="section">
     <h2>Round 14  -  Tips &amp; Tryscorers</h2>
-    <p style="font-size:13px;color:var(--muted-fg);margin-bottom:16px">PuntGuide Best Bet and first tryscorer for every Round 14 match. Tap any card for full analysis, team lists and odds comparison.</p>
+    <p style="font-size:13px;color:var(--muted-fg);margin-bottom:16px">PuntGuide Best Bet and anytime tryscorer for every Round 14 match. Tap any card for full analysis, team lists and odds comparison.</p>
     <div class="match-grid">{grid}</div>
     <p style="font-size:13px;color:var(--muted-fg);margin-top:12px"><strong>Bye:</strong> {BYE_TEAM}</p>
   </div>
