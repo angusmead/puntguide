@@ -5,7 +5,7 @@
       label: '🔥 Today\'s Tips',
       links: [
         { text: '🏇 Racing Tips — Sunday 31 May',      href: '/horse-racing-tips-sunday-31-may-2026.html' },
-        { text: '🏉 NRL Round 13 Tips — This Weekend', href: '/nrl-round-13-tips-2026.html' },
+        { text: '🏉 NRL Round 14 Tips — This Weekend', href: '/nrl-round-14-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
         { text: '🦘 AFL Round 12 Tips',                href: '/afl-round-12-tips-2026.html' },
         { text: '🏀 NBA Finals Preview: Spurs vs Knicks', href: '/nba-finals-spurs-vs-knicks-2026.html' },
@@ -52,7 +52,7 @@
       links: [
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
         { text: '⚡ State of Origin Game 2 Preview', href: '/nrl-state-of-origin-2026-game-2.html' },
-        { text: '🏉 NRL Round 13 Tips 2026 — This Weekend', href: '/nrl-round-13-tips-2026.html' },
+        { text: '🏉 NRL Round 14 Tips 2026 — This Weekend', href: '/nrl-round-14-tips-2026.html' },
         { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
         { text: 'Best Sites for AFL & NRL',     href: '/best-betting-sites-afl-nrl.html' },
