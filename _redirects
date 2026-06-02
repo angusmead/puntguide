@@ -10,3 +10,13 @@
 /nrl-sharks-vs-sea-eagles-round-14-2026.html /nrl-round-14-tips-2026.html 301
 /nrl-storm-vs-titans-round-14-2026.html /nrl-round-14-tips-2026.html 301
 /nrl-warriors-vs-panthers-round-14-2026.html /nrl-round-14-tips-2026.html 301
+
+# NRL Round 14 — root-level per-match URLs from earlier build, redirect to canonical /nrl/2026/round-14/ paths
+/nrl-sea-eagles-vs-rabbitohs-round-14-2026.html /nrl/2026/round-14/sea-eagles-vs-rabbitohs.html 301
+/nrl-storm-vs-knights-round-14-2026.html /nrl/2026/round-14/storm-vs-knights.html 301
+/nrl-raiders-vs-roosters-round-14-2026.html /nrl/2026/round-14/raiders-vs-roosters.html 301
+/nrl-cowboys-vs-dolphins-round-14-2026.html /nrl/2026/round-14/cowboys-vs-dolphins.html 301
+/nrl-broncos-vs-titans-round-14-2026.html /nrl/2026/round-14/broncos-vs-titans.html 301
+/nrl-wests-tigers-vs-panthers-round-14-2026.html /nrl/2026/round-14/wests-tigers-vs-panthers.html 301
+/nrl-sharks-vs-dragons-round-14-2026.html /nrl/2026/round-14/sharks-vs-dragons.html 301
+/nrl-bulldogs-vs-eels-round-14-2026.html /nrl/2026/round-14/bulldogs-vs-eels.html 301
