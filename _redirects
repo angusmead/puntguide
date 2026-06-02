@@ -1,2 +1,12 @@
 /sitemap.xml /sitemap.xml 200
 /robots.txt /robots.txt 200
+
+# NRL Round 14 — obsolete per-match stubs (wrong fixtures), redirect to hub
+/nrl-broncos-vs-cowboys-round-14-2026.html /nrl-round-14-tips-2026.html 301
+/nrl-dragons-vs-rabbitohs-round-14-2026.html /nrl-round-14-tips-2026.html 301
+/nrl-eels-vs-raiders-round-14-2026.html /nrl-round-14-tips-2026.html 301
+/nrl-knights-vs-dolphins-round-14-2026.html /nrl-round-14-tips-2026.html 301
+/nrl-roosters-vs-bulldogs-round-14-2026.html /nrl-round-14-tips-2026.html 301
+/nrl-sharks-vs-sea-eagles-round-14-2026.html /nrl-round-14-tips-2026.html 301
+/nrl-storm-vs-titans-round-14-2026.html /nrl-round-14-tips-2026.html 301
+/nrl-warriors-vs-panthers-round-14-2026.html /nrl-round-14-tips-2026.html 301
