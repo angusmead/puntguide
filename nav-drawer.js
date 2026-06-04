@@ -7,7 +7,7 @@
         { text: '🏇 Racing Tips — Wednesday 3 June',   href: '/horse-racing-tips-wednesday-3-june-2026.html' },
         { text: '🏉 NRL Round 14 Tips — This Weekend', href: '/nrl-round-14-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
-        { text: '🦘 AFL Round 12 Tips',                href: '/afl-round-12-tips-2026.html' },
+        { text: '🦘 AFL Round 13 Tips — King’s Birthday Weekend', href: '/afl-round-13-tips-2026.html' },
         { text: '🏀 NBA Finals Game 1: Spurs vs Knicks', href: '/nba-finals-game-1-spurs-vs-knicks-2026.html' },
         { text: '⚾ MLB Tips Today',                   href: '/mlb-tips-today.html' },
       ]
@@ -38,7 +38,7 @@
       links: [
         { text: 'AFL Tips 2026',               href: '/afl-tips.html' },
         { text: 'AFL Ladder 2026',             href: '/afl-ladder-2026.html' },
-        { text: 'AFL Round 12 Tips 2026',       href: '/afl-round-12-tips-2026.html' },
+        { text: 'AFL Round 13 Tips 2026',       href: '/afl-round-13-tips-2026.html' },
         { text: 'AFL Premiership Odds 2026',    href: '/afl-premiership-odds-2026.html' },
         { text: 'Brownlow Medal Odds 2026',     href: '/brownlow-medal-odds-2026.html' },
         { text: 'Coleman Medal Odds 2026',      href: '/afl-coleman-medal-odds-2026.html' },
