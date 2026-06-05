@@ -4,6 +4,7 @@
     {
       label: '🔥 Today\'s Tips',
       links: [
+        { text: '🏇 Saturday Metro Tips — 6 June',     href: '/horse-racing-tips-saturday-6-june-2026.html' },
         { text: '🏇 Racing Tips — Friday 5 June',      href: '/horse-racing-tips-friday-5-june-2026.html' },
         { text: '🏉 NRL Round 14 Tips — This Weekend', href: '/nrl-round-14-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
@@ -61,6 +62,7 @@
     {
       label: '🏇 Racing',
       links: [
+        { text: '🏇 Saturday Metro Tips — 6 June', href: '/horse-racing-tips-saturday-6-june-2026.html' },
         { text: '🏇 Racing Tips — Friday 5 June', href: '/horse-racing-tips-friday-5-june-2026.html' },
         { text: 'Racing Futures 2026',          href: '/racing-futures-2026.html' },
         { text: 'Best Sites for Racing',        href: '/best-betting-sites-for-racing.html' },
