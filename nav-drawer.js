@@ -133,6 +133,7 @@
     {
       label: '🔍 Reviews & Comparisons',
       links: [
+        { text: '🔴 Dafabet Review — NEW',        href: '/review-dafabet.html' },
         { text: 'PointsBet Review',             href: '/review-pointsbet.html' },
         { text: 'Sportsbet Review',             href: '/review-sportsbet.html' },
         { text: 'Ladbrokes Review',             href: '/review-ladbrokes.html' },
