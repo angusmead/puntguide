@@ -4,7 +4,10 @@
     {
       label: '🔥 Today\'s Tips',
       links: [
-        { text: '🏇 Saturday Metro Tips — 6 June',     href: '/horse-racing-tips-saturday-6-june-2026.html' },
+        { text: '⚽ WORLD CUP STARTS FRIDAY — Full Guide', href: '/world-cup-2026.html' },
+        { text: '⚽ World Cup Group Stage Tips — Week 1',  href: '/world-cup-2026-group-stage-tips.html' },
+        { text: '🦘 Socceroos World Cup Preview',          href: '/socceroos-world-cup-2026.html' },
+        { text: '🏇 Saturday Metro Tips — 6 June',         href: '/horse-racing-tips-saturday-6-june-2026.html' },
         { text: '🏉 NRL Round 14 Tips — This Weekend', href: '/nrl-round-14-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
         { text: '🦘 AFL Round 13 Tips — King’s Birthday Weekend', href: '/afl-round-13-tips-2026.html' },
@@ -78,9 +81,18 @@
       ]
     },
     {
+      label: '⚽ World Cup 2026 — STARTS FRIDAY',
+      links: [
+        { text: '⚽ World Cup 2026 — Full Guide',        href: '/world-cup-2026.html' },
+        { text: '💰 World Cup Winner Odds',               href: '/world-cup-2026-odds.html' },
+        { text: '🏆 Golden Boot Odds',                    href: '/world-cup-2026-golden-boot-odds.html' },
+        { text: '⚽ Group Stage Tips — Week 1',           href: '/world-cup-2026-group-stage-tips.html' },
+        { text: '🦘 Socceroos Group D Preview',           href: '/socceroos-world-cup-2026.html' },
+      ]
+    },
+    {
       label: '⚾ International Sports',
       links: [
-        { text: '⚽ World Cup 2026 Odds',     href: '/world-cup-2026-odds.html' },
         { text: '🏉 Rugby World Cup 2027 Odds', href: '/rugby-world-cup-2027-odds.html' },
         { text: '🏉 Who Will Win RWC 2027?',   href: '/who-will-win-rugby-world-cup-2027.html' },
         { text: '🏀 NBA Finals Game 3 Tips — Spurs vs Knicks', href: '/nba-finals-game-3-spurs-vs-knicks-2026.html' },
