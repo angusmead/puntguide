@@ -11,6 +11,8 @@
     '2026-5-29': '/horse-racing-tips-friday-29-may-2026.html',
     '2026-5-30': '/horse-racing-tips-saturday-30-may-2026.html',
     '2026-5-31': '/horse-racing-tips-sunday-31-may-2026.html',
+    '2026-6-6':  '/horse-racing-tips-saturday-6-june-2026.html',
+    '2026-6-8':  '/horse-racing-tips-sunday-8-june-2026.html',
   };
   var d = new Date();
   var key = d.getFullYear() + '-' + (d.getMonth()+1) + '-' + d.getDate();
@@ -18,11 +20,11 @@
   if (dest) {
     window.location.replace(dest);
   } else {
-    // No tips page for today — redirect to latest Saturday
-    window.location.replace('/horse-racing-tips-sunday-31-may-2026.html');
+    // No tips page for today — redirect to latest
+    window.location.replace('/horse-racing-tips-sunday-8-june-2026.html');
   }
 </script>
-<meta http-equiv="refresh" content="0;url=/horse-racing-tips-sunday-31-may-2026.html">
+<meta http-equiv="refresh" content="0;url=/horse-racing-tips-sunday-8-june-2026.html">
 </head>
 <body>
 <p>Redirecting to today's racing tips&hellip;</p>

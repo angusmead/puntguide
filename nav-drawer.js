@@ -7,7 +7,7 @@
         { text: '⚽ WORLD CUP STARTS FRIDAY — Full Guide', href: '/world-cup-2026.html' },
         { text: '⚽ World Cup Group Stage Tips — Week 1',  href: '/world-cup-2026-group-stage-tips.html' },
         { text: '🦘 Socceroos World Cup Preview',          href: '/socceroos-world-cup-2026.html' },
-        { text: '🏇 Saturday Metro Tips — 6 June',         href: '/horse-racing-tips-saturday-6-june-2026.html' },
+        { text: '🏇 Sunday Racing Tips — 8 June (Queen\'s Birthday)',  href: '/horse-racing-tips-sunday-8-june-2026.html' },
         { text: '🏉 NRL Round 14 Tips — This Weekend', href: '/nrl-round-14-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
         { text: '🦘 AFL Round 13 Tips — King’s Birthday Weekend', href: '/afl-round-13-tips-2026.html' },
