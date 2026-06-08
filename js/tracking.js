@@ -55,7 +55,6 @@
     'topbet.au':              'TopBet',
     'wizbet.com.au':          'WizBet',
     'betyoucan.au':           'BetYouCan',
-    'dowbet.com.au':          'DowBet',
     'betchamps.com.au':       'BetChamps',
     'mintbet.au':             'MintBet',
     'betdragon.au':           'BetDragon',
