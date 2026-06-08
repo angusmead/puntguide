@@ -83,7 +83,7 @@
     'chasebet.com.au':        'ChaseBet',
     'elitebet.com.au':        'EliteBet',
     'vicbet.com.au':          'VicBet',
-    'robwaterhouse.com.au':   'Rob Waterhouse',
+    'robwaterhouse.com':      'Rob Waterhouse',
     'picnicbet.com':          'PicnicBet',
     'okebet.com.au':          'OkeBet',
     'tab.com.au':             'TAB',
