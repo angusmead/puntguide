@@ -50,7 +50,7 @@
     'betestate.com.au':       'BetEstate',
     'betsupreme.com.au':      'BetSupreme',
     'betaus.com.au':          'BetAus',
-    'marantellibet.com.au':   'MarantelliBet',
+    'marantellibet.com':      'MarantelliBet',
     'terrybet.com.au':        'TerryBet',
     'topbet.au':              'TopBet',
     'wizbet.com.au':          'WizBet',
