@@ -8,9 +8,9 @@
         { text: '⚽ World Cup Group Stage Tips — Week 1',  href: '/world-cup-2026-group-stage-tips.html' },
         { text: '🦘 Socceroos World Cup Preview',          href: '/socceroos-world-cup-2026.html' },
         { text: '🏇 Sunday Racing Tips — 8 June (Queen\'s Birthday)',  href: '/horse-racing-tips-sunday-8-june-2026.html' },
-        { text: '🏉 NRL Round 14 Tips — This Weekend', href: '/nrl-round-14-tips-2026.html' },
+        { text: '🏉 NRL Round 15 Tips — This Weekend', href: '/nrl-round-15-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
-        { text: '🦘 AFL Round 13 Tips — King’s Birthday Weekend', href: '/afl-round-13-tips-2026.html' },
+        { text: ‘🦘 AFL Round 14 Tips — This Weekend’, href: ‘/afl-round-14-tips-2026.html’ },
         { text: '🏀 NBA Finals Game 3: Spurs vs Knicks', href: '/nba-finals-game-3-spurs-vs-knicks-2026.html' },
         { text: '⚾ MLB Tips Today',                   href: '/mlb-tips-today.html' },
       ]
@@ -41,7 +41,7 @@
       links: [
         { text: 'AFL Tips 2026',               href: '/afl-tips.html' },
         { text: 'AFL Ladder 2026',             href: '/afl-ladder-2026.html' },
-        { text: 'AFL Round 13 Tips 2026',       href: '/afl-round-13-tips-2026.html' },
+        { text: 'AFL Round 14 Tips 2026',       href: '/afl-round-14-tips-2026.html' },
         { text: 'AFL Premiership Odds 2026',    href: '/afl-premiership-odds-2026.html' },
         { text: 'Brownlow Medal Odds 2026',     href: '/brownlow-medal-odds-2026.html' },
         { text: 'Coleman Medal Odds 2026',      href: '/afl-coleman-medal-odds-2026.html' },
@@ -55,7 +55,7 @@
       links: [
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
         { text: '⚡ State of Origin Game 2 Preview', href: '/nrl-state-of-origin-2026-game-2.html' },
-        { text: '🏉 NRL Round 14 Tips 2026 — This Weekend', href: '/nrl-round-14-tips-2026.html' },
+        { text: '🏉 NRL Round 15 Tips 2026 — This Weekend', href: '/nrl-round-15-tips-2026.html' },
         { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
         { text: 'Best Sites for AFL & NRL',     href: '/best-betting-sites-afl-nrl.html' },
