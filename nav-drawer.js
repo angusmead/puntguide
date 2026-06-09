@@ -10,7 +10,7 @@
         { text: '🏇 Wednesday Racing Tips — 10 June', href: '/horse-racing-tips-wednesday-10-june-2026.html' },
         { text: '🏉 NRL Round 15 Tips — This Weekend', href: '/nrl-round-15-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
-        { text: ‘🦘 AFL Round 14 Tips — This Weekend’, href: ‘/afl-round-14-tips-2026.html’ },
+        { text: '🦘 AFL Round 14 Tips — This Weekend', href: '/afl-round-14-tips-2026.html' },
         { text: '⚾ MLB Tips Today',                   href: '/mlb-tips-today.html' },
       ]
     },
