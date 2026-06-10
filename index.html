@@ -874,7 +874,7 @@ h1,h2,h3,h4 {
             'Content-Type': 'application/json',
             'api-key': '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'
           },
-          body: JSON.stringify({ email: email, updateEnabled: false })
+          body: JSON.stringify({ email: email, listIds: [3], updateEnabled: false })
         });
 
         if (res.status === 201) {
