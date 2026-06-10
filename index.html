@@ -850,33 +850,7 @@ h1,h2,h3,h4 {
     <div id="nl-msg" style="font-size:13px;margin-top:10px;display:none;"></div>
   </div>
   <script>
-    function mailchimpCallback(data) {
-      const btn = document.getElementById('nl-btn');
-      const msg = document.getElementById('nl-msg');
-      const input = document.getElementById('nl-email');
-      btn.disabled = false;
-      if (data.result === 'success') {
-        gtag('event', 'email_signup');
-        input.value = '';
-        btn.textContent = '✓ You\'re in!';
-        btn.style.background = 'hsl(140 50% 36%)';
-        msg.textContent = 'Check your inbox — a confirmation is on its way.';
-        msg.style.color = 'hsl(140 50% 32%)';
-        msg.style.display = 'block';
-      } else if (data.msg && data.msg.includes('already subscribed')) {
-        btn.textContent = 'Subscribe';
-        msg.textContent = 'That email is already subscribed.';
-        msg.style.color = 'hsl(215 20% 42%)';
-        msg.style.display = 'block';
-      } else {
-        btn.textContent = 'Subscribe';
-        msg.textContent = 'Something went wrong — please try again.';
-        msg.style.color = '#e53e3e';
-        msg.style.display = 'block';
-      }
-    }
-
-    document.getElementById('nl-btn').addEventListener('click', function() {
+    document.getElementById('nl-btn').addEventListener('click', async function() {
       const input = document.getElementById('nl-email');
       const btn = document.getElementById('nl-btn');
       const msg = document.getElementById('nl-msg');
@@ -893,11 +867,40 @@ h1,h2,h3,h4 {
       btn.disabled = true;
       msg.style.display = 'none';
 
-      const url = 'https://puntguide.us9.list-manage.com/subscribe/post-json?u=5997fedf0a61aabe489523d53&id=25a1cecf5d&f_id=00c11fe1f0&EMAIL=' + encodeURIComponent(email) + '&b_5997fedf0a61aabe489523d53_25a1cecf5d=&c=mailchimpCallback';
-      const script = document.createElement('script');
-      script.src = url;
-      document.body.appendChild(script);
-      script.onload = function() { script.remove(); };
+      try {
+        const res = await fetch('https://api.brevo.com/v3/contacts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'api-key': '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'
+          },
+          body: JSON.stringify({ email: email, updateEnabled: false })
+        });
+
+        if (res.status === 201) {
+          gtag('event', 'email_signup');
+          input.value = '';
+          btn.textContent = '✓ You\'re in!';
+          btn.style.background = 'hsl(140 50% 36%)';
+          msg.textContent = 'Check your inbox — a confirmation is on its way.';
+          msg.style.color = 'hsl(140 50% 32%)';
+          msg.style.display = 'block';
+        } else if (res.status === 204 || res.status === 409) {
+          btn.textContent = 'Subscribe';
+          btn.disabled = false;
+          msg.textContent = 'That email is already subscribed.';
+          msg.style.color = 'hsl(215 20% 42%)';
+          msg.style.display = 'block';
+        } else {
+          throw new Error();
+        }
+      } catch {
+        btn.textContent = 'Subscribe';
+        btn.disabled = false;
+        msg.textContent = 'Something went wrong — please try again.';
+        msg.style.color = '#e53e3e';
+        msg.style.display = 'block';
+      }
     });
   </script>
 </div>
