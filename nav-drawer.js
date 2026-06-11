@@ -94,7 +94,8 @@
       links: [
         { text: '🏉 Rugby World Cup 2027 Odds', href: '/rugby-world-cup-2027-odds.html' },
         { text: '🏉 Who Will Win RWC 2027?',   href: '/who-will-win-rugby-world-cup-2027.html' },
-        { text: '🏀 NBA Finals Game 3 Tips — Spurs vs Knicks', href: '/nba-finals-game-3-spurs-vs-knicks-2026.html' },
+        { text: '🏀 NBA Finals Game 4 Tips — Spurs vs Knicks', href: '/nba-finals-game-4-spurs-vs-knicks-2026.html' },
+        { text: 'NBA Finals Game 3 Tips', href: '/nba-finals-game-3-spurs-vs-knicks-2026.html' },
         { text: 'NBA Finals Game 2 Tips', href: '/nba-finals-game-2-spurs-vs-knicks-2026.html' },
         { text: 'NBA Finals Game 1 Tips', href: '/nba-finals-game-1-spurs-vs-knicks-2026.html' },
         { text: 'NBA Finals Series Preview', href: '/nba-finals-spurs-vs-knicks-2026.html' },
