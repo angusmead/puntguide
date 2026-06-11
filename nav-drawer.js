@@ -11,7 +11,7 @@
         { text: '🏉 NRL Round 15 Tips — This Weekend', href: '/nrl-round-15-tips-2026.html' },
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
         { text: '🦘 AFL Round 14 Tips — This Weekend', href: '/afl-round-14-tips-2026.html' },
-        { text: '⚾ MLB Tips Today',                   href: '/mlb-tips-today.html' },
+        { text: '⚾ MLB Tips Today — Thursday 12 June', href: '/mlb-tips-today.html' },
         { text: '🏀 NBA Finals Game 4 — Spurs vs Knicks', href: '/nba-finals-game-4-spurs-vs-knicks-2026.html' },
       ]
     },
@@ -95,6 +95,7 @@
       links: [
         { text: '🏉 Rugby World Cup 2027 Odds', href: '/rugby-world-cup-2027-odds.html' },
         { text: '🏉 Who Will Win RWC 2027?',   href: '/who-will-win-rugby-world-cup-2027.html' },
+        { text: '⚾ MLB Tips Thursday 12 June', href: '/mlb-tips-thursday-12-june-2026.html' },
         { text: '🏀 NBA Finals Game 4 Tips — Spurs vs Knicks', href: '/nba-finals-game-4-spurs-vs-knicks-2026.html' },
         { text: 'NBA Finals Game 3 Tips', href: '/nba-finals-game-3-spurs-vs-knicks-2026.html' },
         { text: 'NBA Finals Game 2 Tips', href: '/nba-finals-game-2-spurs-vs-knicks-2026.html' },
