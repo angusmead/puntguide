@@ -6,6 +6,7 @@
       links: [
         { text: '⚽ WORLD CUP STARTS FRIDAY — Full Guide', href: '/world-cup-2026.html' },
         { text: '⚽ World Cup Group Stage Tips — Week 1',  href: '/world-cup-2026-group-stage-tips.html' },
+        { text: '⚽ South Korea vs Czechia Tips — Group A', href: '/world-cup-2026-south-korea-vs-czechia.html' },
         { text: '🦘 Socceroos World Cup Preview',          href: '/socceroos-world-cup-2026.html' },
         { text: '🏇 Wednesday Racing Tips — 10 June', href: '/horse-racing-tips-wednesday-10-june-2026.html' },
         { text: '🏉 NRL Round 15 Tips — This Weekend', href: '/nrl-round-15-tips-2026.html' },
