@@ -12,6 +12,7 @@
         { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
         { text: '🦘 AFL Round 14 Tips — This Weekend', href: '/afl-round-14-tips-2026.html' },
         { text: '⚾ MLB Tips Today',                   href: '/mlb-tips-today.html' },
+        { text: '🏀 NBA Finals Game 4 — Spurs vs Knicks', href: '/nba-finals-game-4-spurs-vs-knicks-2026.html' },
       ]
     },
     {
