@@ -89,6 +89,15 @@
         { text: '🏆 Golden Boot Odds',                    href: '/world-cup-2026-golden-boot-odds.html' },
         { text: '⚽ Group Stage Tips — Week 1',           href: '/world-cup-2026-group-stage-tips.html' },
         { text: '🦘 Socceroos Group D Preview',           href: '/socceroos-world-cup-2026.html' },
+        { text: '⚽ Mexico vs South Africa — Fri 12 Jun', href: '/world-cup-2026-mexico-vs-south-africa.html' },
+        { text: '⚽ South Korea vs Czechia — Fri 12 Jun', href: '/world-cup-2026-south-korea-vs-czechia.html' },
+        { text: '⚽ USA vs Paraguay — Sat 13 Jun',        href: '/world-cup-2026-usa-vs-paraguay.html' },
+        { text: '⚽ Brazil vs Morocco — Sun 14 Jun',      href: '/world-cup-2026-brazil-vs-morocco.html' },
+        { text: '⚽ Australia vs Turkiye — Sun 14 Jun',   href: '/world-cup-2026-australia-vs-turkiye.html' },
+        { text: '⚽ Germany vs Curacao — Mon 15 Jun',     href: '/world-cup-2026-germany-vs-curacao.html' },
+        { text: '⚽ France vs Senegal — Wed 17 Jun',      href: '/world-cup-2026-france-vs-senegal.html' },
+        { text: '⚽ Argentina vs Algeria — Wed 17 Jun',   href: '/world-cup-2026-argentina-vs-algeria.html' },
+        { text: '⚽ England vs Croatia — Thu 18 Jun',     href: '/world-cup-2026-england-vs-croatia.html' },
       ]
     },
     {
