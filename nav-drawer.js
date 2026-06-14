@@ -4,16 +4,13 @@
     {
       label: '🔥 Today\'s Tips',
       links: [
-        { text: '⚽ WORLD CUP STARTS FRIDAY — Full Guide', href: '/world-cup-2026.html' },
+        { text: '⚽ World Cup 2026 — Full Guide',          href: '/world-cup-2026.html' },
         { text: '⚽ World Cup Group Stage Tips — Week 1',  href: '/world-cup-2026-group-stage-tips.html' },
-        { text: '⚽ South Korea vs Czechia Tips — Group A', href: '/world-cup-2026-south-korea-vs-czechia.html' },
         { text: '🦘 Socceroos World Cup Preview',          href: '/socceroos-world-cup-2026.html' },
-        { text: '🏇 Saturday Metro Tips — 13 June', href: '/horse-racing-tips-saturday-13-june-2026.html' },
-        { text: '🏉 NRL Round 15 Tips — This Weekend', href: '/nrl-round-15-tips-2026.html' },
-        { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
-        { text: '🦘 AFL Round 14 Tips — This Weekend', href: '/afl-round-14-tips-2026.html' },
-        { text: '⚾ MLB Tips Today — Thursday 12 June', href: '/mlb-tips-today.html' },
-        { text: '🏀 NBA Finals Game 4 — Spurs vs Knicks', href: '/nba-finals-game-4-spurs-vs-knicks-2026.html' },
+        { text: '🏇 Saturday Metro Tips — 13 June',        href: '/horse-racing-tips-saturday-13-june-2026.html' },
+        { text: '🏉 NRL Round 16 Tips — This Weekend',     href: '/nrl-round-16-tips-2026.html' },
+        { text: '⚡ State of Origin Game 2 Preview',       href: '/nrl-state-of-origin-2026-game-2.html' },
+        { text: '🦘 AFL Round 15 Tips — This Weekend',     href: '/afl-round-15-tips-2026.html' },
       ]
     },
     {
@@ -42,7 +39,7 @@
       links: [
         { text: 'AFL Tips 2026',               href: '/afl-tips.html' },
         { text: 'AFL Ladder 2026',             href: '/afl-ladder-2026.html' },
-        { text: 'AFL Round 14 Tips 2026',       href: '/afl-round-14-tips-2026.html' },
+        { text: 'AFL Round 15 Tips 2026',       href: '/afl-round-15-tips-2026.html' },
         { text: 'AFL Premiership Odds 2026',    href: '/afl-premiership-odds-2026.html' },
         { text: 'Brownlow Medal Odds 2026',     href: '/brownlow-medal-odds-2026.html' },
         { text: 'Coleman Medal Odds 2026',      href: '/afl-coleman-medal-odds-2026.html' },
@@ -56,7 +53,7 @@
       links: [
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
         { text: '⚡ State of Origin Game 2 Preview', href: '/nrl-state-of-origin-2026-game-2.html' },
-        { text: '🏉 NRL Round 15 Tips 2026 — This Weekend', href: '/nrl-round-15-tips-2026.html' },
+        { text: '🏉 NRL Round 16 Tips 2026 — This Weekend', href: '/nrl-round-16-tips-2026.html' },
         { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
         { text: 'Best Sites for AFL & NRL',     href: '/best-betting-sites-afl-nrl.html' },
@@ -90,7 +87,6 @@
         { text: '⚽ Group Stage Tips — Week 1',           href: '/world-cup-2026-group-stage-tips.html' },
         { text: '🦘 Socceroos Group D Preview',           href: '/socceroos-world-cup-2026.html' },
         { text: '⚽ Mexico vs South Africa — Fri 12 Jun', href: '/world-cup-2026-mexico-vs-south-africa.html' },
-        { text: '⚽ South Korea vs Czechia — Fri 12 Jun', href: '/world-cup-2026-south-korea-vs-czechia.html' },
         { text: '⚽ USA vs Paraguay — Sat 13 Jun',        href: '/world-cup-2026-usa-vs-paraguay.html' },
         { text: '⚽ Brazil vs Morocco — Sun 14 Jun',      href: '/world-cup-2026-brazil-vs-morocco.html' },
         { text: '⚽ Australia vs Turkiye — Sun 14 Jun',   href: '/world-cup-2026-australia-vs-turkiye.html' },
@@ -105,8 +101,6 @@
       links: [
         { text: '🏉 Rugby World Cup 2027 Odds', href: '/rugby-world-cup-2027-odds.html' },
         { text: '🏉 Who Will Win RWC 2027?',   href: '/who-will-win-rugby-world-cup-2027.html' },
-        { text: '⚾ MLB Tips Thursday 12 June', href: '/mlb-tips-thursday-12-june-2026.html' },
-        { text: '🏀 NBA Finals Game 4 Tips — Spurs vs Knicks', href: '/nba-finals-game-4-spurs-vs-knicks-2026.html' },
         { text: 'NBA Finals Game 3 Tips', href: '/nba-finals-game-3-spurs-vs-knicks-2026.html' },
         { text: 'NBA Finals Game 2 Tips', href: '/nba-finals-game-2-spurs-vs-knicks-2026.html' },
         { text: 'NBA Finals Game 1 Tips', href: '/nba-finals-game-1-spurs-vs-knicks-2026.html' },
