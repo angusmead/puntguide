@@ -4,7 +4,7 @@
     {
       label: '🔥 Today\'s Tips',
       links: [
-        { text: '⚽ WORLD CUP STARTS FRIDAY — Full Guide', href: '/world-cup-2026.html' },
+        { text: '⚽ WORLD CUP — Full Guide', href: '/world-cup-2026.html' },
         { text: '⚽ World Cup Group Stage Tips — Week 1',  href: '/world-cup-2026-group-stage-tips.html' },
         { text: '🦘 Socceroos World Cup Preview',          href: '/socceroos-world-cup-2026.html' },
         { text: '🏇 Saturday Metro Tips — 13 June', href: '/horse-racing-tips-saturday-13-june-2026.html' },
