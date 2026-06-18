@@ -9,7 +9,7 @@
         { text: '🦘 Socceroos World Cup Preview',          href: '/socceroos-world-cup-2026.html' },
         { text: '🏇 Saturday Metro Tips — 13 June', href: '/horse-racing-tips-saturday-13-june-2026.html' },
         { text: '🏉 NRL Round 16 Tips — This Weekend', href: '/nrl-round-16-tips-2026.html' },
-        { text: '⚡ State of Origin Game 2 Preview',   href: '/nrl-state-of-origin-2026-game-2.html' },
+        { text: '⚡ State of Origin Game 3 — Decider',  href: '/nrl-state-of-origin-2026-game-3.html' },
         { text: '🦘 AFL Round 15 Tips — This Weekend', href: '/afl-round-15-tips-2026.html' },
       ]
     },
@@ -52,7 +52,7 @@
       label: '🏉 NRL',
       links: [
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
-        { text: '⚡ State of Origin Game 2 Preview', href: '/nrl-state-of-origin-2026-game-2.html' },
+        { text: '⚡ State of Origin Game 3 — Decider', href: '/nrl-state-of-origin-2026-game-3.html' },
         { text: '🏉 NRL Round 16 Tips 2026 — This Weekend', href: '/nrl-round-16-tips-2026.html' },
         { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
@@ -79,7 +79,7 @@
       ]
     },
     {
-      label: '⚽ World Cup 2026 — STARTS FRIDAY',
+      label: '⚽ World Cup 2026 — UNDERWAY',
       links: [
         { text: '⚽ World Cup 2026 — Full Guide',        href: '/world-cup-2026.html' },
         { text: '💰 World Cup Winner Odds',               href: '/world-cup-2026-odds.html' },
