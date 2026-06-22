@@ -42,7 +42,6 @@
     'next2go.com.au':         'Next2Go',
     'teambet.com.au':         'TeamBet',
     'millennialbet.com.au':   'MillennialBet',
-    'betvista.com.au':        'BetVista',
     'puntx.com.au':           'PuntX',
     'betblitz.com.au':        'BetBlitz',
     'unibet.com.au':          'Unibet',
