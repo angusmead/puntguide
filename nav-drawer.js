@@ -7,7 +7,6 @@
         { text: '⚽ WORLD CUP — Full Guide', href: '/world-cup-2026.html' },
         { text: '⚽ World Cup Group Stage Tips — Week 1',  href: '/world-cup-2026-group-stage-tips.html' },
         { text: '🦘 Socceroos World Cup Preview',          href: '/socceroos-world-cup-2026.html' },
-        { text: '🏇 Saturday Metro Tips — 20 June', href: '/horse-racing-tips-saturday-20-june-2026.html' },
         { text: '🏉 NRL Round 17 Tips — This Weekend', href: '/nrl-round-17-tips-2026.html' },
         { text: '⚡ State of Origin Game 3 — Decider',  href: '/nrl-state-of-origin-2026-game-3.html' },
         { text: '🦘 AFL Round 16 Tips — This Weekend', href: '/afl-round-16-tips-2026.html' },
@@ -62,7 +61,6 @@
     {
       label: '🏇 Racing',
       links: [
-        { text: '🏇 Saturday Metro Tips — 20 June', href: '/horse-racing-tips-saturday-20-june-2026.html' },
         { text: 'Racing Futures 2026',          href: '/racing-futures-2026.html' },
         { text: 'Best Sites for Racing',        href: '/best-betting-sites-for-racing.html' },
       ]
