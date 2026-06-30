@@ -7,9 +7,9 @@
         { text: '⚽ WORLD CUP — Full Guide', href: '/world-cup-2026.html' },
         { text: '⚽ World Cup Group Stage Tips — Week 1',  href: '/world-cup-2026-group-stage-tips.html' },
         { text: '🦘 Socceroos World Cup Preview',          href: '/socceroos-world-cup-2026.html' },
-        { text: '🏉 NRL Round 17 Tips — This Weekend', href: '/nrl-round-17-tips-2026.html' },
+        { text: '🏉 NRL Round 18 Tips — This Weekend', href: '/nrl-round-18-tips-2026.html' },
         { text: '⚡ State of Origin Game 3 — Decider',  href: '/nrl-state-of-origin-2026-game-3.html' },
-        { text: '🦘 AFL Round 16 Tips — This Weekend', href: '/afl-round-16-tips-2026.html' },
+        { text: '🦘 AFL Round 17 Tips — This Weekend', href: '/afl-round-17-tips-2026.html' },
       ]
     },
     {
@@ -38,7 +38,7 @@
       links: [
         { text: 'AFL Tips 2026',               href: '/afl-tips.html' },
         { text: 'AFL Ladder 2026',             href: '/afl-ladder-2026.html' },
-        { text: 'AFL Round 16 Tips 2026',       href: '/afl-round-16-tips-2026.html' },
+        { text: 'AFL Round 17 Tips 2026',       href: '/afl-round-17-tips-2026.html' },
         { text: 'AFL Premiership Odds 2026',    href: '/afl-premiership-odds-2026.html' },
         { text: 'Brownlow Medal Odds 2026',     href: '/brownlow-medal-odds-2026.html' },
         { text: 'Coleman Medal Odds 2026',      href: '/afl-coleman-medal-odds-2026.html' },
@@ -52,7 +52,7 @@
       links: [
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
         { text: '⚡ State of Origin Game 3 — Decider', href: '/nrl-state-of-origin-2026-game-3.html' },
-        { text: '🏉 NRL Round 17 Tips 2026 — This Weekend', href: '/nrl-round-17-tips-2026.html' },
+        { text: '🏉 NRL Round 18 Tips 2026 — This Weekend', href: '/nrl-round-18-tips-2026.html' },
         { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
         { text: 'Best Sites for AFL & NRL',     href: '/best-betting-sites-afl-nrl.html' },
