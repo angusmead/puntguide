@@ -39,8 +39,6 @@
       label: '🏉 NRL',
       links: [
         { text: 'NRL Tips 2026',               href: '/nrl-tips.html' },
-        { text: '⚡ State of Origin Game 3 — Decider', href: '/nrl-state-of-origin-2026-game-3.html' },
-        { text: '🏉 NRL Round 18 Tips 2026 — This Weekend', href: '/nrl-round-18-tips-2026.html' },
         { text: 'NRL Ladder 2026',             href: '/nrl-ladder-2026.html' },
         { text: 'NRL Premiership Odds 2026',    href: '/nrl-premiership-odds-2026.html' },
         { text: 'Best Sites for AFL & NRL',     href: '/best-betting-sites-afl-nrl.html' },
