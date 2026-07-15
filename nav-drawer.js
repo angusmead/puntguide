@@ -63,28 +63,6 @@
       ]
     },
     {
-      label: '⚽ World Cup 2026 — UNDERWAY',
-      links: [
-        { text: '⚽ World Cup 2026 — Full Guide',        href: '/world-cup-2026.html' },
-        { text: '💰 World Cup Winner Odds',               href: '/world-cup-2026-odds.html' },
-        { text: '🏆 Golden Boot Odds',                    href: '/world-cup-2026-golden-boot-odds.html' },
-        { text: '⚽ Group Stage Tips — Week 1',           href: '/world-cup-2026-group-stage-tips.html' },
-        { text: '🦘 Socceroos Group D Preview',           href: '/socceroos-world-cup-2026.html' },
-        { text: '⚽ USA vs Australia — Sat 20 Jun',       href: '/world-cup-2026-usa-vs-australia.html' },
-        { text: '⚽ Scotland vs Morocco — Sat 20 Jun',    href: '/world-cup-2026-scotland-vs-morocco.html' },
-        { text: '⚽ Brazil vs Haiti — Sat 20 Jun',        href: '/world-cup-2026-brazil-vs-haiti.html' },
-        { text: '⚽ Türkiye vs Paraguay — Sat 20 Jun',    href: '/world-cup-2026-turkiye-vs-paraguay.html' },
-        { text: '⚽ Netherlands vs Sweden — Sun 21 Jun',  href: '/world-cup-2026-netherlands-vs-sweden.html' },
-        { text: '⚽ Germany vs Ivory Coast — Sun 21 Jun', href: '/world-cup-2026-germany-vs-ivory-coast.html' },
-        { text: '⚽ Ecuador vs Curacao — Sun 21 Jun',     href: '/world-cup-2026-ecuador-vs-curacao.html' },
-        { text: '⚽ Tunisia vs Japan — Sun 21 Jun',       href: '/world-cup-2026-tunisia-vs-japan.html' },
-        { text: '⚽ Spain vs Saudi Arabia — Mon 22 Jun',  href: '/world-cup-2026-spain-vs-saudi-arabia.html' },
-        { text: '⚽ Belgium vs Iran — Mon 22 Jun',        href: '/world-cup-2026-belgium-vs-iran.html' },
-        { text: '⚽ Uruguay vs Cape Verde — Mon 22 Jun',  href: '/world-cup-2026-uruguay-vs-cape-verde.html' },
-        { text: '⚽ New Zealand vs Egypt — Mon 22 Jun',   href: '/world-cup-2026-new-zealand-vs-egypt.html' },
-      ]
-    },
-    {
       label: '⚾ International Sports',
       links: [
         { text: '🏉 Rugby World Cup 2027 Odds', href: '/rugby-world-cup-2027-odds.html' },
