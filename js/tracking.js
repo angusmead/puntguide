@@ -58,6 +58,7 @@
     'mintbet.au':             'MintBet',
     'betdragon.au':           'BetDragon',
     'ripperbet.au':           'RipperBet',
+    'donniebet.com.au':       'Donnie Bet',
     'betbuzz.au':             'BetBuzz',
     'betalpha.au':            'BetAlpha',
     'readybet.com.au':        'ReadyBet',
