@@ -67,10 +67,6 @@
       links: [
         { text: '🏉 Rugby World Cup 2027 Odds', href: '/rugby-world-cup-2027-odds.html' },
         { text: '🏉 Who Will Win RWC 2027?',   href: '/who-will-win-rugby-world-cup-2027.html' },
-        { text: 'NBA Finals Game 3 Tips', href: '/nba-finals-game-3-spurs-vs-knicks-2026.html' },
-        { text: 'NBA Finals Game 2 Tips', href: '/nba-finals-game-2-spurs-vs-knicks-2026.html' },
-        { text: 'NBA Finals Game 1 Tips', href: '/nba-finals-game-1-spurs-vs-knicks-2026.html' },
-        { text: 'NBA Finals Series Preview', href: '/nba-finals-spurs-vs-knicks-2026.html' },
         { text: 'NBA Championship Odds 2026', href: '/nba-championship-odds-2026.html' },
         { text: 'Best NBA Betting Sites',     href: '/best-nba-betting-sites-australia.html' },
         { text: 'NFL Tips 2026',              href: '/nfl-tips.html' },
